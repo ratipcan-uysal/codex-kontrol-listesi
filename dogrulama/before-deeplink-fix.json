@@ -1,0 +1,87 @@
+{
+  "base": "http://127.0.0.1:8769/",
+  "browser": "155.0.8059.85",
+  "results": [
+    {
+      "name": "107 items and 19 sections",
+      "status": "PASS"
+    },
+    {
+      "name": "basic and advanced filters",
+      "status": "PASS"
+    },
+    {
+      "name": "Turkish uppercase search",
+      "status": "PASS"
+    },
+    {
+      "name": "section title search",
+      "status": "PASS"
+    },
+    {
+      "name": "empty result and recovery",
+      "status": "PASS"
+    },
+    {
+      "name": "collapse search-opened details regression",
+      "status": "PASS"
+    },
+    {
+      "name": "checkmark persists after reload",
+      "status": "PASS"
+    },
+    {
+      "name": "unfinished excludes checked item",
+      "status": "PASS"
+    },
+    {
+      "name": "quick start clears filters and focuses target",
+      "status": "PASS"
+    },
+    {
+      "name": "clipboard content matches example",
+      "status": "PASS"
+    },
+    {
+      "name": "JSON export contains selected stable ID",
+      "status": "PASS"
+    },
+    {
+      "name": "reset cancellation keeps data",
+      "status": "PASS"
+    },
+    {
+      "name": "confirmed reset clears data",
+      "status": "PASS"
+    },
+    {
+      "name": "export-import round trip",
+      "status": "PASS"
+    },
+    {
+      "name": "import cancellation preserves previous marks",
+      "status": "PASS"
+    },
+    {
+      "name": "legacy backup imports after confirmation",
+      "status": "PASS"
+    },
+    {
+      "name": "unknown ID rejected atomically",
+      "status": "PASS"
+    },
+    {
+      "name": "null import rejected safely",
+      "status": "PASS"
+    },
+    {
+      "name": "oversize backup rejected safely",
+      "status": "PASS"
+    },
+    {
+      "name": "item deep link opens requested detail",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n\nnull !== ''\n"
+    }
+  ]
+}

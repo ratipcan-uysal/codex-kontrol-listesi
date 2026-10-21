@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Codex için 19 bölüm, __TOTAL__ maddelik etkileşimli kullanım rehberi. Her maddede neden, uygulama, örnek ve doğrulama.">
+<meta name="theme-color" content="#f8f9f6">
+<link rel="canonical" href="__URL__">
+<meta property="og:title" content="Codex kullanım kontrol listesi">
+<meta property="og:description" content="__STATS__. Türkçe, kaynaklı, etkileşimli rehber.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="__URL__">
+<title>Codex kullanım kontrol listesi · __TOTAL__ madde</title>
+<style>__CSS__</style>
+</head>
+<body>
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<header class="topbar"><a href="#baslangic" class="brand" aria-label="Codex rehberi başlangıç"><span class="brandmark" aria-hidden="true">›_</span>Codex <span class="brandlight">/ kullanım rehberi</span></a><a href="#kaynaklar" class="top-source">Kaynaklar ↗</a></header>
+<div class="layout" id="baslangic">
+<aside class="sidebar" aria-label="Bölümler">
+ <div class="sidebar-top"><span class="eyebrow">ÇALIŞMA DÜZENİN</span><strong><span id="side-done">0</span><span class="muted"> / __TOTAL__</span></strong><progress id="side-progress" max="__TOTAL__" value="0" aria-label="Tamamlanan maddeler"></progress><p id="storage-note">İşaretlerin bu tarayıcıda saklanır.</p></div>
+ <nav id="section-nav" aria-label="Bölüm bağlantıları"></nav>
+ <div class="side-bottom">19 bölüm · __BASIC__ temel · __ADVANCED__ ileri<br><span>Belge kontrolü: __DATE__</span></div>
+</aside>
+<main id="icerik">
+ <section class="hero" aria-labelledby="page-title"><div class="eyebrow"><span class="live-dot" aria-hidden="true"></span>DAHA NET İŞLER, DAHA AZ TEKRAR</div><h1 id="page-title">Codex’i iyi kullanmanın<br> kontrol listesi.</h1><p class="lead">19 bölüm, __TOTAL__ uygulanabilir madde. Her adımın gerekçesi, nasıl yapılacağı, kopyalanabilir örneği ve doğrulaması bir arada.</p><div class="hero-meta"><span>CLI + masaüstü + IDE</span><span>__DATE__</span><span>Türkçe rehber</span></div></section>
+ <section class="quick" aria-labelledby="quick-title"><div class="section-kicker">BAŞLAMAK İÇİN</div><h2 id="quick-title">Önce bu on madde.</h2><p>Bütün ayarları bir anda değiştirme. Önce işin bitişini, bağlamını ve kanıtını netleştir.</p><ol id="top-ten"></ol></section>
+ <details class="reading-note"><summary>Nasıl kullanılır? · Codex’e uyarlarken neler değişti?</summary><div><p><strong>Temel</strong> maddeler başlangıç için; <strong>ileri</strong> maddeler ihtiyaca göre. İşaret, senin kontrol kaydındır; makinen otomatik denetlenmez. Bu sayfa komut çalıştırmaz veya ayar değiştirmez.</p><p>Claude’a ait komutlar ve ayar biçimleri Codex karşılıklarıyla yeniden yazıldı. Birebir karşılığı olmayan yerlerde aynı amaç için farklı bir yöntem var. Hook, özel ajan ve beta izin profillerinde sürüm desteğini ayrıca kontrol et.</p><p>Bu denetimde PATH’te <code>0.132.0</code>, masaüstüyle gelen CLI’da <code>0.163.0-alpha.10.2</code> görüldü. Seçili komut bayrakları ikinci sürümün yardım çıktısıyla kontrol edildi; bütün örnekler canlı çalıştırılmadı. <code>codex --version</code> ve ilgili <code>--help</code> çıktısı kurulu sürümün gerçeğidir. Örneklerdeki yollar, modeller ve UDID yer tutucuları göreve göre seçilir.</p><p>Her maddenin sonunda ürün bilgisi veya iş akışı önerisi etiketi bulunur. CLI eğik çizgi komutları interaktif terminal içindir; diğer arayüzlerde aynı komutu varsayma. Sıralama bir performans araştırması sonucu değildir; görev bitişi, bağlam ve kanıt açıklığına göre hazırlanmış editoryal bir önceliktir. Evrensel satır, disk yüzdesi, ajan sayısı veya kalite garantisi önerilmez.</p></div></details>
+ <div class="controls" id="controls"><label class="search-label"><span class="sr-only">Maddelerde ara</span><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Bir konu ara: AGENTS.md, test, simülatör…" autocomplete="off"></label><div class="filters" role="group" aria-label="Seviye filtresi"><button class="filter active" data-level="all" aria-pressed="true">Tümü <span>__TOTAL__</span></button><button class="filter" data-level="basic" aria-pressed="false">Temel <span>__BASIC__</span></button><button class="filter" data-level="advanced" aria-pressed="false">İleri <span>__ADVANCED__</span></button></div><label class="unfinished"><input id="unfinished" type="checkbox">Yapılmamış</label><div class="control-bottom"><span id="result-count" role="status" aria-live="polite">__TOTAL__ madde gösteriliyor</span><div><button id="expand-all" class="text-button">Detayları aç</button><button id="clear-filters" class="text-button" hidden>Süzgeçleri temizle</button></div></div></div>
+ <label class="mobile-nav-label">Bölüme git<select id="mobile-nav" aria-label="Bölüme git"><option value="">Bölüm seç…</option></select></label>
+ <div id="empty" hidden><h2>Bu aramada madde yok.</h2><p>Başka bir sözcük dene veya süzgeçleri temizle.</p><button id="empty-reset" class="button">Süzgeçleri temizle</button></div>
+ <noscript><p>İşaretleme ve arama için JavaScript gerekir. <a href="codex-kontrol-listesi.md">Rehberin tamamını Markdown olarak oku.</a></p></noscript><div id="sections"></div>
+ <section class="tools-section" aria-labelledby="record-title"><h2 id="record-title">Kontrol kaydını yanında tut.</h2><p>İşaretler bu tarayıcı profiline özeldir; başka cihaza kendiliğinden eşitlenmez. JSON yedeğini dışa aktarabilir veya geri yükleyebilirsin. Eski ChatGPT Sites adresindeki işaretler kendiliğinden taşınmaz; eski sayfadan dışa aktarıp buraya yükle. İçe alma mevcut işaretlerin yerini alır.</p><div class="tools"><button class="button" id="export-state">İşaretleri dışa aktar</button><label class="button file-label">Yedeği içe al<input type="file" id="import-state" accept="application/json,.json" class="sr-only"></label><a class="button" href="codex-kontrol-listesi.md" download>Rehberi Markdown indir</a><button class="text-button danger" id="reset-state">İşaretleri sıfırla</button></div><p id="import-status" role="status" aria-live="polite"></p></section>
+ <section class="sources-section" id="kaynaklar" aria-labelledby="sources-title"><div class="section-kicker">KAYNAK VE KAPSAM</div><h2 id="sources-title">İşleyen karşılıklar, açık sınırlar.</h2><p>Bu sürüm, <a href="https://github.com/ratipcan-uysal/claude-code-kontrol-listesi" target="_blank" rel="noopener noreferrer">Claude Code kontrol listesi</a> referans alınarak Codex için yeniden yazıldı. Ürün özellikleri aşağıdaki resmî belgelerle; seçili CLI seçenekleri yerel yardım çıktısıyla kontrol edildi. İş akışı önerileri, her projede zorunlu ürün kuralı değildir.</p><div id="source-links"></div><p class="source-limit">Belge kontrolü, bütün örnek komutların bu makinede çalıştırıldığı anlamına gelmez. Hook, izin ve hesap özelliklerinin gerçek desteği sürüme ve ortama bağlıdır.</p></section>
+ <footer><span>© 2026 Ratipcan Uysal · <a href="__REPO__">GitHub</a> · <a href="LICENSE">CC BY 4.0</a><br>Bağımsız rehber; resmî OpenAI yayını değildir.</span><span><a href="GUNCELLEMELER.md">Güncellemeler</a> · <a href="DOGRULAMA.md">Doğrulama</a><br>19 bölüm / __TOTAL__ madde · 2026</span></footer>
+</main></div><div id="toast" role="status" aria-live="polite"></div>
+<script type="application/json" id="checklist-data">__DATA__</script>
+<script>__JS__</script>
+</body></html>

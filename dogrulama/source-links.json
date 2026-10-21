@@ -1,0 +1,149 @@
+[
+  {
+    "key": "agents",
+    "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+    "final_url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+    "status": 200,
+    "bytes": 408542
+  },
+  {
+    "key": "config",
+    "url": "https://learn.chatgpt.com/docs/config-file/config-reference",
+    "final_url": "https://learn.chatgpt.com/docs/config-file/config-reference",
+    "status": 200,
+    "bytes": 1456078
+  },
+  {
+    "key": "basic",
+    "url": "https://learn.chatgpt.com/docs/config-file/config-basic",
+    "final_url": "https://learn.chatgpt.com/docs/config-file/config-basic",
+    "status": 200,
+    "bytes": 415264
+  },
+  {
+    "key": "commands",
+    "url": "https://learn.chatgpt.com/docs/developer-commands?surface=cli",
+    "final_url": "https://learn.chatgpt.com/docs/developer-commands?surface=cli",
+    "status": 200,
+    "bytes": 1091211
+  },
+  {
+    "key": "cli",
+    "url": "https://learn.chatgpt.com/docs/cli/reference",
+    "final_url": "https://learn.chatgpt.com/docs/cli/reference",
+    "status": 200,
+    "bytes": 882668
+  },
+  {
+    "key": "subagents",
+    "url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+    "final_url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+    "status": 200,
+    "bytes": 613830
+  },
+  {
+    "key": "rules",
+    "url": "https://learn.chatgpt.com/docs/agent-configuration/rules",
+    "final_url": "https://learn.chatgpt.com/docs/agent-configuration/rules",
+    "status": 200,
+    "bytes": 375469
+  },
+  {
+    "key": "permissions",
+    "url": "https://learn.chatgpt.com/docs/permissions",
+    "final_url": "https://learn.chatgpt.com/docs/permissions",
+    "status": 200,
+    "bytes": 470089
+  },
+  {
+    "key": "security",
+    "url": "https://learn.chatgpt.com/docs/agent-approvals-security",
+    "final_url": "https://learn.chatgpt.com/docs/agent-approvals-security",
+    "status": 200,
+    "bytes": 466653
+  },
+  {
+    "key": "hooks",
+    "url": "https://learn.chatgpt.com/docs/hooks",
+    "final_url": "https://learn.chatgpt.com/docs/hooks",
+    "status": 200,
+    "bytes": 527520
+  },
+  {
+    "key": "skills",
+    "url": "https://learn.chatgpt.com/docs/build-skills",
+    "final_url": "https://learn.chatgpt.com/docs/build-skills",
+    "status": 200,
+    "bytes": 417112
+  },
+  {
+    "key": "plugins",
+    "url": "https://learn.chatgpt.com/docs/build-plugins",
+    "final_url": "https://learn.chatgpt.com/docs/build-plugins",
+    "status": 200,
+    "bytes": 461494
+  },
+  {
+    "key": "workflow",
+    "url": "https://learn.chatgpt.com/guides/best-practices",
+    "final_url": "https://learn.chatgpt.com/guides/best-practices",
+    "status": 200,
+    "bytes": 384599
+  },
+  {
+    "key": "projects",
+    "url": "https://learn.chatgpt.com/docs/projects",
+    "final_url": "https://learn.chatgpt.com/docs/projects",
+    "status": 200,
+    "bytes": 552776
+  },
+  {
+    "key": "automation",
+    "url": "https://learn.chatgpt.com/docs/automations",
+    "final_url": "https://learn.chatgpt.com/docs/automations",
+    "status": 200,
+    "bytes": 479989
+  },
+  {
+    "key": "speed",
+    "url": "https://learn.chatgpt.com/docs/agent-configuration/speed",
+    "final_url": "https://learn.chatgpt.com/docs/agent-configuration/speed",
+    "status": 200,
+    "bytes": 361463
+  },
+  {
+    "key": "git",
+    "url": "https://git-scm.com/docs/git-worktree",
+    "final_url": "https://git-scm.com/docs/git-worktree",
+    "status": 200,
+    "bytes": 99050
+  },
+  {
+    "key": "apple",
+    "url": "https://developer.apple.com/documentation/xcode/running-your-app-on-simulated-or-physical-devices",
+    "final_url": "https://developer.apple.com/documentation/xcode/running-your-app-on-simulated-or-physical-devices",
+    "status": 200,
+    "bytes": 19148
+  },
+  {
+    "key": "models",
+    "url": "https://learn.chatgpt.com/docs/models",
+    "final_url": "https://learn.chatgpt.com/docs/models",
+    "status": 200,
+    "bytes": 579686
+  },
+  {
+    "key": "mcp",
+    "url": "https://learn.chatgpt.com/docs/extend/mcp",
+    "final_url": "https://learn.chatgpt.com/docs/extend/mcp",
+    "status": 200,
+    "bytes": 552789
+  },
+  {
+    "key": "headless",
+    "url": "https://learn.chatgpt.com/docs/non-interactive-mode",
+    "final_url": "https://learn.chatgpt.com/docs/non-interactive-mode",
+    "status": 200,
+    "bytes": 440339
+  }
+]
