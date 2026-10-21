@@ -44,5 +44,15 @@ Gerekirse `PLAYWRIGHT_MODULE` ile paket yolunu, `CHROME_PATH` ile tarayıcı
 `EVIDENCE_DIR` çıktı dizini seçer. Test boş bir tarayıcı profili açar ve sonunda
 kapatır. Sonuçlar ve görüntüler varsayılan olarak `work/browser-evidence/` altına yazılır.
 
-Bu rapor yayından önceki yerel adayın kontrolüdür. GitHub Pages dağıtım durumu
-ve canlı HTTP/içerik kimliği yayından sonra ayrıca doğrulanır.
+## Herkese açık yayın
+
+PASS — [GitHub deposu](https://github.com/ratipcan-uysal/codex-kontrol-listesi) PUBLIC;
+[GitHub Pages sitesi](https://ratipcan-uysal.github.io/codex-kontrol-listesi/) giriş gerektirmeden HTTP 200 döndü.
+İlk içerik commit’i `938f363cfcfc04e3922a343bb0b891182943b989` için Pages durumu `built` olarak gözlendi.
+Canlı HTML SHA-256 değeri yerel adayla birebir eşleşti.
+Ayrıca boş tarayıcı profilinde 6 canlı kontrol geçti: HTTP, 107 madde, temel filtre,
+arama, aynı belge içinde madde bağlantısı ve depo alt yolundan Markdown erişimi.
+[Makine okunur yayın kanıtı](dogrulama/yayin.json).
+
+Yerel kapsamlı kontroller, hash’i aynı kalan bu içerik için geçerlidir.
+Sonraki bu rapor güncellemesi içerik HTML’sini değiştirmez.
