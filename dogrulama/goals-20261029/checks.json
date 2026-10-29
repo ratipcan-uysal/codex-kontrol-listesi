@@ -1,0 +1,12 @@
+{
+  "python_tests": {
+    "checklist": 6,
+    "guide": 18,
+    "status": "PASS"
+  },
+  "javascript_syntax": "PASS",
+  "unchanged_checklist_and_mapping": true,
+  "only_changed_chapter": 14,
+  "new_flow": "goal",
+  "local_browser_checks": 6
+}

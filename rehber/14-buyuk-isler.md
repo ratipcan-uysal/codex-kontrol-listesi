@@ -36,13 +36,53 @@ Son aşamada değişikliklerin aynı kaynak üzerinde buluştuğunu kontrol et. 
 
 ## Goals ne zaman yararlı?
 
-Masaüstünde `/goal` ile başlatılan Goals, desteklenen Codex istemcisinde bir hedefin birkaç tur boyunca sürdürülmesi ve ilerleme durumunun takip edilmesi içindir. Normal istekten daha uzun devamlılık gerektiren işlerde anlamlıdır. Hedef, bitiş ölçütü ve varsa bütçe açık olmalı. Her masaüstü sürümünde aynı komut görünümünü varsayma; güncel istemci desteğini kontrol et. [Masaüstü Goals](https://learn.chatgpt.com/docs/reference/slash-commands) · [Hedef yazma kılavuzu](https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex)
+**Bitiş noktası belli, fakat sonraki adım denemeden öğrenilecekse** Goals yararlıdır. Tek satır düzeltme için normal istek yeterlidir. Hata araştırması veya ölçüme göre ilerleyen iyileştirmede hedef birkaç tur boyunca korunur. [Hedef yazma kılavuzu](https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex)
 
-> Hedef: bu deponun bozuk iç bağlantılarını gider ve üretim kontrolünü çalışır hâle getir. Başarı: bağlantı denetimi geçiyor ve ilgili içerik kaybolmuyor. Yayın yapma. Gerekli bir dış karar olmadan ilerleyemiyorsan bunu açıkça bildir.
+<a id="hedefi-hazirlamak-ile-baslatmak"></a>
 
-Masaüstünde etkin hedefin üstündeki ilerleme denetimleriyle duraklatma, sürdürme, düzenleme ve temizleme yapılır. CLI kılavuzundaki alt komutları masaüstüne aynen taşımamak gerekir.
+### Hedefi hazırlamak ile başlatmak
 
-“Sınırsız devam et” iyi bir bitiş ölçütü değildir. Bütçenin bitmesi, hedefin tamamlanması ve kullanıcının durdurması ayrı durumlardır. Goals zamanlanmış otomasyon da değildir; belirli gün/saatte uyanma ihtiyacı 15. bölümün konusudur.
+Önce `/plan` ile hedefi netleştir; ardından desteklenen masaüstü istemcisinde `/goal` ile başlat. Şu doğal dil isteği yalnız taslak içindir:
+
+> Bu işi bir hedef taslağına dönüştür; henüz Goals başlatma. Başarı kanıtını, korunacak koşulları ve ilerlemeyi engelleyecek eksikleri belirle.
+
+Hedefi çalıştırmadan önce sonucu ve kapsamını oku. Menüde görünen seçenekler hesap ve ortama göre değişebilir. [Masaüstü Goals](https://learn.chatgpt.com/docs/reference/slash-commands)
+
+<a id="alti-parcayi-tek-ornekte-gor"></a>
+
+### Altı parçayı tek örnekte gör
+
+**Kurgu eğitim örneği:** Bu rehberin iç bağlantılarında hatalar bulunduğunu varsayalım. Aşağıdaki tablo, Cookbook’taki hedef yazma yaklaşımının bu işe uyarlamasıdır; yapılmış bir hata araştırmasının kaydı değildir.
+
+| Parça | Bu işte ne yazılır? |
+|---|---|
+| Sonuç | Bozuk iç bağlantılar giderilsin. |
+| Kanıt | Bağlantı denetimi geçsin; HTML ve Markdown hedefleri bulunsun. |
+| Korunacak koşul | 107 madde, mevcut çapalar ve kullanıcı işaretleri korunsun. |
+| Çalışma sınırı | Bu depo içinde çalış; dış siteleri değiştirme, yayın yapma. |
+| Denemeler arasında seçim | Hata çıktısını oku; sonraki düzeltmeyi kalan hatanın nedenine göre seç. |
+| Engel halinde teslim | İlerleyemediğin noktayı, denediğin yolları ve gereken bilgi veya erişimi bildir. |
+
+**Zayıf istek:** “Bağlantıları düzelt, bitene kadar devam et.”
+
+**Daha güçlü hedef metni:**
+
+> Bu rehberdeki bozuk iç bağlantıları gider. Bağlantı denetimini çalıştır; HTML ve Markdown hedeflerini doğrula. 107 maddeyi, mevcut çapaları ve kullanıcı işaretlerini koru. Yalnız bu depoda çalış, yayın yapma. Her başarısız kontrolde hata çıktısına göre sonraki düzeltmeyi seç. Erişemediğin dış bağlantıyı bozuk sayma; ayrı raporla. Mevcut sınırlar içinde ilerleme yolu kalmazsa denediklerini ve işi açacak bilgi ya da erişimi bildir.
+
+Burada “devam et” sözüne **bir seçim kuralı** eklendi. Örneğin bağlantı dosyası varsa ama başlık çapası yoksa dosyayı yeniden üretmek tek başına çözüm değildir. Yeni deneme, önceki kontrolün gösterdiği eksikliği hedeflemeli. Aynı başarısız işlemi açıklamasız tekrarlamak ilerleme sayılmaz.
+
+**Goal karar akışı: çalış → kontrol et → sonuca göre ilerle**
+
+1. **Çalış:** Kanıta dayanan bir sonraki adımı uygula.
+2. **Kontrol et:** Hedef sağlandı ve koruma koşulları geçti mi?
+3. **Karar ver:** Evet → tamamla. Hayır, geçerli yol var → yeni denemeye dön.
+4. **Engeli bildir:** Geçerli yol kalmadıysa eksik bilgi veya erişimi yaz. Bütçe bittiyse ilerlemeyi özetle; başarı ilan etme.
+
+<a id="hedef-neden-durmus-olabilir"></a>
+
+### Hedef neden durmuş olabilir?
+
+Goal, ilgili sohbetin kalıcı durumudur; global bellek veya proje talimatı değildir. Otomatik devam için hedef etkin, sohbet boşta ve bütçe uygun olmalıdır. Bekleyen kullanıcı mesajı veya başka iş varken aynı anda yeni devam turu başlamaz. Bütçe tükenmesi başarı anlamına gelmez. [Goals çalışma koşulları](https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex)
 
 ![Mesaj alanının üstünde hedef denetimleri. Paused goal satırı duraklamış hedefi gösteriyor. Sağdaki denetimlerle hedefi düzenleme, sürdürme veya temizleme işlemlerine ulaşılır; bunlar yeni slash komutları değildir.](assets/goal.png)
 
@@ -52,7 +92,17 @@ Masaüstünde etkin hedefin üstündeki ilerleme denetimleriyle duraklatma, sür
 2. **Ne yap:** Hedef aynıysa sürdür; değiştiyse önce hedef metnini düzelt.
 3. **Ne gör:** Etkin hedef ile yapmak istediğin iş aynı kapsamı taşır.
 
-İlerleme satırında **Paused goal** yazıyorsa hedef duraklatılmıştır. Satırdaki sürdürme, düzenleme ve temizleme denetimleri hedefin yönetimi içindir. Hedef açıkken kavram sormak için `/side` kullanabilirsin. Bağlantının kesileceğini biliyorsan önceden duraklatmak ve devamda mevcut çıktıyı kontrol etmek yararlı olur. Hedef oluşturmak erişim izinlerini genişletmez. [Uzun işler](https://learn.chatgpt.com/docs/long-running-work)
+**Paused goal** duraklamayı gösterir. Masaüstündeki ilerleme satırından duraklat, sürdür, düzenle veya temizle; Cookbook’taki CLI alt komutlarını masaüstüne aynen taşıma. Çalışırken ek mesajlarla yön verebilir, kavram sorusunu `/side` ile ayırabilirsin. [Masaüstü denetimleri](https://learn.chatgpt.com/docs/reference/slash-commands)
+
+Hedef oluşturmak erişim izinlerini genişletmez. Belirli saatte yeniden çalışma ise [otomasyon](15-otomasyon.md) konusudur. [Uzun işler](https://learn.chatgpt.com/docs/long-running-work)
+
+<a id="arastirmada-bitis-iddia-basina-kanit"></a>
+
+### Araştırmada bitiş: iddia başına kanıt
+
+Araştırma hedefinde tek bir başarı etiketi yerine doğrulanan, yaklaşık desteklenen, eksik veriyle engellenen ve belirsiz kalan iddiaları ayır. Benzer bir sonuç elde etmek, özgün deneyi aynen tekrarlamak anlamına gelmez. [Araştırma örneği](https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex)
+
+Bizim [araştırmadan karara](is-arastirma.md) örneğimizde şu teslim isteği kullanılabilir: “Her seçenek için iddiayı, dayandığı kaydı, kanıt durumunu ve açık soruyu göster. Kaynakta bulunmayan ücreti tahminle doldurma.” Bu, eksik bilgi yüzünden bütün araştırmayı çöpe atmadan hangi karara güvenilebildiğini gösterir. Genel kaynak ve kanıt ayrımı [doğrulama bölümünde](12-dogrulama.md) açıklanır.
 
 <a id="kurgu-senaryo-paralelligin-faydasiz-oldugu-is"></a>
 

@@ -1,5 +1,11 @@
 # Güncellemeler
 
+## 29 Ekim 2026 — Goals ile kanıta göre ilerleme
+
+- Mevcut Goals bölümüne altı parçalı hedef tablosu, taslak/başlatma ayrımı ve zayıf–güçlü istek örneği eklendi.
+- Çalışma, kontrol, yeniden deneme ve engel bildirme şeması eklendi. Sohbet kapsamı, devam koşulları ve araştırmada iddia başına kanıt açıklandı.
+- Tekrarlanan duraklatma açıklamaları birleştirildi; masaüstü denetimleri ile CLI komutlarının ayrımı korundu.
+
 ## 29 Ekim 2026 — Baştan sona örneklerle eğitim
 
 - Üç tam örnek iş ana okuma yolu oldu: araştırma, veri ve web düzeltmesi. Dokuz indirilebilir örnek dosya eklendi.

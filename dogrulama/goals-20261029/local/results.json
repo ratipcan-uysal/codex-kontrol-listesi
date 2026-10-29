@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "name": "preserved anchor, six goal components, four decision steps",
+      "status": "PASS"
+    },
+    {
+      "name": "1440 px has no page overflow and shows flow",
+      "status": "PASS"
+    },
+    {
+      "name": "390 px has no page overflow and shows flow",
+      "status": "PASS"
+    },
+    {
+      "name": "320 px has no page overflow and shows flow",
+      "status": "PASS"
+    },
+    {
+      "name": "existing official goal image loads",
+      "status": "PASS"
+    },
+    {
+      "name": "no JavaScript errors",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}
