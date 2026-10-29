@@ -1,18 +1,44 @@
 # Codex’i Derinlemesine Kullanma Rehberi
 
-Codex ile ilk dosyanı üretmekten büyük bir işi tamamlamaya kadar, uygulamada neyi nerede kullanacağını anlatan Türkçe rehber. Başlangıç için [uygulamayı tanıma bölümündeki ilk iş akışını](02-uygulama.md) izle. Bir işi zaten yapıyorsan aşağıdaki içindekilerden ihtiyacına geç.
+Codex ile iyi çalışmak, hangi komutun nerede olduğunu bilmenin ötesine geçiyor. Bir araştırmanın yanlış ölçütle sıralandığını, bir tablonun bilinmeyeni sıfıra çevirdiğini veya görsel sorunun yanlış katmanda çözüldüğünü fark edebilmek sonucu değiştiriyor. Bu eğitim, o kararları görünür kılıyor.
 
-<a id="nasil-okunur"></a>
+<a id="uc-isi-bastan-sona-izle"></a>
 
-## Nasıl okunur?
+## Üç işi baştan sona izle
 
-İlk dört bölüm olanakları, uygulamayı ve iş vermeyi açıklar. 5–11 günlük çalışma düzenini kurar. 12–18 sonuç kalitesi, büyük işler ve teslimi ele alır. [Komutlar](komutlar.md) ve [sorun giderme](sorun-giderme.md) çalışma sırasında hızlı başvuru içindir. Eğitim, anlatıcının gösterebileceği örneklerle ilerler; katılımcı alıştırması gerektirmez.
+Bu üç örnek eğitim anlatısının ana yolu. Her birinde girdi, istek, ara çıktı, düzeltme ve teslim var. Kurgu verileri ve örnek dosyaları anlatıcı açıp gösterebilir; dinleyicinin kurulum yapması, alıştırma çözmesi veya komut ezberlemesi gerekmez.
 
-**Doğrudan ihtiyacına git:** yanlış sonuçta [yönlendirme](05-yonetmek.md); eski işe dönüşte [bağlam ve bellek](06-baglam-bellek.md); yanlış dosya veya önizlemede [çalışma ortamı](08-ortamlar.md); yavaş işte [model ve hız](07-model-hiz-kullanim.md); yayında [teslim](17-teslim-yayin.md).
+1. [Araştırmadan karar ve sunuma](is-arastirma.md): seçenekleri doğru ölçütle ele, kararı gerekçelendir, doğrulanmış bilgiden yeni çıktılar üret.
+2. [Dağınık tablodan güvenilir rapora](is-veri.md): kimliği koru, eksik veriyi görünür tut, bir sayının neyi anlattığını doğru adlandır.
+3. [Görsel sorundan doğrulanmış yayına](is-sayfa.md): bölgeyi işaretle, yalnız gereken boyutu düzelt, aynı koşulda kontrol et ve gerçek hedefte bitir.
 
-Omurga, birlikte yaptığımız işlerden çıkan dersler ve mevcut 107 maddelik kontrol listesi. Gerçek vakalar anonimleştirildi. “Kurgu senaryo” etiketli örnekler öğretim için yazıldı. Atölye adlı hayalî topluluğun belge, veri ve web işleri birçok özelliği aynı bağlamda görmeni sağlar.
+Uygulamayı ilk kez açıyorsan önce [ilk dosyayı üretme yolunu](02-uygulama.md#i-lk-dosyani-uret-ac-duzelt) gör. Sonra bu üç işe dön. Her örneğin içindeki bağlantılar, ihtiyaç duyulduğu anda ilgili özelliği açıyor.
 
-**Belge kontrolü: 29 Ekim 2026.** Ürün bilgileri resmî kaynaklara dayanır. Arayüz görselleri OpenAI belgelerindeki açıklayıcı gösterimlerdir; kendi hesabımızda çekilmiş ekran görüntüleri değildir. Görsele tıklayarak büyütebilirsin. Özellik erişimi sürüme, hesaba ve platforma göre değişebilir. Kontrol edilen kapsam ve denenmeyen davranışlar [kaynaklar sayfasında](kaynaklar.md) açıklanır.
+<a id="once-hangi-bes-karari-ogrenmelisin"></a>
+
+## Önce hangi beş kararı öğrenmelisin?
+
+| Karar | Çalışırken söyleyebileceğin şey | Neden değerli? |
+|---|---|---|
+| Hangi sonuç gerekiyor? | “Karar notu ve düzenlenebilir sunum gerekiyor.” | İş, yalnız sohbet cevabında kalmaz |
+| Hangi bilgi esas? | “Bu onaylı not ana kaynak; yeni iddia ekleme.” | Biçim değişirken anlam korunur |
+| Ne değişecek, ne kalacak? | “Yalnız kart genişliği değişsin; metin ve renk aynı kalsın.” | İyi çalışan parçalar yeniden açılmaz |
+| Nerede belirsizlik var? | “Boş tahsilatı sıfır sayma; ayrı göster.” | Güzel görünen sonuç yanlış kesinlik üretmez |
+| Ne zaman tamamlandı? | “Son dosyayı aç; yayın istediysem canlı hedefi de kontrol et.” | Ara adım son teslimle karışmaz |
+
+<a id="bizim-deneyimlerimiz-bu-anlatida-nerede"></a>
+
+## Bizim deneyimlerimiz bu anlatıda nerede?
+
+[Dokuz gerçek vaka](deneyimler.md), gözlenen sorun ile müdahalenin neyi değiştirdiğini ayırıyor. Kullanıcının düzeltmesi kayıtlıysa anlatılıyor. Yalnız inceleme bulgusu varsa ona sonradan konuşma uydurulmuyor. Örneğin uygulama bulma vakasında müdahale, yeniden derlemeyi başlatmadı; “uygulama yok” iddiasının kapsamını düzeltti. Bu küçük ayrım, eğitimde doğru neden–sonuç kurmanın bir parçası.
+
+<a id="egitim-yolu-ve-basvuru-rehberi-birlikte-nasil-kullanilir"></a>
+
+## Eğitim yolu ve başvuru rehberi birlikte nasıl kullanılır?
+
+Üç örnekten sonra aşağıdaki 18 bölümle bilgiyi derinleştirebilirsin. Başlangıçta talimat dosyası, MCP, hook veya otomasyon kurman gerekmiyor. Tekrarlanan bir ihtiyaç ortaya çıktığında ilgili bölüm değer kazanır. [Komutlar](komutlar.md), [sorun giderme](sorun-giderme.md) ve 107 maddelik kontrol listesi iş sırasında hızlı başvuru için duruyor.
+
+**Belge kontrolü: 29 Ekim 2026.** Ürün bilgisi resmî kaynaklara, gerçek vakalar seçili kayıtlara dayanır. Üç örneğin verileri kurgu; mini web sayfaları bu rehber için üretildi. Resmî uygulama görselleri ile örnek HTML'nin gerçek tarayıcı görüntüleri ayrı etiketlidir. Görsellerin altındaki “Nereye bak / Ne yap / Ne gör” açıklamaları öğretim yorumumuzdur. Erişim koşulları ve doğrulama sınırları [kaynaklarda](kaynaklar.md).
 
 <a id="tam-icindekiler"></a>
 
@@ -42,7 +68,7 @@ Omurga, birlikte yaptığımız işlerden çıkan dersler ve mevcut 107 maddelik
 ## Ekler ve hızlı erişim
 
 - [Komutlar ve kısayollar](komutlar.md)
-- [Gerçek deneyimlerden sekiz ders](deneyimler.md)
+- [Gerçek deneyimlerden dokuz ders](deneyimler.md)
 - [On iki kurgu kullanım senaryosu](senaryolar.md)
 - [Sade terimler sözlüğü](sozluk.md)
 - [Sorun giderme tablosu](sorun-giderme.md)

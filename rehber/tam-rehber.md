@@ -1,16 +1,36 @@
 # Codex’i Derinlemesine Kullanma Rehberi
 
-Codex ile ilk dosyanı üretmekten büyük bir işi tamamlamaya kadar, uygulamada neyi nerede kullanacağını anlatan Türkçe rehber. Başlangıç için [uygulamayı tanıma bölümündeki ilk iş akışını](02-uygulama.md) izle. Bir işi zaten yapıyorsan aşağıdaki içindekilerden ihtiyacına geç.
+Codex ile iyi çalışmak, hangi komutun nerede olduğunu bilmenin ötesine geçiyor. Bir araştırmanın yanlış ölçütle sıralandığını, bir tablonun bilinmeyeni sıfıra çevirdiğini veya görsel sorunun yanlış katmanda çözüldüğünü fark edebilmek sonucu değiştiriyor. Bu eğitim, o kararları görünür kılıyor.
 
-## Nasıl okunur?
+## Üç işi baştan sona izle
 
-İlk dört bölüm olanakları, uygulamayı ve iş vermeyi açıklar. 5–11 günlük çalışma düzenini kurar. 12–18 sonuç kalitesi, büyük işler ve teslimi ele alır. [Komutlar](komutlar.md) ve [sorun giderme](sorun-giderme.md) çalışma sırasında hızlı başvuru içindir. Eğitim, anlatıcının gösterebileceği örneklerle ilerler; katılımcı alıştırması gerektirmez.
+Bu üç örnek eğitim anlatısının ana yolu. Her birinde girdi, istek, ara çıktı, düzeltme ve teslim var. Kurgu verileri ve örnek dosyaları anlatıcı açıp gösterebilir; dinleyicinin kurulum yapması, alıştırma çözmesi veya komut ezberlemesi gerekmez.
 
-**Doğrudan ihtiyacına git:** yanlış sonuçta [yönlendirme](05-yonetmek.md); eski işe dönüşte [bağlam ve bellek](06-baglam-bellek.md); yanlış dosya veya önizlemede [çalışma ortamı](08-ortamlar.md); yavaş işte [model ve hız](07-model-hiz-kullanim.md); yayında [teslim](17-teslim-yayin.md).
+1. [Araştırmadan karar ve sunuma](is-arastirma.md): seçenekleri doğru ölçütle ele, kararı gerekçelendir, doğrulanmış bilgiden yeni çıktılar üret.
+2. [Dağınık tablodan güvenilir rapora](is-veri.md): kimliği koru, eksik veriyi görünür tut, bir sayının neyi anlattığını doğru adlandır.
+3. [Görsel sorundan doğrulanmış yayına](is-sayfa.md): bölgeyi işaretle, yalnız gereken boyutu düzelt, aynı koşulda kontrol et ve gerçek hedefte bitir.
 
-Omurga, birlikte yaptığımız işlerden çıkan dersler ve mevcut 107 maddelik kontrol listesi. Gerçek vakalar anonimleştirildi. “Kurgu senaryo” etiketli örnekler öğretim için yazıldı. Atölye adlı hayalî topluluğun belge, veri ve web işleri birçok özelliği aynı bağlamda görmeni sağlar.
+Uygulamayı ilk kez açıyorsan önce [ilk dosyayı üretme yolunu](02-uygulama.md#i-lk-dosyani-uret-ac-duzelt) gör. Sonra bu üç işe dön. Her örneğin içindeki bağlantılar, ihtiyaç duyulduğu anda ilgili özelliği açıyor.
 
-**Belge kontrolü: 29 Ekim 2026.** Ürün bilgileri resmî kaynaklara dayanır. Arayüz görselleri OpenAI belgelerindeki açıklayıcı gösterimlerdir; kendi hesabımızda çekilmiş ekran görüntüleri değildir. Görsele tıklayarak büyütebilirsin. Özellik erişimi sürüme, hesaba ve platforma göre değişebilir. Kontrol edilen kapsam ve denenmeyen davranışlar [kaynaklar sayfasında](kaynaklar.md) açıklanır.
+## Önce hangi beş kararı öğrenmelisin?
+
+| Karar | Çalışırken söyleyebileceğin şey | Neden değerli? |
+|---|---|---|
+| Hangi sonuç gerekiyor? | “Karar notu ve düzenlenebilir sunum gerekiyor.” | İş, yalnız sohbet cevabında kalmaz |
+| Hangi bilgi esas? | “Bu onaylı not ana kaynak; yeni iddia ekleme.” | Biçim değişirken anlam korunur |
+| Ne değişecek, ne kalacak? | “Yalnız kart genişliği değişsin; metin ve renk aynı kalsın.” | İyi çalışan parçalar yeniden açılmaz |
+| Nerede belirsizlik var? | “Boş tahsilatı sıfır sayma; ayrı göster.” | Güzel görünen sonuç yanlış kesinlik üretmez |
+| Ne zaman tamamlandı? | “Son dosyayı aç; yayın istediysem canlı hedefi de kontrol et.” | Ara adım son teslimle karışmaz |
+
+## Bizim deneyimlerimiz bu anlatıda nerede?
+
+[Dokuz gerçek vaka](deneyimler.md), gözlenen sorun ile müdahalenin neyi değiştirdiğini ayırıyor. Kullanıcının düzeltmesi kayıtlıysa anlatılıyor. Yalnız inceleme bulgusu varsa ona sonradan konuşma uydurulmuyor. Örneğin uygulama bulma vakasında müdahale, yeniden derlemeyi başlatmadı; “uygulama yok” iddiasının kapsamını düzeltti. Bu küçük ayrım, eğitimde doğru neden–sonuç kurmanın bir parçası.
+
+## Eğitim yolu ve başvuru rehberi birlikte nasıl kullanılır?
+
+Üç örnekten sonra aşağıdaki 18 bölümle bilgiyi derinleştirebilirsin. Başlangıçta talimat dosyası, MCP, hook veya otomasyon kurman gerekmiyor. Tekrarlanan bir ihtiyaç ortaya çıktığında ilgili bölüm değer kazanır. [Komutlar](komutlar.md), [sorun giderme](sorun-giderme.md) ve 107 maddelik kontrol listesi iş sırasında hızlı başvuru için duruyor.
+
+**Belge kontrolü: 29 Ekim 2026.** Ürün bilgisi resmî kaynaklara, gerçek vakalar seçili kayıtlara dayanır. Üç örneğin verileri kurgu; mini web sayfaları bu rehber için üretildi. Resmî uygulama görselleri ile örnek HTML'nin gerçek tarayıcı görüntüleri ayrı etiketlidir. Görsellerin altındaki “Nereye bak / Ne yap / Ne gör” açıklamaları öğretim yorumumuzdur. Erişim koşulları ve doğrulama sınırları [kaynaklarda](kaynaklar.md).
 
 
 
@@ -76,6 +96,12 @@ Bu, rehberin iş akışı önerisi. Kazanç yalnız yazma hızından gelmez: ayn
 
 Okurken her özelliği açmaya çalışma. Bir özelliğin hangi sorunu çözdüğünü öğrenmek, onu sürekli kullanmaktan daha değerlidir.
 
+<a id="i-lk-calismada-akisi-gormek"></a>
+
+## İlk çalışmada akışı görmek
+
+Araştırmadan karar ve sunuma giden [tam örnek işte](is-arastirma.md), aynı doğrulanmış bilginin üç farklı çıktıda nasıl korunduğunu izle.
+
 
 # 2. Uygulamanın tamamını tanımak
 
@@ -119,6 +145,10 @@ Sohbetleri “web sitesi”, “notlar”, “test” gibi geniş adlar yerine s
 
 **Proje ve sohbetleri bulmak.** Soldaki listede sabitlenmiş sohbet, diğer sohbetler ve Projects başlığı altındaki klasörleri ayırt et. Bir sohbet adı ile bağlı proje klasörü farklı öğelerdir. [Tam boyut](assets/projects.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/projects) · 2026-10-29.
 
+1. **Nereye bak:** Projects altındaki klasörlere ve üstteki sohbet adlarına.
+2. **Ne yap:** Dosya işi için ilgili yerel projeyi seç; sohbeti sonuç adıyla adlandır.
+3. **Ne gör:** Yeni konuşmanın hangi proje kaynaklarıyla başlayacağı anlaşılır olur.
+
 **Yerel proje ile ChatGPT projesi farklı kaynakları bağlar.** Yerel proje bilgisayarındaki klasörlerle çalışır. ChatGPT projesindeki Sources ise yüklenen veya bağlanan bulut kaynaklarıdır; bilgisayarındaki klasöre otomatik erişim vermez. İki yerde aynı proje adını görmek dosyaların ortak olduğu anlamına gelmez.
 
 Eski işi bulmak için kenar çubuğundaki **Search chats** alanında ayırt edici bir ifade veya dal adı ara. ⌘F / Ctrl+F ise açık sohbetin içinde arar. Search chats için belgelenmiş varsayılan kısayol yok; Settings → Keyboard shortcuts üzerinden atanabilir. Quick chat, New chat yanındaki simgeden açılan genel ChatGPT girişidir ve Codex kenar çubuğunda görünmez. Proje dosyası üzerinde işe başlayacaksan projenin kendi yeni sohbetini kullan. [Sohbetleri bulma ve düzenleme](https://learn.chatgpt.com/docs/projects)
@@ -144,6 +174,10 @@ Terminal, komutların çalıştığı paneldir. New tab → Terminal ile açıl�
 ![Sohbetin yanında sunum önizlemesi. Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele.](assets/preview.png)
 
 **Sohbetin yanında sunum önizlemesi.** Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele. [Tam boyut](assets/preview.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/artifacts-viewer) · 2026-10-29.
+
+1. **Nereye bak:** Soldaki output.pptx bağlantısına, sağdaki slayt listesine.
+2. **Ne yap:** Sorunlu slaytı seç; yalnız o parçanın değişmesini, sayıların korunmasını iste.
+3. **Ne gör:** Son dosyada aynı karar ve verilerle daha okunur bir slayt.
 
 Ekranda bir sunum görünse de aynı alışkanlık rapor ve tablo için geçerli: dosyayı aç, sorunlu bölgeyi tarif et, değişikliği aynı çıktı üzerinde iste. “Yeni dosya üret” demediğin sürece hangi dosyanın son sürüm olduğu belli kalsın.
 
@@ -177,6 +211,10 @@ Appearance içindeki tema ve yazı tipi tercihleri uzun okumayı kolaylaştırab
 ![Görünümü ayarlamak. Appearance içindeki Light, Dark ve System seçimiyle başla. Tema rengi, yazı tipi ve boyut denetimleri uygulamanın görünümünü değiştirir; modelin çalışma talimatlarını değiştirmez.](assets/settings.png)
 
 **Görünümü ayarlamak.** Appearance içindeki Light, Dark ve System seçimiyle başla. Tema rengi, yazı tipi ve boyut denetimleri uygulamanın görünümünü değiştirir; modelin çalışma talimatlarını değiştirmez. [Tam boyut](assets/settings.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/reference/settings) · 2026-10-29.
+
+1. **Nereye bak:** Appearance içindeki Theme ve UI font size alanlarına.
+2. **Ne yap:** Okuma rahatlığını tema ve yazı boyutundan ayarla.
+3. **Ne gör:** Arayüz değişir; modelin görev talimatı veya düşünme seviyesi değişmez.
 
 <a id="i-s-bitti-mi-benden-yanit-mi-bekliyor"></a>
 
@@ -349,11 +387,9 @@ Bir fikir eleştirisi uygulama yetkisi vermez. Karar netleşince üretim isteği
 
 ## Küçük örnekle yöntemi netleştir, sonra genişlet
 
-Kurgu: 200 ürün açıklamasını aynı dile ve biçime getireceksin. “Hepsini iyileştir” demeden önce üç farklı üründe örnek sonuç iste. Uzun açıklama, eksik bilgi ve sıra dışı ölçü birimi gibi zor örnekleri seç. Böylece yöntemi yalnız kolay kayıtlarda başarılı görmezsin.
+200 kayda uygulanacak bir dönüşümde önce zor örnekleri seç: aynı isimli farklı kayıt, boş tutar veya sıra dışı sayı biçimi. Kural bu örneklerde doğruysa bütün tabloya yay. Tek bir yazım hatası için böyle bir ara aşama gerekmeyebilir.
 
-> Önce bu üç kayıtta dönüşümü göster. Ürün kodu, ölçü ve fiyatları koru. Eksik bilgiyi tamamlama. Yöntemi onayladıktan sonra bütün tabloya uygula; değişen alanları kaynakla eşleştir.
-
-Bu istek ara onayı özellikle seçiyor çünkü yanlış yöntem 200 kaydı etkiler. Tek bir yazım hatasında aynı süreç gereksiz olur. Tekrarlı ve kesin kurallı dönüşümde, yöntemi sabitledikten sonra bir betik kullanmak daha tutarlı olabilir.
+[Altı kayıtlık rapor örneğinde](is-veri.md) bu kararın sonucunu görebilirsin: kayıt kimliği korunuyor, boş tutar sıfıra dönüşmüyor, “bilinen tahsilat” ile “tam toplam” ayrılıyor. Yöntem sabitlenince tekrarlı dönüşümü bir betiğe taşımak daha tutarlı olabilir.
 
 <a id="i-yi-bir-revizyon-korunacak-kismi-da-soyler"></a>
 
@@ -415,7 +451,9 @@ Bu istek önce hatanın etkisini belirletir. “Hepsini geri al” farklı bir y
 
 ## Gerçek deneyim: bulunamayan uygulama
 
-Bir masaüstü projesinde ilk bakılan konumlarda uygulama paketi bulunamayınca, daha önce çalıştırılmış uygulamanın yokluğu izlenimi doğdu. Kullanıcının itirazı araştırmanın yönünü değiştirdi. Kaynak proje bulundu, Release derlemesi alındı ve uygulama süreci gözlendi. Pencerenin görünürlüğü ve yeni ses işlevlerinin testi ayrıca doğrulanmamıştı. Ders, bulunamayan dosyayla hiç üretilmemiş ürünü aynı sonuca bağlamamak. [Vaka C01](deneyimler.md#c01)
+İlk bakılan konumlarda paket bulunamayınca “uygulama yok” izlenimi doğdu. Sen daha önce uygulamayı test ettiğimizi hatırlattın. Kayıt sırasını yeniden okuyunca önemli bir ayrım ortaya çıkıyor: yeniden derleme zaten başlamıştı. Müdahalen, araştırmayı başlatmak yerine benim iddiamı daralttı. Son rapor paket, çalışan süreç ve doğrulanmamış pencere/işlev durumlarını ayırdı. [Vakanın tam zinciri](deneyimler.md#c01)
+
+Başka işte kullanacağın soru: “Bu sonuç yalnız baktığın yerde mi geçerli, yoksa bütün ürün hakkında mı?” Daha çok araştırma istemeden önce yanlış kesinliği düzeltebilirsin.
 
 <a id="durmak-yeniden-denemek-ve-kapsami-degistirmek"></a>
 
@@ -468,11 +506,17 @@ Masaüstündeki Codex belleği ile ChatGPT web belleği aynı kayıt sistemi de�
 
 ## Aynı sohbet mi, yeni sohbet mi?
 
-Aynı sonuca doğru ilerlerken mevcut sohbette kalmak, kararları korur. Ayrı bir ürün, başka bir karar veya bağımsız inceleme için yeni sohbet daha temiz bir başlangıç sağlar. Dallandırma, mevcut geçmişten farklı bir yönde devam etmeye yarar; dosya yalıtımı sağlamaz. Dosyaları da ayırmak gerekiyorsa worktree konusuna bak.
+| İhtiyaç | Seçim | Korumak istediğin şey |
+|---|---|---|
+| Aynı sonucun bir bölümünü düzeltmek | Mevcut sohbette devam et | Kararlar ve son çıktı |
+| Çalışan işi kesmeden kavram sormak | `/side` | Ana işin devamı |
+| Aynı geçmişten farklı yön denemek | `/fork` | Başlangıç bağlamı; dosya yalıtımı ayrıca seçilir |
+| Bağımsız işe başlamak | `/new` | Aynı çalışma alanı, boş konuşma |
+| Uzayan konuşmanın bağlamını sıkıştırmak | `/compact` | Çalışmaya yarayan özet; eksiksiz arşiv değil |
 
-Sıkıştırma, uzun konuşmanın çalışmaya elverişli bir özete dönüşmesidir. Kaynak dosya, kesin alıntı veya test günlüğü yerine kullanılmamalı. Önemli kararın bulunduğu tek yer eski bir mesajsa, onu proje belgesine yazdır.
+Bu seçimleri bir sayfa düzeltmesi içinde [yan yana görebilirsin](is-sayfa.md#5-sohbetin-yonunu-hangi-aracla-degistirirsin). Komutların yüzey ve erişim koşulları [masaüstü belgesinde](https://learn.chatgpt.com/docs/reference/slash-commands) açıklanır. Kaynak dosya, kesin alıntı veya test günlüğü yerine sohbet özetini kullanma.
 
-> Bu işin kararlarını proje notlarına geçir. Hangi dosyada çalıştığımızı, son doğrulanan sonucu ve açık kalan üç sorunu kaydet. Tekrar üretilebilen ayrıntıları kopyalama; ilgili kaynaklara bağla.
+> Bu işin kararlarını proje notlarına geçir. Hangi dosyada çalıştığımızı, son doğrulanan sonucu ve açık kalan soruları kaydet. Ayrıntıları kopyalamak yerine ilgili kaynağa bağla.
 
 <a id="eski-bilgiye-dogru-soru-sor"></a>
 
@@ -573,6 +617,13 @@ Atölye için 200 satırlık etkinlik verisi temizleniyor. Codex her satırı te
 **Sign in with ChatGPT** ile üçüncü taraf uygulamaya giriş yapmak ve o uygulamanın plan kullanım hakkını tüketmesine izin vermek ayrı seçimlerdir. Desteklenen Plus/Pro bağlantılarında dış uygulama, Codex/Work ile paylaşılan mevcut kotadan kullanabilir. Bu yeni bir kota sağlamaz; uygulamanın ayrıca kendi ücreti olabilir.
 
 Kullanımını anlamaya çalışırken yalnız açık Codex sohbetlerini sayma. Settings → Usage → App limits içinde bağlı uygulamaların kullanım sınırları görünüyorsa bunları da incele. Yüzdelik üst sınır, uygulama için ayrılmış veya garantilenmiş kota değildir. Plan kullanma izni sohbet geçmişine ve belleğe erişim izni de vermez. [ChatGPT ile giriş ve plan kullanımı](https://learn.chatgpt.com/docs/sign-in-with-chatgpt)
+
+
+<a id="modeli-degistirmeden-once"></a>
+
+## Modeli değiştirmeden önce
+
+[Karar örneğinde](is-arastirma.md) yanlış öneri model seçimiyle değil, eleme ölçütünün düzeltilmesiyle değişiyor. Önce yanlış sonucun hangi karardan çıktığını belirle.
 
 
 <a id="kontrol-listesinde-karsiligi"></a>
@@ -694,6 +745,10 @@ Belge kontrol tarihinde yerleşik tarayıcıda otomatik dosya yükleme desteklen
 ![Yerleşik tarayıcıda hedefli yorum. Sağdaki grafikte işaretlenen alan, soldaki sohbete bağlam olarak taşınıyor. Görsel sorunu doğrudan yerinde göstermek, hangi öğenin değişeceğini netleştirir.](assets/browser.png)
 
 **Yerleşik tarayıcıda hedefli yorum.** Sağdaki grafikte işaretlenen alan, soldaki sohbete bağlam olarak taşınıyor. Görsel sorunu doğrudan yerinde göstermek, hangi öğenin değişeceğini netleştirir. [Tam boyut](assets/browser.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/browser) · 2026-10-29.
+
+1. **Nereye bak:** Sağdaki grafikte mavi işaretli alana ve soldaki yorum bağlamına.
+2. **Ne yap:** Annotate ile öğeyi işaretle, sorunu ve korunacak boyutu yaz, sohbette uygulat.
+3. **Ne gör:** Düzeltme aynı öğede görünür; başka kartlar gerekçesiz değişmez.
 
 Görseldeki gibi bir alanı işaretledikten sonra “yalnız bu grafiğin bilgi kutusu kesiliyor; renkleri ve veriyi koruyarak düzelt” demek, bütün sayfayı belirsiz biçimde değiştirtmekten daha hedefli bir geri bildirimdir.
 
@@ -918,11 +973,22 @@ Bağımsız ikinci bakış, özellikle aynı akıl yürütmenin hatasını tekra
 
 **Değişen satıra bağlı inceleme bulgusu.** İnceleme yorumu ilgili kod satırının yanında duruyor. Bulguyu öncelik etiketiyle birlikte gerekçesi ve etkilenen dosyası üzerinden değerlendir. [Tam boyut](assets/review.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/code-review) · 2026-10-29.
 
+1. **Nereye bak:** Kod satırına bağlı bulgunun gerekçesine; yalnız P1 etiketine değil.
+2. **Ne yap:** Bulgunun gerçek davranışı etkileyip etkilemediğini kontrol ettir.
+3. **Ne gör:** Geçerli bulgu için dar kapsamlı fark ve ilgili doğrulama.
+
 <a id="kurgu-senaryo-kayit-sayisi-dogru-anlam-yanlis"></a>
 
 ## Kurgu senaryo: kayıt sayısı doğru, anlam yanlış
 
 Atölye'nin 80 katılımcı kaydı dönüşümden sonra yine 80 satır. Bu iyi bir ilk kontrol, ama iki kişinin e-postası yer değiştirmiş olabilir. Sabit kayıt anahtarıyla eşleştirme, alan bazlı karşılaştırma ve temsilî uç durumlar gerekir. Toplamın eşit olması kimliğin korunduğunu tek başına göstermez. Bu yüzden “80 satır korundu” ile “dönüşüm doğru” aynı rapor cümlesi olmamalı.
+
+<a id="kaniti-sonucun-icinde-gor"></a>
+
+## Kanıtı sonucun içinde gör
+
+[Tablo örneği](is-veri.md) hesap ile iddia farkını; [sayfa örneği](is-sayfa.md) kaynak farkı ile görünüm kontrolünü somutlaştırıyor.
+
 
 <a id="kontrol-listesinde-karsiligi"></a>
 
@@ -1068,6 +1134,10 @@ Masaüstünde etkin hedefin üstündeki ilerleme denetimleriyle duraklatma, sür
 
 **Mesaj alanının üstünde hedef denetimleri.** Paused goal satırı duraklamış hedefi gösteriyor. Sağdaki denetimlerle hedefi düzenleme, sürdürme veya temizleme işlemlerine ulaşılır; bunlar yeni slash komutları değildir. [Tam boyut](assets/goal.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/reference/slash-commands) · 2026-10-29.
 
+1. **Nereye bak:** Mesaj alanının üstündeki Paused goal satırına.
+2. **Ne yap:** Hedef aynıysa sürdür; değiştiyse önce hedef metnini düzelt.
+3. **Ne gör:** Etkin hedef ile yapmak istediğin iş aynı kapsamı taşır.
+
 İlerleme satırında **Paused goal** yazıyorsa hedef duraklatılmıştır. Satırdaki sürdürme, düzenleme ve temizleme denetimleri hedefin yönetimi içindir. Hedef açıkken kavram sormak için `/side` kullanabilirsin. Bağlantının kesileceğini biliyorsan önceden duraklatmak ve devamda mevcut çıktıyı kontrol etmek yararlı olur. Hedef oluşturmak erişim izinlerini genişletmez. [Uzun işler](https://learn.chatgpt.com/docs/long-running-work)
 
 <a id="kurgu-senaryo-paralelligin-faydasiz-oldugu-is"></a>
@@ -1077,6 +1147,13 @@ Masaüstünde etkin hedefin üstündeki ilerleme denetimleriyle duraklatma, sür
 Tek paragrafın üslubunu düzeltmek için üç ajan kurmak, görev dağıtımı ve uzlaştırmayı asıl işten uzun hâle getirebilir. Aynı yazının kaynak doğrulaması, anlam kontrolü ve görsel yerleşimi ise yeterince büyükse ayrılabilir. Karar verirken ajan sayısına değil, bağımsız kanıt ve bağımsız çıktı ihtiyacına bak.
 
 Teslimde yalnız yardımcıların özetlerini aktarma. Ana sorumlu, birleşmiş sonucun istenen hedefi karşıladığını ve hangi kontrollerin hâlâ yapılmadığını söylemeli.
+
+<a id="bu-is-gercekten-paralellik-gerektiriyor-mu"></a>
+
+## Bu iş gerçekten paralellik gerektiriyor mu?
+
+Üç [örnek iş](README.md#uc-isi-bastan-sona-izle) tek sohbetle yönetilebilecek ölçekte. Önce bağımsız alt sonuç ihtiyacı doğmalı. Yalnız araç mevcut diye alt ajan veya ayrı sohbet açmak ek koordinasyon getirir.
+
 
 <a id="kontrol-listesinde-karsiligi"></a>
 
@@ -1464,7 +1541,7 @@ Bu cümleler görev tarifidir. `/` komutları gibi sabit program arayüzü deği
 - [14.2 Headless koşumun çıktısını ve dış sınırını belirle.](../codex-kontrol-listesi.md#m-14-2)
 
 
-# Gerçek deneyimlerden sekiz ders
+# Gerçek deneyimlerden dokuz ders
 
 Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşma parçaları üzerinden doğrulanan gerçek deneyimleri anonimleştirir. Tüm sohbet geçmişinin eksiksiz tarandığı iddiası yoktur. Özel kayıtlar, hesaplar, yerel yollar ve ham konuşmalar kamuya taşınmaz. Bölümlerdeki “Kurgu senaryo” metinleri bu vakaların kaydı değildir.
 
@@ -1472,57 +1549,71 @@ Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşm
 
 ## C01
 
-<a id="bulunamayan-uygulama-hic-var-olmamis-uygulama-degildir"></a>
+<a id="uygulama-yok-iddiasini-duzeltmek"></a>
 
-### Bulunamayan uygulama, hiç var olmamış uygulama değildir
+### “Uygulama yok” iddiasını düzeltmek
 
-**Gözlenen:** Daha önce çalıştırılmış bir masaüstü uygulamasının paketi ilk kontrol edilen konumlarda bulunamadı. Kullanıcı bu yoruma itiraz etti. Kaynak proje üzerinden Release derlemesi alındı ve uygulama süreci gözlendi.
+**İstenen iş:** Daha önce üzerinde çalışılmış masaüstü uygulamasını başlatmak. İlk bakılan derleme ve uygulama konumlarında hazır paket bulunamadı; mevcut kaynaktan Release derlemesi başladı.
 
-**Ders:** “Bu yolda bulunamadı” sonucunu “uygulama yok” iddiasına dönüştürme. Kaynak, paket, çalışan süreç ve görünür pencere ayrı kanıtlardır.
+**Senin müdahalen:** “buranın app'i nasıl yok ya test ettik bir ton”. Bu cümle, geçmiş test bilgisini yeniden görünür yaptı ve yokluk iddiasına itiraz etti.
 
-**Sınır:** Pencere görünürlüğü ve yeni işlevlerin davranış testi bu kayıtla doğrulanmadı. Derleme başarısı ses kalitesini kanıtlamaz. Kontrol tarihi: 28 Ekim 2026.
+**Neyi değiştirdi?** Konuşma sırası derlemenin bu itirazdan önce başladığını gösteriyor. Bu yüzden “kullanıcı düzeltti, ardından uygulamayı yeniden derledik” diye bir neden–sonuç kurmuyoruz. Düzelen şey raporun kesinliği oldu: ilk bakılan konumlarda paket bulunamaması, uygulamanın hiç var olmadığı anlamına gelmiyordu.
+
+**Gözlenen sonuç:** Kaynak proje üzerinden derleme tamamlandı, uygulama süreci gözlendi. Paketin neden önceki konumlarda bulunmadığı bilinmiyordu. Görünür pencere ve yeni ses işlevleri ayrıca doğrulanmadı. Kontrol tarihi: 28 Ekim 2026.
+
+**Başka işte kullan:** “Aradığın kapsam neydi?” sorusu, modelin gözlemini geniş bir iddiaya dönüştürdüğü noktayı bulur. [Rapor örneğindeki](is-veri.md) bilinen tahsilat/tam toplam ayrımı aynı alışkanlığın veri işindeki karşılığı.
 
 <a id="c02"></a>
 
 ## C02
 
-<a id="eski-not-guncel-urunun-gercegi-olmayabilir"></a>
+<a id="eksik-gorunen-icerik-icin-yanlis-isi-baslatmamak"></a>
 
-### Eski not, güncel ürünün gerçeği olmayabilir
+### Eksik görünen içerik için yanlış işi başlatmamak
 
-**Gözlenen:** Ürün incelemesinde eski “ilk kullanım akışı yok” notu mevcut kaynakla çelişti. Akış vardı; derleme koşulları farklı davranıyordu. Aynı incelemede bazı çevrilmiş içeriklerin uygulama paketine aktarılmadığı görüldü.
+**Başlangıç:** Ürün incelemesinde eski “ilk kullanım akışı yok” notu ve İngilizce görünümde eksik bağlam sorunu vardı. Eski nota dayanmak yeni bir giriş akışı önermeye, İngilizce eksikliği ise tekrar çeviri yaptırmaya götürebilirdi.
 
-**Ders:** Belleği araştırma başlangıcı yap. İçerik, paketleme ve çalışma zamanı sorunlarını ayır. Mevcut çeviriyi yeniden üretmeden önce hangi katmanda eksik olduğunu bul.
+**İncelemenin değiştirdiği karar:** Güncel kaynak açıldı. İlk kullanım akışı vardı; Debug/Release koşulları ayrılıyordu. İngilizce açıklamalar kaynakta bulunuyordu, yerel uygulama paketinde yoktu. Dolayısıyla önce içeriği yeniden üretmek yerine üretim ve paketleme zincirine bakmak gerekiyordu.
 
-**Sınır:** Kaynak ve paket incelemesi kullanıcı etkisi, mağaza sürümü veya fiziksel cihaz davranışı ölçümü değildi. Kontrol tarihi: 27 Ekim 2026.
+**Sonuç ve sınır:** Kanıt, yapılacak işin katmanını değiştirdi. Bu incelemede uygulama onarımı, yeni cihaz testi veya mağaza yayını yapılmadı. Bulguyu belirli bir kullanıcı cümlesi tetiklemiş gibi anlatmıyoruz; kayıt kaynak temelli incelemeyi destekliyor. Kontrol tarihi: 27 Ekim 2026.
+
+**Başka işte kullan:** “Bu bilgi hiç üretilmedi mi, yoksa doğru yere ulaşmadı mı?” diye ayır. [Araştırma örneğinde](is-arastirma.md) onaylanmış karar notunu yeniden araştırmadan sunuma taşıma aynı aktarım disiplinini kullanıyor.
 
 <a id="c03"></a>
 
 ## C03
 
-<a id="gecen-konum-kontrolu-okunabilirligin-tamamini-olcmez"></a>
+<a id="testin-gecmesiyle-metnin-gorunmesi-farkliydi"></a>
 
-### Geçen konum kontrolü, okunabilirliğin tamamını ölçmez
+### Testin geçmesiyle metnin görünmesi farklıydı
 
-**Gözlenen:** A/B yerel prototipte klavye ve giriş alanına ilişkin konum kontrolü geçti; görüntüde ikinci metin satırının örtüldüğü görüldü. Yerleşim düzeltildi, ilgili kontrol ve son görsel inceleme yapıldı.
+**İstenen iş:** İki yerel arayüz adayını gerçek içerik uzunlukları ve büyük yazıyla karşılaştırmak. Klavye ile giriş alanının konum kontrolü geçti.
 
-**Ders:** Testi hangi iddiayı ölçtüğüyle oku. Gerçek içerikli ekran görüntüsünü açmak, geometrik kontrolün kaçırdığı kusuru gösterebilir.
+**Yönü değiştiren kanıt:** Ekran görüntüsü açıldığında ikinci metin satırının örtüldüğü görüldü. Bu, kullanıcıdan geldiği kaydedilmemiş bir müdahale; görsel inceleme bulgusu olarak anlatıyoruz. Sayısal konum kontrolü, metnin tamamının okunabilirliğini ölçmüyordu.
 
-**Sınır:** Kullanıcının tasarım seçimi ve ana ürüne aktarım ayrı kaldı. Fiziksel cihaz ve gerçek VoiceOver doğrulaması bu prototip kanıtından çıkarılamaz. Kontrol tarihi: 20 Ekim 2026.
+**Yapılan değişiklik:** Giriş alanı üste, açılabilir kaynak bağlamı altına alındı. Son kontrol iki satırlık taslağı ve imleci görünür gösterdi. Başarısız önceki görüntüler son kabul diye kullanılmadı.
+
+**Sonuç ve sınır:** Yerel prototipte ilgili durum kapandı. Tasarım seçimi, ana ürüne aktarım, fiziksel cihaz ve gerçek VoiceOver doğrulaması bu sonucun dışında kaldı. Kontrol tarihi: 20 Ekim 2026.
+
+**Başka işte kullan:** Testin hangi iddiayı ölçtüğünü söyle ve gösterilen çıktıyı aç. [Web sayfası örneğinde](is-sayfa.md) aynı koşulda önce/sonra görüntüsü ve bağlantı davranışı ayrı kontrol edilir.
 
 <a id="c04"></a>
 
 ## C04
 
-<a id="video-dogrulamasi-muzik-begenisini-veya-sosyal-yayini-kanitlamaz"></a>
+<a id="teknik-teslim-tamamlanirken-yaratici-tercih-acik-kalabilir"></a>
 
-### Video doğrulaması, müzik beğenisini veya sosyal yayını kanıtlamaz
+### Teknik teslim tamamlanırken yaratıcı tercih açık kalabilir
 
-**Gözlenen:** Kitap kapaklarından oluşan videoda kapak sayısı, benzersizlik ve tam çözümleme kontrol edildi. Müzik yönü kullanıcıyı tatmin etmedi. Sonraki istek sessiz sürümün e-postayla teslimiydi.
+**İstenen iş:** Kitap kapaklarından video üretmek; ardından geçiş ritmine uyacak müzik eklemek. Kapak sayısı, benzersizlik ve videonun tam çözümlenmesi kontrol edildi.
 
-**Ders:** Teknik bütünlük, yaratıcı tercih ve teslim aşamasını ayrı değerlendir. “Daha yaratıcı” geri bildirimini somut yönlere dönüştür.
+**Senin müdahalen:** “sıkıcı bir müzik, daha yaratıcı ol”. Bu, dosyanın teknik bütünlüğüne değil yaratıcı yöne itirazdı. Sonraki isteğin “müziksiz halini bana gmail'e atabilir misin” oldu.
 
-**Sınır:** Sessiz sürümün teslim kaydı, müzik revizyonunun bittiğini veya sosyal platformda yayın yapıldığını göstermiyor. Kontrol tarihi: 19 Ekim 2026.
+**Neyi değiştirdi?** Son teslim hedefi sessiz sürümün e-postayla gönderilmesine döndü. Kayıt, sessiz teslimi destekliyor; beğenilen yeni bir müziğin bulunup tamamlandığını göstermiyor. Teknik başarı, yaratıcı memnuniyet ve teslim aynı ölçü değildi.
+
+**Başka işte kullan:** Beğenmediğin boyutu seçilebilir yönlere aç: ritim, doku, yoğunluk veya referans. Bu öneri vakadan çıkardığımız yöntemdir; o konuşmada bu çerçeveyle başarılı müzik üretildiğini iddia etmiyoruz. [Yaratıcı yönü tarif etme örneği](13-tasarim.md#kurgu-senaryo-daha-yaratici-muzik-istegini-acmak).
+
+**Sınır:** E-postayla teslim kaydı sosyal platform yayını değildir. Adres ve ileti kimlikleri kamuya alınmadı. Kontrol tarihi: 19 Ekim 2026.
 
 <a id="c05"></a>
 
@@ -1580,8 +1671,28 @@ Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşm
 
 **Sınır:** Sürüm numaraları tarihli gözlemdir. Güncel kurulumun `--version` ve `--help` çıktısı yeniden kontrol edilmelidir. [Önceki kaynak denetimi](../KAYNAKLAR.md), 21 Ekim 2026.
 
+<a id="c09"></a>
+
+## C09
+
+<a id="bu-rehberde-daha-iyi-yi-uc-ayri-karara-cevirmek"></a>
+
+### Bu rehberde “daha iyi”yi üç ayrı karara çevirmek
+
+**İstenen iş:** Codex'i başlangıçtan ileri kullanıma anlatan, gerçek deneyimlere dayalı bir eğitim kaynağı. İlk sürüm 18 bölüm, komutlar ve senaryolar içeriyordu; uygulama görseli yoktu.
+
+**Senin müdahalen:** İlk kullanıcı gözüyle yeniden inceleme istedin; görsellerin eksikliğini ve yeşil arka planın bunaltmasını ayrı ayrı belirttin. Böylece içerik, öğretim ve görünüm tek bir belirsiz “iyileştir” isteğinde kalmadı.
+
+**Gözlenen değişiklik:** İlk dosyayı üretme yolu ve eksik kullanım başlıkları eklendi; altı resmî arayüz gösterimi açıklamalarıyla yerleştirildi. Geniş yeşil yüzeyler nötr renklere döndü, düzen korundu. 107 kontrol maddesi ve işaretleme biçimi değişmedi. Bu değişiklikler GitHub ve canlı Pages üzerinde kontrol edildi. [29 Ekim revizyonunun kanıtı](../dogrulama/rehber-revizyon-20261029/INCELEME.md) · [Yayın](../DOGRULAMA.md).
+
+**Sonraki ayrım:** “Yapabileceğimiz en iyi eğitim materyali bu mu?” sorusu, kapsamlı bir başvuru kaynağının eğitim anlatısını tek başına kurmadığını ortaya çıkardı. Şimdi okuduğun örnek işler bu ikinci isteğin uygulaması. Dinleyicilerin daha iyi öğrendiğine ilişkin ölçüm yapılmadı; içerik ve ürün kontrollerini öğrenme başarısı saymıyoruz.
+
+**Başka işte kullan:** Geri bildirimde sorunlu boyutu ayır. Eksik bilgiye içerik, yanlış sıraya anlatı, yetersiz gösterime görsel, bunaltan zemine palet müdahalesi gerekir. Her eleştiride bütün ürünü baştan kurmak zorunda değilsin.
+
 
 # On iki kurgu kullanım senaryosu
+
+Eğitimde ilk anlatılacak akışlar [araştırma](is-arastirma.md), [veri](is-veri.md) ve [sayfa düzeltme](is-sayfa.md) örnekleridir. Aşağıdaki on iki kısa senaryo farklı işlere uyarlamak için hızlı başvurudur.
 
 Aşağıdaki senaryolar eğitim için üretilmiş kurgulardır. Gerçekte yürütülmüş görev, başarı ölçümü veya müşteri hikâyesi değildir. İstekler kopyalanabilir; dosya, hesap ve hedefleri kendi işine göre seç. Bunlar katılımcı alıştırması değil, anlatıcının bir özelliği somutlaştırabileceği örneklerdir.
 
@@ -1916,6 +2027,282 @@ Codex Micro, uyumlu fiziksel donanımla sohbet ve komut kontrolü sunan ayrı bi
 - [19.6 Geçici derleme dosyalarını kanıttan ayırarak temizle.](../codex-kontrol-listesi.md#m-19-6)
 
 
+# Araştırmadan karar ve sunuma
+
+**Kurgu iş:** Atölye, 60 kişilik ücretsiz bir buluşma için kayıt sistemi seçecek. Katılımcıya hesap açtırmak istemiyor; katılımcı listesini CSV olarak indirebilmesi gerekiyor. Etkinlik başına bütçe 3.000 TL. Aşağıdaki platform adları, fiyatlar ve belge parçaları eğitim için uyduruldu. Gerçek bir ürün karşılaştırması veya yapılmış satın alma yok.
+
+Bu işin sonunda iki şey görünmeli: seçimin dayanağı olan kısa karar notu ve aynı kararı anlatan sunum taslağı. Araştırma, taslak ve görsel düzeltme tek bir iş içinde birbirini besliyor.
+
+**Karar bilgisini biçimler arasında koru**
+
+1. **Girdi:** Ölçüt + kaynak paketi
+2. **Seçim:** Zorunlu koşulla ele
+3. **Karar:** Gerekçeyi ve sınırı yaz
+4. **Çıktı:** Aynı bilgiden sunum
+
+<a id="1-i-stekten-once-kararin-olcusunu-kur"></a>
+
+## 1. İstekten önce kararın ölçüsünü kur
+
+“En iyi platformu bul” demek araştırmanın nereye kadar süreceğini açık bırakır. Bu işte kaliteyi üç koşul belirliyor: hesapsız kayıt, CSV dışa aktarma ve bütçe. Renk veya yüzlerce entegrasyon ancak bu koşulları sağlayan seçenekler arasında fark yaratıyorsa önemli.
+
+> Atölye'nin 60 kişilik etkinliği için kayıt sistemi seçiyoruz. Hesapsız kayıt ve CSV dışa aktarma zorunlu; bütçe etkinlik başına 3.000 TL. Önce bu ölçütlerle bir karşılaştırma çıkar, sonra tek öneri ve öneriyi değiştirecek koşulu yaz. Henüz hesap açma veya satın alma yapma.
+
+İş belirsizse `/plan` ile ölçütleri birlikte netleştirebilirsin. Burada ölçütler zaten belli olduğundan doğrudan uygulama isteği yeterli. Bir planın varlığı ayrıca karar kalitesini garanti etmez. [Plan komutu](https://learn.chatgpt.com/docs/reference/slash-commands)
+
+<a id="2-kaynak-yiginini-karsilastirilabilir-kanita-donustur"></a>
+
+## 2. Kaynak yığınını karşılaştırılabilir kanıta dönüştür
+
+Anlatıcı [kurgu kaynak paketini](ornekler/arastirma-kaynaklari.md) açar. Üç kısa belge parçası şöyle bir karşılaştırmayı destekliyor:
+
+| Kurgu seçenek | Etkinlik bedeli | Hesapsız kayıt | CSV | İlk karar |
+|---|---|---|---|---|
+| Kayıt A | 0 TL | Var | Yok | Zorunlu dışa aktarma koşulunu karşılamıyor |
+| Kayıt B | 2.500 TL | Var | Var | Üç koşulu da sağlıyor |
+| Kayıt C | 1.700 TL | Yok | Var | Katılımcı hesabı zorunlu |
+
+Gerçek işte bu tabloyu güncel resmî sayfalarla kurdur. Kaynak URL'sini, okunan koşulu ve kontrol tarihini birlikte tut. “CSV var” ifadesinin seçtiğin pakete mi, daha pahalı bir pakete mi ait olduğunu sor. Açılmayan sayfayı tahminle tamamlama. Araştırma yolu seçimi [web ve tarayıcı bölümünde](09-web-tarayici-bilgisayar.md).
+
+**Kurgu ara hata:** İlk taslak C'yi en ucuz ücretli seçenek olduğu için öneriyor. Sorun yetersiz yaratıcılık veya düşük düşünme seviyesi değil; zorunlu koşulun sıralamaya katılmaması.
+
+> C daha ucuz, fakat katılımcıya hesap açtırmama koşulunu karşılamıyor. Zorunlu koşulları önce eleme ölçütü yap. Uygun seçenekler arasında maliyeti karşılaştır. Kaynak paketini değiştirme.
+
+Bu düzeltme bir sıfatı değiştirmiyor, karar yöntemini düzeltiyor. B'nin bütçenin altında kalan payı 500 TL; bu sayının rahatlık payı mı yoksa başka masraflara yetecek bütçe mi olduğu ayrı bir değerlendirme. Örnekte ek vergi veya ödeme komisyonu bilgisi yok; toplam maliyetin bunları içerdiği varsayılmıyor.
+
+<a id="3-secimi-tek-cumleye-sigdir-gerekceyi-kaybetme"></a>
+
+## 3. Seçimi tek cümleye sığdır, gerekçeyi kaybetme
+
+İyi karar notu bütün araştırmayı tekrar anlatmaz. [Örnek karar notunda](ornekler/karar-notu.md) öneri, gerekçe, elenen seçenekler ve açık koşul birlikte duruyor:
+
+> Kurgu belgelerdeki koşullara göre Kayıt B öneriliyor: hesapsız kayıt ve CSV gereksinimlerini karşılıyor, listelenen 2.500 TL bedel bütçenin altında. Ek ücretler doğrulanmalı. Hesap açma koşulu kabul edilirse C yeniden değerlendirilebilir.
+
+Öneriyi değiştirecek koşulu yazmak, kararın hangi varsayıma dayandığını görünür yapar. Kullanıcı daha sonra “hesap açmak sorun değilmiş” derse bütün araştırmayı baştan yapmak gerekmez; değişen ölçütle sıralama yenilenir.
+
+Bizim gerçek işimizde de yanlış katmanda çözüm üretme riski görüldü: İngilizce içerik kaynakta vardı ama uygulama paketine ulaşmamıştı. Sıfırdan çeviri istemek yerine aktarım zincirine bakmak gerekiyordu. Bu, araştırmayı tekrarlamadan önce eksik olanın bilgi mi, aktarım mı olduğunu ayırmayı öğretiyor. [Gerçek vaka C02](deneyimler.md#c02)
+
+<a id="4-dogrulanmis-nottan-yeni-bicimler-uret"></a>
+
+## 4. Doğrulanmış nottan yeni biçimler üret
+
+> Bu karar notunu ana kaynak kabul et. Karar, dayanak ve açık koşulu taşıyan üç slaytlık sunum taslağı hazırla. Yeni fiyat veya özellik ekleme. Ayrıca aynı kararı 100 kelimeyi geçmeyen ekip duyurusuna dönüştür.
+
+Anlatıcı [örnek sunum taslağını](ornekler/sunum-taslagi.md) açar. Aynı B önerisi, aynı 2.500 TL ve aynı ek ücret belirsizliği korunuyor. Slayt için daha kısa yazılması, “ek ücretler bilinmiyor” cümlesinin silinmesini haklı çıkarmaz.
+
+![Sohbetin yanında sunum önizlemesi. Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele.](assets/preview.png)
+
+**Sohbetin yanında sunum önizlemesi.** Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele. [Tam boyut](assets/preview.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/artifacts-viewer) · 2026-10-29.
+
+1. **Nereye bak:** Soldaki output.pptx bağlantısına, sağdaki slayt listesine.
+2. **Ne yap:** Sorunlu slaytı seç; yalnız o parçanın değişmesini, sayıların korunmasını iste.
+3. **Ne gör:** Son dosyada aynı karar ve verilerle daha okunur bir slayt.
+
+Resmî görselde farklı bir sunum gösteriliyor; Atölye için çalıştırılmış oturum ekranı değil. Buradan öğrenilecek hareket, üretim mesajından dosyanın önizlemesine geçmek. Bir slayt kalabalıksa bütün sunumu yeniden yazdırmadan “yalnız ikinci slaytı sadeleştir; karar, sayı ve kaynakları koru” diye belirt. Desteklenen önizlemelerde işaretlenen alan bağlam olarak gönderilebilir. [Dosya önizleme ve yorum](https://learn.chatgpt.com/docs/artifacts-viewer)
+
+<a id="5-i-sin-bittigini-hangi-ciktida-gorursun"></a>
+
+## 5. İşin bittiğini hangi çıktıda görürsün?
+
+Bu örnekte teslim, karar notu ve sunum taslağıdır. Bir satın alma veya herkese açık duyuru yok. Gerçek işte PPTX istersen oluşturulan dosyayı açıp slaytları incelet; bu sayfadaki indirilebilir Markdown taslağını PPTX dosyası sanma.
+
+**Başka işte kullanacağın ders:** Önce karar ölçütünü sabitle, sonra uygun kaynakları araştır. Doğrulanmış ana metni yeni biçimlere dönüştürürken iddiaları sabit tut. Her biçim değişikliğini yeni araştırmaya çevirmek, onaylanmış bilgiye gereksiz değişken ekler.
+
+Sonraki örnek aynı yaklaşımı sayısal veriye taşır: [tablodan güvenilir rapora](is-veri.md).
+
+
+# Dağınık tablodan güvenilir rapora
+
+**Kurgu iş:** Atölye'nin etkinlik kayıtları farklı biçimlerde tutulmuş. Altı kayıt var; iki kişinin adı aynı, bir tahsilat boş. Amaç, kimseyi kaybetmeden düzenli tablo ve kısa rapor üretmek. İsimler ve tutarlar eğitim için kurgulandı. Dosyalar gerçek katılımcı verisi içermiyor.
+
+Anlatıcı [ham CSV'yi](ornekler/katilim-ham.csv) ve [beklenen temiz çıktıyı](ornekler/katilim-temiz.csv) yan yana açabilir. CSV, satır ve sütunlardan oluşan, birçok tablo uygulamasında açılabilen düz metin biçimidir. Bu dosyalar bir oturumun otomatik kaydı değil, yöntemi incelemek için hazırlanmış örnek girdiler ve çıktılardır.
+
+**Dönüşüm boyunca kayıt kimliğini izle**
+
+1. **Girdi:** 6 kimlikli ham kayıt
+2. **Kural:** Biçimi düzelt, anlamı koru
+3. **Kontrol:** Eksik tutarı ayrı göster
+4. **Çıktı:** CSV + kaynakla tutarlı rapor
+
+<a id="1-guzel-tablo-yerine-korunacak-bilgiyi-tarif-et"></a>
+
+## 1. Güzel tablo yerine korunacak bilgiyi tarif et
+
+“Veriyi temizle” isteğinde hangi değişikliklerin kabul edilebilir olduğu belirsizdir. Aynı isimli iki kişiyi birleştirmek tabloyu kısaltır ama bilgiyi kaybettirir. Eksik ödemeyi sıfır yapmak da hiç tahsilat yapılmadığı iddiası üretir.
+
+> Ham dosyayı koru. Kimlik alanı kayit_id olsun; aynı isimleri birleştirme. Tahsilatları sayıya dönüştür, boş tutarı boş bırak. Durumları değiştirmeden temiz CSV ve kısa rapor üret. Kaynak ve sonucu kimlik bazında eşleştir.
+
+Burada karar yetkisini işin niteliğine göre dağıtıyorsun: sayı biçimini dönüştürmeye izin var; eksik ödeme gerçeğini icat etmeye yok. Her satır için soru sormak yerine belirsiz kayıtları tek listede raporlamasını isteyebilirsin.
+
+<a id="2-zor-orneklerde-yontemi-gorunur-yap"></a>
+
+## 2. Zor örneklerde yöntemi görünür yap
+
+Anlatıcı bütün tabloyu okumak yerine üç ayırıcı durumu gösterir:
+
+| Kayıt | Ham bilgi | Doğru yorum | Yanlış kestirme |
+|---|---|---|---|
+| K02 | Deniz; katıldı; 600,00 | Tahsilat 600; kimlik K02 | İsmi aynı diye K03 ile birleştirmek |
+| K03 | Deniz; iptal; 0 | Ayrı kişi/kayıt; tahsilat sıfır | K02'nin durumuyla üzerine yazmak |
+| K04 | Ece; katıldı; tutar boş | Katılım biliniyor, tahsilat bilinmiyor | Boşluğu 0 veya 600 ile doldurmak |
+
+İlk dönüşümü bu ayrımlarda gör. Kural doğruysa tüm tabloya uygulat. Kesin ve tekrarlanacak dönüşümde aynı kuralları küçük bir betiğe taşımak yararlı olabilir; her hafta aynı altı kararı yeniden yorumlatmak gerekmez. Betik, programın bir dizi işlemi tekrarlanabilir biçimde yürütmesidir.
+
+<a id="3-sonucun-ne-soyledigini-sinirlariyla-oku"></a>
+
+## 3. Sonucun ne söylediğini sınırlarıyla oku
+
+[Örnek raporda](ornekler/katilim-raporu.md) üç ayrı sayı var:
+
+| Ölçü | Kurgu veriden çıkan sonuç | Anlamı |
+|---|---|---|
+| Kayıt sayısı | 6 | Altı farklı kayit_id korundu |
+| Durum dağılımı | 3 katıldı, 2 iptal, 1 bekliyor | Katılım durumu toplam altı kayda karşılık geliyor |
+| Bilinen tahsilat | 1.800 TL | Boş K04 tutarı hariç, verilen tutarların toplamı |
+| Tahsilatı bilinmeyen | 1 kayıt: K04 | Tam tahsilat toplamı henüz bilinmiyor |
+
+K05 bekliyor durumunda ama 600 TL tahsilat kaydı var. “Katılan kişi sayısı × bilet bedeli” ile tahsilat toplamı bu nedenle aynı hesap değildir. Hangi soruyu cevapladığını seçmeden grafik çizdirmek yanlış sonuç verebilir.
+
+**Kurgu ara hata:** Rapor “toplam gelir 1.800 TL” diyor. Hesap verilen sayılar için doğru olsa da ifade bütün gelirin bilindiğini düşündürüyor.
+
+> 1.800 TL'yi bilinen tahsilat olarak adlandır. K04 için tutar bilinmediğini aynı yerde göster. Eksik tutara varsayılan değer koyma. Katılım ve ödeme dağılımlarını ayrı anlat.
+
+Bu müdahale hesap makinesini değiştirmiyor; rakamın temsil ettiği şeyi düzeltiyor. Bizim uygulama bulma vakasında da düzeltme raporun iddia sınırını değiştirmişti. “Baktığım yerde yok” ile “hiç yok” arasındaki fark burada “bilinen toplam” ile “bütün toplam” olarak karşımıza çıkıyor. [Gerçek vaka C01](deneyimler.md#c01)
+
+<a id="4-grafigi-cevabi-belli-soruya-cizdir"></a>
+
+## 4. Grafiği cevabı belli soruya çizdir
+
+> Katılım durumunu üç kategoriyle göster. Tahsilatı ayrı tabloda tut; eksik tutarı dipnotta gizleme. Grafiğin yanında sayıları düz metin olarak da ver.
+
+Burada durum dağılımını anlatan basit bir çubuk grafik yeterli olabilir. Tahsilat için etkileşimli gösterge paneli kurmaya gerek yok. Bir sonraki toplantıda fiyat değişimini tartışacaksan, o zaman ayrı bir kurgu bütçe görselleştirmesi yararlı olur. Gerçek kayıt ile varsayımsal bütçeyi aynı grafikte karıştırma. [Görselleştirme seçimi](13-tasarim.md#kavram-anlatmak-icin-etkilesimli-gorsellestirme)
+
+Tablo programında sonucu açıp kontrol edebilirsin. Desteklenen masaüstü önizlemesi kaynak ve çıktıyı inceleme akışına yardımcı olur; kullanılan dosya türüne göre özellikler değişir. [Dosyalarla çalışma](https://learn.chatgpt.com/docs/artifacts-viewer)
+
+<a id="5-i-s-tekrarlanacaksa-once-sabit-kalan-kismi-ayir"></a>
+
+## 5. İş tekrarlanacaksa önce sabit kalan kısmı ayır
+
+Bir kez çalışan rapordan hemen otomasyon kurmak yerine yöntemi sonraki gerçek dosyada da kontrol et. Yeni bir durum etiketi veya farklı sayı biçimi gelirse betik bunu sessizce yanlış dönüştürmesin; belirsiz satır olarak ayırsın. Rapor her çalıştırıldığında aynı haftaya ikinci kopya üretmek yerine aynı hedefi güncelleme kuralı belirle.
+
+Kurallar yerleştiğinde otomasyona şu işi ver: “Belirlenen klasördeki yeni kayıt dosyasını bu yöntemle işle, raporu kaydet; yeni durum etiketi veya eksik veri varsa bana bildir.” Kullanıcıya mesaj gönderme ya da dış sisteme yayın yapma bu isteğin kendiliğinden parçası olmaz. [Tekrar eden işler](15-otomasyon.md)
+
+**Teslim:** Kaynak korunmuş, temiz CSV açılabilir, kimlik eşlemesi tamam, eksik tutar görünür ve rapordaki dört sonuç kaynakla tutarlı. Gerçek işte XLSX gerekiyorsa hesaplamaları ve düzenlenebilirliği o dosyada ayrıca kontrol et.
+
+**Başka işte kullanacağın ders:** Kimliği koru, bilinmeyeni sıfıra çevirme, ölçünün neyi temsil ettiğini yaz. Bu üç karar müşteri listesi, stok, anket veya bütçe dosyasında da yararlıdır. Sonraki örnekte aynı netlik görsel bir düzeltmeye uygulanıyor: [sayfadan doğrulanmış yayına](is-sayfa.md).
+
+
+# Görsel sorundan doğrulanmış yayına
+
+**Kurgu iş:** Atölye'nin etkinlik sayfasındaki kart telefonda taşıyor. Kullanıcı mevcut metinleri ve görsel yönü seviyor; yalnız dar ekranda okunabilirlik istiyor. Bu rehber için gerçekten üretilmiş iki küçük HTML dosyası üzerinden ilerliyoruz. Bir müşteri sitesinin çalışma kaydı veya mağaza dağıtımı değil.
+
+[Taşan örneği aç](ornekler/sayfa-once.html) · [Düzeltilmiş örneği aç](ornekler/sayfa-sonra.html). Anlatıcı sayfayı daraltıp aynı içeriği karşılaştırabilir. Dinleyicinin kurulum veya kod yazma yapması gerekmez.
+
+**Gözlenen sorundan istenen hedefe ilerle**
+
+1. **Belirti:** Dar ekranda taşma
+2. **Müdahale:** Genişliği kapsayıcıya uyarla
+3. **Kontrol:** Aynı ekran + bağlantı
+4. **Teslim:** İstenen yerel veya canlı hedef
+
+<a id="1-gozledigin-sorunu-ver-cozumu-erkenden-dayatma"></a>
+
+## 1. Gözlediğin sorunu ver, çözümü erkenden dayatma
+
+> Bu yerel sayfada etkinlik kartı dar ekranda taşıyor. 390 ve 320 pikselde tekrar et. Metni, tarihleri ve renkleri koruyarak düzelt. Önce taşmanın hangi öğeden geldiğini göster; sonra aynı koşullarda sonucu kontrol et.
+
+İlk istekte “yazıları küçült” demek yanlış çözümü peşinen seçebilir. Örneğimizde sorun yazı boyutu değil; kartın sabit genişliği. Aşağıdaki görüntü 390 piksel genişlikte açılan **önce** dosyasının gerçek tarayıcı görüntüsüdür.
+
+![Sabit genişlik dar ekranda taşıyor; kurgu Atölye etkinlik sayfasının 390 piksel tarayıcı görünümü.](assets/lesson-before.png)
+
+**Sabit genişlik dar ekranda taşıyor.** Bu rehber için üretilen örnek HTML’nin gerçek tarayıcı görüntüsü. Metin ve tarih kurgudur; Codex uygulaması ekranı değildir. [Tam boyut](assets/lesson-before.png) · Kurgu örnek HTML’nin gerçek tarayıcı görüntüsü · [Kaynak](ornekler/sayfa-once.html) · 2026-10-29.
+
+1. **Nereye bak:** Kartın sağ kenarına ve Programı gör bağlantısına.
+2. **Ne yap:** Aynı içerik ve ekran genişliğinde önce/sonra karşılaştır.
+3. **Ne gör:** Taşma giderildi mi, metin ve bağlantı korundu mu?
+
+Bu görüntüden “buton çalışmıyor” sonucu çıkmaz. Görünen sorun sağ kenarın taşmasıdır. Önce etkilenen öğeyi ve tekrar koşulunu netleştirmek, gereksiz yeniden tasarımı önler.
+
+<a id="2-tarayicida-bolgeyi-goster-degisecek-boyutu-yaz"></a>
+
+## 2. Tarayıcıda bölgeyi göster, değişecek boyutu yaz
+
+![Yerleşik tarayıcıda hedefli yorum. Sağdaki grafikte işaretlenen alan, soldaki sohbete bağlam olarak taşınıyor. Görsel sorunu doğrudan yerinde göstermek, hangi öğenin değişeceğini netleştirir.](assets/browser.png)
+
+**Yerleşik tarayıcıda hedefli yorum.** Sağdaki grafikte işaretlenen alan, soldaki sohbete bağlam olarak taşınıyor. Görsel sorunu doğrudan yerinde göstermek, hangi öğenin değişeceğini netleştirir. [Tam boyut](assets/browser.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/browser) · 2026-10-29.
+
+1. **Nereye bak:** Sağdaki grafikte mavi işaretli alana ve soldaki yorum bağlamına.
+2. **Ne yap:** Annotate ile öğeyi işaretle, sorunu ve korunacak boyutu yaz, sohbette uygulat.
+3. **Ne gör:** Düzeltme aynı öğede görünür; başka kartlar gerekçesiz değişmez.
+
+Resmî gösterimde işaretlenen öğe bir grafik. Atölye örneğinde aynı yöntemi taşan kart için kullanırsın: araç çubuğunda **Annotate** seç, öğeyi veya bölgeyi işaretle, yorumunu kaydet, ardından sohbette yorumun uygulanmasını iste. İşaretlemek tek başına değişikliğin tamamlandığı anlamına gelmez. [Tarayıcıda yorum](https://learn.chatgpt.com/docs/browser)
+
+> İşaretlediğim kart ekranın dışına çıkıyor. Kartın içerik sırası ve tipografisi aynı kalsın. Genişliği kapsayıcısına uyarlayarak düzelt.
+
+Yeni yön istemediğin için iki farklı tasarım prototipi üretmeye gerek yok. Eğer sorun “bu sayfa sıkıcı” olsaydı, önce bilgi sırası ve görsel yönü konuşmak gerekirdi. Bizim rehberdeki “yeşil background beni boğdu” düzeltmen ise belirli bir görsel katmanı tarif etti: düzeni koruyup paleti değiştirdik. [Gerçek vaka C09](deneyimler.md#c09)
+
+<a id="3-kucuk-degisikligin-butun-etkisini-gor"></a>
+
+## 3. Küçük değişikliğin bütün etkisini gör
+
+Örnek dosyalarda değişen tek CSS değeri şudur:
+
+```css
+/* Önce */
+.event-card { width: 440px; }
+
+/* Sonra */
+.event-card { width: 100%; }
+```
+
+Kart zaten `max-width: 520px` olan bir ana alanın içinde; `box-sizing: border-box` iç boşluk ve kenarlığı genişliğe dahil ediyor. Bu bağlam yüzünden yüzde yüz genişlik uygun. Her taşma için aynı iki satır evrensel çözüm değildir: uzun kesintisiz metin veya grid alt öğesi başka bir neden olabilir.
+
+Anlatıcı [kaynak farkını](ornekler/sayfa-degisikligi.md) gösterir. Tarih, başlık, renk ve bağlantı aynı kaldı. Büyük bir dosyanın tamamının değişmesi gerekmiyordu.
+
+<a id="4-kod-farkini-ve-gorunen-sonucu-birlikte-oku"></a>
+
+## 4. Kod farkını ve görünen sonucu birlikte oku
+
+![Aynı kart kapsayıcıya sığıyor; kurgu Atölye etkinlik sayfasının 390 piksel tarayıcı görünümü.](assets/lesson-after.png)
+
+**Aynı kart kapsayıcıya sığıyor.** Bu rehber için üretilen örnek HTML’nin gerçek tarayıcı görüntüsü. Metin ve tarih kurgudur; Codex uygulaması ekranı değildir. [Tam boyut](assets/lesson-after.png) · Kurgu örnek HTML’nin gerçek tarayıcı görüntüsü · [Kaynak](ornekler/sayfa-sonra.html) · 2026-10-29.
+
+1. **Nereye bak:** Kartın sağ kenarına ve Programı gör bağlantısına.
+2. **Ne yap:** Aynı içerik ve ekran genişliğinde önce/sonra karşılaştır.
+3. **Ne gör:** Taşma giderildi mi, metin ve bağlantı korundu mu?
+
+Bu da aynı 390 piksel görünümde **sonra** dosyasının gerçek görüntüsü. Kart kapsayıcıya sığıyor ve içerik okunuyor. Sayfayı açıp Programı gör bağlantısını kullanmak, görselin tek başına anlatamayacağı etkileşimi kontrol eder. İlgili 320 piksel koşulu da ayrıca sınanır.
+
+Bir Git projesinde `/review` ile değişiklikleri inceletebilirsin. İnceleme bulgusu seçili dosya farkına dayanır; tarayıcıda okunabilirliği kontrol etmenin yerine geçmez. [Kod inceleme](https://learn.chatgpt.com/docs/code-review)
+
+Bizim başka bir prototipimizde klavye konum testi geçtiği hâlde ikinci metin satırı örtülüyordu. Düzen değişikliği ve son görüntünün açılmasıyla sorun kapandı. Bu örnek, “test geçti” sözünü davranış ve görüntüyle eşleştirmemize neden oldu; gerçek cihaz veya üretim yayını bu kaydın kapsamı değildi. [Gerçek vaka C03](deneyimler.md#c03)
+
+<a id="5-sohbetin-yonunu-hangi-aracla-degistirirsin"></a>
+
+## 5. Sohbetin yönünü hangi araçla değiştirirsin?
+
+| Yeni ihtiyacın | Bu işte seçeceğin yol | Neden? |
+|---|---|---|
+| “Rengi değiştirme, yalnız genişliği düzelt” | Aynı sohbeti yönlendir | Mevcut hedefin sınırını düzeltiyorsun |
+| “Bu CSS ifadesi ne demek?” | `/side` | Ana işi kesmeden kavram açıklaması istiyorsun |
+| “Aynı geçmişten farklı bir tasarım deneyeyim” | `/fork` | Ayrı yön istiyorsun; dosya yalıtımını ayrıca seçmelisin |
+| “Bambaşka bir rapora başlayacağım” | `/new` | Aynı çalışma alanında boş sohbet istiyorsun |
+
+Komutların erişimi ortama bağlıdır. `/fork` sohbeti dallandırır; aynı klasördeki dosyaları otomatik olarak iki bağımsız ürün yapmaz. Gerekiyorsa ayrı Git çalışma kopyası olan worktree seçilir. [Masaüstü komutları](https://learn.chatgpt.com/docs/reference/slash-commands)
+
+<a id="6-yayin-istegi-gelince-hedefi-degistir"></a>
+
+## 6. Yayın isteği gelince hedefi değiştir
+
+“Yerelde düzelt” isteğinin bitişi yerel sonuçtur. Kullanıcı ayrıca “onaylanan değişikliği GitHub ve canlı sayfaya al” derse teslim zinciri uzar:
+
+> İlgili kontrolleri tamamla, değişikliği belirtilen depoya gönder ve dağıtımı bekle. Sonra canlı adresi açıp aynı düzeltmenin orada olduğunu doğrula. Bekleyen aşamayı tamamlandı sayma.
+
+Bu rehberin kendisi üzerinde gerçekten yapılan yayınlarda yerel test, uzak commit, Pages dağıtımı ve canlı dosya karşılaştırması ayrı kaydedildi. [Yayın kayıtları](../DOGRULAMA.md). Atölye örneğinin GitHub'a ayrı bir uygulama olarak yayımlandığı iddia edilmiyor; örnek dosyaları rehberin içinde açılıyor.
+
+**Başka işte kullanacağın ders:** Belirtiyi tarif et, korunacak boyutları söyle, kaynağı ve görünümü aynı koşulda kontrol et. Sonra kullanıcının istediği hedefte bitir. Bu yaklaşım bir slayttaki taşan başlık veya belgedeki kırık tablo için de uygulanabilir.
+
+
 # 84 özellik ailesinin kapsam envanteri
 
 Envanter birimi, kullanıcıya dönük yetenek veya ilişkili özellik ailesidir. Resmî belgelerde tespit edilen masaüstü yetenekleri ve kullanım kararını etkileyen komşu yüzeyler kapsanır. Her satırın açıklaması/erişim sınırı ilgili bölümde bulunur. Hesaba özel görünmeyen dağıtımlar ve üçüncü taraf plugin'lerin bütün iç komutları için evrensel eksiksizlik iddiası yoktur.
@@ -2214,7 +2601,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 
 ## Arayüz görselleri ve atıf
 
-Görseller OpenAI belgelerindeki açıklayıcı arayüz gösterimlerinden, içerikleri değiştirilmeden alındı. Bu rehber için çalışan kullanıcı hesabının ekranı çekilmedi. Örneklerdeki model adları, tarihler ve veriler ürünün her hesapta güncel durumunu temsil etmez. Her görsel açılıp incelendi. Kaynak ve dosya özeti [görsel manifestinde](gorsel-manifest.json) kayıtlıdır. OpenAI ve diğer hak sahiplerine ait görseller rehber metninin CC BY 4.0 lisansına dahil değildir; bu rehber görseller için ayrıca yeniden kullanım lisansı vermez.
+Altı resmî arayüz gösterimi OpenAI belgelerinden içerikleri değiştirilmeden alındı. İki önce/sonra görüntüsü ise bu rehber için üretilmiş kurgu HTML sayfalarının gerçek tarayıcı çekimidir; Codex uygulamasının oturum ekranı değildir. Her görselin türü ve kaynağı altında yazılıdır. Yanlarındaki Nereye bak / Ne yap / Ne gör açıklamaları bizim öğretim yorumumuzdur. Kaynak ve dosya özeti [görsel manifestinde](gorsel-manifest.json) kayıtlıdır. OpenAI ve diğer hak sahiplerine ait görseller metnin CC BY 4.0 lisansına dahil değildir. Rehber için yazılmış örnek dosyalar ve onların ekran görüntüleri rehber lisansını izler.
 
 | Görsel | Resmî sayfa | Kayıt tarihi |
 |---|---|---|
@@ -2224,6 +2611,8 @@ Görseller OpenAI belgelerindeki açıklayıcı arayüz gösterimlerinden, içer
 | [Değişen satıra bağlı inceleme bulgusu](assets/review.png) | [Kaynak](https://learn.chatgpt.com/docs/code-review) | 2026-10-29 |
 | [Mesaj alanının üstünde hedef denetimleri](assets/goal.png) | [Kaynak](https://learn.chatgpt.com/docs/reference/slash-commands) | 2026-10-29 |
 | [Görünümü ayarlamak](assets/settings.png) | [Kaynak](https://learn.chatgpt.com/docs/reference/settings) | 2026-10-29 |
+| [Sabit genişlik dar ekranda taşıyor](assets/lesson-before.png) | [Kaynak](ornekler/sayfa-once.html) | 2026-10-29 |
+| [Aynı kart kapsayıcıya sığıyor](assets/lesson-after.png) | [Kaynak](ornekler/sayfa-sonra.html) | 2026-10-29 |
 
 <a id="yapilan-ve-yapilmayan-dogrulama"></a>
 

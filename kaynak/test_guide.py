@@ -7,7 +7,11 @@ import hashlib
 import json
 import re
 import unittest
-from content import GUIDE_CHAPTERS,GUIDE_APPENDICES,GUIDE_FEATURES,GUIDE_ITEM_MAP,GUIDE_SOURCES,GUIDE_FIGURES,SECTIONS
+import csv
+import io
+from decimal import Decimal
+from collections import Counter
+from content import GUIDE_CHAPTERS,GUIDE_APPENDICES,GUIDE_FEATURES,GUIDE_ITEM_MAP,GUIDE_SOURCES,GUIDE_FIGURES,GUIDE_PATHS,GUIDE_FLOWS,GUIDE_EXAMPLES,SECTIONS
 from guide_build import ROOT,OUT,build_guide,validate_guide,render_markdown,slugify,inline,markdown_output
 
 class Links(HTMLParser):
@@ -60,7 +64,7 @@ class GuideTests(unittest.TestCase):
         self.assertIn('id="baslik"',rendered);self.assertIn('id="baslik-2"',rendered)
 
     def test_html_local_links_and_anchors(self):
-        for p in OUT.glob('*.html'):
+        for p in OUT.rglob('*.html'):
             page=Links();page.feed(p.read_text());self.assertEqual(len(page.ids),len(set(page.ids)),p.name)
             for url in page.links:
                 u=urlsplit(url)
@@ -75,7 +79,7 @@ class GuideTests(unittest.TestCase):
                     self.assertIn(unquote(u.fragment),ids,f'{p.name}: {url}')
 
     def test_markdown_local_links_and_anchors(self):
-        for p in OUT.glob('*.md'):
+        for p in OUT.rglob('*.md'):
             text=p.read_text()
             for url in re.findall(r'\]\(([^\s)]+)\)',text):
                 u=urlsplit(url)
@@ -91,8 +95,8 @@ class GuideTests(unittest.TestCase):
         for p in GUIDE_CHAPTERS+GUIDE_APPENDICES:
             self.assertTrue((OUT/(p['slug']+'.md')).exists())
             self.assertTrue((OUT/(p['slug']+'.html')).exists())
-        for path in OUT.iterdir():
-            if not path.is_file():continue
+        for path in OUT.rglob('*'):
+            if not path.is_file() or path.suffix not in {'.md','.html','.json','.csv'}:continue
             text=path.read_text()
             self.assertNotRegex(text,r'source:|/Users/|rollout_summaries/|\.codex/sessions/|@[a-z0-9.-]+\.(?:com|net)\b')
             self.assertNotRegex(text,r'__[A-Z]+__')
@@ -126,13 +130,38 @@ class GuideTests(unittest.TestCase):
         self.assertEqual(anchors,['gorunum','gorunum-2'])
         for a in anchors:self.assertIn(f'id="{a}"',html)
 
+    def test_teaching_flows_have_parity_and_reject_unknown(self):
+        self.assertEqual(len(GUIDE_PATHS),3)
+        for key,f in GUIDE_FLOWS.items():
+            token=f'[FLOW:{key}]';rendered,_=render_markdown(token);md=markdown_output(token)
+            for label,text in f['steps']:
+                self.assertIn(text,rendered);self.assertIn(text,md)
+            self.assertNotIn('[FLOW:',rendered+md)
+        with self.assertRaises(ValueError):render_markdown('[FLOW:unknown]')
+
+    def test_example_data_preserves_identity_and_unknown_payment(self):
+        raw=list(csv.DictReader(io.StringIO(GUIDE_EXAMPLES['katilim-ham.csv'])))
+        clean=list(csv.DictReader(io.StringIO(GUIDE_EXAMPLES['katilim-temiz.csv'])))
+        self.assertEqual(len(raw),6);self.assertEqual(len(clean),6)
+        self.assertEqual(len({x['kayit_id'] for x in clean}),6)
+        for a,b in zip(raw,clean):
+            self.assertEqual({k:v for k,v in a.items() if k!='tahsilat_tl'},{k:v for k,v in b.items() if k!='tahsilat_tl'})
+            if not a['tahsilat_tl']:self.assertEqual(b['tahsilat_tl'],'')
+            else:self.assertEqual(Decimal(a['tahsilat_tl'].replace(' TL','').replace(',','.')),Decimal(b['tahsilat_tl']))
+        self.assertEqual(sum(Decimal(x['tahsilat_tl']) for x in clean if x['tahsilat_tl']),Decimal(1800))
+        self.assertEqual(Counter(x['durum'] for x in clean),{'katıldı':3,'iptal':2,'bekliyor':1})
+
+    def test_examples_are_generated_from_canonical_source(self):
+        for name,body in GUIDE_EXAMPLES.items():self.assertEqual((OUT/'ornekler'/name).read_text(),body)
+        self.assertEqual(GUIDE_EXAMPLES['sayfa-once.html'].replace('width:440px','width:100%'),GUIDE_EXAMPLES['sayfa-sonra.html'])
+
     def test_no_markdown_left_in_rendered_prose(self):
         for p in OUT.glob('*.html'):
             text=p.read_text().split('<article class="prose">')[1].split('</article>')[0]
             self.assertNotRegex(text,r'\]\(|\*\*|```|\x00',p.name)
 
     def test_deterministic_generation(self):
-        def digest():return {p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in OUT.iterdir() if p.is_file()}
+        def digest():return {str(p.relative_to(OUT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in OUT.rglob('*') if p.is_file()}
         before=digest();build_guide();self.assertEqual(before,digest())
 
 if __name__=='__main__':unittest.main()

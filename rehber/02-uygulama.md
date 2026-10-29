@@ -42,6 +42,10 @@ Sohbetleri “web sitesi”, “notlar”, “test” gibi geniş adlar yerine s
 
 **Proje ve sohbetleri bulmak.** Soldaki listede sabitlenmiş sohbet, diğer sohbetler ve Projects başlığı altındaki klasörleri ayırt et. Bir sohbet adı ile bağlı proje klasörü farklı öğelerdir. [Tam boyut](assets/projects.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/projects) · 2026-10-29.
 
+1. **Nereye bak:** Projects altındaki klasörlere ve üstteki sohbet adlarına.
+2. **Ne yap:** Dosya işi için ilgili yerel projeyi seç; sohbeti sonuç adıyla adlandır.
+3. **Ne gör:** Yeni konuşmanın hangi proje kaynaklarıyla başlayacağı anlaşılır olur.
+
 **Yerel proje ile ChatGPT projesi farklı kaynakları bağlar.** Yerel proje bilgisayarındaki klasörlerle çalışır. ChatGPT projesindeki Sources ise yüklenen veya bağlanan bulut kaynaklarıdır; bilgisayarındaki klasöre otomatik erişim vermez. İki yerde aynı proje adını görmek dosyaların ortak olduğu anlamına gelmez.
 
 Eski işi bulmak için kenar çubuğundaki **Search chats** alanında ayırt edici bir ifade veya dal adı ara. ⌘F / Ctrl+F ise açık sohbetin içinde arar. Search chats için belgelenmiş varsayılan kısayol yok; Settings → Keyboard shortcuts üzerinden atanabilir. Quick chat, New chat yanındaki simgeden açılan genel ChatGPT girişidir ve Codex kenar çubuğunda görünmez. Proje dosyası üzerinde işe başlayacaksan projenin kendi yeni sohbetini kullan. [Sohbetleri bulma ve düzenleme](https://learn.chatgpt.com/docs/projects)
@@ -67,6 +71,10 @@ Terminal, komutların çalıştığı paneldir. New tab → Terminal ile açıl�
 ![Sohbetin yanında sunum önizlemesi. Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele.](assets/preview.png)
 
 **Sohbetin yanında sunum önizlemesi.** Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele. [Tam boyut](assets/preview.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/artifacts-viewer) · 2026-10-29.
+
+1. **Nereye bak:** Soldaki output.pptx bağlantısına, sağdaki slayt listesine.
+2. **Ne yap:** Sorunlu slaytı seç; yalnız o parçanın değişmesini, sayıların korunmasını iste.
+3. **Ne gör:** Son dosyada aynı karar ve verilerle daha okunur bir slayt.
 
 Ekranda bir sunum görünse de aynı alışkanlık rapor ve tablo için geçerli: dosyayı aç, sorunlu bölgeyi tarif et, değişikliği aynı çıktı üzerinde iste. “Yeni dosya üret” demediğin sürece hangi dosyanın son sürüm olduğu belli kalsın.
 
@@ -100,6 +108,10 @@ Appearance içindeki tema ve yazı tipi tercihleri uzun okumayı kolaylaştırab
 ![Görünümü ayarlamak. Appearance içindeki Light, Dark ve System seçimiyle başla. Tema rengi, yazı tipi ve boyut denetimleri uygulamanın görünümünü değiştirir; modelin çalışma talimatlarını değiştirmez.](assets/settings.png)
 
 **Görünümü ayarlamak.** Appearance içindeki Light, Dark ve System seçimiyle başla. Tema rengi, yazı tipi ve boyut denetimleri uygulamanın görünümünü değiştirir; modelin çalışma talimatlarını değiştirmez. [Tam boyut](assets/settings.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/reference/settings) · 2026-10-29.
+
+1. **Nereye bak:** Appearance içindeki Theme ve UI font size alanlarına.
+2. **Ne yap:** Okuma rahatlığını tema ve yazı boyutundan ayarla.
+3. **Ne gör:** Arayüz değişir; modelin görev talimatı veya düşünme seviyesi değişmez.
 
 <a id="i-s-bitti-mi-benden-yanit-mi-bekliyor"></a>
 

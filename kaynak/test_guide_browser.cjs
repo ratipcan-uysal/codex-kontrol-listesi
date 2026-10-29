@@ -16,26 +16,27 @@ const out=path.resolve(process.env.EVIDENCE_DIR || 'work/guide-browser');
   await page.goto(base);
   await check('checklist entry opens guide',async()=>{await page.getByRole('link',{name:'Ana rehberi aç →'}).click();await page.waitForURL('**/rehber/index.html');assert.equal(await page.locator('h1').textContent(),'Codex’i Derinlemesine Kullanma Rehberi');});
   await page.screenshot({path:path.join(out,'guide-desktop-light.png')});
-  await check('complete index has 18 ordered chapters',async()=>{assert.equal(await page.locator('.prose > ol > li').count(),18);assert.equal(await page.locator('.prose > ul > li').count(),9);});
-  await check('sequential reading and current navigation',async()=>{await page.locator('a[rel="next"]').click();await page.waitForURL('**/01-olanaklar.html');assert.equal(await page.locator('[aria-current="page"]').count(),1);await page.locator('a[rel="next"]').click();await page.waitForURL('**/02-uygulama.html');assert.ok((await page.locator('h1').textContent()).startsWith('2.'));await page.locator('a[rel="prev"]').click();await page.waitForURL('**/01-olanaklar.html');});
+  await check('complete index has 18 ordered chapters',async()=>{assert.equal(await page.locator('#tam-icindekiler + ol > li').count(),18);assert.equal(await page.locator('.prose > ul > li').count(),9);});
+  await check('sequential reading and current navigation',async()=>{await page.goto(base+'rehber/01-olanaklar.html');assert.equal(await page.locator('[aria-current="page"]').count(),1);await page.locator('a[rel="next"]').click();await page.waitForURL('**/02-uygulama.html');assert.ok((await page.locator('h1').textContent()).startsWith('2.'));await page.locator('a[rel="prev"]').click();await page.waitForURL('**/01-olanaklar.html');});
+  await check('three teaching journeys lead into chapter reference',async()=>{await page.goto(base+'rehber/index.html');assert.equal(await page.locator('#uc-isi-bastan-sona-izle + p + ol > li').count(),3);for(const slug of ['is-arastirma','is-veri','is-sayfa','01-olanaklar']){await page.locator('a[rel="next"]').click();await page.waitForURL('**/'+slug+'.html');if(slug.startsWith('is-'))assert.equal(await page.locator('.lesson-flow li').count(),4);} });
   await check('chapter contents jump reaches heading',async()=>{await page.locator('.page-toc summary').click();const link=page.locator('.page-toc a').first();const hash=await link.getAttribute('href');await link.click();assert.ok(page.url().endsWith(hash));assert.equal(await page.locator(hash).count(),1);});
   await check('all 107 checklist rows link to their mapped chapter',async()=>{await page.goto(base);assert.equal(await page.locator('.guide-link a').count(),107);await page.locator('#m-1-1 summary').click();await page.locator('#m-1-1 .guide-link a').click();await page.waitForURL('**/11-talimatlar.html');});
   await check('chapter returns to original checklist anchor',async()=>{await page.locator('.prose a[href="../index.html#m-1-1"]').click();await page.waitForFunction(()=>document.querySelector('#m-1-1 details')?.open);assert.equal(await page.evaluate(()=>document.activeElement.closest('article')?.id),'m-1-1');});
   await check('guide navigation preserves saved checkmarks',async()=>{await page.locator('#check-m-1-1').check();await page.locator('#m-1-1 .guide-link a').click();await page.getByRole('link',{name:'107 madde ↗'}).click();await page.waitForSelector('#check-m-1-1');assert.equal(await page.locator('#check-m-1-1').isChecked(),true);});
   await check('all guide pages return successful response with one heading',async()=>{await page.goto(base+'rehber/index.html');const paths=await page.locator('.sidebar nav a').evaluateAll(a=>a.map(x=>x.getAttribute('href')));for(const p of paths){const response=await page.goto(base+'rehber/'+p);assert.equal(response.status(),200,p);assert.equal(await page.locator('h1').count(),1,p);assert.ok((await page.locator('.prose').textContent()).length>1000,p);}});
-  await check('all six official figures load with captions and accessible full-size links',async()=>{
+  await check('all eight figures load with teaching notes and correctly identified sources',async()=>{
    const manifest=await (await page.request.get(base+'rehber/gorsel-manifest.json')).json();
    const seen=new Set();
-   for(const slug of ['02-uygulama','09-web-tarayici-bilgisayar','12-dogrulama','14-buyuk-isler']){
+   for(const slug of ['02-uygulama','09-web-tarayici-bilgisayar','12-dogrulama','14-buyuk-isler','is-sayfa']){
     await page.goto(base+'rehber/'+slug+'.html');
     for(const figure of await page.locator('.app-figure').all()){
      const img=figure.locator('img');await img.scrollIntoViewIfNeeded();
      await img.evaluate(e=>e.decode());
      const src=await img.getAttribute('src');seen.add(src);
-     assert.ok(await img.evaluate(e=>e.complete&&e.naturalWidth>=1200&&e.naturalHeight>0));
+     assert.ok(await img.evaluate(e=>e.complete&&e.naturalWidth>=780&&e.naturalHeight>0));
      assert.ok((await img.getAttribute('alt')).length>30);
      assert.equal(await figure.locator('.figure-open').getAttribute('href'),src);
-     assert.ok((await figure.locator('figcaption').textContent()).includes('OpenAI'));
+     const text=await figure.locator('figcaption').textContent();assert.ok(text.includes(src.includes('lesson-')?'Kurgu örnek HTML':'OpenAI'));assert.equal(await figure.locator('.figure-lesson li').count(),3);
     }
    }
    assert.deepEqual([...seen].sort(),Object.values(manifest.figures).map(f=>f.file).sort());
@@ -64,6 +65,26 @@ const out=path.resolve(process.env.EVIDENCE_DIR || 'work/guide-browser');
    assert.ok(await page.locator('img').evaluate(e=>e.naturalWidth>=1200));await page.goBack();
   });
   await page.setViewportSize({width:1440,height:1000});
+  await check('teaching page flows and callouts fit desktop and mobile',async()=>{
+   for(const width of [1440,390,320]){
+    await page.setViewportSize({width,height:1000});await page.goto(base+'rehber/is-sayfa.html');
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+    await page.locator('.lesson-flow').scrollIntoViewIfNeeded();
+    await page.screenshot({path:path.join(out,'teaching-flow-'+width+'.png')});
+    const f=page.locator('.figure-example').last();await f.scrollIntoViewIfNeeded();await f.locator('img').evaluate(e=>e.decode());
+    await page.screenshot({path:path.join(out,'teaching-figure-'+width+'.png')});
+   }
+   await page.setViewportSize({width:1440,height:1000});
+  });
+  await check('example pages demonstrate only the intended width change',async()=>{
+   for(const width of [320,390]){await page.setViewportSize({width,height:844});let before;
+    for(const [name,expected] of [['once',true],['sonra',false]]){await page.goto(base+'rehber/ornekler/sayfa-'+name+'.html');
+     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),expected);
+     const copy=await page.locator('main').textContent();if(before)assert.equal(copy,before);before=copy;
+     await page.getByRole('link',{name:'Programı gör'}).click();assert.ok(page.url().endsWith('#program'));
+    }
+   }await page.setViewportSize({width:1440,height:1000});
+  });
   await page.goto(base+'rehber/komutlar.html');
   await page.screenshot({path:path.join(out,'guide-commands-desktop.png')});
   await check('28 desktop commands and goal surface distinction',async()=>{assert.equal(await page.locator('table').first().locator('tbody tr').count(),28);assert.ok((await page.locator('.prose').textContent()).includes('düğmeleri tarif ediyor'));});

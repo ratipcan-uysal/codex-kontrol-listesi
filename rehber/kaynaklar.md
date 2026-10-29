@@ -89,7 +89,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 
 ## Arayüz görselleri ve atıf
 
-Görseller OpenAI belgelerindeki açıklayıcı arayüz gösterimlerinden, içerikleri değiştirilmeden alındı. Bu rehber için çalışan kullanıcı hesabının ekranı çekilmedi. Örneklerdeki model adları, tarihler ve veriler ürünün her hesapta güncel durumunu temsil etmez. Her görsel açılıp incelendi. Kaynak ve dosya özeti [görsel manifestinde](gorsel-manifest.json) kayıtlıdır. OpenAI ve diğer hak sahiplerine ait görseller rehber metninin CC BY 4.0 lisansına dahil değildir; bu rehber görseller için ayrıca yeniden kullanım lisansı vermez.
+Altı resmî arayüz gösterimi OpenAI belgelerinden içerikleri değiştirilmeden alındı. İki önce/sonra görüntüsü ise bu rehber için üretilmiş kurgu HTML sayfalarının gerçek tarayıcı çekimidir; Codex uygulamasının oturum ekranı değildir. Her görselin türü ve kaynağı altında yazılıdır. Yanlarındaki Nereye bak / Ne yap / Ne gör açıklamaları bizim öğretim yorumumuzdur. Kaynak ve dosya özeti [görsel manifestinde](gorsel-manifest.json) kayıtlıdır. OpenAI ve diğer hak sahiplerine ait görseller metnin CC BY 4.0 lisansına dahil değildir. Rehber için yazılmış örnek dosyalar ve onların ekran görüntüleri rehber lisansını izler.
 
 | Görsel | Resmî sayfa | Kayıt tarihi |
 |---|---|---|
@@ -99,6 +99,8 @@ Görseller OpenAI belgelerindeki açıklayıcı arayüz gösterimlerinden, içer
 | [Değişen satıra bağlı inceleme bulgusu](assets/review.png) | [Kaynak](https://learn.chatgpt.com/docs/code-review) | 2026-10-29 |
 | [Mesaj alanının üstünde hedef denetimleri](assets/goal.png) | [Kaynak](https://learn.chatgpt.com/docs/reference/slash-commands) | 2026-10-29 |
 | [Görünümü ayarlamak](assets/settings.png) | [Kaynak](https://learn.chatgpt.com/docs/reference/settings) | 2026-10-29 |
+| [Sabit genişlik dar ekranda taşıyor](assets/lesson-before.png) | [Kaynak](ornekler/sayfa-once.html) | 2026-10-29 |
+| [Aynı kart kapsayıcıya sığıyor](assets/lesson-after.png) | [Kaynak](ornekler/sayfa-sonra.html) | 2026-10-29 |
 
 <a id="yapilan-ve-yapilmayan-dogrulama"></a>
 

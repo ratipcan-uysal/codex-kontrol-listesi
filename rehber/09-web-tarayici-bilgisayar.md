@@ -42,6 +42,10 @@ Belge kontrol tarihinde yerleşik tarayıcıda otomatik dosya yükleme desteklen
 
 **Yerleşik tarayıcıda hedefli yorum.** Sağdaki grafikte işaretlenen alan, soldaki sohbete bağlam olarak taşınıyor. Görsel sorunu doğrudan yerinde göstermek, hangi öğenin değişeceğini netleştirir. [Tam boyut](assets/browser.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/browser) · 2026-10-29.
 
+1. **Nereye bak:** Sağdaki grafikte mavi işaretli alana ve soldaki yorum bağlamına.
+2. **Ne yap:** Annotate ile öğeyi işaretle, sorunu ve korunacak boyutu yaz, sohbette uygulat.
+3. **Ne gör:** Düzeltme aynı öğede görünür; başka kartlar gerekçesiz değişmez.
+
 Görseldeki gibi bir alanı işaretledikten sonra “yalnız bu grafiğin bilgi kutusu kesiliyor; renkleri ve veriyi koruyarak düzelt” demek, bütün sayfayı belirsiz biçimde değiştirtmekten daha hedefli bir geri bildirimdir.
 
 <a id="chrome-ve-diger-desteklenen-tarayicilar"></a>

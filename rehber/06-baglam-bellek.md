@@ -22,11 +22,17 @@ Masaüstündeki Codex belleği ile ChatGPT web belleği aynı kayıt sistemi de�
 
 ## Aynı sohbet mi, yeni sohbet mi?
 
-Aynı sonuca doğru ilerlerken mevcut sohbette kalmak, kararları korur. Ayrı bir ürün, başka bir karar veya bağımsız inceleme için yeni sohbet daha temiz bir başlangıç sağlar. Dallandırma, mevcut geçmişten farklı bir yönde devam etmeye yarar; dosya yalıtımı sağlamaz. Dosyaları da ayırmak gerekiyorsa worktree konusuna bak.
+| İhtiyaç | Seçim | Korumak istediğin şey |
+|---|---|---|
+| Aynı sonucun bir bölümünü düzeltmek | Mevcut sohbette devam et | Kararlar ve son çıktı |
+| Çalışan işi kesmeden kavram sormak | `/side` | Ana işin devamı |
+| Aynı geçmişten farklı yön denemek | `/fork` | Başlangıç bağlamı; dosya yalıtımı ayrıca seçilir |
+| Bağımsız işe başlamak | `/new` | Aynı çalışma alanı, boş konuşma |
+| Uzayan konuşmanın bağlamını sıkıştırmak | `/compact` | Çalışmaya yarayan özet; eksiksiz arşiv değil |
 
-Sıkıştırma, uzun konuşmanın çalışmaya elverişli bir özete dönüşmesidir. Kaynak dosya, kesin alıntı veya test günlüğü yerine kullanılmamalı. Önemli kararın bulunduğu tek yer eski bir mesajsa, onu proje belgesine yazdır.
+Bu seçimleri bir sayfa düzeltmesi içinde [yan yana görebilirsin](is-sayfa.md#5-sohbetin-yonunu-hangi-aracla-degistirirsin). Komutların yüzey ve erişim koşulları [masaüstü belgesinde](https://learn.chatgpt.com/docs/reference/slash-commands) açıklanır. Kaynak dosya, kesin alıntı veya test günlüğü yerine sohbet özetini kullanma.
 
-> Bu işin kararlarını proje notlarına geçir. Hangi dosyada çalıştığımızı, son doğrulanan sonucu ve açık kalan üç sorunu kaydet. Tekrar üretilebilen ayrıntıları kopyalama; ilgili kaynaklara bağla.
+> Bu işin kararlarını proje notlarına geçir. Hangi dosyada çalıştığımızı, son doğrulanan sonucu ve açık kalan soruları kaydet. Ayrıntıları kopyalamak yerine ilgili kaynağa bağla.
 
 <a id="eski-bilgiye-dogru-soru-sor"></a>
 

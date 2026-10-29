@@ -36,7 +36,7 @@ def build():
     counts = {'sections':len(SECTIONS), 'items':len(items), 'basic':basic, 'advanced':len(items)-basic}
     stats = f"{len(SECTIONS)} bölüm · {len(items)} madde · {basic} temel · {len(items)-basic} ileri"
     payload = dict(guideMap=GUIDE_ITEM_MAP, sections=SECTIONS, sources=SOURCES, topTen=TOP_TEN, version=1,
-                   updated='2026-10-21', guideUpdated='2026-10-29', revision=4)
+                   updated='2026-10-21', guideUpdated='2026-10-29', revision=5)
     replacements = {
         '__CSS__':(HERE/'style.css').read_text(), '__JS__':(HERE/'app.js').read_text(),
         '__DATA__':json.dumps(payload, ensure_ascii=False).replace('</', '<\\/'),
@@ -50,7 +50,7 @@ def build():
     (ROOT/'index.html').write_text(html, encoding='utf-8')
     md = ['# Codex kullanım kontrol listesi', '',
           f'## [Çevrimiçi ana rehberi oku →]({URL}rehber/)', '',
-          '18 bölümlük rehberi tarayıcıda aç: mobil uyumlu görünüm, bölüm bağlantıları ve önceki/sonraki gezinmesi. Aşağıdaki 107 madde hızlı başvuru için korunur.', '',
+          '18 bölümlük rehberi tarayıcıda aç: üç baştan sona örnek iş, indirilebilir örnek dosyalar, açıklamalı görseller ve önceki/sonraki gezinmesi. Aşağıdaki 107 madde hızlı başvuru için korunur.', '',
           f'**{stats} · {DATE}**', '',
           f'[Etkileşimli rehberi aç]({URL}) · [Değişiklikler](GUNCELLEMELER.md) · [Kaynak denetimi](KAYNAKLAR.md)', '',
           'Codex ile çalışırken bağlamı, görev sınırını, araçları ve doğrulamayı düzenlemek için Türkçe bir rehber. Her maddede neden, nasıl, örnek ve doğrulama bulunur.', '',

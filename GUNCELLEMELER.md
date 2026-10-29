@@ -1,5 +1,14 @@
 # Güncellemeler
 
+## 29 Ekim 2026 — Baştan sona örneklerle eğitim
+
+- Üç tam örnek iş ana okuma yolu oldu: araştırma, veri ve web düzeltmesi. Dokuz indirilebilir örnek dosya eklendi.
+- Dokuz gerçek vaka içinde müdahale, sonuç ve kanıt sınırları netleştirildi; ilk vakadaki neden-sonuç sırası düzeltildi.
+- Altı resmî gösterime öğretici okuma notları, iki gerçek önce/sonra HTML görüntüsü ve üç akış şeması eklendi.
+- Beş başlangıç kararı ve sohbeti sürdürme / side / fork / new karşılaştırması eklendi. Tekrarlar ilgili tam örneklere bağlandı.
+- 18 bölüm, 84 özellik ailesi, 28 masaüstü komutu ve 107 kontrol maddesi korundu.
+- [İnceleme](dogrulama/egitim-20261029/INCELEME.md) · [Editoryal kontrol](dogrulama/egitim-20261029/EDITORIAL.md) · [Doğrulama](DOGRULAMA.md).
+
 ## 29 Ekim 2026 — Başlangıç akışı, arayüz görselleri ve açık görünüm
 
 - İlk yerel dosyayı üretme, açma ve düzeltme yolu eklendi; başlangıç terimleri yerinde açıklandı.

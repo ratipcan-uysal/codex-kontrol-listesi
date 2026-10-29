@@ -48,6 +48,10 @@ Masaüstünde etkin hedefin üstündeki ilerleme denetimleriyle duraklatma, sür
 
 **Mesaj alanının üstünde hedef denetimleri.** Paused goal satırı duraklamış hedefi gösteriyor. Sağdaki denetimlerle hedefi düzenleme, sürdürme veya temizleme işlemlerine ulaşılır; bunlar yeni slash komutları değildir. [Tam boyut](assets/goal.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/reference/slash-commands) · 2026-10-29.
 
+1. **Nereye bak:** Mesaj alanının üstündeki Paused goal satırına.
+2. **Ne yap:** Hedef aynıysa sürdür; değiştiyse önce hedef metnini düzelt.
+3. **Ne gör:** Etkin hedef ile yapmak istediğin iş aynı kapsamı taşır.
+
 İlerleme satırında **Paused goal** yazıyorsa hedef duraklatılmıştır. Satırdaki sürdürme, düzenleme ve temizleme denetimleri hedefin yönetimi içindir. Hedef açıkken kavram sormak için `/side` kullanabilirsin. Bağlantının kesileceğini biliyorsan önceden duraklatmak ve devamda mevcut çıktıyı kontrol etmek yararlı olur. Hedef oluşturmak erişim izinlerini genişletmez. [Uzun işler](https://learn.chatgpt.com/docs/long-running-work)
 
 <a id="kurgu-senaryo-paralelligin-faydasiz-oldugu-is"></a>
@@ -57,6 +61,13 @@ Masaüstünde etkin hedefin üstündeki ilerleme denetimleriyle duraklatma, sür
 Tek paragrafın üslubunu düzeltmek için üç ajan kurmak, görev dağıtımı ve uzlaştırmayı asıl işten uzun hâle getirebilir. Aynı yazının kaynak doğrulaması, anlam kontrolü ve görsel yerleşimi ise yeterince büyükse ayrılabilir. Karar verirken ajan sayısına değil, bağımsız kanıt ve bağımsız çıktı ihtiyacına bak.
 
 Teslimde yalnız yardımcıların özetlerini aktarma. Ana sorumlu, birleşmiş sonucun istenen hedefi karşıladığını ve hangi kontrollerin hâlâ yapılmadığını söylemeli.
+
+<a id="bu-is-gercekten-paralellik-gerektiriyor-mu"></a>
+
+## Bu iş gerçekten paralellik gerektiriyor mu?
+
+Üç [örnek iş](README.md#uc-isi-bastan-sona-izle) tek sohbetle yönetilebilecek ölçekte. Önce bağımsız alt sonuç ihtiyacı doğmalı. Yalnız araç mevcut diye alt ajan veya ayrı sohbet açmak ek koordinasyon getirir.
+
 
 <a id="kontrol-listesinde-karsiligi"></a>
 

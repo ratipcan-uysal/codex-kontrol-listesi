@@ -2,6 +2,8 @@
 
 Belge kontrolü: 2026-10-29.
 
+Eğitimde ilk anlatılacak akışlar [araştırma](is-arastirma.md), [veri](is-veri.md) ve [sayfa düzeltme](is-sayfa.md) örnekleridir. Aşağıdaki on iki kısa senaryo farklı işlere uyarlamak için hızlı başvurudur.
+
 Aşağıdaki senaryolar eğitim için üretilmiş kurgulardır. Gerçekte yürütülmüş görev, başarı ölçümü veya müşteri hikâyesi değildir. İstekler kopyalanabilir; dosya, hesap ve hedefleri kendi işine göre seç. Bunlar katılımcı alıştırması değil, anlatıcının bir özelliği somutlaştırabileceği örneklerdir.
 
 <a id="1-arastirmadan-karar-notuna"></a>

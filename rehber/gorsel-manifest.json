@@ -8,7 +8,22 @@
       "caption": "Soldaki listede sabitlenmiş sohbet, diğer sohbetler ve Projects başlığı altındaki klasörleri ayırt et. Bir sohbet adı ile bağlı proje klasörü farklı öğelerdir.",
       "source": "https://learn.chatgpt.com/docs/projects",
       "checked": "2026-10-29",
-      "sha256": "a2f2db004c5133bb2533d462866c503239e3c34fb17d4f38396bd8b35e364872"
+      "sha256": "a2f2db004c5133bb2533d462866c503239e3c34fb17d4f38396bd8b35e364872",
+      "kind": "official",
+      "lesson": [
+        [
+          "Nereye bak",
+          "Projects altındaki klasörlere ve üstteki sohbet adlarına."
+        ],
+        [
+          "Ne yap",
+          "Dosya işi için ilgili yerel projeyi seç; sohbeti sonuç adıyla adlandır."
+        ],
+        [
+          "Ne gör",
+          "Yeni konuşmanın hangi proje kaynaklarıyla başlayacağı anlaşılır olur."
+        ]
+      ]
     },
     "preview": {
       "file": "assets/preview.png",
@@ -17,7 +32,22 @@
       "caption": "Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele.",
       "source": "https://learn.chatgpt.com/docs/artifacts-viewer",
       "checked": "2026-10-29",
-      "sha256": "40db53c8f98ce91fb32cb9ab796d4ed1af5f7234055737454a27f310de46c5c5"
+      "sha256": "40db53c8f98ce91fb32cb9ab796d4ed1af5f7234055737454a27f310de46c5c5",
+      "kind": "official",
+      "lesson": [
+        [
+          "Nereye bak",
+          "Soldaki output.pptx bağlantısına, sağdaki slayt listesine."
+        ],
+        [
+          "Ne yap",
+          "Sorunlu slaytı seç; yalnız o parçanın değişmesini, sayıların korunmasını iste."
+        ],
+        [
+          "Ne gör",
+          "Son dosyada aynı karar ve verilerle daha okunur bir slayt."
+        ]
+      ]
     },
     "browser": {
       "file": "assets/browser.png",
@@ -26,7 +56,22 @@
       "caption": "Sağdaki grafikte işaretlenen alan, soldaki sohbete bağlam olarak taşınıyor. Görsel sorunu doğrudan yerinde göstermek, hangi öğenin değişeceğini netleştirir.",
       "source": "https://learn.chatgpt.com/docs/browser",
       "checked": "2026-10-29",
-      "sha256": "9c0dd2742a7b9d198ae5a50c84caaf849db2fe092da1816eca5af6958985691a"
+      "sha256": "9c0dd2742a7b9d198ae5a50c84caaf849db2fe092da1816eca5af6958985691a",
+      "kind": "official",
+      "lesson": [
+        [
+          "Nereye bak",
+          "Sağdaki grafikte mavi işaretli alana ve soldaki yorum bağlamına."
+        ],
+        [
+          "Ne yap",
+          "Annotate ile öğeyi işaretle, sorunu ve korunacak boyutu yaz, sohbette uygulat."
+        ],
+        [
+          "Ne gör",
+          "Düzeltme aynı öğede görünür; başka kartlar gerekçesiz değişmez."
+        ]
+      ]
     },
     "review": {
       "file": "assets/review.png",
@@ -35,7 +80,22 @@
       "caption": "İnceleme yorumu ilgili kod satırının yanında duruyor. Bulguyu öncelik etiketiyle birlikte gerekçesi ve etkilenen dosyası üzerinden değerlendir.",
       "source": "https://learn.chatgpt.com/docs/code-review",
       "checked": "2026-10-29",
-      "sha256": "17db6c06386b2dcbcc8713cb29b4293c7bd205fcdbc7fbcaa613e05713e6a509"
+      "sha256": "17db6c06386b2dcbcc8713cb29b4293c7bd205fcdbc7fbcaa613e05713e6a509",
+      "kind": "official",
+      "lesson": [
+        [
+          "Nereye bak",
+          "Kod satırına bağlı bulgunun gerekçesine; yalnız P1 etiketine değil."
+        ],
+        [
+          "Ne yap",
+          "Bulgunun gerçek davranışı etkileyip etkilemediğini kontrol ettir."
+        ],
+        [
+          "Ne gör",
+          "Geçerli bulgu için dar kapsamlı fark ve ilgili doğrulama."
+        ]
+      ]
     },
     "goal": {
       "file": "assets/goal.png",
@@ -44,7 +104,22 @@
       "caption": "Paused goal satırı duraklamış hedefi gösteriyor. Sağdaki denetimlerle hedefi düzenleme, sürdürme veya temizleme işlemlerine ulaşılır; bunlar yeni slash komutları değildir.",
       "source": "https://learn.chatgpt.com/docs/reference/slash-commands",
       "checked": "2026-10-29",
-      "sha256": "a76bcece3a4acc56b3b9b3d36f3ed4e68a66293055e1519bf338d4c69c07e7ef"
+      "sha256": "a76bcece3a4acc56b3b9b3d36f3ed4e68a66293055e1519bf338d4c69c07e7ef",
+      "kind": "official",
+      "lesson": [
+        [
+          "Nereye bak",
+          "Mesaj alanının üstündeki Paused goal satırına."
+        ],
+        [
+          "Ne yap",
+          "Hedef aynıysa sürdür; değiştiyse önce hedef metnini düzelt."
+        ],
+        [
+          "Ne gör",
+          "Etkin hedef ile yapmak istediğin iş aynı kapsamı taşır."
+        ]
+      ]
     },
     "settings": {
       "file": "assets/settings.png",
@@ -53,7 +128,70 @@
       "caption": "Appearance içindeki Light, Dark ve System seçimiyle başla. Tema rengi, yazı tipi ve boyut denetimleri uygulamanın görünümünü değiştirir; modelin çalışma talimatlarını değiştirmez.",
       "source": "https://learn.chatgpt.com/docs/reference/settings",
       "checked": "2026-10-29",
-      "sha256": "c0c572e6bec7c4ea4188f2df6d3a4798ec4653389c284f79dc22cd582c42305c"
+      "sha256": "c0c572e6bec7c4ea4188f2df6d3a4798ec4653389c284f79dc22cd582c42305c",
+      "kind": "official",
+      "lesson": [
+        [
+          "Nereye bak",
+          "Appearance içindeki Theme ve UI font size alanlarına."
+        ],
+        [
+          "Ne yap",
+          "Okuma rahatlığını tema ve yazı boyutundan ayarla."
+        ],
+        [
+          "Ne gör",
+          "Arayüz değişir; modelin görev talimatı veya düşünme seviyesi değişmez."
+        ]
+      ]
+    },
+    "lesson-before": {
+      "kind": "example",
+      "file": "assets/lesson-before.png",
+      "title": "Sabit genişlik dar ekranda taşıyor",
+      "alt": "Sabit genişlik dar ekranda taşıyor; kurgu Atölye etkinlik sayfasının 390 piksel tarayıcı görünümü.",
+      "caption": "Bu rehber için üretilen örnek HTML’nin gerçek tarayıcı görüntüsü. Metin ve tarih kurgudur; Codex uygulaması ekranı değildir.",
+      "source": "ornekler/sayfa-once.html",
+      "checked": "2026-10-29",
+      "sha256": "d9d51ac5cae2e2ea8ef2bae257c1c0b2fd9eb8091ebb190c24ca07b45def81d5",
+      "lesson": [
+        [
+          "Nereye bak",
+          "Kartın sağ kenarına ve Programı gör bağlantısına."
+        ],
+        [
+          "Ne yap",
+          "Aynı içerik ve ekran genişliğinde önce/sonra karşılaştır."
+        ],
+        [
+          "Ne gör",
+          "Taşma giderildi mi, metin ve bağlantı korundu mu?"
+        ]
+      ]
+    },
+    "lesson-after": {
+      "kind": "example",
+      "file": "assets/lesson-after.png",
+      "title": "Aynı kart kapsayıcıya sığıyor",
+      "alt": "Aynı kart kapsayıcıya sığıyor; kurgu Atölye etkinlik sayfasının 390 piksel tarayıcı görünümü.",
+      "caption": "Bu rehber için üretilen örnek HTML’nin gerçek tarayıcı görüntüsü. Metin ve tarih kurgudur; Codex uygulaması ekranı değildir.",
+      "source": "ornekler/sayfa-sonra.html",
+      "checked": "2026-10-29",
+      "sha256": "bca104c9b5261ba3670359624f84d7725563eddd5885398e994f06c3d27b4987",
+      "lesson": [
+        [
+          "Nereye bak",
+          "Kartın sağ kenarına ve Programı gör bağlantısına."
+        ],
+        [
+          "Ne yap",
+          "Aynı içerik ve ekran genişliğinde önce/sonra karşılaştır."
+        ],
+        [
+          "Ne gör",
+          "Taşma giderildi mi, metin ve bağlantı korundu mu?"
+        ]
+      ]
     }
   }
 }

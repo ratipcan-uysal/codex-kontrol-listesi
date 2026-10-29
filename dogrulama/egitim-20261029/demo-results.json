@@ -1,0 +1,36 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "example": "once",
+      "overflow": true,
+      "copyAndAnchor": "PASS"
+    },
+    {
+      "width": 320,
+      "example": "sonra",
+      "overflow": false,
+      "copyAndAnchor": "PASS"
+    },
+    {
+      "width": 390,
+      "example": "once",
+      "overflow": true,
+      "copyAndAnchor": "PASS"
+    },
+    {
+      "width": 390,
+      "example": "sonra",
+      "overflow": false,
+      "copyAndAnchor": "PASS"
+    }
+  ],
+  "figures": {
+    "lesson-before": {
+      "sha256": "d9d51ac5cae2e2ea8ef2bae257c1c0b2fd9eb8091ebb190c24ca07b45def81d5"
+    },
+    "lesson-after": {
+      "sha256": "bca104c9b5261ba3670359624f84d7725563eddd5885398e994f06c3d27b4987"
+    }
+  }
+}

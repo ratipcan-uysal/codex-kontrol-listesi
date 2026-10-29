@@ -53,11 +53,22 @@ Bağımsız ikinci bakış, özellikle aynı akıl yürütmenin hatasını tekra
 
 **Değişen satıra bağlı inceleme bulgusu.** İnceleme yorumu ilgili kod satırının yanında duruyor. Bulguyu öncelik etiketiyle birlikte gerekçesi ve etkilenen dosyası üzerinden değerlendir. [Tam boyut](assets/review.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/code-review) · 2026-10-29.
 
+1. **Nereye bak:** Kod satırına bağlı bulgunun gerekçesine; yalnız P1 etiketine değil.
+2. **Ne yap:** Bulgunun gerçek davranışı etkileyip etkilemediğini kontrol ettir.
+3. **Ne gör:** Geçerli bulgu için dar kapsamlı fark ve ilgili doğrulama.
+
 <a id="kurgu-senaryo-kayit-sayisi-dogru-anlam-yanlis"></a>
 
 ## Kurgu senaryo: kayıt sayısı doğru, anlam yanlış
 
 Atölye'nin 80 katılımcı kaydı dönüşümden sonra yine 80 satır. Bu iyi bir ilk kontrol, ama iki kişinin e-postası yer değiştirmiş olabilir. Sabit kayıt anahtarıyla eşleştirme, alan bazlı karşılaştırma ve temsilî uç durumlar gerekir. Toplamın eşit olması kimliğin korunduğunu tek başına göstermez. Bu yüzden “80 satır korundu” ile “dönüşüm doğru” aynı rapor cümlesi olmamalı.
+
+<a id="kaniti-sonucun-icinde-gor"></a>
+
+## Kanıtı sonucun içinde gör
+
+[Tablo örneği](is-veri.md) hesap ile iddia farkını; [sayfa örneği](is-sayfa.md) kaynak farkı ile görünüm kontrolünü somutlaştırıyor.
+
 
 <a id="kontrol-listesinde-karsiligi"></a>
 

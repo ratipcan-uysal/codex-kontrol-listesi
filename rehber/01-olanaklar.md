@@ -62,4 +62,10 @@ Bu, rehberin iş akışı önerisi. Kazanç yalnız yazma hızından gelmez: ayn
 
 Okurken her özelliği açmaya çalışma. Bir özelliğin hangi sorunu çözdüğünü öğrenmek, onu sürekli kullanmaktan daha değerlidir.
 
+<a id="i-lk-calismada-akisi-gormek"></a>
+
+## İlk çalışmada akışı görmek
+
+Araştırmadan karar ve sunuma giden [tam örnek işte](is-arastirma.md), aynı doğrulanmış bilginin üç farklı çıktıda nasıl korunduğunu izle.
+
 [İçindekiler](README.md) · [Uygulamanın tamamını tanımak →](02-uygulama.md)

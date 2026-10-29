@@ -13,3 +13,5 @@
 
 - Arayüz görsellerinin kaydı GUIDE_FIGURES içindedir; kaynak, açıklama, alternatif metin ve dosya özeti birlikte tutulur. Resmî açıklayıcı gösterimi kullanıcı hesabında çekilmiş ekran diye sunma. Metin lisansının görselleri kapsadığını varsayma.
 - Markdown ve HTML bölüm çapaları birlikte üretilir. Eski çapaları ve kullanıcı işareti biçimini koru; yeni bağlantıları iki çıktıda kontrol et.
+
+- Öğretim yolları GUIDE_PATHS, şemalar GUIDE_FLOWS, indirilebilir örnekler GUIDE_EXAMPLES alanlarından üretilir. Kurgu çıktıyı çalıştırılmış oturum kanıtı gibi sunma; gerçek vakada kronolojiden desteklenmeyen neden-sonuç çıkarma.

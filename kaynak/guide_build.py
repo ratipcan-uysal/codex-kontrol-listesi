@@ -7,7 +7,8 @@ import hashlib
 import struct
 from urllib.parse import urlsplit
 from content import (GUIDE_DATE, GUIDE_INTRO, GUIDE_CHAPTERS, GUIDE_APPENDICES,
-                     GUIDE_SOURCES, GUIDE_FEATURES, GUIDE_ITEM_MAP, GUIDE_FIGURES, SECTIONS)
+                     GUIDE_SOURCES, GUIDE_FEATURES, GUIDE_ITEM_MAP, GUIDE_FIGURES,
+                     GUIDE_PATHS, GUIDE_FLOWS, GUIDE_EXAMPLES, SECTIONS)
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -23,22 +24,36 @@ def figure_html(key):
     f = GUIDE_FIGURES[key]
     width, height = struct.unpack('>II', (OUT/f['file']).read_bytes()[16:24])
     esc = lambda s: html.escape(s, quote=True)
-    return (f'<figure class="app-figure"><a class="figure-open" href="{esc(f["file"])}" '
+    label = 'OpenAI’nin resmî arayüz gösterimi' if f['kind']=='official' else 'Kurgu örnek HTML’nin gerçek tarayıcı görüntüsü'
+    lesson='<ol class="figure-lesson">'+''.join('<li><strong>'+esc(a)+'</strong> '+esc(b)+'</li>' for a,b in f['lesson'])+'</ol>'
+    return (f'<figure class="app-figure figure-{f["kind"]}"><a class="figure-open" href="{esc(f["file"])}" '
             f'aria-label="{esc(f["title"])} — görseli tam boyutta aç">'
             f'<img src="{esc(f["file"])}" alt="{esc(f["alt"])}" width="{width}" height="{height}" loading="lazy" decoding="async"></a>'
             f'<figcaption><strong>{esc(f["title"])}</strong> {esc(f["caption"])} '
-            f'<span class="figure-source">OpenAI’nin resmî arayüz gösterimi · '
+            f'{lesson}<span class="figure-source">{label} · '
             f'<a href="{esc(f["source"])}">Kaynak</a> · {f["checked"]} · Görsele tıklayarak büyüt.</span></figcaption></figure>')
+
+
+def flow_html(key):
+    f=GUIDE_FLOWS[key]
+    return ('<figure class="lesson-flow"><figcaption>'+html.escape(f['title'])+'</figcaption><ol>'+''.join(
+        '<li><strong>'+html.escape(a)+'</strong><span>'+html.escape(b)+'</span></li>' for a,b in f['steps'])+'</ol></figure>')
 
 
 def markdown_output(text):
     """Use the same figure metadata and explicit anchors in GitHub Markdown."""
     def figure(m):
         f=GUIDE_FIGURES[m[1]]
+        label='OpenAI’nin resmî arayüz gösterimi' if f['kind']=='official' else 'Kurgu örnek HTML’nin gerçek tarayıcı görüntüsü'
         return (f'![{f["alt"]}]({f["file"]})\n\n**{f["title"]}.** {f["caption"]} '
-                f'[Tam boyut]({f["file"]}) · OpenAI’nin resmî arayüz gösterimi · '
-                f'[Kaynak]({f["source"]}) · {f["checked"]}.')
+                f'[Tam boyut]({f["file"]}) · {label} · '
+                f'[Kaynak]({f["source"]}) · {f["checked"]}.\n\n'+
+                '\n'.join(f'{n}. **{a}:** {b}' for n,(a,b) in enumerate(f['lesson'],1)))
     text=re.sub(r'^\[FIGURE:([a-z-]+)\]$',figure,text,flags=re.M)
+    def flow(m):
+        f=GUIDE_FLOWS[m[1]]
+        return '**'+f['title']+'**\n\n'+'\n'.join(f'{n}. **{a}:** {b}' for n,(a,b) in enumerate(f['steps'],1))
+    text=re.sub(r'^\[FLOW:([a-z-]+)\]$',flow,text,flags=re.M)
     # Match renderer IDs so cross-links work both in GitHub and the HTML site.
     seen={}; fence=False; lines=[]
     for line in text.splitlines():
@@ -91,11 +106,15 @@ def render_markdown(markdown):
     """Small fail-closed renderer for the authored subset, with escaped text/code."""
     lines = markdown.splitlines(); out = []; headings = []; seen = {}; n = 0
     def starts_block(line):
-        return not line.strip() or line.startswith(('#', '|', '>', '```', '- ', '[FIGURE:')) or bool(re.match(r'^\d+\. ', line))
+        return not line.strip() or line.startswith(('#', '|', '>', '```', '- ', '[FIGURE:', '[FLOW:')) or bool(re.match(r'^\d+\. ', line))
     while n < len(lines):
         line = lines[n]
         if not line.strip(): n += 1; continue
-        if line.startswith('[FIGURE:'):
+        if line.startswith('[FLOW:'):
+            match=re.fullmatch(r'\[FLOW:([a-z-]+)\]',line)
+            if not match or match[1] not in GUIDE_FLOWS: raise ValueError('Unknown flow: '+line)
+            out.append(flow_html(match[1])); n += 1
+        elif line.startswith('[FIGURE:'):
             match=re.fullmatch(r'\[FIGURE:([a-z-]+)\]',line)
             if not match or match[1] not in GUIDE_FIGURES: raise ValueError('Unknown figure: '+line)
             out.append(figure_html(match[1])); n += 1
@@ -144,6 +163,12 @@ def validate_guide():
     assert [c['number'] for c in GUIDE_CHAPTERS]==list(range(1,19))
     all_pages=GUIDE_CHAPTERS+GUIDE_APPENDICES
     assert len({p['slug'] for p in all_pages})==len(all_pages)
+    assert len(GUIDE_PATHS)==3 and {p['slug'] for p in GUIDE_PATHS}<={p['slug'] for p in GUIDE_APPENDICES}
+    for name,body in GUIDE_EXAMPLES.items():
+        assert Path(name).name==name and Path(name).suffix in {'.md','.csv','.html'} and body
+    used_flows=set(re.findall(r'\[FLOW:([^]]+)\]', '\n'.join(p['body'] for p in all_pages)))
+    assert used_flows==set(GUIDE_FLOWS)
+    for flow in GUIDE_FLOWS.values(): assert flow['title'] and len(flow['steps'])==4
     ids={i['id'] for s in SECTIONS for i in s['items']}
     assert set(GUIDE_ITEM_MAP)==ids and len(ids)==107
     assert set(GUIDE_ITEM_MAP.values()) <= PAGE_SLUGS
@@ -163,14 +188,20 @@ def validate_guide():
         assert asset.read_bytes()[:8]==b'\x89PNG\r\n\x1a\n'
         assert hashlib.sha256(asset.read_bytes()).hexdigest()==f['sha256']
         assert f['alt'] and f['caption'] and f['title'] and f['checked']==GUIDE_DATE
-        assert f['source'].startswith('https://learn.chatgpt.com/docs/')
+        assert len(f['lesson'])==3 and all(a and b for a,b in f['lesson'])
+        assert f['kind'] in {'official','example'}
+        if f['kind']=='official':assert f['source'].startswith('https://learn.chatgpt.com/docs/')
+        else:assert f['source'].startswith('ornekler/') and f['source'][9:] in GUIDE_EXAMPLES
     return ids
 
 
 def page_html(title, markdown, current, prev=None, next_=None):
     rendered, heads=render_markdown(markdown)
     active_attr = 'aria-current="page"'
-    nav=''.join(f'<a {active_attr if c["slug"]==current else ""} href="{c["slug"]}.html">{c.get("number", "Ek")}. {html.escape(c["title"])}</a>' for c in GUIDE_CHAPTERS+GUIDE_APPENDICES)
+    journeys=[p for p in GUIDE_APPENDICES if 'journey' in p]
+    references=[p for p in GUIDE_APPENDICES if 'journey' not in p]
+    nav='<div class="nav-group">ÖRNEK İŞLER</div>'+''.join(f'<a {active_attr if c["slug"]==current else ""} href="{c["slug"]}.html">{c["journey"]}. {html.escape(c["title"])}</a>' for c in journeys)
+    nav+='<div class="nav-group">KONU REHBERİ</div>'+''.join(f'<a {active_attr if c["slug"]==current else ""} href="{c["slug"]}.html">{c.get("number", "Ek")}. {html.escape(c["title"])}</a>' for c in GUIDE_CHAPTERS+references)
     nav += '<a href="kapsam.html">Özellik envanteri</a><a href="esleme.html">107 madde eşlemesi</a><a href="kaynaklar.html">Kaynaklar ve sınırlar</a>'
     local='<details class="page-toc"><summary>Bu sayfada</summary><ul>'+''.join(f'<li><a href="#{a}">{html.escape(t)}</a></li>' for a,t in heads)+'</ul></details>' if heads else ''
     moves=[]
@@ -185,6 +216,8 @@ def page_html(title, markdown, current, prev=None, next_=None):
 
 def build_guide():
     validate_guide(); OUT.mkdir(exist_ok=True)
+    (OUT/'ornekler').mkdir(exist_ok=True)
+    for name,body in GUIDE_EXAMPLES.items():(OUT/'ornekler'/name).write_text(body)
     lookup={i['id']:i for s in SECTIONS for i in s['items']}
     titles={c['slug']:c['title'] for c in GUIDE_CHAPTERS+GUIDE_APPENDICES}
     pages=[]
@@ -227,7 +260,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 |---|---|
 '''
     for src in GUIDE_SOURCES.values(): source_md+=f'| [{src["title"]}]({src["url"]}) | {src["checked"]} |\n'
-    source_md+='\n## Arayüz görselleri ve atıf\n\nGörseller OpenAI belgelerindeki açıklayıcı arayüz gösterimlerinden, içerikleri değiştirilmeden alındı. Bu rehber için çalışan kullanıcı hesabının ekranı çekilmedi. Örneklerdeki model adları, tarihler ve veriler ürünün her hesapta güncel durumunu temsil etmez. Her görsel açılıp incelendi. Kaynak ve dosya özeti [görsel manifestinde](gorsel-manifest.json) kayıtlıdır. OpenAI ve diğer hak sahiplerine ait görseller rehber metninin CC BY 4.0 lisansına dahil değildir; bu rehber görseller için ayrıca yeniden kullanım lisansı vermez.\n\n'
+    source_md+='\n## Arayüz görselleri ve atıf\n\nAltı resmî arayüz gösterimi OpenAI belgelerinden içerikleri değiştirilmeden alındı. İki önce/sonra görüntüsü ise bu rehber için üretilmiş kurgu HTML sayfalarının gerçek tarayıcı çekimidir; Codex uygulamasının oturum ekranı değildir. Her görselin türü ve kaynağı altında yazılıdır. Yanlarındaki Nereye bak / Ne yap / Ne gör açıklamaları bizim öğretim yorumumuzdur. Kaynak ve dosya özeti [görsel manifestinde](gorsel-manifest.json) kayıtlıdır. OpenAI ve diğer hak sahiplerine ait görseller metnin CC BY 4.0 lisansına dahil değildir. Rehber için yazılmış örnek dosyalar ve onların ekran görüntüleri rehber lisansını izler.\n\n'
     source_md+='| Görsel | Resmî sayfa | Kayıt tarihi |\n|---|---|---|\n'
     for f in GUIDE_FIGURES.values():source_md+=f'| [{f["title"]}]({f["file"]}) | [Kaynak]({f["source"]}) | {f["checked"]} |\n'
     source_md+='''
@@ -238,13 +271,17 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 Yerel çıktı, uzak depoya gönderim ve canlı yayın ayrı durumlardır. Eski kontrol listesinin geçmiş yayın kanıtı, bu yeni rehberin yayımlandığı anlamına gelmez. Bu sürümün teslim durumu da aynı doğrulama raporunda ayrıca belirtilir.
 '''
     pages.append(dict(slug='kaynaklar',title='Kaynaklar, kanıt türleri ve güncellik',body=source_md))
-    intro=GUIDE_INTRO+'\n## Tam içindekiler\n\n'+'\n'.join(f'{c["number"]}. [{c["title"]}]({c["slug"]}.md)' for c in GUIDE_CHAPTERS)+'\n\n## Ekler ve hızlı erişim\n\n'+'\n'.join(f'- [{p["title"]}]({p["slug"]}.md)' for p in pages[18:])+'\n\n[107 maddelik hızlı kontrol listesine dön](../codex-kontrol-listesi.md) · [Tek dosyada rehberi indir](tam-rehber.md)\n'
+    intro=GUIDE_INTRO+'\n## Tam içindekiler\n\n'+'\n'.join(f'{c["number"]}. [{c["title"]}]({c["slug"]}.md)' for c in GUIDE_CHAPTERS)+'\n\n## Ekler ve hızlı erişim\n\n'+'\n'.join(f'- [{p["title"]}]({p["slug"]}.md)' for p in pages[18:] if 'journey' not in p)+'\n\n[107 maddelik hızlı kontrol listesine dön](../codex-kontrol-listesi.md) · [Tek dosyada rehberi indir](tam-rehber.md)\n'
     (OUT/'README.md').write_text('# Codex’i Derinlemesine Kullanma Rehberi\n\n'+markdown_output(intro))
-    (OUT/'index.html').write_text(page_html('Codex’i Derinlemesine Kullanma Rehberi',intro,'index',next_=GUIDE_CHAPTERS[0]))
+    (OUT/'index.html').write_text(page_html('Codex’i Derinlemesine Kullanma Rehberi',intro,'index',next_=GUIDE_PATHS[0]))
     full=['# Codex’i Derinlemesine Kullanma Rehberi',GUIDE_INTRO]
     for index,p in enumerate(pages):
         prev=GUIDE_CHAPTERS[index-1] if 0<index<18 else None
         next_=GUIDE_CHAPTERS[index+1] if index<17 else None
+        if 'journey' in p:
+            pos=p['journey']-1
+            prev=GUIDE_PATHS[pos-1] if pos>0 else None
+            next_=GUIDE_PATHS[pos+1] if pos<2 else GUIDE_CHAPTERS[0]
         navigation='\n\n[İçindekiler](README.md)'
         if prev: navigation+=f' · [← {prev["title"]}]({prev["slug"]}.md)'
         if next_: navigation+=f' · [{next_["title"]} →]({next_["slug"]}.md)'

@@ -1,0 +1,14 @@
+{
+  "build": "PASS",
+  "checklist_python": {
+    "passed": 6
+  },
+  "guide_python": {
+    "passed": 18
+  },
+  "guide_browser_local": {
+    "passed": 21
+  },
+  "javascript_syntax": "PASS",
+  "diff_whitespace": "PASS"
+}

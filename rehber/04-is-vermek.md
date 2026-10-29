@@ -83,11 +83,9 @@ Bir fikir eleştirisi uygulama yetkisi vermez. Karar netleşince üretim isteği
 
 ## Küçük örnekle yöntemi netleştir, sonra genişlet
 
-Kurgu: 200 ürün açıklamasını aynı dile ve biçime getireceksin. “Hepsini iyileştir” demeden önce üç farklı üründe örnek sonuç iste. Uzun açıklama, eksik bilgi ve sıra dışı ölçü birimi gibi zor örnekleri seç. Böylece yöntemi yalnız kolay kayıtlarda başarılı görmezsin.
+200 kayda uygulanacak bir dönüşümde önce zor örnekleri seç: aynı isimli farklı kayıt, boş tutar veya sıra dışı sayı biçimi. Kural bu örneklerde doğruysa bütün tabloya yay. Tek bir yazım hatası için böyle bir ara aşama gerekmeyebilir.
 
-> Önce bu üç kayıtta dönüşümü göster. Ürün kodu, ölçü ve fiyatları koru. Eksik bilgiyi tamamlama. Yöntemi onayladıktan sonra bütün tabloya uygula; değişen alanları kaynakla eşleştir.
-
-Bu istek ara onayı özellikle seçiyor çünkü yanlış yöntem 200 kaydı etkiler. Tek bir yazım hatasında aynı süreç gereksiz olur. Tekrarlı ve kesin kurallı dönüşümde, yöntemi sabitledikten sonra bir betik kullanmak daha tutarlı olabilir.
+[Altı kayıtlık rapor örneğinde](is-veri.md) bu kararın sonucunu görebilirsin: kayıt kimliği korunuyor, boş tutar sıfıra dönüşmüyor, “bilinen tahsilat” ile “tam toplam” ayrılıyor. Yöntem sabitlenince tekrarlı dönüşümü bir betiğe taşımak daha tutarlı olabilir.
 
 <a id="i-yi-bir-revizyon-korunacak-kismi-da-soyler"></a>
 

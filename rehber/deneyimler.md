@@ -1,4 +1,4 @@
-# Gerçek deneyimlerden sekiz ders
+# Gerçek deneyimlerden dokuz ders
 
 Belge kontrolü: 2026-10-29.
 
@@ -8,57 +8,71 @@ Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşm
 
 ## C01
 
-<a id="bulunamayan-uygulama-hic-var-olmamis-uygulama-degildir"></a>
+<a id="uygulama-yok-iddiasini-duzeltmek"></a>
 
-### Bulunamayan uygulama, hiç var olmamış uygulama değildir
+### “Uygulama yok” iddiasını düzeltmek
 
-**Gözlenen:** Daha önce çalıştırılmış bir masaüstü uygulamasının paketi ilk kontrol edilen konumlarda bulunamadı. Kullanıcı bu yoruma itiraz etti. Kaynak proje üzerinden Release derlemesi alındı ve uygulama süreci gözlendi.
+**İstenen iş:** Daha önce üzerinde çalışılmış masaüstü uygulamasını başlatmak. İlk bakılan derleme ve uygulama konumlarında hazır paket bulunamadı; mevcut kaynaktan Release derlemesi başladı.
 
-**Ders:** “Bu yolda bulunamadı” sonucunu “uygulama yok” iddiasına dönüştürme. Kaynak, paket, çalışan süreç ve görünür pencere ayrı kanıtlardır.
+**Senin müdahalen:** “buranın app'i nasıl yok ya test ettik bir ton”. Bu cümle, geçmiş test bilgisini yeniden görünür yaptı ve yokluk iddiasına itiraz etti.
 
-**Sınır:** Pencere görünürlüğü ve yeni işlevlerin davranış testi bu kayıtla doğrulanmadı. Derleme başarısı ses kalitesini kanıtlamaz. Kontrol tarihi: 28 Ekim 2026.
+**Neyi değiştirdi?** Konuşma sırası derlemenin bu itirazdan önce başladığını gösteriyor. Bu yüzden “kullanıcı düzeltti, ardından uygulamayı yeniden derledik” diye bir neden–sonuç kurmuyoruz. Düzelen şey raporun kesinliği oldu: ilk bakılan konumlarda paket bulunamaması, uygulamanın hiç var olmadığı anlamına gelmiyordu.
+
+**Gözlenen sonuç:** Kaynak proje üzerinden derleme tamamlandı, uygulama süreci gözlendi. Paketin neden önceki konumlarda bulunmadığı bilinmiyordu. Görünür pencere ve yeni ses işlevleri ayrıca doğrulanmadı. Kontrol tarihi: 28 Ekim 2026.
+
+**Başka işte kullan:** “Aradığın kapsam neydi?” sorusu, modelin gözlemini geniş bir iddiaya dönüştürdüğü noktayı bulur. [Rapor örneğindeki](is-veri.md) bilinen tahsilat/tam toplam ayrımı aynı alışkanlığın veri işindeki karşılığı.
 
 <a id="c02"></a>
 
 ## C02
 
-<a id="eski-not-guncel-urunun-gercegi-olmayabilir"></a>
+<a id="eksik-gorunen-icerik-icin-yanlis-isi-baslatmamak"></a>
 
-### Eski not, güncel ürünün gerçeği olmayabilir
+### Eksik görünen içerik için yanlış işi başlatmamak
 
-**Gözlenen:** Ürün incelemesinde eski “ilk kullanım akışı yok” notu mevcut kaynakla çelişti. Akış vardı; derleme koşulları farklı davranıyordu. Aynı incelemede bazı çevrilmiş içeriklerin uygulama paketine aktarılmadığı görüldü.
+**Başlangıç:** Ürün incelemesinde eski “ilk kullanım akışı yok” notu ve İngilizce görünümde eksik bağlam sorunu vardı. Eski nota dayanmak yeni bir giriş akışı önermeye, İngilizce eksikliği ise tekrar çeviri yaptırmaya götürebilirdi.
 
-**Ders:** Belleği araştırma başlangıcı yap. İçerik, paketleme ve çalışma zamanı sorunlarını ayır. Mevcut çeviriyi yeniden üretmeden önce hangi katmanda eksik olduğunu bul.
+**İncelemenin değiştirdiği karar:** Güncel kaynak açıldı. İlk kullanım akışı vardı; Debug/Release koşulları ayrılıyordu. İngilizce açıklamalar kaynakta bulunuyordu, yerel uygulama paketinde yoktu. Dolayısıyla önce içeriği yeniden üretmek yerine üretim ve paketleme zincirine bakmak gerekiyordu.
 
-**Sınır:** Kaynak ve paket incelemesi kullanıcı etkisi, mağaza sürümü veya fiziksel cihaz davranışı ölçümü değildi. Kontrol tarihi: 27 Ekim 2026.
+**Sonuç ve sınır:** Kanıt, yapılacak işin katmanını değiştirdi. Bu incelemede uygulama onarımı, yeni cihaz testi veya mağaza yayını yapılmadı. Bulguyu belirli bir kullanıcı cümlesi tetiklemiş gibi anlatmıyoruz; kayıt kaynak temelli incelemeyi destekliyor. Kontrol tarihi: 27 Ekim 2026.
+
+**Başka işte kullan:** “Bu bilgi hiç üretilmedi mi, yoksa doğru yere ulaşmadı mı?” diye ayır. [Araştırma örneğinde](is-arastirma.md) onaylanmış karar notunu yeniden araştırmadan sunuma taşıma aynı aktarım disiplinini kullanıyor.
 
 <a id="c03"></a>
 
 ## C03
 
-<a id="gecen-konum-kontrolu-okunabilirligin-tamamini-olcmez"></a>
+<a id="testin-gecmesiyle-metnin-gorunmesi-farkliydi"></a>
 
-### Geçen konum kontrolü, okunabilirliğin tamamını ölçmez
+### Testin geçmesiyle metnin görünmesi farklıydı
 
-**Gözlenen:** A/B yerel prototipte klavye ve giriş alanına ilişkin konum kontrolü geçti; görüntüde ikinci metin satırının örtüldüğü görüldü. Yerleşim düzeltildi, ilgili kontrol ve son görsel inceleme yapıldı.
+**İstenen iş:** İki yerel arayüz adayını gerçek içerik uzunlukları ve büyük yazıyla karşılaştırmak. Klavye ile giriş alanının konum kontrolü geçti.
 
-**Ders:** Testi hangi iddiayı ölçtüğüyle oku. Gerçek içerikli ekran görüntüsünü açmak, geometrik kontrolün kaçırdığı kusuru gösterebilir.
+**Yönü değiştiren kanıt:** Ekran görüntüsü açıldığında ikinci metin satırının örtüldüğü görüldü. Bu, kullanıcıdan geldiği kaydedilmemiş bir müdahale; görsel inceleme bulgusu olarak anlatıyoruz. Sayısal konum kontrolü, metnin tamamının okunabilirliğini ölçmüyordu.
 
-**Sınır:** Kullanıcının tasarım seçimi ve ana ürüne aktarım ayrı kaldı. Fiziksel cihaz ve gerçek VoiceOver doğrulaması bu prototip kanıtından çıkarılamaz. Kontrol tarihi: 20 Ekim 2026.
+**Yapılan değişiklik:** Giriş alanı üste, açılabilir kaynak bağlamı altına alındı. Son kontrol iki satırlık taslağı ve imleci görünür gösterdi. Başarısız önceki görüntüler son kabul diye kullanılmadı.
+
+**Sonuç ve sınır:** Yerel prototipte ilgili durum kapandı. Tasarım seçimi, ana ürüne aktarım, fiziksel cihaz ve gerçek VoiceOver doğrulaması bu sonucun dışında kaldı. Kontrol tarihi: 20 Ekim 2026.
+
+**Başka işte kullan:** Testin hangi iddiayı ölçtüğünü söyle ve gösterilen çıktıyı aç. [Web sayfası örneğinde](is-sayfa.md) aynı koşulda önce/sonra görüntüsü ve bağlantı davranışı ayrı kontrol edilir.
 
 <a id="c04"></a>
 
 ## C04
 
-<a id="video-dogrulamasi-muzik-begenisini-veya-sosyal-yayini-kanitlamaz"></a>
+<a id="teknik-teslim-tamamlanirken-yaratici-tercih-acik-kalabilir"></a>
 
-### Video doğrulaması, müzik beğenisini veya sosyal yayını kanıtlamaz
+### Teknik teslim tamamlanırken yaratıcı tercih açık kalabilir
 
-**Gözlenen:** Kitap kapaklarından oluşan videoda kapak sayısı, benzersizlik ve tam çözümleme kontrol edildi. Müzik yönü kullanıcıyı tatmin etmedi. Sonraki istek sessiz sürümün e-postayla teslimiydi.
+**İstenen iş:** Kitap kapaklarından video üretmek; ardından geçiş ritmine uyacak müzik eklemek. Kapak sayısı, benzersizlik ve videonun tam çözümlenmesi kontrol edildi.
 
-**Ders:** Teknik bütünlük, yaratıcı tercih ve teslim aşamasını ayrı değerlendir. “Daha yaratıcı” geri bildirimini somut yönlere dönüştür.
+**Senin müdahalen:** “sıkıcı bir müzik, daha yaratıcı ol”. Bu, dosyanın teknik bütünlüğüne değil yaratıcı yöne itirazdı. Sonraki isteğin “müziksiz halini bana gmail'e atabilir misin” oldu.
 
-**Sınır:** Sessiz sürümün teslim kaydı, müzik revizyonunun bittiğini veya sosyal platformda yayın yapıldığını göstermiyor. Kontrol tarihi: 19 Ekim 2026.
+**Neyi değiştirdi?** Son teslim hedefi sessiz sürümün e-postayla gönderilmesine döndü. Kayıt, sessiz teslimi destekliyor; beğenilen yeni bir müziğin bulunup tamamlandığını göstermiyor. Teknik başarı, yaratıcı memnuniyet ve teslim aynı ölçü değildi.
+
+**Başka işte kullan:** Beğenmediğin boyutu seçilebilir yönlere aç: ritim, doku, yoğunluk veya referans. Bu öneri vakadan çıkardığımız yöntemdir; o konuşmada bu çerçeveyle başarılı müzik üretildiğini iddia etmiyoruz. [Yaratıcı yönü tarif etme örneği](13-tasarim.md#kurgu-senaryo-daha-yaratici-muzik-istegini-acmak).
+
+**Sınır:** E-postayla teslim kaydı sosyal platform yayını değildir. Adres ve ileti kimlikleri kamuya alınmadı. Kontrol tarihi: 19 Ekim 2026.
 
 <a id="c05"></a>
 
@@ -115,5 +129,23 @@ Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşm
 **Ders:** Sürüm karşılaştırırken çağrılan dosyayı ve yüzeyi belirt. Eski CLI'da komut bulunmaması, uygulamanın tamamında yeteneğin bulunmadığını kanıtlamaz.
 
 **Sınır:** Sürüm numaraları tarihli gözlemdir. Güncel kurulumun `--version` ve `--help` çıktısı yeniden kontrol edilmelidir. [Önceki kaynak denetimi](../KAYNAKLAR.md), 21 Ekim 2026.
+
+<a id="c09"></a>
+
+## C09
+
+<a id="bu-rehberde-daha-iyi-yi-uc-ayri-karara-cevirmek"></a>
+
+### Bu rehberde “daha iyi”yi üç ayrı karara çevirmek
+
+**İstenen iş:** Codex'i başlangıçtan ileri kullanıma anlatan, gerçek deneyimlere dayalı bir eğitim kaynağı. İlk sürüm 18 bölüm, komutlar ve senaryolar içeriyordu; uygulama görseli yoktu.
+
+**Senin müdahalen:** İlk kullanıcı gözüyle yeniden inceleme istedin; görsellerin eksikliğini ve yeşil arka planın bunaltmasını ayrı ayrı belirttin. Böylece içerik, öğretim ve görünüm tek bir belirsiz “iyileştir” isteğinde kalmadı.
+
+**Gözlenen değişiklik:** İlk dosyayı üretme yolu ve eksik kullanım başlıkları eklendi; altı resmî arayüz gösterimi açıklamalarıyla yerleştirildi. Geniş yeşil yüzeyler nötr renklere döndü, düzen korundu. 107 kontrol maddesi ve işaretleme biçimi değişmedi. Bu değişiklikler GitHub ve canlı Pages üzerinde kontrol edildi. [29 Ekim revizyonunun kanıtı](../dogrulama/rehber-revizyon-20261029/INCELEME.md) · [Yayın](../DOGRULAMA.md).
+
+**Sonraki ayrım:** “Yapabileceğimiz en iyi eğitim materyali bu mu?” sorusu, kapsamlı bir başvuru kaynağının eğitim anlatısını tek başına kurmadığını ortaya çıkardı. Şimdi okuduğun örnek işler bu ikinci isteğin uygulaması. Dinleyicilerin daha iyi öğrendiğine ilişkin ölçüm yapılmadı; içerik ve ürün kontrollerini öğrenme başarısı saymıyoruz.
+
+**Başka işte kullan:** Geri bildirimde sorunlu boyutu ayır. Eksik bilgiye içerik, yanlış sıraya anlatı, yetersiz gösterime görsel, bunaltan zemine palet müdahalesi gerekir. Her eleştiride bütün ürünü baştan kurmak zorunda değilsin.
 
 [İçindekiler](README.md)

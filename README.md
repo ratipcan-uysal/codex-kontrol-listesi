@@ -2,7 +2,7 @@
 
 ## [Çevrimiçi ana rehberi oku →](https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/)
 
-18 bölümlük rehberi tarayıcıda aç: mobil uyumlu görünüm, bölüm bağlantıları ve önceki/sonraki gezinmesi. Aşağıdaki 107 madde hızlı başvuru için korunur.
+18 bölümlük rehberi tarayıcıda aç: üç baştan sona örnek iş, indirilebilir örnek dosyalar, açıklamalı görseller ve önceki/sonraki gezinmesi. Aşağıdaki 107 madde hızlı başvuru için korunur.
 
 **19 bölüm · 107 madde · 25 temel · 82 ileri · 21 Ekim 2026**
 

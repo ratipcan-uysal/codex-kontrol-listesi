@@ -34,7 +34,9 @@ Bu istek önce hatanın etkisini belirletir. “Hepsini geri al” farklı bir y
 
 ## Gerçek deneyim: bulunamayan uygulama
 
-Bir masaüstü projesinde ilk bakılan konumlarda uygulama paketi bulunamayınca, daha önce çalıştırılmış uygulamanın yokluğu izlenimi doğdu. Kullanıcının itirazı araştırmanın yönünü değiştirdi. Kaynak proje bulundu, Release derlemesi alındı ve uygulama süreci gözlendi. Pencerenin görünürlüğü ve yeni ses işlevlerinin testi ayrıca doğrulanmamıştı. Ders, bulunamayan dosyayla hiç üretilmemiş ürünü aynı sonuca bağlamamak. [Vaka C01](deneyimler.md#c01)
+İlk bakılan konumlarda paket bulunamayınca “uygulama yok” izlenimi doğdu. Sen daha önce uygulamayı test ettiğimizi hatırlattın. Kayıt sırasını yeniden okuyunca önemli bir ayrım ortaya çıkıyor: yeniden derleme zaten başlamıştı. Müdahalen, araştırmayı başlatmak yerine benim iddiamı daralttı. Son rapor paket, çalışan süreç ve doğrulanmamış pencere/işlev durumlarını ayırdı. [Vakanın tam zinciri](deneyimler.md#c01)
+
+Başka işte kullanacağın soru: “Bu sonuç yalnız baktığın yerde mi geçerli, yoksa bütün ürün hakkında mı?” Daha çok araştırma istemeden önce yanlış kesinliği düzeltebilirsin.
 
 <a id="durmak-yeniden-denemek-ve-kapsami-degistirmek"></a>
 

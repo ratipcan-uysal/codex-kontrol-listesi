@@ -61,6 +61,13 @@ Atölye için 200 satırlık etkinlik verisi temizleniyor. Codex her satırı te
 Kullanımını anlamaya çalışırken yalnız açık Codex sohbetlerini sayma. Settings → Usage → App limits içinde bağlı uygulamaların kullanım sınırları görünüyorsa bunları da incele. Yüzdelik üst sınır, uygulama için ayrılmış veya garantilenmiş kota değildir. Plan kullanma izni sohbet geçmişine ve belleğe erişim izni de vermez. [ChatGPT ile giriş ve plan kullanımı](https://learn.chatgpt.com/docs/sign-in-with-chatgpt)
 
 
+<a id="modeli-degistirmeden-once"></a>
+
+## Modeli değiştirmeden önce
+
+[Karar örneğinde](is-arastirma.md) yanlış öneri model seçimiyle değil, eleme ölçütünün düzeltilmesiyle değişiyor. Önce yanlış sonucun hangi karardan çıktığını belirle.
+
+
 <a id="kontrol-listesinde-karsiligi"></a>
 
 ## Kontrol listesinde karşılığı
