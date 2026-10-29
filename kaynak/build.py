@@ -2,7 +2,7 @@
 from pathlib import Path
 import json
 import re
-from content import SOURCES, SECTIONS, TOP_TEN, GUIDE_ITEM_MAP
+from content import SOURCES, SECTIONS, TOP_TEN, GUIDE_ITEM_MAP, GUIDE_FEATURES
 from guide_build import build_guide
 
 HERE = Path(__file__).resolve().parent
@@ -36,12 +36,12 @@ def build():
     counts = {'sections':len(SECTIONS), 'items':len(items), 'basic':basic, 'advanced':len(items)-basic}
     stats = f"{len(SECTIONS)} bölüm · {len(items)} madde · {basic} temel · {len(items)-basic} ileri"
     payload = dict(guideMap=GUIDE_ITEM_MAP, sections=SECTIONS, sources=SOURCES, topTen=TOP_TEN, version=1,
-                   updated='2026-10-21', guideUpdated='2026-10-29', revision=3)
+                   updated='2026-10-21', guideUpdated='2026-10-29', revision=4)
     replacements = {
         '__CSS__':(HERE/'style.css').read_text(), '__JS__':(HERE/'app.js').read_text(),
         '__DATA__':json.dumps(payload, ensure_ascii=False).replace('</', '<\\/'),
         '__TOTAL__':str(len(items)), '__BASIC__':str(basic), '__ADVANCED__':str(len(items)-basic),
-        '__DATE__':DATE, '__REPO__':REPO, '__URL__':URL, '__STATS__':stats,
+        '__FEATURES__':str(len(GUIDE_FEATURES)), '__DATE__':DATE, '__REPO__':REPO, '__URL__':URL, '__STATS__':stats,
     }
     html = (HERE/'template.html').read_text()
     for key,value in replacements.items():
@@ -55,7 +55,7 @@ def build():
           f'[Etkileşimli rehberi aç]({URL}) · [Değişiklikler](GUNCELLEMELER.md) · [Kaynak denetimi](KAYNAKLAR.md)', '',
           'Codex ile çalışırken bağlamı, görev sınırını, araçları ve doğrulamayı düzenlemek için Türkçe bir rehber. Her maddede neden, nasıl, örnek ve doğrulama bulunur.', '',
           '## Derinlemesine rehber · 29 Ekim 2026', '',
-          '[18 bölümlük ana rehber ve tam içindekiler](rehber/README.md) · [Komutlar](rehber/komutlar.md) · [Kurgu senaryolar](rehber/senaryolar.md) · [75 özellik ailesi](rehber/kapsam.md) · [107 madde eşlemesi](rehber/esleme.md)', '',
+          f'[18 bölümlük ana rehber ve tam içindekiler](rehber/README.md) · [Komutlar](rehber/komutlar.md) · [Kurgu senaryolar](rehber/senaryolar.md) · [{len(GUIDE_FEATURES)} özellik ailesi](rehber/kapsam.md) · [107 madde eşlemesi](rehber/esleme.md)', '',
           'Bu sayfa hızlı kontrol listesi olarak korunur. Yeni rehber gerçek deneyimleri, ürün özelliklerini, kullanım kararlarını ve örnek istekleri açıklayan sıralı okuma kaynağıdır. Eski maddelerin kimlikleri ve kullanıcı işaretleri değişmez. Kontrol listesinin tarihli CLI gözlemleri 21 Ekim; yeni rehberin belge kontrolü 29 Ekim 2026 tarihine aittir.', '',
           '## Kullanım', '',
           '- İlk turda aşağıdaki on maddeyle başla; her gelişmiş ayarı kurmak zorunda değilsin.',
@@ -82,7 +82,7 @@ def build():
             md += [f'Kaynak: [{name}]({url})', '', f'[Rehberde ayrıntılı açıklama](rehber/{GUIDE_ITEM_MAP[i["id"]]}.md)', '']
     md += ['## Kaynak, atıf ve lisans', '',
            f'Ratipcan Uysal’ın [Claude Code kontrol listesinin]({ORIGINAL}) Codex için yeniden yazılmış ve genişletilmiş sürümüdür. Resmî OpenAI yayını değildir.', '',
-           'Copyright © 2026 Ratipcan Uysal. [CC BY 4.0](LICENSE). Kod, içerik ve değişiklikler bu depoda incelenebilir.', '',
+           'Copyright © 2026 Ratipcan Uysal. [CC BY 4.0](LICENSE). Kod, içerik ve değişiklikler bu depoda incelenebilir. OpenAI arayüz görselleri bu lisansın dışındadır; [görsel kaynaklarını](rehber/kaynaklar.md#arayuz-gorselleri-ve-atif) incele.', '',
            '## Katkı ve yerel çalıştırma', '',
            'İçeriğin tek kaynağı `kaynak/content.py` dosyasıdır. Üretilen HTML ve Markdown dosyalarını doğrudan düzenlemek yerine kaynağı güncelle.', '',
            '```sh', 'python3 kaynak/build.py', 'python3 kaynak/test_build.py', 'python3 -m http.server 8000 --bind 127.0.0.1', '```', '',

@@ -4,6 +4,8 @@ Belge kontrolü: 2026-10-29.
 
 Codex'e yeni bir yetenek eklerken önce eksik olanı adlandır: veriye erişim mi, doğru yöntemi bilmek mi, tekrarlı işlemi yürütmek mi? Her ihtiyaç için yeni plugin kurmak gerekmez.
 
+<a id="dort-kavrami-ayir"></a>
+
 ## Dört kavramı ayır
 
 | Kavram | Ne sağlar? | Tek başına ne sağlamaz? |
@@ -17,11 +19,15 @@ Codex'e yeni bir yetenek eklerken önce eksik olanı adlandır: veriye erişim m
 
 Örneğin takvim bağlantısı etkinlikleri okuyabilir; bir toplantı hazırlık skill'i hangi bilgileri birleştireceğini söyler. Kullanıcının “taslak çıkar” isteği, takvime etkinlik yazma yetkisi vermez.
 
+<a id="kesfetme-baglama-ve-cagirma"></a>
+
 ## Keşfetme, bağlama ve çağırma
 
 Plugins bölümünde gereken yeteneği bul, hangi hesabın ve izinlerin gerektiğini incele, bağlantıyı tamamla. Kurulumdan sonra araçların kullanılabilirliğini yeni sohbet veya ilgili menü üzerinden kontrol etmek gerekebilir. Codex'te `$` menüsünden skill seçmek ya da adını açıkça yazmak, ilgili yöntemin kullanılmasını netleştirir. Bazı diğer yüzeylerde aynı çağrı `@` ile sunulur; sözdizimini yüzeye göre oku.
 
 Bir plugin'in masaüstü etiketi varsa web veya mobilde aynı aracı bekleme. Güncel belgeler plugin paketleriyle IDE'de kullanılan bağımsız skill/MCP yollarını da ayırır. “Bilgisayarımda kurulu” ile “bu sohbetin araçları arasında” farklı durumlardır.
+
+<a id="i-yi-skill-neyi-saklar"></a>
 
 ## İyi skill neyi saklar?
 
@@ -33,17 +39,25 @@ Tekrar tekrar açıklamak zorunda kaldığın yöntemi saklar. Örneğin “kayn
 
 Bu kurgu örnekte beklenen çıktı yalnız uzun bir talimat değildir: doğru tetiklenen, ilgisiz işte devreye girmeyen, kaynakları belli bir paket gerekir.
 
+<a id="betik-mi-skill-mi-ozel-arac-mi"></a>
+
 ## Betik mi, skill mi, özel araç mı?
 
 Aynı kuralla bin dosya adı değişiyorsa betik daha uygundur. Kaynak kalitesini tartıp makale yapısını seçmek yorum gerektirir; skill bu yöntemi yönlendirir. Mevcut araçların erişemediği kurumsal veriye kontrollü erişim gerekiyorsa özel MCP/araç geliştirmek anlamlı olabilir. Önce hazır araçla küçük işi tamamla; soyut bir ihtiyaca büyük entegrasyon kurma.
+
+<a id="record-replay"></a>
 
 ## Record & Replay
 
 Desteklenen macOS kurulumunda Plugins → + → Record a skill yolu bilgisayarda gösterdiğin akıştan skill üretmeye yardımcı olur. Computer Use kurulumu gerekir. Kaydı durdurduktan sonra oluşan yönergeleri incele: sabit kişi adı, tarih, dosya yolu veya tek seferlik tıklama genel kurala dönüşmüş olabilir. Replay, değişen ekranda araçlarla yürütülen akıştır; her pikseli aynı sırayla basan kusursuz makro garantisi değildir. [Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay)
 
+<a id="baglanti-calismiyorsa"></a>
+
 ## Bağlantı çalışmıyorsa
 
 Önce kurulum, hesap bağlantısı, izin kapsamı ve o sohbette araç keşfini ayrı kontrol et. Araç görünüyorsa küçük bir okuma denemesi yap. Ağ erişimi hatasını doğrudan yanlış parola diye yorumlama. Başka hesaba geçmek veya erişimi genişletmek, hata kanıtı olmadan ilk çözüm olmamalı.
+
+<a id="kontrol-listesinde-karsiligi"></a>
 
 ## Kontrol listesinde karşılığı
 

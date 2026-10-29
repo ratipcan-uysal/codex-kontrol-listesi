@@ -4,6 +4,8 @@ Belge kontrolü: 2026-10-29.
 
 Bir konuşma turunda Codex metin üretebilir, araç çağırabilir, aracın sonucunu değerlendirebilir ve sonraki adımı seçebilir. Aynı cümle farklı ortamda farklı sonuç verir: belgeyi düzenlemek için dosyaya erişim gerekir. Dosyanın adını mesajda anmak içeriğini sağlamaz.
 
+<a id="dort-parcayi-ayir"></a>
+
 ## Dört parçayı ayır
 
 | Parça | Rolü | Yaygın yanlış beklenti |
@@ -14,6 +16,8 @@ Bir konuşma turunda Codex metin üretebilir, araç çağırabilir, aracın sonu
 | Ortam | İşin yürüdüğü dosyalar, yazılımlar ve izinler | Bilgisayardaki her şeyin bulutta da bulunduğu |
 
 Araç bir sonuç döndürdüğünde o sonuç da değerlendirme ister. “İşlem kabul edildi”, “işlem tamamlandı” ve “istenen kayıt değişti” farklı durumlardır. Dosya yüklenmiş olsa da onu ilgili sayfaya ayrıca bağlamak gerekebilir.
+
+<a id="okumak-hatirlamak-ve-tahmin-etmek"></a>
 
 ## Okumak, hatırlamak ve tahmin etmek
 
@@ -29,6 +33,8 @@ Doğrudan gördüğün bilgi ile çıkardığın sonucu ayır.
 
 Bu, bütün ara işlemleri raporlamasını istemekten farklı bir ihtiyaçtır. İlgili kontrolü tekrar bulabileceğin bir kayıt yeterlidir.
 
+<a id="bir-islem-zincirini-dogru-okumak"></a>
+
 ## Bir işlem zincirini doğru okumak
 
 Kurgu örnekte Atölye'nin internet sitesindeki etkinlik tarihini değiştirmek istiyorsun. Zincir şöyle olabilir:
@@ -42,6 +48,8 @@ Kurgu örnekte Atölye'nin internet sitesindeki etkinlik tarihini değiştirmek 
 
 İkinci adımın başarısı altıncıyı kanıtlamaz. Dördüncü adım yanlış sunucuya bakıyorsa yerel doğrulama da yanlış olur. Bu nedenle “hangi çıktı, nerede?” sorusu her teslimde işe yarar.
 
+<a id="kurgu-senaryo-listede-gorunen-ama-erismeyen-baglanti"></a>
+
 ## Kurgu senaryo: listede görünen ama erişmeyen bağlantı
 
 Atölye'nin kayıtları bağlı bir belge servisinde. Plugin kurulu görünüyor ama istenen tablo dönmüyor. Muhtemel açıklamalar farklı: yanlış hesap, dosya paylaşım sınırı, eksik araç yeteneği, ağ sorunu veya yanlış kayıt kimliği. Modeli değiştirerek başlamanın bu ayrımlar için doğrudan bir yararı yok.
@@ -54,10 +62,12 @@ Eksik erişimi eksik veri gibi raporlama.
 
 Plugin, MCP ve işletim sistemi izinleri farklı erişim katmanlarıdır. Birinin çalışması diğerlerini doğrulamaz. [Bağlantılar](https://learn.chatgpt.com/docs/extend/mcp) · [İzin katmanları](https://learn.chatgpt.com/docs/permission-modes)
 
-## Başarı mesajının kapsadığı alan
+<a id="bir-isi-anlatmakla-dosyayi-degistirmek-arasindaki-fark"></a>
 
-Bir komutun sıfır çıkış kodu, o komutun sözleşmesi içinde başarı demektir. Yanlış test filtresi hiç test çalıştırmadan başarılı bitebilir. Bir dosyanın üretilmesi içeriğinin doğru olduğunu, sayfanın açılması kaydın kalıcı olduğunu göstermez.
+## Bir işi anlatmakla dosyayı değiştirmek arasındaki fark
 
-“Nasıl emin oldun?” sorusunun iyi cevabı bir sıfat değildir. Beklenen davranış, yapılan kontrol ve gözlenen sonuç birlikte görünmelidir. Bir başlık düzeltmesinde dosyayı yeniden açmak yeterli olabilir. Veri dönüşümünde ise satır sayısı ve kayıt kimlikleri gibi daha güçlü kontroller gerekir.
+“Şöyle yapabilirsin” yanıtı bir açıklamadır. “Bu klasördeki dosyaya uygula” isteği ise araçla işlem gerektirir. Yalnız öneri geldiğinde istek şöyle netleşebilir: “Bu yaklaşımı mevcut dosyaya uygula, kaydet ve sonucu aç.” Araç erişimi yoksa Codex sınırı söylemeli; yapılmış işlem uydurmamalı.
+
+Bir komutun başarılı bitmesiyle istediğin sonucun doğrulanması arasındaki farkı [güvenilir sonuç bölümünde](12-dogrulama.md) ayrıntılı ele alıyoruz. Burada temel alışkanlık, yanıtın hangi kaynağa dayandığını ve dosyada neyin değiştiğini takip etmek.
 
 [İçindekiler](README.md) · [← Uygulamanın tamamını tanımak](02-uygulama.md) · [İş vermenin incelikleri →](04-is-vermek.md)

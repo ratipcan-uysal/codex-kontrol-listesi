@@ -23,6 +23,46 @@ const out=path.resolve(process.env.EVIDENCE_DIR || 'work/guide-browser');
   await check('chapter returns to original checklist anchor',async()=>{await page.locator('.prose a[href="../index.html#m-1-1"]').click();await page.waitForFunction(()=>document.querySelector('#m-1-1 details')?.open);assert.equal(await page.evaluate(()=>document.activeElement.closest('article')?.id),'m-1-1');});
   await check('guide navigation preserves saved checkmarks',async()=>{await page.locator('#check-m-1-1').check();await page.locator('#m-1-1 .guide-link a').click();await page.getByRole('link',{name:'107 madde ↗'}).click();await page.waitForSelector('#check-m-1-1');assert.equal(await page.locator('#check-m-1-1').isChecked(),true);});
   await check('all guide pages return successful response with one heading',async()=>{await page.goto(base+'rehber/index.html');const paths=await page.locator('.sidebar nav a').evaluateAll(a=>a.map(x=>x.getAttribute('href')));for(const p of paths){const response=await page.goto(base+'rehber/'+p);assert.equal(response.status(),200,p);assert.equal(await page.locator('h1').count(),1,p);assert.ok((await page.locator('.prose').textContent()).length>1000,p);}});
+  await check('all six official figures load with captions and accessible full-size links',async()=>{
+   const manifest=await (await page.request.get(base+'rehber/gorsel-manifest.json')).json();
+   const seen=new Set();
+   for(const slug of ['02-uygulama','09-web-tarayici-bilgisayar','12-dogrulama','14-buyuk-isler']){
+    await page.goto(base+'rehber/'+slug+'.html');
+    for(const figure of await page.locator('.app-figure').all()){
+     const img=figure.locator('img');await img.scrollIntoViewIfNeeded();
+     await img.evaluate(e=>e.decode());
+     const src=await img.getAttribute('src');seen.add(src);
+     assert.ok(await img.evaluate(e=>e.complete&&e.naturalWidth>=1200&&e.naturalHeight>0));
+     assert.ok((await img.getAttribute('alt')).length>30);
+     assert.equal(await figure.locator('.figure-open').getAttribute('href'),src);
+     assert.ok((await figure.locator('figcaption').textContent()).includes('OpenAI'));
+    }
+   }
+   assert.deepEqual([...seen].sort(),Object.values(manifest.figures).map(f=>f.file).sort());
+  });
+  await page.goto(base+'rehber/02-uygulama.html');
+  await check('neutral light reading background and first-file instructions',async()=>{
+   assert.equal(await page.evaluate(()=>getComputedStyle(document.body).backgroundColor),'rgb(255, 255, 255)');
+   assert.equal(await page.locator('#i-lk-dosyani-uret-ac-duzelt').count(),1);
+   await page.locator('.app-figure').first().scrollIntoViewIfNeeded();
+  });
+  await page.screenshot({path:path.join(out,'guide-app-figure-desktop.png')});
+  await check('keyboard opens full-size figure and back restores guide',async()=>{
+   const link=page.locator('.figure-open').first();await link.focus();await page.keyboard.press('Enter');
+   await page.waitForURL('**/assets/projects.png');assert.equal(await page.locator('img').count(),1);
+   await page.goBack();await page.waitForURL('**/02-uygulama.html');
+  });
+  await page.setViewportSize({width:390,height:844});
+  await check('mobile figure remains in page and opens at original resolution',async()=>{
+   await page.goto(base+'rehber/02-uygulama.html');const figure=page.locator('.app-figure').first();
+   await figure.scrollIntoViewIfNeeded();await figure.locator('img').evaluate(e=>e.decode());
+   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+   assert.ok((await figure.boundingBox()).width<=390);
+   await page.screenshot({path:path.join(out,'guide-app-figure-mobile.png')});
+   await figure.locator('a.figure-open').click();await page.waitForURL('**/assets/projects.png');
+   assert.ok(await page.locator('img').evaluate(e=>e.naturalWidth>=1200));await page.goBack();
+  });
+  await page.setViewportSize({width:1440,height:1000});
   await page.goto(base+'rehber/komutlar.html');
   await page.screenshot({path:path.join(out,'guide-commands-desktop.png')});
   await check('28 desktop commands and goal surface distinction',async()=>{assert.equal(await page.locator('table').first().locator('tbody tr').count(),28);assert.ok((await page.locator('.prose').textContent()).includes('düğmeleri tarif ediyor'));});
@@ -32,7 +72,7 @@ const out=path.resolve(process.env.EVIDENCE_DIR || 'work/guide-browser');
    await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:path.join(out,'guide-commands-mobile-top-'+width+'.png')});
   }
   await page.setViewportSize({width:1440,height:1000});await page.emulateMedia({colorScheme:'dark'});await page.goto(base+'rehber/05-yonetmek.html');
-  await check('dark chapter layout has no horizontal overflow',async()=>{assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);});
+  await check('dark chapter uses neutral background without horizontal overflow',async()=>{assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);assert.equal(await page.evaluate(()=>getComputedStyle(document.body).backgroundColor),'rgb(32, 33, 36)');});
   await page.screenshot({path:path.join(out,'guide-chapter-dark.png')});
   const nojs=await browser.newContext({javaScriptEnabled:false});const p2=await nojs.newPage();
   await check('guide content and navigation work without JavaScript',async()=>{await p2.goto(base+'rehber/index.html');await p2.locator('.prose ol a').first().click();assert.equal(await p2.locator('h1').count(),1);assert.ok((await p2.locator('.prose').textContent()).includes('Kurgu'));});await nojs.close();

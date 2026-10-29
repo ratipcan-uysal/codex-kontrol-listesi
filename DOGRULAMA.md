@@ -1,5 +1,19 @@
 # Doğrulama kaydı
 
+## 29 Ekim 2026 — Başlangıç ve görsel revizyonu: yerel kontroller
+
+18 bölüm ve altı yazılmış ek yeniden okundu. [Bölüm bazında inceleme](dogrulama/rehber-revizyon-20261029/INCELEME.md), [metin ölçümü ve sınırları](dogrulama/rehber-revizyon-20261029/EDITORIAL.md).
+
+- 21 Python testi (6 eski içerik + 15 rehber) ve JavaScript sözdizimi geçti. [Son üretim](dogrulama/rehber-revizyon-20261029/build-tests.json).
+- 107 madde, bütün özgün alanlar ve eşlemeler aynı. [Karşılaştırma](dogrulama/rehber-revizyon-20261029/legacy-preservation.json).
+- 28 kontrol listesi ve 18 rehber tarayıcı kontrolü geçti. Görsel yükleme, kaynak, tam boyut açma, klavye, mobil taşma ve nötr tema dahil. [Kontrol listesi](dogrulama/rehber-revizyon-20261029/checklist/browser-results.json) · [Rehber](dogrulama/rehber-revizyon-20261029/guide/results.json).
+- Altı resmî arayüz gösterimi ve sitenin masaüstü/mobil açık/koyu görüntüleri açılıp incelendi. Sonrasında yalnız dört terimin kısa açıklaması netleştirildi; layout, asset, link ve davranış kodu aynı. Son metin yeniden üretildi, Python/link kontrolleri tekrar geçti.
+- İlk kontrolün dizin/çapa hataları düzeltildi ve [başarısızlık kaydı](dogrulama/rehber-revizyon-20261029/first-attempt.md) korundu.
+- Görsel yakalamanın 12 ve yerel tarayıcı koşumunun 29 görev süreci kapandı. [Yakalama](dogrulama/rehber-revizyon-20261029/capture-cleanup.json) · [Yerel test](dogrulama/rehber-revizyon-20261029/process-cleanup.json).
+- Ürün envanteri 84 aile / 70 resmî kaynak. Bu, bütün Codex özelliklerinin canlı çalıştırılması veya tüm hesaplarda erişim garantisi değildir. Safari, Firefox, fiziksel cihaz ve VoiceOver testleri yapılmadı.
+
+Bu kayıt yerel revizyonu doğrular. Bu revizyonun push ve canlı hedef kontrolü, tamamlanınca ayrı yayın kaydıyla eklenecek; aşağıdaki önceki yayın kanıtı yeni değişikliklerin kanıtı değildir.
+
 ## 29 Ekim 2026 — GitHub ve çevrimiçi rehber yayında
 
 **PASS:** [Çevrimiçi ana rehber](https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/) GitHub Pages üzerinden giriş gerektirmeden açılıyor. [GitHub deposunun](https://github.com/ratipcan-uysal/codex-kontrol-listesi) girişine doğrudan çevrimiçi okuma bağlantısı eklendi.

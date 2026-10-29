@@ -1,0 +1,117 @@
+{
+  "lang": "tr",
+  "words": 14616,
+  "sentences": 1267,
+  "meanSentence": 11.3,
+  "metrics": [
+    {
+      "key": "emdash",
+      "label": "Em dashes",
+      "value": 0,
+      "unit": "per 1k words",
+      "bad": false,
+      "note": "The single most recognisable marker. Restructure the sentence rather than swapping in an en dash."
+    },
+    {
+      "key": "semicolon",
+      "label": "Semicolons",
+      "value": 11.1,
+      "unit": "per 1k words",
+      "bad": true,
+      "note": "Reads formal and assembled. A full stop almost always works."
+    },
+    {
+      "key": "sentvar",
+      "label": "Sentence length spread",
+      "value": 24,
+      "unit": "stdev, words",
+      "bad": false,
+      "note": "Mean 11.3 words. Low spread means every sentence was built the same way."
+    },
+    {
+      "key": "short",
+      "label": "Short sentences",
+      "value": 17.8,
+      "unit": "% under 6 words",
+      "bad": false,
+      "note": "Writing with no short sentences has no rhythm. Real prose stops dead sometimes."
+    },
+    {
+      "key": "opener",
+      "label": "Top sentence opener",
+      "value": 4.8,
+      "unit": "% start with \"bu\"",
+      "bad": false,
+      "note": "Above ~13% means a definitional habit: The mechanism is, The question is, The point is."
+    },
+    {
+      "key": "sadece",
+      "label": "sadece … değil, aynı zamanda",
+      "value": 0,
+      "unit": "per 1k words",
+      "bad": false,
+      "note": "İngilizce not only/but also kalıbının birebir çevirisi. Türkçede doğal karşılığı iki ayrı cümledir."
+    },
+    {
+      "key": "dir",
+      "label": "-dir / -maktadır ekleri",
+      "value": 0.1,
+      "unit": "per 1k words",
+      "bad": false,
+      "note": "Resmî yazışma kipi. Konuşan Türkçe önemli, gerekiyor, sağlıyor der."
+    },
+    {
+      "key": "ebilir",
+      "label": "-ebilir / -abilir yığılması",
+      "value": 10.1,
+      "unit": "per 1k words",
+      "bad": false,
+      "note": "Her cümleyi ihtimalle yumuşatmak. Bir şey söyleyip arkasında durmak daha insan."
+    },
+    {
+      "key": "baglayici",
+      "label": "Hazır bağlayıcılar",
+      "value": 0.1,
+      "unit": "per 1k words",
+      "bad": false,
+      "note": "Paragrafları hazır kalıplarla dikmek. Fikir zaten bağlıysa bağlaca gerek yok."
+    },
+    {
+      "key": "sismis",
+      "label": "Şişmiş ifadeler",
+      "value": 0,
+      "unit": "per 1k words",
+      "bad": false,
+      "note": "teknoloji dünyasında, kritik öneme sahip: hiçbir şey söylemeyen ağırlık."
+    },
+    {
+      "key": "uclu",
+      "label": "Üçlü sıfat dizileri",
+      "value": 5.1,
+      "unit": "per 1k words",
+      "bad": true,
+      "note": "hızlı, güvenilir ve ölçeklenebilir. Üç sıfat üst üste bir seçim değil, bir refleks."
+    },
+    {
+      "key": "phrases",
+      "label": "Hazır ibare",
+      "value": 0.5,
+      "unit": "per 1k words",
+      "bad": false,
+      "note": "Hazır ibare, yazarın seçeceği cümlenin yerine geçiyor. Geniş ağ; üstündeki dar listelerle bilerek çakışır. Bu yazarın iki kitabında 1,2; üretilmiş örnekte 25,0. Ayrıntı: references/tells-tr.md."
+    },
+    {
+      "key": "edilgen",
+      "label": "Edilgen çatı",
+      "value": 13.3,
+      "unit": "per 1k words",
+      "bad": true,
+      "note": "Kimin yaptığı belli olmayan cümleler. Özneyi geri koy."
+    }
+  ],
+  "flagged": [
+    "semicolon",
+    "uclu",
+    "edilgen"
+  ]
+}

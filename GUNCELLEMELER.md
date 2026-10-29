@@ -1,5 +1,15 @@
 # Güncellemeler
 
+## 29 Ekim 2026 — Başlangıç akışı, arayüz görselleri ve açık görünüm
+
+- İlk yerel dosyayı üretme, açma ve düzeltme yolu eklendi; başlangıç terimleri yerinde açıklandı.
+- Sohbet arama, Quick chat, Activity, mesaj önerileri, /side kullanımı, canlı arama, Work Deep research ve etkileşimli görselleştirmeler somutlaştırıldı.
+- Küçük örnekle toplu dönüşüm yöntemi seçme, revizyonda korunacak alanı belirtme ve düzenlenebilir çıktı biçimi seçme dersleri eklendi. Tekrarlanan vaka ve doğrulama parçaları kısaltıldı.
+- Altı açıklamalı, büyütülebilir resmî arayüz gösterimi eklendi. Kaynak ve lisans sınırları belirtildi.
+- Geniş yeşil yüzeyler beyaz/nötr griye; koyu tema antrasite döndü. Mevcut düzen korundu.
+- Kapsam 84 özellik ailesi ve 70 resmî kaynak oldu. 107 özgün madde ve 28 masaüstü komutu korundu.
+- Ayrıntılı [inceleme kararı](dogrulama/rehber-revizyon-20261029/INCELEME.md) ve [doğrulama durumu](DOGRULAMA.md).
+
 ## 29 Ekim 2026 — Derinlemesine rehber ve çevrimiçi yayın
 
 - 18 ana bölüm ve 9 ek sayfa: 6 yazılmış ek, özellik envanteri, 107 madde eşlemesi ve kaynak dizini.

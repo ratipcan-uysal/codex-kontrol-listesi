@@ -4,6 +4,8 @@ Belge kontrolü: 2026-10-29.
 
 Otomasyon, iyi tanımlanmış işi tekrar eder. Belirsiz işi zamanlamak, belirsizliği düzenli aralıklarla yeniden üretir. Önce bir gerçek örnekte yöntemi çalıştır, sonra takvime bağla.
 
+<a id="ayni-sohbeti-takip-etmek-ve-bagimsiz-rutin"></a>
+
 ## Aynı sohbeti takip etmek ve bağımsız rutin
 
 Aynı sohbette takip, mevcut işteki bir durumun değişmesini beklemek için uygundur: derlemenin sonucu, incelemenin tamamlanması veya geri dönülecek açık konu. Bağımsız rutin ise her çalışmada ayrı çıktı üretir: haftalık kaynak özeti, depo sağlık kontrolü, günlük rapor. Uygulamada Scheduled bölümündeki seçenekler ve doğal dil isteği üzerinden kurulabilir; adlar ve seçenekler istemciye göre değişir. [Otomasyon](https://learn.chatgpt.com/docs/automations)
@@ -14,17 +16,23 @@ Aynı sohbette takip, mevcut işteki bir durumun değişmesini beklemek için uy
 
 İlk örnek mevcut işin devamını, ikincisi bağımsız tekrar eden sonucu tarif eder. Kurulduğunu, zamanlama ve hedefi geri okuyarak doğrula.
 
+<a id="yerel-kosullar-devam-eder"></a>
+
 ## Yerel koşullar devam eder
 
 Yerel otomasyonda uygulama ve bilgisayarın çalışması, proje klasörüne erişim ve gerekli araçların bulunması önemlidir. Bir takvim satırı eklemek bilgisayarı her koşulda uyandıracağı anlamına gelmez. Worktree kullanan rutin için kurulum ve çıktıların ana projeye nasıl döneceği ayrıca belirlenir.
 
 Gmail, Slack veya GitHub olaylarıyla tetiklenen bazı akışlar web yüzeyinde belgelenmiştir; aynı olay tetikleyicisini masaüstü, CLI veya IDE özelliği gibi anlatma. Önce hangi ortamın çalıştıracağını seç. [Yüzey ve çalışma koşulları](https://learn.chatgpt.com/docs/automations)
 
+<a id="tekrar-guvenligi"></a>
+
 ## Tekrar güvenliği
 
 Aynı görevin iki kez çalışması iki kayıt, iki e-posta veya iki yayın üretmemeli. Buna tekrar güvenliği denir; teknik adı idempotency'dir. Örneğin raporu tarih ve proje anahtarıyla bulup güncellemek, her seferinde yeni kopya açmaktan daha uygundur. Gönderim sonucunun belirsiz olduğu durumda yeniden göndermeden önce hedefi kontrol etmek gerekir.
 
 Otomasyon tanımı şu soruları cevaplamalı: Hangi girdiyi okuyacak? Çıktı nereye gidecek? Ne zaman duracak? Hata olduğunda ne yapacak? Hangi değişiklik haber vermeye değer? Görev metnindeki içerik yöntemi ile bildirim tercihini mümkün olduğunca ayrı tut.
+
+<a id="kurgu-senaryo-dusuk-degerli-bildirimleri-azaltmak"></a>
 
 ## Kurgu senaryo: düşük değerli bildirimleri azaltmak
 
@@ -34,9 +42,13 @@ Atölye sayfasının kayıt bağlantısı takip ediliyor. Her kontrolde “hâl�
 
 Bu kurgu örnek bir izleme mantığını öğretir; burada gerçek otomasyon oluşturulmaz. Kontrol aralığı, yerel çalışma koşulu ve durma tarihi gerçek kurulumda açıkça seçilmelidir.
 
+<a id="otomasyon-sonuclarini-degerlendirmek"></a>
+
 ## Otomasyon sonuçlarını değerlendirmek
 
 “Zamanlandı”, “çalıştı” ve “istenen çıktı hedefte oluştu” farklı aşamalardır. İlk koşumun sonucunu incele. Yanlış kaynak, gereksiz bildirim veya tekrar kayıt varsa yöntem düzelmeden daha sık çalıştırma. Otomasyonun öneri üretmesi, önerileri otomatik yayınlama yetkisi vermez.
+
+<a id="kontrol-listesinde-karsiligi"></a>
 
 ## Kontrol listesinde karşılığı
 

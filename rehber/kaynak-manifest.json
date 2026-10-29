@@ -448,6 +448,48 @@
       "sha256": "31116b5621fa26a4fe944a92517cab42941ca18f68495f04b1f19370571b7c07",
       "status": 200,
       "checked": "2026-10-29"
+    },
+    "features__composer-predictions": {
+      "url": "https://learn.chatgpt.com/docs/features/composer-predictions",
+      "sha256": "65803be313d13df867765ca6138a127dd32f3e65ff8a676b9b9ed9702f404d6d",
+      "status": 200,
+      "title": "Composer predictions",
+      "checked": "2026-10-29"
+    },
+    "visualizations": {
+      "url": "https://learn.chatgpt.com/docs/visualizations",
+      "sha256": "eb3be57fae1a603b1ea48340c2eb660316a1b1a53f24271ef47a71b56a94838d",
+      "status": 200,
+      "title": "Visualizations",
+      "checked": "2026-10-29"
+    },
+    "notifications": {
+      "url": "https://learn.chatgpt.com/docs/notifications",
+      "sha256": "3574fbb5669fd40e44364681b4fbda7dcf7f8ef932bc5b57eeade2381a759fb2",
+      "status": 200,
+      "title": "Notifications and Activity",
+      "checked": "2026-10-29"
+    },
+    "long-running-work": {
+      "url": "https://learn.chatgpt.com/docs/long-running-work",
+      "sha256": "14bba6e57c9bae8bf37b289ef369a4c59863c07f95037fe3d37143b14057246b",
+      "status": 200,
+      "title": "Long-running work",
+      "checked": "2026-10-29"
+    },
+    "web-search": {
+      "url": "https://learn.chatgpt.com/docs/web-search",
+      "sha256": "b05fedecab43b239fec88b7fe5fb3ced3d44317785b389ee25c62cc415f8ad26",
+      "status": 200,
+      "title": "Web search",
+      "checked": "2026-10-29"
+    },
+    "sign-in-with-chatgpt": {
+      "url": "https://learn.chatgpt.com/docs/sign-in-with-chatgpt",
+      "sha256": "6e1d173c2eed6f108d249301689c713f4e9a0c6df6e3f0bfaefd4a6a13e7e028",
+      "status": 200,
+      "title": "Sign in with ChatGPT",
+      "checked": "2026-10-29"
     }
   }
 }

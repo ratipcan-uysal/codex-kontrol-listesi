@@ -4,11 +4,15 @@ Belge kontrolü: 2026-10-29.
 
 Güvenilir sonuç, yalnız doğru görünen cevap değildir. İddiaya uygun kanıtın bulunması gerekir. Aynı doğrulama yöntemi kod, çeviri ve tasarım için yeterli olmaz.
 
+<a id="dort-tur-cumleyi-ayir"></a>
+
 ## Dört tür cümleyi ayır
 
 **Kaynak bilgisi:** “Resmî belgede bu özellik macOS için belirtiliyor.” **Gözlem:** “Bu hesapta ilgili seçenek göründü.” **Çıkarım:** “Bu yüzden sorunun izin ayarından kaynaklanması olası.” **Öneri:** “Önce dar kapsamlı okuma denemesi yapalım.” Birinden diğerine geçerken kesinlik artıyorsa yeni kanıt gerekir.
 
 > Bulguları kaynakta yazan, bizzat gözlenen ve yorumlanan olarak ayır. Açılmayan kaynağı doğrulanmış sayma. Sonuç çıkarmaya yetmeyen yerde neyin eksik olduğunu belirt.
+
+<a id="i-se-gore-kalite-olcutu"></a>
 
 ## İşe göre kalite ölçütü
 
@@ -23,15 +27,21 @@ Güvenilir sonuç, yalnız doğru görünen cevap değildir. İddiaya uygun kan�
 
 Örneğin İngilizce metinde “may reduce” ifadesini “azaltır” diye çevirmek, dilbilgisi düzgün olsa da iddianın gücünü değiştirir. Kaynak yeniden araştırılmadan yapılabilecek düzeltme, bu anlam farkını gidermektir.
 
+<a id="yesil-testin-ne-soyledigini-oku"></a>
+
 ## Yeşil testin ne söylediğini oku
 
 Test komutunun çıkış kodu sıfır olabilir ama hiç test seçilmemiş olabilir. Yanlış klasördeki eski derleme test edilmiş olabilir. Kontrol, yalnız dosyanın varlığını ölçüyor olabilir. Rapor bu ayrımları göstermeli: hangi kaynak, hangi komut, kaç test, hangi ortam ve hangi davranış.
 
 Geçen testleri gerekçesiz tekrar etmek de güvenilirliği artırmaz. Kaynak, yapılandırma, ortam ve kapsam aynı kaldıysa kanıt yeniden kullanılabilir. İlgili değişiklik veya yeni hata varsa kontrol yenilenir.
 
+<a id="gercek-deneyim-klavye-kontrolu-gecti-metin-ortuldu"></a>
+
 ## Gerçek deneyim: klavye kontrolü geçti, metin örtüldü
 
 Bir yerel prototipte klavye ile giriş alanının çakışmadığını ölçen kontrol geçti. Ekran görüntüsünde ise ikinci metin satırı örtülüyordu. Sayısal konum kontrolü, okunabilirliğin bütününü ölçmüyordu. Görsel bulgudan sonra yerleşim düzeltildi ve son görünüm yeniden incelendi. Bu sonuç üretim ürününe aktarım veya fiziksel cihaz doğrulaması anlamına gelmedi. [Vaka C03](deneyimler.md#c03)
+
+<a id="i-nceleme-ile-duzeltme-arasindaki-sinir"></a>
 
 ## İnceleme ile düzeltme arasındaki sınır
 
@@ -39,9 +49,17 @@ Git projesinde `/review`, seçilen değişiklikleri inceleyip bulgu üretmeye ya
 
 Bağımsız ikinci bakış, özellikle aynı akıl yürütmenin hatasını tekrar etmesini azaltmak için değerlidir. İnceleyene “önceki yanıtı onayla” yerine hedef ve kanıtı ver. Hiç bulgu çıkmaması, bütün olası hataların yokluğunu kanıtlamaz.
 
+![Değişen satıra bağlı inceleme bulgusu. İnceleme yorumu ilgili kod satırının yanında duruyor. Bulguyu öncelik etiketiyle birlikte gerekçesi ve etkilenen dosyası üzerinden değerlendir.](assets/review.png)
+
+**Değişen satıra bağlı inceleme bulgusu.** İnceleme yorumu ilgili kod satırının yanında duruyor. Bulguyu öncelik etiketiyle birlikte gerekçesi ve etkilenen dosyası üzerinden değerlendir. [Tam boyut](assets/review.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/code-review) · 2026-10-29.
+
+<a id="kurgu-senaryo-kayit-sayisi-dogru-anlam-yanlis"></a>
+
 ## Kurgu senaryo: kayıt sayısı doğru, anlam yanlış
 
 Atölye'nin 80 katılımcı kaydı dönüşümden sonra yine 80 satır. Bu iyi bir ilk kontrol, ama iki kişinin e-postası yer değiştirmiş olabilir. Sabit kayıt anahtarıyla eşleştirme, alan bazlı karşılaştırma ve temsilî uç durumlar gerekir. Toplamın eşit olması kimliğin korunduğunu tek başına göstermez. Bu yüzden “80 satır korundu” ile “dönüşüm doğru” aynı rapor cümlesi olmamalı.
+
+<a id="kontrol-listesinde-karsiligi"></a>
 
 ## Kontrol listesinde karşılığı
 

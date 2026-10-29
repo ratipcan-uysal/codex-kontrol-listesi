@@ -4,6 +4,8 @@ Belge kontrolü: 2026-10-29.
 
 İyi bir istek, Codex'in yanlış seçmesi pahalı olacak kararları açık eder. Her adımı önceden yazmak zorunda değilsin. İşin amacı belli olduğu hâlde uygulamanın bütün ayrıntılarını dayatmak, daha iyi bir çözüm bulma alanını daraltabilir.
 
+<a id="alti-bilgiden-hangileri-gerekiyor"></a>
+
 ## Altı bilgiden hangileri gerekiyor?
 
 Amaç, girdi, çıktı, korunacaklar, karar sınırı ve bitiş ölçütü bir isteği kurmak için yararlı altı başlıktır. Basit işte bunların çoğu bağlamdan bellidir. “Bu paragraftaki yazım hatalarını düzelt” için yeni bir brief gerekmeyebilir. Veri taşıma işinde ise hangi kayıtların korunacağı ve hedefin ne olduğu belirleyicidir.
@@ -17,6 +19,8 @@ Kaynak ve sonuç kayıt sayısını karşılaştır; fark varsa nedenini açıkl
 
 Örneğin gücü uzunluğundan gelmiyor. “Aynı ad aynı kişi değildir” kararını baştan koruyor. Aksi durumda temiz görünen bir tablo yanlış birleştirme içerebilir.
 
+<a id="i-s-turunu-acikca-sec"></a>
+
 ## İş türünü açıkça seç
 
 | İhtiyaç | Kullanılabilir istek |
@@ -29,6 +33,8 @@ Kaynak ve sonuç kayıt sayısını karşılaştır; fark varsa nedenini açıkl
 | İncelemek | “Somut kusurları ve etkilerini raporla; dosya değiştirme.” |
 
 Plan modu arayüzde mevcutsa onu kullanabilirsin. Normal mesajla “önce planla” diyerek de niyetini aktarabilirsin. Bu durumda arayüzdeki modun ayrıca değiştiğini varsayma. İsteğin sonunda “uygulama” ve “yalnız inceleme” yönlerinin çelişmemesine dikkat et. [İstek yazımı](https://learn.chatgpt.com/docs/prompting)
+
+<a id="ornek-karsi-ornek-ve-korunacak-davranis"></a>
 
 ## Örnek, karşı örnek ve korunacak davranış
 
@@ -45,6 +51,8 @@ Henüz kesinleşmemiş yeni bir tarih ekleme.
 
 Bir karşı örnek, beğenmediğin sonucu eleştirmekten daha erken işe yarar. Yaratıcı işlerde ilk taslağı gördüğünde yeni tercihler fark edebilirsin. Her ayrıntıyı ilk mesajda bilmen gerekmez.
 
+<a id="yetkiyi-karar-turune-gore-ver"></a>
+
 ## Yetkiyi karar türüne göre ver
 
 “Bana sormadan her şeyi yap” belirsiz kapsam bırakır. Daha iyi bir sınır, geri alınabilir uygulama ayrıntıları ile senin kararını gerektiren değişiklikleri ayırır:
@@ -57,6 +65,8 @@ seçenekleri ve önerini getir. Diğer yetkili işleri tamamla.
 
 Bu yaklaşım, ajanın her satırda onay istemesine de bütün ürünü yeniden kurmasına da kapı açmaz. Yetki sınırını işin etkisine göre seç. Basit düzeltmeyi ilgisiz yasaklarla ağırlaştırma.
 
+<a id="bir-ust-duzey-soru-dogru-isi-mi-istiyorsun"></a>
+
 ## Bir üst düzey soru: doğru işi mi istiyorsun?
 
 “Bana bir dashboard yap” talebinin arkasında haftalık toplantıda karar verebilmek olabilir. Dashboard için gerekli veri yoksa ilk iş veri sahiplerini belirlemek veya küçük bir rapor hazırlamak olabilir. Codex'ten çözüm önerisini problemle birlikte sorgulamasını isteyebilirsin:
@@ -68,6 +78,27 @@ Daha küçük bir çözüm aynı sonucu sağlıyorsa karşılaştır.
 ```
 
 Bir fikir eleştirisi uygulama yetkisi vermez. Karar netleşince üretim isteğine dönmek, analizin sonsuza kadar sürmesini önler.
+
+<a id="kucuk-ornekle-yontemi-netlestir-sonra-genislet"></a>
+
+## Küçük örnekle yöntemi netleştir, sonra genişlet
+
+Kurgu: 200 ürün açıklamasını aynı dile ve biçime getireceksin. “Hepsini iyileştir” demeden önce üç farklı üründe örnek sonuç iste. Uzun açıklama, eksik bilgi ve sıra dışı ölçü birimi gibi zor örnekleri seç. Böylece yöntemi yalnız kolay kayıtlarda başarılı görmezsin.
+
+> Önce bu üç kayıtta dönüşümü göster. Ürün kodu, ölçü ve fiyatları koru. Eksik bilgiyi tamamlama. Yöntemi onayladıktan sonra bütün tabloya uygula; değişen alanları kaynakla eşleştir.
+
+Bu istek ara onayı özellikle seçiyor çünkü yanlış yöntem 200 kaydı etkiler. Tek bir yazım hatasında aynı süreç gereksiz olur. Tekrarlı ve kesin kurallı dönüşümde, yöntemi sabitledikten sonra bir betik kullanmak daha tutarlı olabilir.
+
+<a id="i-yi-bir-revizyon-korunacak-kismi-da-soyler"></a>
+
+## İyi bir revizyon, korunacak kısmı da söyler
+
+“Daha iyi yap” yerine değişecek boyutu belirt: “İlk paragrafı yarıya indir; iddiaları, bağlantıları ve belirsizlik ifadelerini koru.” Görselde “üst boşluğu azalt; yazı tipi, renk ve içerik sırası aynı kalsın” de. Bu, memnun olduğun parçaların her turda yeniden tasarlanmasını azaltır.
+
+Beklentiyi yanlış anlamışsa kelimeleri çoğaltmak yerine amaç farkını düzelt: “Ben dosya oluşturmanı değil, mevcut dosyadaki iki çelişkiyi bulmanı istiyorum.” Bu tür yön düzeltmeleri [iş sürerken yönetim bölümünde](05-yonetmek.md) devam ediyor.
+
+
+<a id="kontrol-listesinde-karsiligi"></a>
 
 ## Kontrol listesinde karşılığı
 

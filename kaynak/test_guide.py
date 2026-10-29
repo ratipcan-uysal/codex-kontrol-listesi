@@ -7,8 +7,8 @@ import hashlib
 import json
 import re
 import unittest
-from content import GUIDE_CHAPTERS,GUIDE_APPENDICES,GUIDE_FEATURES,GUIDE_ITEM_MAP,GUIDE_SOURCES,SECTIONS
-from guide_build import ROOT,OUT,build_guide,validate_guide,render_markdown,slugify,inline
+from content import GUIDE_CHAPTERS,GUIDE_APPENDICES,GUIDE_FEATURES,GUIDE_ITEM_MAP,GUIDE_SOURCES,GUIDE_FIGURES,SECTIONS
+from guide_build import ROOT,OUT,build_guide,validate_guide,render_markdown,slugify,inline,markdown_output
 
 class Links(HTMLParser):
     def __init__(self): super().__init__(); self.ids=[]; self.links=[]
@@ -92,9 +92,39 @@ class GuideTests(unittest.TestCase):
             self.assertTrue((OUT/(p['slug']+'.md')).exists())
             self.assertTrue((OUT/(p['slug']+'.html')).exists())
         for path in OUT.iterdir():
+            if not path.is_file():continue
             text=path.read_text()
             self.assertNotRegex(text,r'source:|/Users/|rollout_summaries/|\.codex/sessions/|@[a-z0-9.-]+\.(?:com|net)\b')
             self.assertNotRegex(text,r'__[A-Z]+__')
+
+    def test_figures_have_same_attribution_and_asset_in_both_formats(self):
+        for key,f in GUIDE_FIGURES.items():
+            token=f'[FIGURE:{key}]'
+            rendered,_=render_markdown(token)
+            md=markdown_output(token)
+            self.assertIn('<figcaption>',rendered)
+            self.assertIn(f['source'],rendered);self.assertIn(f['source'],md)
+            self.assertIn(f'src="{f["file"]}"',rendered)
+            self.assertIn(f']({f["file"]})',md)
+            self.assertIn('loading="lazy"',rendered)
+            self.assertIn('aria-label=',rendered)
+            self.assertNotIn('[FIGURE:',rendered+md)
+        with self.assertRaises(ValueError):render_markdown('[FIGURE:unknown]')
+
+    def test_figure_asset_escape_and_changed_bytes_rejected(self):
+        broken={k:dict(v) for k,v in GUIDE_FIGURES.items()}
+        broken['projects']['file']='../index.html'
+        with patch('guide_build.GUIDE_FIGURES',broken),self.assertRaises(AssertionError):validate_guide()
+        broken['projects']=dict(GUIDE_FIGURES['projects'],sha256='0'*64)
+        with patch('guide_build.GUIDE_FIGURES',broken),self.assertRaises(AssertionError):validate_guide()
+
+    def test_github_markdown_has_matching_explicit_anchors(self):
+        text='## Görünüm\n\n## Görünüm\n\n```text\n## Inside code\n```'
+        md=markdown_output(text)
+        html,_=render_markdown(text)
+        anchors=re.findall(r'<a id="([^"]+)"',md)
+        self.assertEqual(anchors,['gorunum','gorunum-2'])
+        for a in anchors:self.assertIn(f'id="{a}"',html)
 
     def test_no_markdown_left_in_rendered_prose(self):
         for p in OUT.glob('*.html'):

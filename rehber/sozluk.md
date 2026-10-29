@@ -50,6 +50,11 @@ Bir terimi bilmek, bütün teknik ayrıntısını öğrenmeyi gerektirmez. Aşa�
 | Release / Debug | Dağıtım ve geliştirme için farklı derleme yapılandırmaları |
 | Headless | Görünür etkileşimli pencere gerektirmeden çalışan yol |
 | NOT_RUN | İlgili kontrolün yapılmadığını açıkça belirten durum |
+| Steer / yönlendirme | Çalışan işin yönünü yeni mesajla düzeltme |
+| Queue / sıraya alma | Mesajı mevcut turdan sonra işlenmek üzere bekletme |
+| Activity | Çalışan, biten veya yanıt bekleyen işleri gösteren etkinlik görünümü |
+| Composer | Mesajı yazıp bağlam ve model seçeneklerini seçtiğin giriş alanı |
+| Canlı arama / önbellekli arama | Yeni web isteğiyle erişim ile önceden derlenmiş dizinden sonuç getirme ayrımı |
 
 Ürün adları ve erişim koşulları için terim tanımı yerine ilgili bölümdeki resmî kaynağı esas al. Örneğin “bulut”, bütün bulut görevlerinin aynı ağ izinlerine sahip olduğunu söylemez.
 

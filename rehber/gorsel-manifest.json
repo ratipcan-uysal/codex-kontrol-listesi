@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-29",
+  "figures": {
+    "projects": {
+      "file": "assets/projects.png",
+      "title": "Proje ve sohbetleri bulmak",
+      "alt": "Proje ve sohbetleri bulmak. Soldaki listede sabitlenmiş sohbet, diğer sohbetler ve Projects başlığı altındaki klasörleri ayırt et. Bir sohbet adı ile bağlı proje klasörü farklı öğelerdir.",
+      "caption": "Soldaki listede sabitlenmiş sohbet, diğer sohbetler ve Projects başlığı altındaki klasörleri ayırt et. Bir sohbet adı ile bağlı proje klasörü farklı öğelerdir.",
+      "source": "https://learn.chatgpt.com/docs/projects",
+      "checked": "2026-10-29",
+      "sha256": "a2f2db004c5133bb2533d462866c503239e3c34fb17d4f38396bd8b35e364872"
+    },
+    "preview": {
+      "file": "assets/preview.png",
+      "title": "Sohbetin yanında sunum önizlemesi",
+      "alt": "Sohbetin yanında sunum önizlemesi. Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele.",
+      "caption": "Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele.",
+      "source": "https://learn.chatgpt.com/docs/artifacts-viewer",
+      "checked": "2026-10-29",
+      "sha256": "40db53c8f98ce91fb32cb9ab796d4ed1af5f7234055737454a27f310de46c5c5"
+    },
+    "browser": {
+      "file": "assets/browser.png",
+      "title": "Yerleşik tarayıcıda hedefli yorum",
+      "alt": "Yerleşik tarayıcıda hedefli yorum. Sağdaki grafikte işaretlenen alan, soldaki sohbete bağlam olarak taşınıyor. Görsel sorunu doğrudan yerinde göstermek, hangi öğenin değişeceğini netleştirir.",
+      "caption": "Sağdaki grafikte işaretlenen alan, soldaki sohbete bağlam olarak taşınıyor. Görsel sorunu doğrudan yerinde göstermek, hangi öğenin değişeceğini netleştirir.",
+      "source": "https://learn.chatgpt.com/docs/browser",
+      "checked": "2026-10-29",
+      "sha256": "9c0dd2742a7b9d198ae5a50c84caaf849db2fe092da1816eca5af6958985691a"
+    },
+    "review": {
+      "file": "assets/review.png",
+      "title": "Değişen satıra bağlı inceleme bulgusu",
+      "alt": "Değişen satıra bağlı inceleme bulgusu. İnceleme yorumu ilgili kod satırının yanında duruyor. Bulguyu öncelik etiketiyle birlikte gerekçesi ve etkilenen dosyası üzerinden değerlendir.",
+      "caption": "İnceleme yorumu ilgili kod satırının yanında duruyor. Bulguyu öncelik etiketiyle birlikte gerekçesi ve etkilenen dosyası üzerinden değerlendir.",
+      "source": "https://learn.chatgpt.com/docs/code-review",
+      "checked": "2026-10-29",
+      "sha256": "17db6c06386b2dcbcc8713cb29b4293c7bd205fcdbc7fbcaa613e05713e6a509"
+    },
+    "goal": {
+      "file": "assets/goal.png",
+      "title": "Mesaj alanının üstünde hedef denetimleri",
+      "alt": "Mesaj alanının üstünde hedef denetimleri. Paused goal satırı duraklamış hedefi gösteriyor. Sağdaki denetimlerle hedefi düzenleme, sürdürme veya temizleme işlemlerine ulaşılır; bunlar yeni slash komutları değildir.",
+      "caption": "Paused goal satırı duraklamış hedefi gösteriyor. Sağdaki denetimlerle hedefi düzenleme, sürdürme veya temizleme işlemlerine ulaşılır; bunlar yeni slash komutları değildir.",
+      "source": "https://learn.chatgpt.com/docs/reference/slash-commands",
+      "checked": "2026-10-29",
+      "sha256": "a76bcece3a4acc56b3b9b3d36f3ed4e68a66293055e1519bf338d4c69c07e7ef"
+    },
+    "settings": {
+      "file": "assets/settings.png",
+      "title": "Görünümü ayarlamak",
+      "alt": "Görünümü ayarlamak. Appearance içindeki Light, Dark ve System seçimiyle başla. Tema rengi, yazı tipi ve boyut denetimleri uygulamanın görünümünü değiştirir; modelin çalışma talimatlarını değiştirmez.",
+      "caption": "Appearance içindeki Light, Dark ve System seçimiyle başla. Tema rengi, yazı tipi ve boyut denetimleri uygulamanın görünümünü değiştirir; modelin çalışma talimatlarını değiştirmez.",
+      "source": "https://learn.chatgpt.com/docs/reference/settings",
+      "checked": "2026-10-29",
+      "sha256": "c0c572e6bec7c4ea4188f2df6d3a4798ec4653389c284f79dc22cd582c42305c"
+    }
+  }
+}

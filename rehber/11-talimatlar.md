@@ -4,11 +4,15 @@ Belge kontrolü: 2026-10-29.
 
 Kalıcı talimat, aynı düzeltmeyi tekrar söyleme ihtiyacını azaltır. Ancak her başarısızlığın ardından yeni bir yasak eklemek, kısa işi uzun bir prosedüre çevirebilir. İyi kural belirli bir sürtüşmeyi çözer.
 
+<a id="talimati-dogru-yere-koy"></a>
+
 ## Talimatı doğru yere koy
 
 Global talimat, projeler arasında değişmeyen tercih içindir: kullanılan dil, kanıt standardı, dış işlem sınırı gibi. Proje kökündeki `AGENTS.md`, o projenin çalışma ve doğrulama bilgisini tutar. Alt dizindeki talimat daha dar alanın gereğini açıklayabilir. Dosyanın kapsamı ve uygulanan öncelik zinciri önemlidir; farklı yerlerde aynı kuralı çoğaltmak çelişki riskini artırır. [AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
 
 Codex'in yapılandırma dosyası `config.toml`, arayüz tercihleri ve çalışma politikalarının başka bir katmanıdır. Her ayar doğal dil talimatıyla aynı etkiye sahip değildir. Proje güveni, kullanıcı ayarı, yönetilen kurum ayarı ve çalışma sırasında verilen seçenekler farklı kapsamlar taşır. Belgedeki katman sırasını esas al; rastgele kopyalanmış bir dosyanın yüklendiğini varsayma. [Yapılandırma](https://learn.chatgpt.com/docs/config-file/config-basic) · [Ayar katmanları](https://learn.chatgpt.com/docs/configuration)
+
+<a id="zayif-ve-ise-yarayan-kural"></a>
 
 ## Zayıf ve işe yarayan kural
 
@@ -20,6 +24,8 @@ Codex'in yapılandırma dosyası `config.toml`, arayüz tercihleri ve çalışma
 | “Bütün bilgiyi hatırla.” | “Kalıcı kararları proje notlarına yaz; eski karar değişince yenisinin öncekini geçersiz kıldığını belirt.” |
 
 Bu kuralların değeri uzunluklarında değil, yanlış davranışın yerine ne koyduklarında.
+
+<a id="kurgu-ornegi-kucuk-proje-talimati"></a>
 
 ## Kurgu örneği: küçük proje talimatı
 
@@ -33,17 +39,23 @@ Teslimde yerel değişiklik, push ve canlı yayın durumunu ayrı yaz.
 
 Bu örnek, bu rehberin üretim biçimine benzer bir proje için yazılmıştır. Başka projeye aynen yapıştırmak yerine gerçek kaynak ve komutlarla değiştir.
 
+<a id="kurallar-sandbox-ve-hook-ayni-sey-degildir"></a>
+
 ## Kurallar, sandbox ve hook aynı şey değildir
 
 Talimat modelin davranışını yönlendirir. Sandbox teknik erişimi sınırlar. Komut kuralları belirli işlemlerin nasıl onaylanacağını tanımlayabilir. Hook, belirli yaşam döngüsü olayında çalışan programdır. Bir Markdown cümlesi, işletim sisteminde dosya erişimini kapatmaz. [Komut kuralları](https://learn.chatgpt.com/docs/agent-configuration/rules) · [Hook](https://learn.chatgpt.com/docs/hooks)
 
 Hook'lar örneğin desteklenen olaydan sonra kısa bir yerel kontrol veya bildirim üretmek için kullanılabilir. Her yanıttan sonra tüm projeyi derlemek ise akışı yavaşlatır. Olay adı, veri sözleşmesi ve yüklenme yolu istemci/sürüm belgesinden doğrulanmalı. CLI için anlatılan hook'u masaüstünde aynı adla çalışıyor kabul etme. Hatalı hook kendi hata döngüsünü veya takılı kalan süreci yaratabilir.
 
+<a id="tekrarlanan-isi-kodla"></a>
+
 ## Tekrarlanan işi kodla
 
 Her yayında aynı dosyaları üretip bağlantıları sayıyorsan, bu adımları bir üretim betiğine taşı. Codex betiğin amacını ve ne zaman çalışacağını bilsin. Böylece her tur farklı bir dönüşüm icat etmez; değişiklik diff üzerinden incelenebilir.
 
 İşi tamamlayınca “hangi kuralı ekleyelim?” kadar “hangi eski kuralı çıkaralım?” sorusu da değerlidir. Eski kaynak yolunu, artık gerekmeyen kontrolü ve çelişen onay cümlesini kaldır. Gizli anahtarları veya kişisel veriyi talimat dosyasına koyma; bu dosyalar Git'e girebilir.
+
+<a id="kontrol-listesinde-karsiligi"></a>
 
 ## Kontrol listesinde karşılığı
 

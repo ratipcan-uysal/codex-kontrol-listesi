@@ -549,7 +549,7 @@
       "id": "F69",
       "name": "Pets ve Mini",
       "source": "pets",
-      "target": "02-uygulama",
+      "target": "ileri-teknik",
       "condition": "İsteğe bağlı masaüstü yüzeyi; düşünme niteliğini değiştirmez",
       "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
     },
@@ -557,7 +557,7 @@
       "id": "F70",
       "name": "Codex Micro",
       "source": "features__codex-micro",
-      "target": "02-uygulama",
+      "target": "ileri-teknik",
       "condition": "Uyumlu fiziksel donanım; temel kullanım gereği değil",
       "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
     },
@@ -599,6 +599,78 @@
       "source": "reference__troubleshooting",
       "target": "sorun-giderme",
       "condition": "/feedback; logları göndermeden içeriği incele",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F76",
+      "name": "İlk yerel dosya ve önizleme akışı",
+      "source": "projects",
+      "target": "02-uygulama",
+      "condition": "Yerel proje; seçili klasör ve desteklenen dosya önizlemesi",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F77",
+      "name": "ChatGPT projesi / yerel proje ve Quick chat",
+      "source": "projects",
+      "target": "02-uygulama",
+      "condition": "Kaynak kapsamı ve sohbet yüzeyi farklı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F78",
+      "name": "Sohbetler arasında arama",
+      "source": "projects",
+      "target": "02-uygulama",
+      "condition": "Search chats; sohbet içi bulmadan ayrı, varsayılan kısayol yok",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F79",
+      "name": "Mesaj önerileri / Composer predictions",
+      "source": "features__composer-predictions",
+      "target": "02-uygulama",
+      "condition": "Kademeli beta; Pro, yaş/bölge/model ve ortam koşulları; Tab taslağa alır",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F80",
+      "name": "Activity ve bildirim türleri",
+      "source": "notifications",
+      "target": "02-uygulama",
+      "condition": "Uygulama tercihi ve OS bildirim izni birlikte geçerli",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F81",
+      "name": "Önbellekli / canlı web araması",
+      "source": "web-search",
+      "target": "09-web-tarayici-bilgisayar",
+      "condition": "Web aracı, shell ağı ve plugin erişimi ayrı kanallar",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F82",
+      "name": "Deep research giriş yolu",
+      "source": "web-search",
+      "target": "09-web-tarayici-bilgisayar",
+      "condition": "Work yüzeyi, hesap ve workspace koşulları; Codex slash komutu değil",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F83",
+      "name": "Etkileşimli görselleştirmeler",
+      "source": "visualizations",
+      "target": "13-tasarim",
+      "condition": "Masaüstünde kademeli preview; CLI/IDE render desteği yok",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F84",
+      "name": "Dış uygulamanın plan kullanımına erişimi",
+      "source": "sign-in-with-chatgpt",
+      "target": "07-model-hiz-kullanim",
+      "condition": "Desteklenen Plus/Pro bağlantıları; giriş ve kota izni ayrı",
       "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
     }
   ],

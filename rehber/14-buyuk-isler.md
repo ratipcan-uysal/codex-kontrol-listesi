@@ -4,11 +4,15 @@ Belge kontrolü: 2026-10-29.
 
 Büyük işi parçalamak, bütün dosyaları eşit gruplara ayırmak değildir. Parçalar ayrı sonuç üretebilmeli ve bir araya geldiklerinde aynı hedefe hizmet etmelidir.
 
+<a id="bagimsizligi-sonuc-uzerinden-olc"></a>
+
 ## Bağımsızlığı sonuç üzerinden ölç
 
 Atölye sitesi için kaynak araştırması ile mevcut arayüzün erişilebilirlik incelemesi bağımsız ilerleyebilir. Aynı sayfanın başlığını, düzenini ve CSS'ini üç ayrı çalışmanın eşzamanlı değiştirmesi ise yoğun koordinasyon ister.
 
 Her parçaya bir çıktı ve sınır ver: “Kaynak iddialarını kontrol et, kodu değiştirme” veya “Yalnız arama davranışını düzelt, içerik metnini değiştirme.” Entegrasyonu kimin yapacağı da belli olsun. Farklı çalışmaların çıktılarını birleştirmek ayrı iştir; son doğrulamanın sahibi gerekir.
+
+<a id="alt-ajan-ayri-sohbet-ve-worktree"></a>
 
 ## Alt ajan, ayrı sohbet ve worktree
 
@@ -20,11 +24,15 @@ Alt ajan erişimi, mevcut çalışma politikasına ve kullanıcı yetkisine bağ
 
 Bu, yeni kullanıcı sohbetleri oluşturma talimatı değildir. Yeni sohbet gerekiyorsa ayrıca o sonuç için oluşturulmalıdır.
 
+<a id="entegrasyon-neden-zorlasir"></a>
+
 ## Entegrasyon neden zorlaşır?
 
 İki çalışma aynı kavrama farklı ad verir, biri eski dosyayı okur, diğeri farklı sürümde test yapar. “Her parça geçti” sonucu birleşmiş ürünün çalıştığını göstermez. Başlangıç sürümü, ortak veri sözleşmesi ve dokunulacak alanlar belirlenirse bu risk azalır.
 
 Son aşamada değişikliklerin aynı kaynak üzerinde buluştuğunu kontrol et. Çelişen önerileri sessizce birleştirmek yerine hangisinin neden seçildiğini kaydet. Bağımsız incelemede kaynak değişiyorsa eski bulgunun hâlâ geçerli olup olmadığını yeniden değerlendir.
+
+<a id="goals-ne-zaman-yararli"></a>
 
 ## Goals ne zaman yararlı?
 
@@ -36,11 +44,21 @@ Masaüstünde etkin hedefin üstündeki ilerleme denetimleriyle duraklatma, sür
 
 “Sınırsız devam et” iyi bir bitiş ölçütü değildir. Bütçenin bitmesi, hedefin tamamlanması ve kullanıcının durdurması ayrı durumlardır. Goals zamanlanmış otomasyon da değildir; belirli gün/saatte uyanma ihtiyacı 15. bölümün konusudur.
 
+![Mesaj alanının üstünde hedef denetimleri. Paused goal satırı duraklamış hedefi gösteriyor. Sağdaki denetimlerle hedefi düzenleme, sürdürme veya temizleme işlemlerine ulaşılır; bunlar yeni slash komutları değildir.](assets/goal.png)
+
+**Mesaj alanının üstünde hedef denetimleri.** Paused goal satırı duraklamış hedefi gösteriyor. Sağdaki denetimlerle hedefi düzenleme, sürdürme veya temizleme işlemlerine ulaşılır; bunlar yeni slash komutları değildir. [Tam boyut](assets/goal.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/reference/slash-commands) · 2026-10-29.
+
+İlerleme satırında **Paused goal** yazıyorsa hedef duraklatılmıştır. Satırdaki sürdürme, düzenleme ve temizleme denetimleri hedefin yönetimi içindir. Hedef açıkken kavram sormak için `/side` kullanabilirsin. Bağlantının kesileceğini biliyorsan önceden duraklatmak ve devamda mevcut çıktıyı kontrol etmek yararlı olur. Hedef oluşturmak erişim izinlerini genişletmez. [Uzun işler](https://learn.chatgpt.com/docs/long-running-work)
+
+<a id="kurgu-senaryo-paralelligin-faydasiz-oldugu-is"></a>
+
 ## Kurgu senaryo: paralelliğin faydasız olduğu iş
 
 Tek paragrafın üslubunu düzeltmek için üç ajan kurmak, görev dağıtımı ve uzlaştırmayı asıl işten uzun hâle getirebilir. Aynı yazının kaynak doğrulaması, anlam kontrolü ve görsel yerleşimi ise yeterince büyükse ayrılabilir. Karar verirken ajan sayısına değil, bağımsız kanıt ve bağımsız çıktı ihtiyacına bak.
 
 Teslimde yalnız yardımcıların özetlerini aktarma. Ana sorumlu, birleşmiş sonucun istenen hedefi karşıladığını ve hangi kontrollerin hâlâ yapılmadığını söylemeli.
+
+<a id="kontrol-listesinde-karsiligi"></a>
 
 ## Kontrol listesinde karşılığı
 

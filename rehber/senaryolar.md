@@ -4,6 +4,8 @@ Belge kontrolü: 2026-10-29.
 
 Aşağıdaki senaryolar eğitim için üretilmiş kurgulardır. Gerçekte yürütülmüş görev, başarı ölçümü veya müşteri hikâyesi değildir. İstekler kopyalanabilir; dosya, hesap ve hedefleri kendi işine göre seç. Bunlar katılımcı alıştırması değil, anlatıcının bir özelliği somutlaştırabileceği örneklerdir.
 
+<a id="1-arastirmadan-karar-notuna"></a>
+
 ## 1. Araştırmadan karar notuna
 
 **Durum:** Küçük bir eğitim topluluğu üç etkinlik platformunu karşılaştırmak istiyor.
@@ -11,6 +13,8 @@ Aşağıdaki senaryolar eğitim için üretilmiş kurgulardır. Gerçekte yürü
 > Üç platformu kayıt akışı, veri dışa aktarma ve toplam maliyeti anlamaya yarayan bilgiler açısından karşılaştır. Resmî sayfaları aç. Belgelenmeyen koşulları bilinmiyor diye işaretle. Bizim 60 kişilik ücretsiz etkinliğimiz için önerini ve önerini değiştirecek koşulu yaz.
 
 **Öğrettiği:** Kaynak seçimi, değişen fiyat bilgisi ve karar gerekçesi. Beklenen çıktı, özellik yığını yerine seçimi etkileyen farklardır. Açılmayan fiyat sayfasına uydurma rakam konmaz. Kullanılabilecek yollar: web araştırması, bağlı belge, karar notu.
+
+<a id="2-kod-bilmeden-bozuk-sayfayi-tarif-etmek"></a>
 
 ## 2. Kod bilmeden bozuk sayfayı tarif etmek
 
@@ -20,6 +24,8 @@ Aşağıdaki senaryolar eğitim için üretilmiş kurgulardır. Gerçekte yürü
 
 **Öğrettiği:** Gözlenen belirtiyi doğru bağlamla vermek. Beklenen çıktı ilgili kaynak düzeltmesi ve açılmış görünüm kanıtıdır. Ekran görüntüsü, yanlış URL'yi test etme riskini tek başına çözmez. Araçlar: dosya erişimi, yerleşik tarayıcı, değişiklik görünümü.
 
+<a id="3-tabloyu-temizlerken-kimligi-korumak"></a>
+
 ## 3. Tabloyu temizlerken kimliği korumak
 
 **Durum:** Aynı isimli katılımcılar ve farklı tarih biçimleri var.
@@ -27,6 +33,8 @@ Aşağıdaki senaryolar eğitim için üretilmiş kurgulardır. Gerçekte yürü
 > Kaynak tabloyu koru. Tarihleri tek biçime dönüştür; aynı adları otomatik birleştirme. Kayıt anahtarı yoksa bunu belirt. Belirsiz satırları ayrı göster. Kaynak ve sonuçtaki kayıtları eşleştirip kayıp ve tekrar kontrolü yap.
 
 **Öğrettiği:** Temiz görünen çıktı ile doğru veri arasındaki fark. Beklenen çıktı düzenlenebilir tablo, dönüşüm kuralları ve açık belirsizliklerdir. Araç: dosya veya bağlı tablo; tekrar eden dönüşüm için betik.
+
+<a id="4-kaynagi-dogrulanmis-metni-cevirmek"></a>
 
 ## 4. Kaynağı doğrulanmış metni çevirmek
 
@@ -36,6 +44,8 @@ Aşağıdaki senaryolar eğitim için üretilmiş kurgulardır. Gerçekte yürü
 
 **Öğrettiği:** Görev sınırı. Beklenen çıktı çeviri ve gerekiyorsa kısa anlam sorularıdır; bütün konunun sıfırdan araştırılması değildir. Araç: belge ve uygun yazım skill'i.
 
+<a id="5-yaratici-yonu-secilebilir-yapmak"></a>
+
 ## 5. Yaratıcı yönü seçilebilir yapmak
 
 **Durum:** Duyuru sayfası teknik olarak doğru ama sıradan görünüyor.
@@ -43,6 +53,8 @@ Aşağıdaki senaryolar eğitim için üretilmiş kurgulardır. Gerçekte yürü
 > Aynı gerçek metin ve görsellerle iki farklı düzen üret. Birinde editoryal okuma, diğerinde program tarama öne çıksın. Renk değiştirerek iki kopya üretme; bilgi sırasını ve kullanım farkını göster. Seçimden önce ana sayfayı değiştirme.
 
 **Öğrettiği:** Karşılaştırılabilir prototip, referans ve karar yetkisi. Beklenen çıktı açılıp incelenen iki yön ve farklarının açıklamasıdır. Araç: HTML/yerel prototip ve tarayıcı.
+
+<a id="6-hata-ayiklarken-cozumu-pesinen-dayatmamak"></a>
 
 ## 6. Hata ayıklarken çözümü peşinen dayatmamak
 
@@ -52,6 +64,8 @@ Aşağıdaki senaryolar eğitim için üretilmiş kurgulardır. Gerçekte yürü
 
 **Öğrettiği:** Hipotez, regresyon ve cihaz kanıtı farkı. Beklenen çıktı gerekçeli düzeltme, ilgili kontroller ve sınırlarıdır. “Bütün mobil senaryolar geçti” gibi kapsamsız sonuç üretilmez.
 
+<a id="7-paralel-arastirma-tek-sonuc"></a>
+
 ## 7. Paralel araştırma, tek sonuç
 
 **Durum:** Büyük rehberin hem kaynak hem kullanım açısından incelenmesi gerekiyor.
@@ -59,6 +73,8 @@ Aşağıdaki senaryolar eğitim için üretilmiş kurgulardır. Gerçekte yürü
 > İki bağımsız alt ajan kullanmana yetki veriyorum. Biri yalnız ürün iddialarını resmî kaynaklarla kontrol etsin; diğeri başlangıç düzeyi açıklama boşluklarını arasın. Dosyaları değiştirmesinler. Bulguları sen birleştir ve çelişkileri çöz.
 
 **Öğrettiği:** Alt görev sınırı ve entegrasyon sahipliği. Beklenen çıktı iki özetin yapıştırılması değil, önceliklendirilmiş tek incelemedir. Ana görev alt ajan araçlarını desteklemiyorsa yapılmış gibi sunulmaz.
+
+<a id="8-ses-ve-ekran-baglamiyla-hizli-yonlendirme"></a>
 
 ## 8. Ses ve ekran bağlamıyla hızlı yönlendirme
 
@@ -68,6 +84,8 @@ Aşağıdaki senaryolar eğitim için üretilmiş kurgulardır. Gerçekte yürü
 
 **Öğrettiği:** Görüntü hedef gösterir; düzenlenecek kaynağın bulunması ayrıca gerekir. Beklenen sonuç desteklenen ses/ekran bağlamıyla hedefli düzeltmedir. Görünmeyen tüm belgelerin otomatik okunduğu varsayılmaz.
 
+<a id="9-tekrarli-raporu-otomasyona-donusturmek"></a>
+
 ## 9. Tekrarlı raporu otomasyona dönüştürmek
 
 **Durum:** Haftalık kaynak raporunun yöntemi birkaç gerçek çalışmada tutarlı hâle gelmiş.
@@ -75,6 +93,8 @@ Aşağıdaki senaryolar eğitim için üretilmiş kurgulardır. Gerçekte yürü
 > Bu yöntemi haftalık bağımsız rutin olarak kur. Aynı haftaya ait rapor varsa güncelle, ikinci kopya üretme. Kaynak bulunamazsa uydurma özet yerine engeli yaz. Yayın yapma; yalnız belirlenen klasöre taslak üret.
 
 **Öğrettiği:** Zamanlama, tekrar güvenliği ve yayın yetkisi. Beklenen çıktı doğrulanmış zamanlama ve ilk koşumun gözlenen durumudur. Yerel bilgisayarın çalışma koşulu hesaba katılır.
+
+<a id="10-teslimi-gercek-hedefte-bitirmek"></a>
 
 ## 10. Teslimi gerçek hedefte bitirmek
 
@@ -84,6 +104,8 @@ Aşağıdaki senaryolar eğitim için üretilmiş kurgulardır. Gerçekte yürü
 
 **Öğrettiği:** Commit, push, deployment ve kamuya açık görünüm ayrımı. Beklenen çıktı hedefte gözlenen sürümdür. Düzeltmeyi yerelde bırakıp “yayında” demek tamamlanma değildir.
 
+<a id="11-belge-ve-sunum-uretimini-incelemek"></a>
+
 ## 11. Belge ve sunum üretimini incelemek
 
 **Durum:** Uzun rapordan yönetim toplantısına kısa sunum gerekiyor.
@@ -91,6 +113,8 @@ Aşağıdaki senaryolar eğitim için üretilmiş kurgulardır. Gerçekte yürü
 > Kaynak rapordaki karar, dayanak ve belirsizlikleri koruyarak sunum hazırla. Her slayt tek kararı desteklesin. Kaynakta olmayan sayı ekleme. Dosyayı önizle; taşan metin, okunamayan grafik ve kopan kaynak bağlantılarını düzelt.
 
 **Öğrettiği:** Düzenlenebilir çıktı, kaynak sadakati ve görsel kontrol. Beklenen dosya türünü ve hedef uygulamayı belirtmek gerekir. Bir PPTX dosyasının oluşması slaytların incelendiğini göstermez.
+
+<a id="12-eski-isten-guvenilir-devam"></a>
 
 ## 12. Eski işten güvenilir devam
 

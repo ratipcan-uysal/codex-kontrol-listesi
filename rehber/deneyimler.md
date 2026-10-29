@@ -4,7 +4,11 @@ Belge kontrolü: 2026-10-29.
 
 Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşma parçaları üzerinden doğrulanan gerçek deneyimleri anonimleştirir. Tüm sohbet geçmişinin eksiksiz tarandığı iddiası yoktur. Özel kayıtlar, hesaplar, yerel yollar ve ham konuşmalar kamuya taşınmaz. Bölümlerdeki “Kurgu senaryo” metinleri bu vakaların kaydı değildir.
 
+<a id="c01"></a>
+
 ## C01
+
+<a id="bulunamayan-uygulama-hic-var-olmamis-uygulama-degildir"></a>
 
 ### Bulunamayan uygulama, hiç var olmamış uygulama değildir
 
@@ -14,7 +18,11 @@ Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşm
 
 **Sınır:** Pencere görünürlüğü ve yeni işlevlerin davranış testi bu kayıtla doğrulanmadı. Derleme başarısı ses kalitesini kanıtlamaz. Kontrol tarihi: 28 Ekim 2026.
 
+<a id="c02"></a>
+
 ## C02
+
+<a id="eski-not-guncel-urunun-gercegi-olmayabilir"></a>
 
 ### Eski not, güncel ürünün gerçeği olmayabilir
 
@@ -24,7 +32,11 @@ Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşm
 
 **Sınır:** Kaynak ve paket incelemesi kullanıcı etkisi, mağaza sürümü veya fiziksel cihaz davranışı ölçümü değildi. Kontrol tarihi: 27 Ekim 2026.
 
+<a id="c03"></a>
+
 ## C03
+
+<a id="gecen-konum-kontrolu-okunabilirligin-tamamini-olcmez"></a>
 
 ### Geçen konum kontrolü, okunabilirliğin tamamını ölçmez
 
@@ -34,7 +46,11 @@ Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşm
 
 **Sınır:** Kullanıcının tasarım seçimi ve ana ürüne aktarım ayrı kaldı. Fiziksel cihaz ve gerçek VoiceOver doğrulaması bu prototip kanıtından çıkarılamaz. Kontrol tarihi: 20 Ekim 2026.
 
+<a id="c04"></a>
+
 ## C04
+
+<a id="video-dogrulamasi-muzik-begenisini-veya-sosyal-yayini-kanitlamaz"></a>
 
 ### Video doğrulaması, müzik beğenisini veya sosyal yayını kanıtlamaz
 
@@ -44,7 +60,11 @@ Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşm
 
 **Sınır:** Sessiz sürümün teslim kaydı, müzik revizyonunun bittiğini veya sosyal platformda yayın yapıldığını göstermiyor. Kontrol tarihi: 19 Ekim 2026.
 
+<a id="c05"></a>
+
 ## C05
+
+<a id="arama-detaylari-ac-dugmesinin-durumunu-degistirdi"></a>
 
 ### Arama, “detayları aç” düğmesinin durumunu değiştirdi
 
@@ -54,7 +74,11 @@ Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşm
 
 **Sınır:** Bu belirli sayfa davranışı için kanıttır; her arama uygulaması aynı yapıyı kullanmaz. [Önceki doğrulama raporu](../DOGRULAMA.md), 21 Ekim 2026.
 
+<a id="c06"></a>
+
 ## C06
+
+<a id="ayni-sayfada-baglanti-degisimi-ilk-yuklemeyle-ayni-olay-degildir"></a>
 
 ### Aynı sayfada bağlantı değişimi, ilk yüklemeyle aynı olay değildir
 
@@ -64,7 +88,11 @@ Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşm
 
 **Sınır:** Sayfa içi bağlantı davranışıdır; uzak yayın veya bütün tarayıcı uyumluluğu kanıtı değildir. [Önceki doğrulama raporu](../DOGRULAMA.md), 21 Ekim 2026.
 
+<a id="c07"></a>
+
 ## C07
+
+<a id="ag-engeli-yanlis-kimlik-bilgisi-demek-degildir"></a>
 
 ### Ağ engeli, yanlış kimlik bilgisi demek değildir
 
@@ -74,7 +102,11 @@ Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşm
 
 **Sınır:** Bu vaka, bütün kimlik hatalarının ağdan kaynaklandığını söylemez. 21 Ekim 2026 tarihli çalışma kaydı. Özel erişim günlüğü bu kamuya açık rehbere eklenmez.
 
+<a id="c08"></a>
+
 ## C08
+
+<a id="ayni-isimli-cli-farkli-ikili-olabilir"></a>
 
 ### Aynı isimli CLI, farklı ikili olabilir
 

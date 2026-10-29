@@ -4,6 +4,8 @@ Belge kontrolü: 2026-10-29.
 
 Codex'in bir bilgiyi daha önce duymuş olması, o bilginin şu anda eksiksiz ve güncel biçimde elinde olduğu anlamına gelmez. Devamlılık için bilginin nerede tutulduğunu bilmek gerekir.
 
+<a id="bes-farkli-bilgi-kaynagi"></a>
+
 ## Beş farklı bilgi kaynağı
 
 | Kaynak | Ne işe yarar? | Sınırı |
@@ -16,6 +18,8 @@ Codex'in bir bilgiyi daha önce duymuş olması, o bilginin şu anda eksiksiz ve
 
 Masaüstündeki Codex belleği ile ChatGPT web belleği aynı kayıt sistemi değildir. Codex belleği uygun geçmiş konuşmalardan arka planda oluşturulur. Settings → Personalization ve desteklenen `/memories` denetimleri kullanım ve katkı tercihlerini yönetir. Menülerin kapsamı hesabına bağlıdır. [Bellek](https://learn.chatgpt.com/docs/customization/memories)
 
+<a id="ayni-sohbet-mi-yeni-sohbet-mi"></a>
+
 ## Aynı sohbet mi, yeni sohbet mi?
 
 Aynı sonuca doğru ilerlerken mevcut sohbette kalmak, kararları korur. Ayrı bir ürün, başka bir karar veya bağımsız inceleme için yeni sohbet daha temiz bir başlangıç sağlar. Dallandırma, mevcut geçmişten farklı bir yönde devam etmeye yarar; dosya yalıtımı sağlamaz. Dosyaları da ayırmak gerekiyorsa worktree konusuna bak.
@@ -24,17 +28,23 @@ Sıkıştırma, uzun konuşmanın çalışmaya elverişli bir özete dönüşmes
 
 > Bu işin kararlarını proje notlarına geçir. Hangi dosyada çalıştığımızı, son doğrulanan sonucu ve açık kalan üç sorunu kaydet. Tekrar üretilebilen ayrıntıları kopyalama; ilgili kaynaklara bağla.
 
+<a id="eski-bilgiye-dogru-soru-sor"></a>
+
 ## Eski bilgiye doğru soru sor
 
 Bellek “ilk kullanım ekranı yok” diyebilir. Bugünkü kaynakta bu ekran eklenmiş olabilir. Güvenilir yaklaşım, belleği arama başlangıcı yapmak ve mevcut kodla karşılaştırmaktır.
 
 Gerçek bir ürün incelememizde eski “onboarding yok” notu güncel kaynakla uyuşmadı. İlk kullanım akışı vardı; Debug ve Release koşulları farklıydı. Başka bir bulguda içerik çevrilmişti, fakat uygulama paketine aktarılmamıştı. İki durumda da eski görevi yeniden yapmak yanlış çözüm olurdu. [Vaka C02](deneyimler.md#c02)
 
+<a id="computer-history-appshots-ve-bellek"></a>
+
 ## Computer History, Appshots ve bellek
 
 Computer History, desteklenen macOS kurulumlarında isteğe bağlı bilgisayar etkinliği bağlamıdır. Bellek ve uygun hesap/kurum koşulları gerekir. Açık onayla etkinleşir; uygulama/site kapsamı, duraklatma ve silme denetimleri vardır. Belgeler bunun sürekli ekran görüntüsü veya ses kaydı olmadığını belirtir. Appshots ise belirli anda ön plandaki pencereyi sohbete ekleme yoludur. Bunları birbirinin adı gibi kullanma. [Computer History](https://learn.chatgpt.com/docs/customization/computer-history) · [Appshots](https://learn.chatgpt.com/docs/appshots)
 
 Bu özellikleri öğrenmek için açmak zorunda değilsin. Kaynak dosyalar ve kısa proje notları birçok işte yeterlidir.
+
+<a id="kurgu-senaryo-iki-hafta-sonra-donus"></a>
 
 ## Kurgu senaryo: iki hafta sonra dönüş
 
@@ -43,6 +53,8 @@ Atölye için hazırlanan etkinlik takvimine iki hafta sonra dönüyorsun. Eski 
 > Önceki kararları oku. Katılımcı sayısı artık 35; bu bilgi eski 20 kişilik varsayımın yerini alıyor. Mekân kapasitesi ve bütçe hesabında etkilenen yerleri bul. Diğer kararları gerekmedikçe yeniden açma.
 
 Böylece değişiklik hem güncel işte kullanılır hem de sonraki dönüşte eski sayı yeniden canlanmaz.
+
+<a id="kontrol-listesinde-karsiligi"></a>
 
 ## Kontrol listesinde karşılığı
 

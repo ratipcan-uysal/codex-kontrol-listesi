@@ -1,4 +1,4 @@
-# 75 özellik ailesinin kapsam envanteri
+# 84 özellik ailesinin kapsam envanteri
 
 Belge kontrolü: 2026-10-29.
 
@@ -76,13 +76,21 @@ Envanter birimi, kullanıcıya dönük yetenek veya ilişkili özellik ailesidir
 | F66 | Otomatik onay incelemesi | Etkin politika; /approve tek yeniden deneme | [İzinler, gizlilik ve güvenlik](16-izinler-guvenlik.md) | [Auto-review](https://learn.chatgpt.com/docs/sandboxing/auto-review) |
 | F67 | Plugin izinleri ve veri kapsamı | Hesap ve kurum politikası; kurulum sınırsız erişim değil | [İzinler, gizlilik ve güvenlik](16-izinler-guvenlik.md) | [Codex Security plugin quickstart](https://learn.chatgpt.com/docs/security/plugin) |
 | F68 | Sohbet paylaşımı ve geri dönüş sınırı | Paylaşılan içerik gözden geçirilir; dış işlem geri alınmaz | [Teslim, yayın ve geri dönüş](17-teslim-yayin.md) | [Commands](https://learn.chatgpt.com/docs/reference/commands) |
-| F69 | Pets ve Mini | İsteğe bağlı masaüstü yüzeyi; düşünme niteliğini değiştirmez | [Uygulamanın tamamını tanımak](02-uygulama.md) | [Pets](https://learn.chatgpt.com/docs/pets) |
-| F70 | Codex Micro | Uyumlu fiziksel donanım; temel kullanım gereği değil | [Uygulamanın tamamını tanımak](02-uygulama.md) | [Codex Micro](https://learn.chatgpt.com/docs/features/codex-micro) |
+| F69 | Pets ve Mini | İsteğe bağlı masaüstü yüzeyi; düşünme niteliğini değiştirmez | [İleri teknik ayrıntılar](ileri-teknik.md) | [Pets](https://learn.chatgpt.com/docs/pets) |
+| F70 | Codex Micro | Uyumlu fiziksel donanım; temel kullanım gereği değil | [İleri teknik ayrıntılar](ileri-teknik.md) | [Codex Micro](https://learn.chatgpt.com/docs/features/codex-micro) |
 | F71 | Başka ajandan içe aktarma ve eşitleme | Masaüstü/CLI kaynak listesi farklı; Finish/yeniden giriş gerekebilir | [İleri teknik ayrıntılar](ileri-teknik.md) | [Import from another agent](https://learn.chatgpt.com/docs/import) |
 | F72 | Space, Pages, Slides ve tablolar | Bulut ürün yüzeyi; her Codex hesabında aynı erişim varsayılmaz | [İleri teknik ayrıntılar](ileri-teknik.md) | [ChatGPT Space](https://learn.chatgpt.com/docs/space) |
 | F73 | CLI ve etkileşimsiz koşum | Terminal yüzeyi; şema, olay akışı ve gerçek sonuç ayrı | [Komutlar ve kısayollar](komutlar.md) | [Non-interactive mode](https://learn.chatgpt.com/docs/non-interactive-mode) |
 | F74 | IDE bağlamı ve yüzeyler arası sınır | /ide-context; plugin/CLI komut kapsamı otomatik aktarılmaz | [Komutlar ve kısayollar](komutlar.md) | [Slash commands](https://learn.chatgpt.com/docs/reference/slash-commands) |
 | F75 | Geri bildirim ve sorun giderme | /feedback; logları göndermeden içeriği incele | [Sorun giderme tablosu](sorun-giderme.md) | [Troubleshooting](https://learn.chatgpt.com/docs/reference/troubleshooting) |
-
+| F76 | İlk yerel dosya ve önizleme akışı | Yerel proje; seçili klasör ve desteklenen dosya önizlemesi | [Uygulamanın tamamını tanımak](02-uygulama.md) | [Projects and chats](https://learn.chatgpt.com/docs/projects) |
+| F77 | ChatGPT projesi / yerel proje ve Quick chat | Kaynak kapsamı ve sohbet yüzeyi farklı | [Uygulamanın tamamını tanımak](02-uygulama.md) | [Projects and chats](https://learn.chatgpt.com/docs/projects) |
+| F78 | Sohbetler arasında arama | Search chats; sohbet içi bulmadan ayrı, varsayılan kısayol yok | [Uygulamanın tamamını tanımak](02-uygulama.md) | [Projects and chats](https://learn.chatgpt.com/docs/projects) |
+| F79 | Mesaj önerileri / Composer predictions | Kademeli beta; Pro, yaş/bölge/model ve ortam koşulları; Tab taslağa alır | [Uygulamanın tamamını tanımak](02-uygulama.md) | [Composer predictions](https://learn.chatgpt.com/docs/features/composer-predictions) |
+| F80 | Activity ve bildirim türleri | Uygulama tercihi ve OS bildirim izni birlikte geçerli | [Uygulamanın tamamını tanımak](02-uygulama.md) | [Notifications and Activity](https://learn.chatgpt.com/docs/notifications) |
+| F81 | Önbellekli / canlı web araması | Web aracı, shell ağı ve plugin erişimi ayrı kanallar | [İnternet, tarayıcı ve bilgisayar kullanımı](09-web-tarayici-bilgisayar.md) | [Web search](https://learn.chatgpt.com/docs/web-search) |
+| F82 | Deep research giriş yolu | Work yüzeyi, hesap ve workspace koşulları; Codex slash komutu değil | [İnternet, tarayıcı ve bilgisayar kullanımı](09-web-tarayici-bilgisayar.md) | [Web search](https://learn.chatgpt.com/docs/web-search) |
+| F83 | Etkileşimli görselleştirmeler | Masaüstünde kademeli preview; CLI/IDE render desteği yok | [Tasarım ve yaratıcı üretim](13-tasarim.md) | [Visualizations](https://learn.chatgpt.com/docs/visualizations) |
+| F84 | Dış uygulamanın plan kullanımına erişimi | Desteklenen Plus/Pro bağlantıları; giriş ve kota izni ayrı | [Model, düşünme seviyesi, hız ve kullanım](07-model-hiz-kullanim.md) | [Sign in with ChatGPT](https://learn.chatgpt.com/docs/sign-in-with-chatgpt) |
 
 [İçindekiler](README.md)

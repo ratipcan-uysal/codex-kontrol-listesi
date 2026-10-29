@@ -4,6 +4,8 @@ Belge kontrolü: 2026-10-29.
 
 Bir dosyanın nerede değiştiği, o dosyayla ne yapıldığı kadar önemlidir. “Bende çalışıyor” ifadesinin anlamı çalışma ortamı açıklanınca ortaya çıkar.
 
+<a id="klasor-depo-dal-ve-worktree"></a>
+
 ## Klasör, depo, dal ve worktree
 
 **Çalışma dizini**, komutun başlangıç klasörüdür. **Git deposu**, dosyaların sürüm geçmişini tutar. **Dal**, geçmişteki bir gelişim çizgisidir. **Worktree**, aynı Git geçmişine bağlı ayrı bir dosya çalışma kopyasıdır. Sıradan klasörün Git deposu olması zorunlu değildir; worktree için Git gerekir.
@@ -17,6 +19,8 @@ Bir dosyanın nerede değiştiği, o dosyayla ne yapıldığı kadar önemlidir.
 
 [Ortam türleri](https://learn.chatgpt.com/docs/environments/modes) · [Worktree](https://learn.chatgpt.com/docs/environments/git-worktrees) · [Bulut](https://learn.chatgpt.com/docs/environments/cloud-environments)
 
+<a id="worktree-nin-asil-kazanci"></a>
+
 ## Worktree'nin asıl kazancı
 
 Aynı projede bir hata düzeltirken başka tasarımı denemek istiyorsan ayrı dosya alanı yararlıdır. Uygulamada yeni işin ortamını Worktree seçip başlangıç durumunu belirlersin. Uygulamanın yönettiği bazı akışlar mevcut değişiklikleri başlangıca taşıyabilir; düz `git worktree add` komutunun bunu otomatik yaptığını düşünme. Başlangıç commit'i ve taşınan değişiklikleri kontrol et.
@@ -25,11 +29,15 @@ Yeni worktree ayrılmış HEAD durumunda başlayabilir: henüz adlandırılmış
 
 Hand off, desteklenen akışlarda sohbeti ve kod durumunu Local ile worktree arasında taşır. Her klasörü elle kopyalamakla aynı işlem değildir. Git tarafından izlenmeyen ve yok sayılan dosyaların taşınma davranışını ayrıca incele. `.worktreeinclude` desteklenen yerel worktree akışlarında seçili yok sayılmış dosyaları kopyalamaya yarar; sırları topluca ekleme. [Worktree ayrıntıları](https://learn.chatgpt.com/docs/environments/git-worktrees)
 
+<a id="ortam-kurulumu-ve-actions"></a>
+
 ## Ortam kurulumu ve Actions
 
 Bağımlılıklar, veri dosyaları ve başlatma komutu eksikse kaynak kod tek başına yeterli olmaz. Local environment tanımları yeni worktree hazırlığı için kurulum komutlarını ve tekrar kullanılan Actions işlemlerini düzenleyebilir. Actions, sık kullandığın “uygulamayı aç” veya “önizlemeyi başlat” komutuna hızlı erişim sağlar. [Yerel ortam](https://learn.chatgpt.com/docs/environments/local-environment)
 
 Büyük modeli veya uzun derlemeyi her sohbet başında yeniden kurmak yerine kurulumun mevcut ve geçerli olup olmadığını kontrol ettir. Kullanıcıya ait eski önbellekleri sırf temiz görünmek için silme.
+
+<a id="uzaktan-ve-mobilden-calisma"></a>
 
 ## Uzaktan ve mobilden çalışma
 
@@ -39,6 +47,8 @@ Mobil eşleme desteklenen ana bilgisayarda Settings → Connections → Control 
 
 Work Cloud içindeki Local computer access ise uygun Work konuşmalarını bulut koordinasyonuyla yerel kaynaklara bağlayan ayrı akıştır. Etkinleştirilmeden önce açılmış her eski sohbetin bu moda geçtiğini varsayma. Ana bilgisayar erişilemiyorsa bulut ortamının onun yerel dosyalarına erişmesi de mümkün değildir.
 
+<a id="kurgu-senaryo-dogru-kod-yanlis-onizleme"></a>
+
 ## Kurgu senaryo: doğru kod, yanlış önizleme
 
 Atölye'nin başlık düzeltmesi worktree'de yapılmış, tarayıcı ise ana klasörden çalışan sunucuyu gösteriyor. Değişiklik görünmüyor. Codex'e daha güçlü CSS yazdırmak yerine:
@@ -46,6 +56,8 @@ Atölye'nin başlık düzeltmesi worktree'de yapılmış, tarayıcı ise ana kla
 > Önizlemeyi sunan sürecin çalışma klasörünü ve portunu doğrula. Düzenlediğin worktree ile aynı kaynaktan çalıştığını göster. Sonra görsel kontrolü tekrarla.
 
 Bu kontrol, kodun yanlış olduğu varsayımını sınar. Sonuç raporunda klasör, sürüm ve URL birlikte anlam taşır.
+
+<a id="kontrol-listesinde-karsiligi"></a>
 
 ## Kontrol listesinde karşılığı
 

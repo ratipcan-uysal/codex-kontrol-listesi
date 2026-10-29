@@ -4,6 +4,8 @@ Belge kontrolü: 2026-10-29.
 
 Codex ile çalışırken kazanacağın beceri, bir isteği güzel cümlelerle anlatmaktan daha geniş. Dosyayı bulmak, doğru ortamda çalışmak, bir fikri görünür çıktıya çevirmek ve sonucun gerçekten istediğin şey olup olmadığını anlamak aynı işin parçaları. Bu rehber bunları birlikte öğretiyor.
 
+<a id="yapabileceklerini-cikti-uzerinden-dusun"></a>
+
 ## Yapabileceklerini çıktı üzerinden düşün
 
 Codex araştırma yapabilir, kaynakları karşılaştırabilir, kod ve metin düzenleyebilir, dosya üretebilir ve mevcut araçları kullanarak sonucu kontrol edebilir. Hangi işin mümkün olduğu seçtiğin ortamın dosyalarına, araçlarına ve izinlerine bağlıdır. Uygulamada Codex'i seçmiş olmak her servise bağlandığın anlamına gelmez. [Ürün yüzeyleri](https://learn.chatgpt.com/docs/use-chatgpt)
@@ -19,11 +21,15 @@ Codex araştırma yapabilir, kaynakları karşılaştırabilir, kod ve metin dü
 
 Tablo, her iş için hangi doğruluk ölçütünü belirlemen gerektiğini gösterir. Örneğin bir grafiğin açılması, verinin doğru işlendiğini kanıtlamaz.
 
+<a id="i-lk-isi-nasil-secersin"></a>
+
 ## İlk işi nasıl seçersin?
 
 İyi başlangıç işinde girdi erişilebilir, çıktı tanımlı ve düzeltme maliyeti düşüktür. Bir belgenin tutarsızlıklarını bulmak, mevcut sayfadaki taşmayı düzeltmek veya on kayıtlık örnekte veri temizleme yöntemi kurmak bu yüzden öğreticidir. Bir şirketin bütün operasyonunu otomatikleştirmek ise çok sayıda yetki, belirsizlik ve bağımlılığı aynı anda getirir.
 
 İşi küçültmek değerini azaltmak zorunda değil. Bir müşteri kaydının baştan sona doğru aktarılması, yalnız güzel görünen on ekranın hazırlanmasından daha fazla şey doğrulayabilir. Sonraki genişleme için çalışan bir temel elde edersin.
+
+<a id="kurgu-senaryo-atolye-adli-bir-ogrenme-toplulugu"></a>
 
 ## Kurgu senaryo: Atölye adlı bir öğrenme topluluğu
 
@@ -38,11 +44,17 @@ Sonucu düzenlenebilir bir belge olarak hazırla ve kullandığın kaynakları b
 
 Bu istek üç kararı birlikte veriyor: kaynak belli, taslağa girecek bilginin eşiği belli, eksik bilgiye davranış belli. Codex'in programı dolu göstermek için tarih uydurmasına gerek kalmıyor. İlk taslağı gördükten sonra yoğunluğu, sıralamayı veya dili değiştirebilirsin.
 
-## Deneyim: hazır uygulamayı bulamamak
+<a id="tek-ciktiyi-birkac-ise-donustur"></a>
 
-Bir masaüstü uygulamasını açmak istediğimizde, kontrol edilen konumlarda hazır uygulama paketi bulunamadı. İlk yorum bunu uygulamanın yokluğuna genişletti. Kullanıcı daha önce test yaptığımızı hatırlattı. Kaynağı koruyarak uygulamayı yeniden derledik ve çalışan süreci gözledik. O turda pencereyi ve yeni ses işlevlerini doğrulamadık.
+## Tek çıktıyı birkaç işe dönüştür
 
-Buradaki ders aramanın sınırını cümlenin içinde taşımak. “Baktığım iki konumda paket yok” gözlemdir. “Uygulama hiç yapılmamış” ise ek kanıt ister. Aynı ayrım kayıp belge, eksik çeviri ve erişilemeyen servis için de geçerlidir. Bu vakanın anonim kaydı [deneyim dizininde](deneyimler.md) bulunur.
+Bir kaynak paketinden önce karar notu, sonra onaylı nottan sunum ve kısa duyuru ürettirebilirsin. Böylece her biçimde konuyu yeniden araştırmak yerine doğrulanmış bilgiyi kullanırsın. Yeni biçim yeni iddia gerektiriyorsa o boşluğu ayrıca araştırırsın.
+
+> Önce kaynaklardan bir sayfalık karar notu çıkar. Ben bu notu onayladıktan sonra aynı bilgiyle beş slaytlık sunum ve 150 kelimelik duyuru hazırla. Her çıktıda tarih ve sayıları ana notla karşılaştır.
+
+Bu, rehberin iş akışı önerisi. Kazanç yalnız yazma hızından gelmez: aynı kararın üç belgede farklı anlatılması da önlenir. Hangi dosyayı üreteceğini ve nerede açacağını [ilk iş akışında](02-uygulama.md#i-lk-dosyani-uret-ac-duzelt) görebilirsin.
+
+<a id="i-yi-sonuc-icin-iki-ayri-karar-ver"></a>
 
 ## İyi sonuç için iki ayrı karar ver
 

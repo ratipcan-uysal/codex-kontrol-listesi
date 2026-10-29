@@ -3,9 +3,11 @@ from pathlib import Path
 import html
 import json
 import re
+import hashlib
+import struct
 from urllib.parse import urlsplit
 from content import (GUIDE_DATE, GUIDE_INTRO, GUIDE_CHAPTERS, GUIDE_APPENDICES,
-                     GUIDE_SOURCES, GUIDE_FEATURES, GUIDE_ITEM_MAP, SECTIONS)
+                     GUIDE_SOURCES, GUIDE_FEATURES, GUIDE_ITEM_MAP, GUIDE_FIGURES, SECTIONS)
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -15,6 +17,38 @@ PAGE_SLUGS = {c['slug'] for c in GUIDE_CHAPTERS + GUIDE_APPENDICES} | {'kapsam',
 
 def resolve_sources(text):
     return re.sub(r'\(source:([\w-]+)\)', lambda m: '(' + GUIDE_SOURCES[m[1]]['url'] + ')', text)
+
+
+def figure_html(key):
+    f = GUIDE_FIGURES[key]
+    width, height = struct.unpack('>II', (OUT/f['file']).read_bytes()[16:24])
+    esc = lambda s: html.escape(s, quote=True)
+    return (f'<figure class="app-figure"><a class="figure-open" href="{esc(f["file"])}" '
+            f'aria-label="{esc(f["title"])} — görseli tam boyutta aç">'
+            f'<img src="{esc(f["file"])}" alt="{esc(f["alt"])}" width="{width}" height="{height}" loading="lazy" decoding="async"></a>'
+            f'<figcaption><strong>{esc(f["title"])}</strong> {esc(f["caption"])} '
+            f'<span class="figure-source">OpenAI’nin resmî arayüz gösterimi · '
+            f'<a href="{esc(f["source"])}">Kaynak</a> · {f["checked"]} · Görsele tıklayarak büyüt.</span></figcaption></figure>')
+
+
+def markdown_output(text):
+    """Use the same figure metadata and explicit anchors in GitHub Markdown."""
+    def figure(m):
+        f=GUIDE_FIGURES[m[1]]
+        return (f'![{f["alt"]}]({f["file"]})\n\n**{f["title"]}.** {f["caption"]} '
+                f'[Tam boyut]({f["file"]}) · OpenAI’nin resmî arayüz gösterimi · '
+                f'[Kaynak]({f["source"]}) · {f["checked"]}.')
+    text=re.sub(r'^\[FIGURE:([a-z-]+)\]$',figure,text,flags=re.M)
+    # Match renderer IDs so cross-links work both in GitHub and the HTML site.
+    seen={}; fence=False; lines=[]
+    for line in text.splitlines():
+        if line.startswith('```'):fence=not fence
+        if not fence and re.match(r'^#{1,6} ',line):
+            slug=slugify(line.lstrip('#').strip());seen[slug]=seen.get(slug,0)+1
+            anchor=slug if seen[slug]==1 else slug+'-'+str(seen[slug])
+            lines.extend([f'<a id="{anchor}"></a>',''])
+        lines.append(line)
+    return '\n'.join(lines)
 
 
 def slugify(text):
@@ -57,11 +91,15 @@ def render_markdown(markdown):
     """Small fail-closed renderer for the authored subset, with escaped text/code."""
     lines = markdown.splitlines(); out = []; headings = []; seen = {}; n = 0
     def starts_block(line):
-        return not line.strip() or line.startswith(('#', '|', '>', '```', '- ')) or bool(re.match(r'^\d+\. ', line))
+        return not line.strip() or line.startswith(('#', '|', '>', '```', '- ', '[FIGURE:')) or bool(re.match(r'^\d+\. ', line))
     while n < len(lines):
         line = lines[n]
         if not line.strip(): n += 1; continue
-        if line.startswith('```'):
+        if line.startswith('[FIGURE:'):
+            match=re.fullmatch(r'\[FIGURE:([a-z-]+)\]',line)
+            if not match or match[1] not in GUIDE_FIGURES: raise ValueError('Unknown figure: '+line)
+            out.append(figure_html(match[1])); n += 1
+        elif line.startswith('```'):
             code=[]; n += 1
             while n < len(lines) and not lines[n].startswith('```'):
                 code.append(lines[n]); n += 1
@@ -117,6 +155,15 @@ def validate_guide():
         assert p['body'].strip()
         assert len(p['body'].split()) >= 250, p['slug']
         for key in re.findall(r'\(source:([\w-]+)\)',p['body']): assert key in GUIDE_SOURCES, key
+    used=set(re.findall(r'\[FIGURE:([^]]+)\]', '\n'.join(p['body'] for p in all_pages)))
+    assert used==set(GUIDE_FIGURES), 'Every figure must be used and declared'
+    for f in GUIDE_FIGURES.values():
+        asset=(OUT/f['file']).resolve()
+        assert asset.is_relative_to((OUT/'assets').resolve()) and asset.suffix=='.png'
+        assert asset.read_bytes()[:8]==b'\x89PNG\r\n\x1a\n'
+        assert hashlib.sha256(asset.read_bytes()).hexdigest()==f['sha256']
+        assert f['alt'] and f['caption'] and f['title'] and f['checked']==GUIDE_DATE
+        assert f['source'].startswith('https://learn.chatgpt.com/docs/')
     return ids
 
 
@@ -133,7 +180,7 @@ def page_html(title, markdown, current, prev=None, next_=None):
     return f'''<!doctype html>
 <html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{html.escape(title)} · Codex rehberi</title><meta name="description" content="Gerçek deneyimler, kaynaklı açıklamalar ve kurgu senaryolarla Türkçe Codex uygulaması rehberi."><style>{css}</style></head>
 <body class="guide"><a class="skip" href="#icerik">İçeriğe geç</a><header class="topbar"><a class="brand" href="index.html"><span class="brandmark" aria-hidden="true">›_</span>Codex <span class="brandlight">/ derinlemesine rehber</span></a><a class="top-source" href="../index.html">107 madde ↗</a></header>
-<div class="layout"><aside class="sidebar"><div class="eyebrow">İÇİNDEKİLER</div><nav aria-label="Rehber bölümleri">{nav}</nav></aside><main id="icerik"><nav class="breadcrumb" aria-label="Sayfa yolu"><a href="index.html">Rehber</a> / <a href="{current+'.md' if current!='index' else 'README.md'}">Markdown</a></nav><div class="eyebrow">BELGE KONTROLÜ · {GUIDE_DATE}</div><h1>{html.escape(title)}</h1>{local}<article class="prose">{rendered}</article><nav class="page-next" aria-label="Sıralı okuma">{''.join(moves)}</nav><footer><span>© 2026 Ratipcan Uysal · <a href="../LICENSE">CC BY 4.0</a><br>Bağımsız rehber; resmî OpenAI yayını değildir.</span><a href="kaynaklar.html">Kaynak ve erişim sınırları</a></footer></main></div></body></html>'''
+<div class="layout"><aside class="sidebar"><div class="eyebrow">İÇİNDEKİLER</div><nav aria-label="Rehber bölümleri">{nav}</nav></aside><main id="icerik"><nav class="breadcrumb" aria-label="Sayfa yolu"><a href="index.html">Rehber</a> / <a href="{current+'.md' if current!='index' else 'README.md'}">Markdown</a></nav><div class="eyebrow">BELGE KONTROLÜ · {GUIDE_DATE}</div><h1>{html.escape(title)}</h1>{local}<article class="prose">{rendered}</article><nav class="page-next" aria-label="Sıralı okuma">{''.join(moves)}</nav><footer><span>© 2026 Ratipcan Uysal · Metin: <a href="../LICENSE">CC BY 4.0</a><br>Arayüz görselleri: OpenAI; bu lisansa dahil değildir.<br>Bağımsız rehber; resmî OpenAI yayını değildir.</span><a href="kaynaklar.html">Kaynak ve erişim sınırları</a></footer></main></div></body></html>'''
 
 
 def build_guide():
@@ -180,6 +227,9 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 |---|---|
 '''
     for src in GUIDE_SOURCES.values(): source_md+=f'| [{src["title"]}]({src["url"]}) | {src["checked"]} |\n'
+    source_md+='\n## Arayüz görselleri ve atıf\n\nGörseller OpenAI belgelerindeki açıklayıcı arayüz gösterimlerinden, içerikleri değiştirilmeden alındı. Bu rehber için çalışan kullanıcı hesabının ekranı çekilmedi. Örneklerdeki model adları, tarihler ve veriler ürünün her hesapta güncel durumunu temsil etmez. Her görsel açılıp incelendi. Kaynak ve dosya özeti [görsel manifestinde](gorsel-manifest.json) kayıtlıdır. OpenAI ve diğer hak sahiplerine ait görseller rehber metninin CC BY 4.0 lisansına dahil değildir; bu rehber görseller için ayrıca yeniden kullanım lisansı vermez.\n\n'
+    source_md+='| Görsel | Resmî sayfa | Kayıt tarihi |\n|---|---|---|\n'
+    for f in GUIDE_FIGURES.values():source_md+=f'| [{f["title"]}]({f["file"]}) | [Kaynak]({f["source"]}) | {f["checked"]} |\n'
     source_md+='''
 ## Yapılan ve yapılmayan doğrulama
 
@@ -189,7 +239,7 @@ Yerel çıktı, uzak depoya gönderim ve canlı yayın ayrı durumlardır. Eski 
 '''
     pages.append(dict(slug='kaynaklar',title='Kaynaklar, kanıt türleri ve güncellik',body=source_md))
     intro=GUIDE_INTRO+'\n## Tam içindekiler\n\n'+'\n'.join(f'{c["number"]}. [{c["title"]}]({c["slug"]}.md)' for c in GUIDE_CHAPTERS)+'\n\n## Ekler ve hızlı erişim\n\n'+'\n'.join(f'- [{p["title"]}]({p["slug"]}.md)' for p in pages[18:])+'\n\n[107 maddelik hızlı kontrol listesine dön](../codex-kontrol-listesi.md) · [Tek dosyada rehberi indir](tam-rehber.md)\n'
-    (OUT/'README.md').write_text('# Codex’i Derinlemesine Kullanma Rehberi\n\n'+intro)
+    (OUT/'README.md').write_text('# Codex’i Derinlemesine Kullanma Rehberi\n\n'+markdown_output(intro))
     (OUT/'index.html').write_text(page_html('Codex’i Derinlemesine Kullanma Rehberi',intro,'index',next_=GUIDE_CHAPTERS[0]))
     full=['# Codex’i Derinlemesine Kullanma Rehberi',GUIDE_INTRO]
     for index,p in enumerate(pages):
@@ -199,12 +249,13 @@ Yerel çıktı, uzak depoya gönderim ve canlı yayın ayrı durumlardır. Eski 
         if prev: navigation+=f' · [← {prev["title"]}]({prev["slug"]}.md)'
         if next_: navigation+=f' · [{next_["title"]} →]({next_["slug"]}.md)'
         title=(str(p['number'])+'. ' if 'number' in p else '')+p['title']
-        (OUT/(p['slug']+'.md')).write_text(f'# {title}\n\nBelge kontrolü: {GUIDE_DATE}.\n\n'+p['body']+navigation+'\n')
+        (OUT/(p['slug']+'.md')).write_text(f'# {title}\n\nBelge kontrolü: {GUIDE_DATE}.\n\n'+markdown_output(p['body'])+navigation+'\n')
         (OUT/(p['slug']+'.html')).write_text(page_html(title,p['body'],p['slug'],prev,next_))
-        full += ['\n# '+title,p['body']]
+        full += ['\n# '+title,markdown_output(p['body'])]
     (OUT/'tam-rehber.md').write_text('\n\n'.join(full)+'\n')
     (OUT/'kaynak-manifest.json').write_text(json.dumps(dict(checked=GUIDE_DATE,sources=GUIDE_SOURCES),ensure_ascii=False,indent=2)+'\n')
     (OUT/'kapsam.json').write_text(json.dumps(dict(date=GUIDE_DATE,features=GUIDE_FEATURES,item_map=GUIDE_ITEM_MAP),ensure_ascii=False,indent=2)+'\n')
+    (OUT/'gorsel-manifest.json').write_text(json.dumps(dict(date=GUIDE_DATE,figures=GUIDE_FIGURES),ensure_ascii=False,indent=2)+'\n')
     return dict(chapters=18,appendices=len(pages)-18,features=len(GUIDE_FEATURES),mapped=len(GUIDE_ITEM_MAP))
 
 if __name__=='__main__': print(build_guide())

@@ -4,6 +4,8 @@ Belge kontrolü: 2026-10-29.
 
 Bir işin tamamlanma noktası, kullanıcının istediği hedefte tanımlanır. Yerel dosya üretimi, canlı yayın isteyen bir görev için ara adımdır. Taslak isteyen görevde ise yayın yapmak kapsamı aşar.
 
+<a id="durumlari-birbirine-karistirma"></a>
+
 ## Durumları birbirine karıştırma
 
 | Durum | Ne oldu? | Henüz neyi göstermiyor? |
@@ -18,11 +20,15 @@ Bir işin tamamlanma noktası, kullanıcının istediği hedefte tanımlanır. Y
 
 Örneğin uygulama paketi TestFlight'a yüklenmiş olabilir; App Store'da yayınlanması ayrı süreçtir. Eğitimde bu ayrımı yalnız yazılımla sınırlama: belgeyi hazırlamak, e-postaya eklemek ve göndermek de ayrı sonuçlardır.
 
+<a id="git-degisikliklerini-incele"></a>
+
 ## Git değişikliklerini incele
 
 Review panelinde dosya ve değişiklik parçalarını görebilir, desteklenen akışlarda stage, revert, commit, push ve pull request işlemlerini yönetebilirsin. Stage, bir sonraki commit'e hangi değişikliğin gireceğini seçmektir. Revert/geri alma işleminin kapsamını okumadan topluca uygulama; depoda kullanıcının başka işi bulunabilir. [Git ve inceleme](https://learn.chatgpt.com/docs/code-review)
 
 Pull request, değişikliğin inceleme önerisidir. Oluşturulması birleştiği anlamına gelmez. GitHub/GitLab hesabı ve depo erişimi ilgili bağlantıya bağlıdır. Bir PR'ı okumak, yorum göndermek, onaylamak ve merge etmek farklı yetkiler gerektirir. Bazı inceleme alanlarında yorum gönderme anında gerçekleşebilir; metnin taslakta kalacağını varsayma. [GitHub](https://learn.chatgpt.com/docs/third-party/github) · [GitLab](https://learn.chatgpt.com/docs/third-party/gitlab)
+
+<a id="sonucu-hedefte-geri-oku"></a>
 
 ## Sonucu hedefte geri oku
 
@@ -32,21 +38,34 @@ Yetkili dış işlemde araç “başarılı” dönünce hedefi tekrar kontrol e
 
 Bu bir rapor formatı talebi olmanın yanında işin nerede biteceğini açıklar.
 
+<a id="geri-donusun-siniri"></a>
+
 ## Geri dönüşün sınırı
 
 Sohbette önceki mesaja dönmek, yapılmış dış işlemleri geri almayabilir. Git de yalnız kaydettiği içerik için geri dönüş sağlar; gönderilmiş e-posta, uzak veritabanı ve izlenmeyen dosya ayrı sistemlerdir. Riskli işlemden önce hangi geri dönüşün gerçekten var olduğunu bil.
 
 Worktree arşivleme akışları kaydedilmiş durumu kurtarmaya yardımcı olabilir; yok sayılan büyük dosyaların ve yerel sırların korunduğunu otomatik varsayma. [Worktree yaşam döngüsü](https://learn.chatgpt.com/docs/environments/git-worktrees)
 
+<a id="gorev-kaynaklarini-kapat"></a>
+
 ## Görev kaynaklarını kapat
 
-Geçici sunucu, tarayıcı otomasyon süreci, test cihazı ve derleme önbelleği iş sonunda değerlendirilir. Yalnız bu görevin oluşturduğu ve artık kullanılmayan kaynağı kaldır. Test kanıtını, sürüm paketini, kullanıcı tarayıcısını ve başka sohbetin sürecini koru. Genel “bütün node süreçlerini öldür” komutu sahiplik ayırmaz.
+İş bitince yalnız bu görevin oluşturduğu ve artık kullanılmayan geçici kaynakları kapat. Test kanıtını, sürüm paketini ve kullanıcıya ait oturumları koru. Süreç, simülatör ve derleme dosyalarının güvenli temizliği [ileri ekte](ileri-teknik.md#kaynak-ve-disk-temizligi) açıklanır.
 
-## Gerçek deneyim ve kurgu karşılığı
+<a id="kullanacagin-bicimde-teslim-al"></a>
 
-Bir içerik üretimimizde sessiz video e-postayla teslim edildi; sosyal platformda yayın yapılmadı. Bu iki durumu tek “paylaşıldı” sözcüğüyle raporlamak kullanıcıyı yanıltır. [Vaka C04](deneyimler.md#c04)
+## Kullanacağın biçimde teslim al
 
-Kurgu Atölye senaryosunda program sayfası yerelde hazırsa rapor “yerel önizleme hazır” der. Kullanıcı yayını da istediyse doğru uzak sürümün dağıtımı ve canlı URL kontrolü tamamlanmadan “yayında” denmez.
+Çıktıyı nerede kullanacağını başta söyle. Düzenlenecek raporda DOCX, sunumda PPTX, hesaplama sürecek tabloda XLSX yararlı olabilir. Markdown, sade metin ve GitHub yayını için uygundur. PDF sabit görünümle paylaşımı kolaylaştırır ama düzenlenebilir kaynağın yerini her işte tutmaz.
+
+> Raporu düzenlenebilir DOCX ve paylaşmalık PDF olarak teslim et. İkisindeki metin ve tablolar aynı olsun. Kaynak dosyayı sakla; son PDF'yi açıp sayfa taşmalarını kontrol et.
+
+Dosya uzantısını değiştirmek gerçek biçim dönüşümü değildir. Dosyayı hedef uygulamada açtırıp doğrulat. Tek bir “son sürüm” bağlantısı ve gerekiyorsa kaynak dosya vermek, adında final bulunan çok sayıda kopya bırakmaktan daha kolay takip edilir.
+
+Kurgu Atölye'nin program sayfasında teslim hedefi canlı URL ise, yerel önizlemenin ardından uzak sürüm ve canlı sayfa kontrolü gerekir. Yaratıcı kalite ve teslim ayrımının gerçek örneği [C04 vakasında](deneyimler.md#c04) bulunur.
+
+
+<a id="kontrol-listesinde-karsiligi"></a>
 
 ## Kontrol listesinde karşılığı
 

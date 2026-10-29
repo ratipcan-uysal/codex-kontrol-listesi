@@ -114,5 +114,4 @@ Mevcut 107 maddenin kimliği, bağlantı çapası ve içeriği korunur. Her madd
 | [19.5](../codex-kontrol-listesi.md#m-19-5) | Geçmiş kullanımını ölçülü ve mahremiyeti koruyarak değerlendir. | [Kendi kullanımını sürekli iyileştirmek](18-iyilestirmek.md) |
 | [19.6](../codex-kontrol-listesi.md#m-19-6) | Geçici derleme dosyalarını kanıttan ayırarak temizle. | [İleri teknik ayrıntılar](ileri-teknik.md) |
 
-
 [İçindekiler](README.md)

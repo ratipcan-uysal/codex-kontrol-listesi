@@ -27,6 +27,8 @@ Bir hata mesajı nedeni daraltır; her zaman tek nedeni belirlemez. Aşağıdaki
 | Yerel PDF eski görünüyor | Son derleme hatası ve son başarılı çıktı | “Kaynak kaydedildi mi, son derleme başarılı mı; ayrı kontrol et.” |
 | Paylaşılan link yanlış sürüm | Uzak commit, deployment ve önbellek | “Hedef URL'deki sürümü kaynak kimliğiyle karşılaştır.” |
 
+<a id="yardim-isterken-kucuk-ama-ayirici-kanit"></a>
+
 ## Yardım isterken küçük ama ayırıcı kanıt
 
 “Çalışmıyor” yerine son başarılı adımı, beklenen davranışı, gözlenen sonucu ve tekrar koşulunu ver. Gerekirse ekran görüntüsü veya kısa log ekle. Tam log büyükse dosyada tutup ilgili hata bölümünü okut; binlerce satırı sohbetin içine kopyalamak asıl sinyali gizleyebilir.

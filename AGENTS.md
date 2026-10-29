@@ -10,3 +10,6 @@
 
 - Rehberin tek içerik kaynağı content.py içindeki GUIDE_* alanlarıdır. Özellik/komut değişince kaynak tarihi, envanter ve ilgili bölüm birlikte güncellenir. Gerçek deneyim ve kurgu senaryo etiketini koru.
 - Rehber kontrolü: python3 kaynak/test_guide.py. Yeni rehber gezinmesi için kaynak/test_guide_browser.cjs; tarihli yayın durumunu DOGRULAMA.md içinde ayrı tut.
+
+- Arayüz görsellerinin kaydı GUIDE_FIGURES içindedir; kaynak, açıklama, alternatif metin ve dosya özeti birlikte tutulur. Resmî açıklayıcı gösterimi kullanıcı hesabında çekilmiş ekran diye sunma. Metin lisansının görselleri kapsadığını varsayma.
+- Markdown ve HTML bölüm çapaları birlikte üretilir. Eski çapaları ve kullanıcı işareti biçimini koru; yeni bağlantıları iki çıktıda kontrol et.

@@ -12,7 +12,7 @@ Codex ile çalışırken bağlamı, görev sınırını, araçları ve doğrulam
 
 ## Derinlemesine rehber · 29 Ekim 2026
 
-[18 bölümlük ana rehber ve tam içindekiler](rehber/README.md) · [Komutlar](rehber/komutlar.md) · [Kurgu senaryolar](rehber/senaryolar.md) · [75 özellik ailesi](rehber/kapsam.md) · [107 madde eşlemesi](rehber/esleme.md)
+[18 bölümlük ana rehber ve tam içindekiler](rehber/README.md) · [Komutlar](rehber/komutlar.md) · [Kurgu senaryolar](rehber/senaryolar.md) · [84 özellik ailesi](rehber/kapsam.md) · [107 madde eşlemesi](rehber/esleme.md)
 
 Bu sayfa hızlı kontrol listesi olarak korunur. Yeni rehber gerçek deneyimleri, ürün özelliklerini, kullanım kararlarını ve örnek istekleri açıklayan sıralı okuma kaynağıdır. Eski maddelerin kimlikleri ve kullanıcı işaretleri değişmez. Kontrol listesinin tarihli CLI gözlemleri 21 Ekim; yeni rehberin belge kontrolü 29 Ekim 2026 tarihine aittir.
 
@@ -2364,7 +2364,7 @@ Kaynak: [Çalışma önerileri](https://learn.chatgpt.com/guides/best-practices)
 
 Ratipcan Uysal’ın [Claude Code kontrol listesinin](https://github.com/ratipcan-uysal/claude-code-kontrol-listesi) Codex için yeniden yazılmış ve genişletilmiş sürümüdür. Resmî OpenAI yayını değildir.
 
-Copyright © 2026 Ratipcan Uysal. [CC BY 4.0](LICENSE). Kod, içerik ve değişiklikler bu depoda incelenebilir.
+Copyright © 2026 Ratipcan Uysal. [CC BY 4.0](LICENSE). Kod, içerik ve değişiklikler bu depoda incelenebilir. OpenAI arayüz görselleri bu lisansın dışındadır; [görsel kaynaklarını](rehber/kaynaklar.md#arayuz-gorselleri-ve-atif) incele.
 
 ## Katkı ve yerel çalıştırma
 

@@ -1,18 +1,20 @@
 # Codex’i Derinlemesine Kullanma Rehberi
 
-Bu rehber Codex masaüstü uygulamasını öğrenmek ve gerçek işlerde daha etkili kullanmak için hazırlandı. İlk kez başlayan biri sıralı okuyabilir; deneyimli kullanıcı ihtiyacına göre bir bölüme geçebilir. Eğitimde dinleyicilerin alıştırma yapması gerekmez: anlatım, örnek istekler, kısa ekran gösterimleri ve karar karşılaştırmaları üzerinden ilerler.
+Codex ile ilk dosyanı üretmekten büyük bir işi tamamlamaya kadar, uygulamada neyi nerede kullanacağını anlatan Türkçe rehber. Başlangıç için [uygulamayı tanıma bölümündeki ilk iş akışını](02-uygulama.md) izle. Bir işi zaten yapıyorsan aşağıdaki içindekilerden ihtiyacına geç.
 
-Omurga, kullanıcıyla yapılan gerçek işlerden çıkan dersler ve mevcut 107 maddelik kontrol listesidir. Ürün özellikleri resmî belgelerle karşılaştırıldı. Gerçek vakalar anonimleştirildi; kurgu senaryolar açıkça işaretlendi. İş akışı önerileri resmî ürün kuralı gibi sunulmaz.
-
-**Belge kontrolü: 29 Ekim 2026.** Kapsam, aşağıdaki özellik envanteri ve masaüstü komut listesi üzerinden denetlenir. Bu, her hesapta bütün özelliklerin açık olduğu veya bütün davranışların canlı çalıştırıldığı iddiası değildir. Yeni dağıtımlar, kurum politikası ve işletim sistemi farkları erişimi değiştirebilir. Menü adları, açılan resmî belgelerin adlarıdır; evrensel ekran görüntüsü vaadi yoktur.
+<a id="nasil-okunur"></a>
 
 ## Nasıl okunur?
 
-İlk dört bölüm olanakları, uygulamayı ve iş vermeyi açıklar. 5–11 günlük çalışma düzenini kurar. 12–18 sonuç kalitesi, büyük işler ve teslimi ele alır. Komutlar ve sorun giderme ekleri çalışma sırasında hızlı başvuru içindir.
+İlk dört bölüm olanakları, uygulamayı ve iş vermeyi açıklar. 5–11 günlük çalışma düzenini kurar. 12–18 sonuç kalitesi, büyük işler ve teslimi ele alır. [Komutlar](komutlar.md) ve [sorun giderme](sorun-giderme.md) çalışma sırasında hızlı başvuru içindir. Eğitim, anlatıcının gösterebileceği örneklerle ilerler; katılımcı alıştırması gerektirmez.
 
-Kurgularda tekrar eden **Atölye**, küçük bir öğrenme topluluğudur. Web sayfası, etkinlik tablosu, kaynaklı içerik ve haftalık rapor gibi işler üzerinden aynı ayrımın farklı kullanım alanlarında nasıl işe yaradığını gösterir.
+**Doğrudan ihtiyacına git:** yanlış sonuçta [yönlendirme](05-yonetmek.md); eski işe dönüşte [bağlam ve bellek](06-baglam-bellek.md); yanlış dosya veya önizlemede [çalışma ortamı](08-ortamlar.md); yavaş işte [model ve hız](07-model-hiz-kullanim.md); yayında [teslim](17-teslim-yayin.md).
 
-**Hemen ihtiyaçtan başlamak için:** yanlış sonuçta 5 ve 12; eski işe dönüşte 6; yanlış dosya/önizlemede 8; araç bağlantısında 9–10; yavaş işte 7 ve 14; yayında 17. Ayrıntılı açıklamayı okuduktan sonra kontrol listesindeki kendi işaretlerini kullanabilirsin.
+Omurga, birlikte yaptığımız işlerden çıkan dersler ve mevcut 107 maddelik kontrol listesi. Gerçek vakalar anonimleştirildi. “Kurgu senaryo” etiketli örnekler öğretim için yazıldı. Atölye adlı hayalî topluluğun belge, veri ve web işleri birçok özelliği aynı bağlamda görmeni sağlar.
+
+**Belge kontrolü: 29 Ekim 2026.** Ürün bilgileri resmî kaynaklara dayanır. Arayüz görselleri OpenAI belgelerindeki açıklayıcı gösterimlerdir; kendi hesabımızda çekilmiş ekran görüntüleri değildir. Görsele tıklayarak büyütebilirsin. Özellik erişimi sürüme, hesaba ve platforma göre değişebilir. Kontrol edilen kapsam ve denenmeyen davranışlar [kaynaklar sayfasında](kaynaklar.md) açıklanır.
+
+<a id="tam-icindekiler"></a>
 
 ## Tam içindekiler
 
@@ -35,6 +37,8 @@ Kurgularda tekrar eden **Atölye**, küçük bir öğrenme topluluğudur. Web sa
 17. [Teslim, yayın ve geri dönüş](17-teslim-yayin.md)
 18. [Kendi kullanımını sürekli iyileştirmek](18-iyilestirmek.md)
 
+<a id="ekler-ve-hizli-erisim"></a>
+
 ## Ekler ve hızlı erişim
 
 - [Komutlar ve kısayollar](komutlar.md)
@@ -43,7 +47,7 @@ Kurgularda tekrar eden **Atölye**, küçük bir öğrenme topluluğudur. Web sa
 - [Sade terimler sözlüğü](sozluk.md)
 - [Sorun giderme tablosu](sorun-giderme.md)
 - [İleri teknik ayrıntılar](ileri-teknik.md)
-- [75 özellik ailesinin kapsam envanteri](kapsam.md)
+- [84 özellik ailesinin kapsam envanteri](kapsam.md)
 - [107 maddenin rehberle eşlemesi](esleme.md)
 - [Kaynaklar, kanıt türleri ve güncellik](kaynaklar.md)
 

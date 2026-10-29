@@ -8,6 +8,8 @@ Belge kontrolü: 2026-10-29.
 
 Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu öğretim örnekleri [senaryo ekinde](senaryolar.md) açıklanır. Özel proje dosyaları ve ham sohbetler kamuya eklenmez. Tarihli ürün bilgisi ile kendi iş akışı önerimizi aynı kesinlikle sunmayız.
 
+<a id="kaynak-dizini"></a>
+
 ## Kaynak dizini
 
 | Resmî sayfa | Kontrol tarihi |
@@ -76,12 +78,34 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Codex Security plugin quickstart](https://learn.chatgpt.com/docs/security/plugin) | 2026-10-29 |
 | [Windows sandbox](https://learn.chatgpt.com/docs/windows/windows-sandbox) | 2026-10-29 |
 | [Slash commands](https://learn.chatgpt.com/docs/reference/slash-commands) | 2026-10-29 |
+| [Composer predictions](https://learn.chatgpt.com/docs/features/composer-predictions) | 2026-10-29 |
+| [Visualizations](https://learn.chatgpt.com/docs/visualizations) | 2026-10-29 |
+| [Notifications and Activity](https://learn.chatgpt.com/docs/notifications) | 2026-10-29 |
+| [Long-running work](https://learn.chatgpt.com/docs/long-running-work) | 2026-10-29 |
+| [Web search](https://learn.chatgpt.com/docs/web-search) | 2026-10-29 |
+| [Sign in with ChatGPT](https://learn.chatgpt.com/docs/sign-in-with-chatgpt) | 2026-10-29 |
+
+<a id="arayuz-gorselleri-ve-atif"></a>
+
+## Arayüz görselleri ve atıf
+
+Görseller OpenAI belgelerindeki açıklayıcı arayüz gösterimlerinden, içerikleri değiştirilmeden alındı. Bu rehber için çalışan kullanıcı hesabının ekranı çekilmedi. Örneklerdeki model adları, tarihler ve veriler ürünün her hesapta güncel durumunu temsil etmez. Her görsel açılıp incelendi. Kaynak ve dosya özeti [görsel manifestinde](gorsel-manifest.json) kayıtlıdır. OpenAI ve diğer hak sahiplerine ait görseller rehber metninin CC BY 4.0 lisansına dahil değildir; bu rehber görseller için ayrıca yeniden kullanım lisansı vermez.
+
+| Görsel | Resmî sayfa | Kayıt tarihi |
+|---|---|---|
+| [Proje ve sohbetleri bulmak](assets/projects.png) | [Kaynak](https://learn.chatgpt.com/docs/projects) | 2026-10-29 |
+| [Sohbetin yanında sunum önizlemesi](assets/preview.png) | [Kaynak](https://learn.chatgpt.com/docs/artifacts-viewer) | 2026-10-29 |
+| [Yerleşik tarayıcıda hedefli yorum](assets/browser.png) | [Kaynak](https://learn.chatgpt.com/docs/browser) | 2026-10-29 |
+| [Değişen satıra bağlı inceleme bulgusu](assets/review.png) | [Kaynak](https://learn.chatgpt.com/docs/code-review) | 2026-10-29 |
+| [Mesaj alanının üstünde hedef denetimleri](assets/goal.png) | [Kaynak](https://learn.chatgpt.com/docs/reference/slash-commands) | 2026-10-29 |
+| [Görünümü ayarlamak](assets/settings.png) | [Kaynak](https://learn.chatgpt.com/docs/reference/settings) | 2026-10-29 |
+
+<a id="yapilan-ve-yapilmayan-dogrulama"></a>
 
 ## Yapılan ve yapılmayan doğrulama
 
 İçerik üretimi, iç bağlantılar, 107 madde eşlemesi ve web davranışı depo testleriyle kontrol edilir. Son koşumun sonucu [doğrulama raporunda](../DOGRULAMA.md) bulunur. Kod örneklerinin hepsini çalıştırmak, gerçek gönderim yapmak, otomasyon kurmak veya hesap izinlerini değiştirmek bu içerik işinin parçası değildir.
 
 Yerel çıktı, uzak depoya gönderim ve canlı yayın ayrı durumlardır. Eski kontrol listesinin geçmiş yayın kanıtı, bu yeni rehberin yayımlandığı anlamına gelmez. Bu sürümün teslim durumu da aynı doğrulama raporunda ayrıca belirtilir.
-
 
 [İçindekiler](README.md)
