@@ -1,5 +1,15 @@
 # Doğrulama kaydı
 
+## 29 Ekim 2026 — Eğitim anlatısı canlıda doğrulandı
+
+**PASS:** [Çevrimiçi rehber](https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/) üç baştan sona iş, dokuz örnek dosya ve öğretici görsellerle yayında.
+
+- İçerik commit’i: `801440874534cbcae670554bd56df9adc14931b1`. GitHub main’e gönderildi; Pages aynı commit için `built` döndü.
+- 49 canlı dosya yerel SHA-256 özetleriyle birebir aynı: 32 giriş/rehber HTML’si, 8 PNG ve 9 örnek dosya. [Yayın kanıtı](dogrulama/egitim-20261029/live-publication.json).
+- **21 canlı tarayıcı kontrolü geçti.** Örnek iş sırası, 107 madde bağlantısı ve eski işaretlerin korunması, tüm sayfaların açılması, sekiz görselin yüklenmesi/atıfları, dar ekranlar, klavye ve önce/sonra HTML davranışı dahil. [Sonuçlar](dogrulama/egitim-20261029/live/results.json).
+- Canlı masaüstü giriş ve 390 px öğretici görsel görüntüsü açılıp incelendi. 13 görev süreci kapandı; [temizlik](dogrulama/egitim-20261029/live/cleanup.json). Göreve ait Python önbelleği kaldırıldı ve yokluğu doğrulandı.
+- Bu yayın kanıtı sonraki belge commit’inde eklenir; doğrulanan rehber dosyalarını değiştirmez. Öğrenme etkisi veya bütün Codex özelliklerinin çalıştırıldığı iddiası yok.
+
 ## 29 Ekim 2026 — Eğitim anlatısı: yerel doğrulama
 
 24 Python testi ve 21 rehber tarayıcı kontrolü geçti. [Tarayıcı sonuçları](dogrulama/egitim-20261029/guide/results.json), [107 maddeyi koruma](dogrulama/egitim-20261029/legacy-preservation.json), [önce/sonra davranışı](dogrulama/egitim-20261029/demo-results.json) ve [inceleme](dogrulama/egitim-20261029/INCELEME.md). Masaüstü giriş, dar ekran akış ve açıklamalı örnek görüntüsü açılarak incelendi. Yerel tarayıcı koşumunun 16 süreci kapandı; yakalama koşumunun 10 süreci de kapandı. Mevcut kontrol listesi davranışı değişmedi. Canlı hedef doğrulaması ayrı kaydedilir.

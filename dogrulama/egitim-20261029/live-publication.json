@@ -1,0 +1,400 @@
+{
+  "checked_at": "2026-10-29T14:57:20.086923+00:00",
+  "commit": "801440874534cbcae670554bd56df9adc14931b1",
+  "pages_status": "built",
+  "pages_url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/",
+  "pages": [
+    {
+      "path": "index.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/index.html",
+      "status": 200,
+      "local_sha256": "edb035f92ebd8049d5645ac0cea44359d751cf267aabccc6857d71954f0cedeb",
+      "live_sha256": "edb035f92ebd8049d5645ac0cea44359d751cf267aabccc6857d71954f0cedeb",
+      "match": true
+    },
+    {
+      "path": "rehber/01-olanaklar.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/01-olanaklar.html",
+      "status": 200,
+      "local_sha256": "fa00e6c4f4bf87be51bd31550f039584bbd644fb90d70d815133045e58104804",
+      "live_sha256": "fa00e6c4f4bf87be51bd31550f039584bbd644fb90d70d815133045e58104804",
+      "match": true
+    },
+    {
+      "path": "rehber/02-uygulama.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/02-uygulama.html",
+      "status": 200,
+      "local_sha256": "4973e247047c3579895eec8bcda608897640bbb43f37a39f730b6f759216547b",
+      "live_sha256": "4973e247047c3579895eec8bcda608897640bbb43f37a39f730b6f759216547b",
+      "match": true
+    },
+    {
+      "path": "rehber/03-calisma-mantigi.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/03-calisma-mantigi.html",
+      "status": 200,
+      "local_sha256": "e063c96a30a9010aa6143780de98be375a2ca93477b9f657084eaada2ecf1e11",
+      "live_sha256": "e063c96a30a9010aa6143780de98be375a2ca93477b9f657084eaada2ecf1e11",
+      "match": true
+    },
+    {
+      "path": "rehber/04-is-vermek.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/04-is-vermek.html",
+      "status": 200,
+      "local_sha256": "53d3b8dc9409647d65952f7d035de5a1d355dc8e7fee1e52ea2bc075aba5418c",
+      "live_sha256": "53d3b8dc9409647d65952f7d035de5a1d355dc8e7fee1e52ea2bc075aba5418c",
+      "match": true
+    },
+    {
+      "path": "rehber/05-yonetmek.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/05-yonetmek.html",
+      "status": 200,
+      "local_sha256": "93d6a7663e624adb327f66602966615287a641852aa2a94b9e90862b1f60a23f",
+      "live_sha256": "93d6a7663e624adb327f66602966615287a641852aa2a94b9e90862b1f60a23f",
+      "match": true
+    },
+    {
+      "path": "rehber/06-baglam-bellek.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/06-baglam-bellek.html",
+      "status": 200,
+      "local_sha256": "e2f93f17c1b88eb4588a698a4551a249c85116e7fc94b30e95c420678ef111cb",
+      "live_sha256": "e2f93f17c1b88eb4588a698a4551a249c85116e7fc94b30e95c420678ef111cb",
+      "match": true
+    },
+    {
+      "path": "rehber/07-model-hiz-kullanim.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/07-model-hiz-kullanim.html",
+      "status": 200,
+      "local_sha256": "b0c18740c80d9c590f2db4d4dc2528198a480e6a4a1ba8bec45e7471640a7a87",
+      "live_sha256": "b0c18740c80d9c590f2db4d4dc2528198a480e6a4a1ba8bec45e7471640a7a87",
+      "match": true
+    },
+    {
+      "path": "rehber/08-ortamlar.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/08-ortamlar.html",
+      "status": 200,
+      "local_sha256": "837f54788382dafa4cb877b08c24a7af2a5e3b3f05db75ed6361ee54b78ffed9",
+      "live_sha256": "837f54788382dafa4cb877b08c24a7af2a5e3b3f05db75ed6361ee54b78ffed9",
+      "match": true
+    },
+    {
+      "path": "rehber/09-web-tarayici-bilgisayar.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/09-web-tarayici-bilgisayar.html",
+      "status": 200,
+      "local_sha256": "a3125994df87a1e2f42a8d51920a41d0ce96c8b5f0566453f770ca734d9a085f",
+      "live_sha256": "a3125994df87a1e2f42a8d51920a41d0ce96c8b5f0566453f770ca734d9a085f",
+      "match": true
+    },
+    {
+      "path": "rehber/10-baglantilar-skills.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/10-baglantilar-skills.html",
+      "status": 200,
+      "local_sha256": "bfc7c5901ea3ac455a31359fbcdb82f5fa54851992045acc15b2590ec6a8c08b",
+      "live_sha256": "bfc7c5901ea3ac455a31359fbcdb82f5fa54851992045acc15b2590ec6a8c08b",
+      "match": true
+    },
+    {
+      "path": "rehber/11-talimatlar.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/11-talimatlar.html",
+      "status": 200,
+      "local_sha256": "046955919a7fddae84d4080cf1919d03791fc88e0e2774a8b949defba2bafac0",
+      "live_sha256": "046955919a7fddae84d4080cf1919d03791fc88e0e2774a8b949defba2bafac0",
+      "match": true
+    },
+    {
+      "path": "rehber/12-dogrulama.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/12-dogrulama.html",
+      "status": 200,
+      "local_sha256": "e319030196f5d47a6494651beb8e3dd24612ac6a8e5794bb4f3579cd45b11817",
+      "live_sha256": "e319030196f5d47a6494651beb8e3dd24612ac6a8e5794bb4f3579cd45b11817",
+      "match": true
+    },
+    {
+      "path": "rehber/13-tasarim.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/13-tasarim.html",
+      "status": 200,
+      "local_sha256": "48a4ea88237d931d3f8bd5230b68a57b65833e5b832a793318d78879dd3b7640",
+      "live_sha256": "48a4ea88237d931d3f8bd5230b68a57b65833e5b832a793318d78879dd3b7640",
+      "match": true
+    },
+    {
+      "path": "rehber/14-buyuk-isler.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/14-buyuk-isler.html",
+      "status": 200,
+      "local_sha256": "413daa0c6aea3ab942c812e48ee9028965d5f40c562404db3a0c604d0e2bc1ef",
+      "live_sha256": "413daa0c6aea3ab942c812e48ee9028965d5f40c562404db3a0c604d0e2bc1ef",
+      "match": true
+    },
+    {
+      "path": "rehber/15-otomasyon.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/15-otomasyon.html",
+      "status": 200,
+      "local_sha256": "fa7e190a7493e9919a7b2fad27eacfa1b73d37bf070f2d3f775857ccc46b42ed",
+      "live_sha256": "fa7e190a7493e9919a7b2fad27eacfa1b73d37bf070f2d3f775857ccc46b42ed",
+      "match": true
+    },
+    {
+      "path": "rehber/16-izinler-guvenlik.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/16-izinler-guvenlik.html",
+      "status": 200,
+      "local_sha256": "02d154070c3fb1b98027081bfcd97a4a4a6c5f09c8320a5dc98825c0bdb7c7da",
+      "live_sha256": "02d154070c3fb1b98027081bfcd97a4a4a6c5f09c8320a5dc98825c0bdb7c7da",
+      "match": true
+    },
+    {
+      "path": "rehber/17-teslim-yayin.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/17-teslim-yayin.html",
+      "status": 200,
+      "local_sha256": "b37a8457dc84a2f085e068ab702db1aa5c2299a28f6a2c6c0cef21fdde0f4189",
+      "live_sha256": "b37a8457dc84a2f085e068ab702db1aa5c2299a28f6a2c6c0cef21fdde0f4189",
+      "match": true
+    },
+    {
+      "path": "rehber/18-iyilestirmek.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/18-iyilestirmek.html",
+      "status": 200,
+      "local_sha256": "7d4ddf6dd27e7ba05da35f15868f1a58e0ef1a2ca4c578b60c790eaa6e773040",
+      "live_sha256": "7d4ddf6dd27e7ba05da35f15868f1a58e0ef1a2ca4c578b60c790eaa6e773040",
+      "match": true
+    },
+    {
+      "path": "rehber/deneyimler.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/deneyimler.html",
+      "status": 200,
+      "local_sha256": "8f87de0c071c1f50a31e4f5a00b0c578a9aec8b2432d70b67e4c353b9def59ac",
+      "live_sha256": "8f87de0c071c1f50a31e4f5a00b0c578a9aec8b2432d70b67e4c353b9def59ac",
+      "match": true
+    },
+    {
+      "path": "rehber/esleme.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/esleme.html",
+      "status": 200,
+      "local_sha256": "bcdfa67d2b667528a85eb5b31947ed74d00587999a6b04bd15165c54756c472a",
+      "live_sha256": "bcdfa67d2b667528a85eb5b31947ed74d00587999a6b04bd15165c54756c472a",
+      "match": true
+    },
+    {
+      "path": "rehber/ileri-teknik.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/ileri-teknik.html",
+      "status": 200,
+      "local_sha256": "523bbb569b5defab48db8bbe236a44864591a8471d6980f05541b6881dcf5bbb",
+      "live_sha256": "523bbb569b5defab48db8bbe236a44864591a8471d6980f05541b6881dcf5bbb",
+      "match": true
+    },
+    {
+      "path": "rehber/index.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/index.html",
+      "status": 200,
+      "local_sha256": "3dae82690b454b3fb8185455954e8f9ea888bf20d61fcd27b1820f9467966b77",
+      "live_sha256": "3dae82690b454b3fb8185455954e8f9ea888bf20d61fcd27b1820f9467966b77",
+      "match": true
+    },
+    {
+      "path": "rehber/is-arastirma.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/is-arastirma.html",
+      "status": 200,
+      "local_sha256": "73c52d5dddb795955cd756683b48020623dfb0302f8c5d306d7ad5ca6cbfc1f0",
+      "live_sha256": "73c52d5dddb795955cd756683b48020623dfb0302f8c5d306d7ad5ca6cbfc1f0",
+      "match": true
+    },
+    {
+      "path": "rehber/is-sayfa.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/is-sayfa.html",
+      "status": 200,
+      "local_sha256": "bef508a1d6964b2a087b5f1d41495247dc382dc43fc96263cb4aede6a7e75d29",
+      "live_sha256": "bef508a1d6964b2a087b5f1d41495247dc382dc43fc96263cb4aede6a7e75d29",
+      "match": true
+    },
+    {
+      "path": "rehber/is-veri.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/is-veri.html",
+      "status": 200,
+      "local_sha256": "c1212c6b32afce7ab995107b6ce13c107c1eae908566498f5d431157caa0542f",
+      "live_sha256": "c1212c6b32afce7ab995107b6ce13c107c1eae908566498f5d431157caa0542f",
+      "match": true
+    },
+    {
+      "path": "rehber/kapsam.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/kapsam.html",
+      "status": 200,
+      "local_sha256": "867a6a308cea0a4a00b4e544d11e92b6553d34f0e1cf149a0fe1c707170775bd",
+      "live_sha256": "867a6a308cea0a4a00b4e544d11e92b6553d34f0e1cf149a0fe1c707170775bd",
+      "match": true
+    },
+    {
+      "path": "rehber/kaynaklar.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/kaynaklar.html",
+      "status": 200,
+      "local_sha256": "197695de95860f707e42c2d848953bb503f1f86b0289c162dee1034dd1244ac3",
+      "live_sha256": "197695de95860f707e42c2d848953bb503f1f86b0289c162dee1034dd1244ac3",
+      "match": true
+    },
+    {
+      "path": "rehber/komutlar.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/komutlar.html",
+      "status": 200,
+      "local_sha256": "5ba55265805c82ace29023cdf37d2da6f93b39b38dafd677721b8402ef72cf26",
+      "live_sha256": "5ba55265805c82ace29023cdf37d2da6f93b39b38dafd677721b8402ef72cf26",
+      "match": true
+    },
+    {
+      "path": "rehber/senaryolar.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/senaryolar.html",
+      "status": 200,
+      "local_sha256": "7930b824973c017f4bf08eac2a1994357de9528d016b2140dc8ac3ee01ed632d",
+      "live_sha256": "7930b824973c017f4bf08eac2a1994357de9528d016b2140dc8ac3ee01ed632d",
+      "match": true
+    },
+    {
+      "path": "rehber/sorun-giderme.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/sorun-giderme.html",
+      "status": 200,
+      "local_sha256": "790b9004b9270362dcdd289dacd4786eef87a7e526911fc98def30ec26ec669e",
+      "live_sha256": "790b9004b9270362dcdd289dacd4786eef87a7e526911fc98def30ec26ec669e",
+      "match": true
+    },
+    {
+      "path": "rehber/sozluk.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/sozluk.html",
+      "status": 200,
+      "local_sha256": "f592867f1292dd4e8415798c68a9fc14ae3903e4bcd062c8885fe678c07c5905",
+      "live_sha256": "f592867f1292dd4e8415798c68a9fc14ae3903e4bcd062c8885fe678c07c5905",
+      "match": true
+    },
+    {
+      "path": "rehber/assets/browser.png",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/assets/browser.png",
+      "status": 200,
+      "local_sha256": "9c0dd2742a7b9d198ae5a50c84caaf849db2fe092da1816eca5af6958985691a",
+      "live_sha256": "9c0dd2742a7b9d198ae5a50c84caaf849db2fe092da1816eca5af6958985691a",
+      "match": true
+    },
+    {
+      "path": "rehber/assets/goal.png",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/assets/goal.png",
+      "status": 200,
+      "local_sha256": "a76bcece3a4acc56b3b9b3d36f3ed4e68a66293055e1519bf338d4c69c07e7ef",
+      "live_sha256": "a76bcece3a4acc56b3b9b3d36f3ed4e68a66293055e1519bf338d4c69c07e7ef",
+      "match": true
+    },
+    {
+      "path": "rehber/assets/lesson-after.png",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/assets/lesson-after.png",
+      "status": 200,
+      "local_sha256": "bca104c9b5261ba3670359624f84d7725563eddd5885398e994f06c3d27b4987",
+      "live_sha256": "bca104c9b5261ba3670359624f84d7725563eddd5885398e994f06c3d27b4987",
+      "match": true
+    },
+    {
+      "path": "rehber/assets/lesson-before.png",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/assets/lesson-before.png",
+      "status": 200,
+      "local_sha256": "d9d51ac5cae2e2ea8ef2bae257c1c0b2fd9eb8091ebb190c24ca07b45def81d5",
+      "live_sha256": "d9d51ac5cae2e2ea8ef2bae257c1c0b2fd9eb8091ebb190c24ca07b45def81d5",
+      "match": true
+    },
+    {
+      "path": "rehber/assets/preview.png",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/assets/preview.png",
+      "status": 200,
+      "local_sha256": "40db53c8f98ce91fb32cb9ab796d4ed1af5f7234055737454a27f310de46c5c5",
+      "live_sha256": "40db53c8f98ce91fb32cb9ab796d4ed1af5f7234055737454a27f310de46c5c5",
+      "match": true
+    },
+    {
+      "path": "rehber/assets/projects.png",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/assets/projects.png",
+      "status": 200,
+      "local_sha256": "a2f2db004c5133bb2533d462866c503239e3c34fb17d4f38396bd8b35e364872",
+      "live_sha256": "a2f2db004c5133bb2533d462866c503239e3c34fb17d4f38396bd8b35e364872",
+      "match": true
+    },
+    {
+      "path": "rehber/assets/review.png",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/assets/review.png",
+      "status": 200,
+      "local_sha256": "17db6c06386b2dcbcc8713cb29b4293c7bd205fcdbc7fbcaa613e05713e6a509",
+      "live_sha256": "17db6c06386b2dcbcc8713cb29b4293c7bd205fcdbc7fbcaa613e05713e6a509",
+      "match": true
+    },
+    {
+      "path": "rehber/assets/settings.png",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/assets/settings.png",
+      "status": 200,
+      "local_sha256": "c0c572e6bec7c4ea4188f2df6d3a4798ec4653389c284f79dc22cd582c42305c",
+      "live_sha256": "c0c572e6bec7c4ea4188f2df6d3a4798ec4653389c284f79dc22cd582c42305c",
+      "match": true
+    },
+    {
+      "path": "rehber/ornekler/arastirma-kaynaklari.md",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/ornekler/arastirma-kaynaklari.md",
+      "status": 200,
+      "local_sha256": "e8c3f90fc8aadc2b3a3c1d79d74ff001095336e81e850f11d82cfab78431067e",
+      "live_sha256": "e8c3f90fc8aadc2b3a3c1d79d74ff001095336e81e850f11d82cfab78431067e",
+      "match": true
+    },
+    {
+      "path": "rehber/ornekler/karar-notu.md",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/ornekler/karar-notu.md",
+      "status": 200,
+      "local_sha256": "ec26a5685201fb62c8708ccbe2a91995204588f2c3ba4feaecc1a9b0d89ab405",
+      "live_sha256": "ec26a5685201fb62c8708ccbe2a91995204588f2c3ba4feaecc1a9b0d89ab405",
+      "match": true
+    },
+    {
+      "path": "rehber/ornekler/katilim-ham.csv",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/ornekler/katilim-ham.csv",
+      "status": 200,
+      "local_sha256": "ba4d4df51422b4fa5f00dc9627103ccebcf6cf27775d0c143fe2e887ecf27111",
+      "live_sha256": "ba4d4df51422b4fa5f00dc9627103ccebcf6cf27775d0c143fe2e887ecf27111",
+      "match": true
+    },
+    {
+      "path": "rehber/ornekler/katilim-raporu.md",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/ornekler/katilim-raporu.md",
+      "status": 200,
+      "local_sha256": "9095cb37ddee4049c5a273d93a81428f9d20780da9cd782711e573a8ac428918",
+      "live_sha256": "9095cb37ddee4049c5a273d93a81428f9d20780da9cd782711e573a8ac428918",
+      "match": true
+    },
+    {
+      "path": "rehber/ornekler/katilim-temiz.csv",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/ornekler/katilim-temiz.csv",
+      "status": 200,
+      "local_sha256": "a60d7a2a504426bf561c5353b5d36c77c39df8bd44318b05834e7d179d389a10",
+      "live_sha256": "a60d7a2a504426bf561c5353b5d36c77c39df8bd44318b05834e7d179d389a10",
+      "match": true
+    },
+    {
+      "path": "rehber/ornekler/sayfa-degisikligi.md",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/ornekler/sayfa-degisikligi.md",
+      "status": 200,
+      "local_sha256": "3f80a4775472ee2a77992f6fc235ff2735897c3c9c7c0bbf6e21286390cca1ee",
+      "live_sha256": "3f80a4775472ee2a77992f6fc235ff2735897c3c9c7c0bbf6e21286390cca1ee",
+      "match": true
+    },
+    {
+      "path": "rehber/ornekler/sayfa-once.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/ornekler/sayfa-once.html",
+      "status": 200,
+      "local_sha256": "5a4d82c09d1ad4222cf9c8cdd774c56ca5154cd68bbe5a80c5d46b190d906d1a",
+      "live_sha256": "5a4d82c09d1ad4222cf9c8cdd774c56ca5154cd68bbe5a80c5d46b190d906d1a",
+      "match": true
+    },
+    {
+      "path": "rehber/ornekler/sayfa-sonra.html",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/ornekler/sayfa-sonra.html",
+      "status": 200,
+      "local_sha256": "eb3015dd274282b4c52364ebf3e2a00dac00686b64cb409940bf3d0af71e7e59",
+      "live_sha256": "eb3015dd274282b4c52364ebf3e2a00dac00686b64cb409940bf3d0af71e7e59",
+      "match": true
+    },
+    {
+      "path": "rehber/ornekler/sunum-taslagi.md",
+      "url": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/ornekler/sunum-taslagi.md",
+      "status": 200,
+      "local_sha256": "893c53d9b5ff15e5e7404b854278246a50ac9c5536d1007b3e6ce436c5ecba14",
+      "live_sha256": "893c53d9b5ff15e5e7404b854278246a50ac9c5536d1007b3e6ce436c5ecba14",
+      "match": true
+    }
+  ]
+}
