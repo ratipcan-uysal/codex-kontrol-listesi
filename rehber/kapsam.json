@@ -1,0 +1,714 @@
+{
+  "date": "2026-10-29",
+  "features": [
+    {
+      "id": "F01",
+      "name": "Kurulum ve hesap girişi",
+      "source": "app",
+      "target": "02-uygulama",
+      "condition": "macOS / Windows / Linux dağıtımı ve hesap koşulları",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F02",
+      "name": "Chat, Work ve Codex yüzeyleri",
+      "source": "use-chatgpt",
+      "target": "02-uygulama",
+      "condition": "Ürün seçimi; geçmiş ve geliştirici ayrıntıları farklı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F03",
+      "name": "Yerel proje ve projesiz sohbet",
+      "source": "projects",
+      "target": "02-uygulama",
+      "condition": "Klasör bağlamak ile boş sohbet farklı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F04",
+      "name": "Birden çok proje klasörü",
+      "source": "projects",
+      "target": "02-uygulama",
+      "condition": "Birincil klasör talimat keşfini etkiler; remote kapsamı farklı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F05",
+      "name": "Sohbet seçme, adlandırma, sabitleme, arşivleme",
+      "source": "reference__slash-commands",
+      "target": "komutlar",
+      "condition": "/chat /new /project /rename /pin /archive; görünürlük koşullu",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F06",
+      "name": "Sohbet dallandırma ve geçici yan soru",
+      "source": "reference__slash-commands",
+      "target": "komutlar",
+      "condition": "/fork ve /side; dosya yalıtımı seçime bağlı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F07",
+      "name": "Dosya ve görsel ekleme",
+      "source": "image-inputs",
+      "target": "02-uygulama",
+      "condition": "Dosya içeriği ve görüntü bağlamı farklı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F08",
+      "name": "Skill ve özel prompt çağrısı",
+      "source": "reference__slash-commands",
+      "target": "komutlar",
+      "condition": "$; etkin skill ve /prompts:<ad> kurulum kapsamı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F09",
+      "name": "Model, çaba ve hız seçimi",
+      "source": "models",
+      "target": "07-model-hiz-kullanim",
+      "condition": "Hesap/model kataloğu; benchmark iddiası yok",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F10",
+      "name": "Fast ve üst hız katmanları",
+      "source": "agent-configuration__speed",
+      "target": "07-model-hiz-kullanim",
+      "condition": "Plan/erişim ve kullanım etkisi değişir",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F11",
+      "name": "Bağlam, durum ve kullanım göstergeleri",
+      "source": "reference__slash-commands",
+      "target": "komutlar",
+      "condition": "/status /usage; API faturasıyla karıştırılmaz",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F12",
+      "name": "Komut menüsü ve klavye kısayolları",
+      "source": "reference__commands",
+      "target": "02-uygulama",
+      "condition": "Odak, platform ve kişisel tuş ataması etkiler",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F13",
+      "name": "Ayarlar, görünüm, yazı tipi ve bildirimler",
+      "source": "reference__settings",
+      "target": "02-uygulama",
+      "condition": "İstemci/platform koşullu",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F14",
+      "name": "Gönderme ve steer/queue davranışı",
+      "source": "reference__settings",
+      "target": "05-yonetmek",
+      "condition": "Çalışan dış işlemi geri almaz",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F15",
+      "name": "Ayrı pencere ve Always on top",
+      "source": "reference__settings",
+      "target": "02-uygulama",
+      "condition": "Pencere düzeni; özellik erişimi koşullu",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F16",
+      "name": "Uyku önleme",
+      "source": "reference__settings",
+      "target": "15-otomasyon",
+      "condition": "Desteklenen platformda; otomasyon için her koşulu sağlamaz",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F17",
+      "name": "Dosya arama ve ağaç görünümü",
+      "source": "reference__commands",
+      "target": "02-uygulama",
+      "condition": "Bağlı çalışma alanı kapsamı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F18",
+      "name": "Belge, tablo, sunum ve PDF önizlemesi",
+      "source": "artifacts-viewer",
+      "target": "02-uygulama",
+      "condition": "Desteklenen dosya/araç; üretim ve görsel kontrol ayrı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F19",
+      "name": "HTML kaynak ve render görünümü",
+      "source": "artifacts-viewer",
+      "target": "02-uygulama",
+      "condition": "Önizleme ile kaynak kayıt ayrımı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F20",
+      "name": "LaTeX kaynak ve PDF derleme",
+      "source": "artifacts-viewer",
+      "target": "02-uygulama",
+      "condition": "Son başarılı PDF, son derleme başarısı olmayabilir",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F21",
+      "name": "Terminal sekmesi ve çıktı bağlamı",
+      "source": "integrated-terminal",
+      "target": "02-uygulama",
+      "condition": "Panel açılması komutun çalışması değildir",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F22",
+      "name": "Plan modu",
+      "source": "reference__slash-commands",
+      "target": "04-is-vermek",
+      "condition": "/plan; doğal dilde plan istemekle mod durumu farklı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F23",
+      "name": "Ara mesajla yön verme ve durdurma",
+      "source": "reference__settings",
+      "target": "05-yonetmek",
+      "condition": "Araç tamamlanma sınırı ve geri alma ayrımı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F24",
+      "name": "Bağlam sıkıştırma",
+      "source": "reference__slash-commands",
+      "target": "06-baglam-bellek",
+      "condition": "/compact; eksiksiz arşiv değildir",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F25",
+      "name": "Codex belleği",
+      "source": "customization__memories",
+      "target": "06-baglam-bellek",
+      "condition": "Settings ve /memories; web belleği ayrı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F26",
+      "name": "Computer History",
+      "source": "customization__computer-history",
+      "target": "06-baglam-bellek",
+      "condition": "macOS, uygun plan/admin ve açık etkinleştirme",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F27",
+      "name": "Yerel çalışma",
+      "source": "environments__modes",
+      "target": "08-ortamlar",
+      "condition": "Seçili host dosyaları ve araçları",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F28",
+      "name": "Worktree oluşturma, dal ve başlangıç durumu",
+      "source": "environments__git-worktrees",
+      "target": "08-ortamlar",
+      "condition": "Git gerekli; değişiklik taşıma yönteme bağlı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F29",
+      "name": "Hand off ve worktree yaşam döngüsü",
+      "source": "environments__git-worktrees",
+      "target": "08-ortamlar",
+      "condition": "İzlenmeyen/yok sayılan dosyaların korunması ayrıca kontrol edilir",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F30",
+      "name": ".worktreeinclude",
+      "source": "environments__git-worktrees",
+      "target": "08-ortamlar",
+      "condition": "Desteklenen yerel akış; sırları topluca kopyalama",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F31",
+      "name": "Yerel ortam kurulumu ve Actions",
+      "source": "environments__local-environment",
+      "target": "08-ortamlar",
+      "condition": "Kurulum komutları ve yeniden kullanılabilir proje eylemleri",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F32",
+      "name": "Bulut görevi ve ortam seçimi",
+      "source": "environments__cloud-environments",
+      "target": "08-ortamlar",
+      "condition": "/cloud /cloud-environment; yerel oturum taşınmaz",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F33",
+      "name": "Uzak bilgisayar bağlantısı ve SSH ayrımı",
+      "source": "remote-connections",
+      "target": "08-ortamlar",
+      "condition": "Host çevrimiçi, hesap/workspace ve erişim koşulları",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F34",
+      "name": "Mobilden ana bilgisayara erişim",
+      "source": "mobile",
+      "target": "08-ortamlar",
+      "condition": "Telefon masaüstü derleyiciye dönüşmez",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F35",
+      "name": "Web araştırması ve kaynak açma",
+      "source": "prompting",
+      "target": "09-web-tarayici-bilgisayar",
+      "condition": "İddia için birincil kaynağa git; çalışma önerisi",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F36",
+      "name": "Yerleşik tarayıcı ve @Browser",
+      "source": "browser",
+      "target": "09-web-tarayici-bilgisayar",
+      "condition": "Ayrı profil; yerel sunucu gerekli olabilir",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F37",
+      "name": "Tarayıcı anotasyonu ve önizleme ayarı",
+      "source": "browser",
+      "target": "09-web-tarayici-bilgisayar",
+      "condition": "Geçici görünüm kaynak/deployment kanıtı değil",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F38",
+      "name": "Yerleşik tarayıcıda yükleme sınırı",
+      "source": "browser",
+      "target": "09-web-tarayici-bilgisayar",
+      "condition": "Kontrol tarihinde otomatik dosya yükleme desteklenmiyor",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F39",
+      "name": "Chrome/Edge/Brave/Opera/Vivaldi eklentisi",
+      "source": "chrome-extension",
+      "target": "09-web-tarayici-bilgisayar",
+      "condition": "Plugin + eklenti; Opera yan sohbet kapsamı farklı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F40",
+      "name": "Tarayıcı sekme referansı ve alan izinleri",
+      "source": "chrome-extension",
+      "target": "09-web-tarayici-bilgisayar",
+      "condition": "Hesap/alan kapsamını kontrol et",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F41",
+      "name": "Altyazı ve seçili metin bağlamı",
+      "source": "chrome-extension",
+      "target": "09-web-tarayici-bilgisayar",
+      "condition": "Metin okumak videonun görselini izlemek değildir",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F42",
+      "name": "Native bilgisayar kullanımı",
+      "source": "computer-use",
+      "target": "09-web-tarayici-bilgisayar",
+      "condition": "OS izinleri; macOS ve Windows çalışma biçimi farklı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F43",
+      "name": "Appshots",
+      "source": "appshots",
+      "target": "09-web-tarayici-bilgisayar",
+      "condition": "Anlık ön plan penceresi; görüntüye ek erişilebilir metin olabilir",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F44",
+      "name": "Dikte ve sesli sohbet",
+      "source": "features__voice",
+      "target": "09-web-tarayici-bilgisayar",
+      "condition": "Mikrofon, platform/hesap ve etkin oturum koşulları",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F45",
+      "name": "Sesli sohbette ekran bağlamı",
+      "source": "features__voice",
+      "target": "09-web-tarayici-bilgisayar",
+      "condition": "Desteklenen macOS ayarı; sürekli her şeyi görme yok",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F46",
+      "name": "Plugin keşfi, kurulum ve hesap bağlantısı",
+      "source": "plugins",
+      "target": "10-baglantilar-skills",
+      "condition": "Kurulum ≠ yetkilendirme ≠ araç kullanılabilirliği",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F47",
+      "name": "MCP sunucusu, araçlar ve durum",
+      "source": "extend__mcp",
+      "target": "10-baglantilar-skills",
+      "condition": "/mcp; protokol erişim verir, görev onayı vermez",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F48",
+      "name": "Skill keşfi, oluşturma ve kapsam",
+      "source": "build-skills",
+      "target": "10-baglantilar-skills",
+      "condition": "SKILL.md, kullanım açıklaması ve aşamalı kaynak yükleme",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F49",
+      "name": "Plugin paketleme",
+      "source": "build-plugins",
+      "target": "10-baglantilar-skills",
+      "condition": "Taşınacak yetenek paketi; yüzey desteği koşullu",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F50",
+      "name": "Record & Replay",
+      "source": "extend__record-and-replay",
+      "target": "10-baglantilar-skills",
+      "condition": "macOS, Computer Use; üretilen skill incelenir",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F51",
+      "name": "Global/proje/alt dizin talimatları",
+      "source": "agent-configuration__agents-md",
+      "target": "11-talimatlar",
+      "condition": "Keşif ve kapsam; /init taslağı incelenir",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F52",
+      "name": "Yapılandırma ve yönetilen ayarlar",
+      "source": "config-file__config-basic",
+      "target": "11-talimatlar",
+      "condition": "Katmanlar ve güven; metin teknik erişim sınırı değil",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F53",
+      "name": "Komut kuralları ve izin önekleri",
+      "source": "agent-configuration__rules",
+      "target": "ileri-teknik",
+      "condition": "İlgili yürütme yolunun kapsamı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F54",
+      "name": "Hook keşfi, olayları ve güveni",
+      "source": "hooks",
+      "target": "ileri-teknik",
+      "condition": "İstemci/sürüm; CLI /hooks masaüstü adı varsayılmaz",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F55",
+      "name": "Yerel kod incelemesi",
+      "source": "code-review",
+      "target": "12-dogrulama",
+      "condition": "/review; Git ve seçilen kapsam",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F56",
+      "name": "Diff, stage, revert, commit, push",
+      "source": "code-review",
+      "target": "17-teslim-yayin",
+      "condition": "Kullanıcının diğer değişikliklerini koru",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F57",
+      "name": "GitHub/GitLab PR ve kontrol incelemesi",
+      "source": "code-review",
+      "target": "17-teslim-yayin",
+      "condition": "Bağlı hesap; yorum/onay/merge ayrı yan etkiler",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F58",
+      "name": "Görsel üretme ve düzenleme",
+      "source": "image-generation",
+      "target": "13-tasarim",
+      "condition": "Araç erişimi; gerçek çıktıyı açıp incele",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F59",
+      "name": "Sites ile üretim ve yayın",
+      "source": "sites",
+      "target": "13-tasarim",
+      "condition": "Desteklenen plugin/yüzey; önizleme ve yayın ayrı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F60",
+      "name": "Alt ajanlar ve paralel iş",
+      "source": "agent-configuration__subagents",
+      "target": "14-buyuk-isler",
+      "condition": "İstemci, talimat ve yetki kapsamı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F61",
+      "name": "Goals ve ilerleme denetimleri",
+      "source": "reference__slash-commands",
+      "target": "14-buyuk-isler",
+      "condition": "/goal; masaüstünde etkin hedef düğmeleri",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F62",
+      "name": "Aynı sohbeti takip eden otomasyon",
+      "source": "automations",
+      "target": "15-otomasyon",
+      "condition": "Çalışma ortamı, bildirim ve durma koşulları",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F63",
+      "name": "Bağımsız zamanlanmış rutin",
+      "source": "automations",
+      "target": "15-otomasyon",
+      "condition": "Yeni çıktı/sohbet tercihi; yerel host gereklilikleri",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F64",
+      "name": "Olay tetikleyicileri",
+      "source": "automations",
+      "target": "15-otomasyon",
+      "condition": "Web koşullu; masaüstü/CLI/IDE özelliği gibi anlatılmaz",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F65",
+      "name": "Sandbox ve izin modları",
+      "source": "permission-modes",
+      "target": "16-izinler-guvenlik",
+      "condition": "Teknik erişim ile görev yetkisi farklı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F66",
+      "name": "Otomatik onay incelemesi",
+      "source": "sandboxing__auto-review",
+      "target": "16-izinler-guvenlik",
+      "condition": "Etkin politika; /approve tek yeniden deneme",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F67",
+      "name": "Plugin izinleri ve veri kapsamı",
+      "source": "security__plugin",
+      "target": "16-izinler-guvenlik",
+      "condition": "Hesap ve kurum politikası; kurulum sınırsız erişim değil",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F68",
+      "name": "Sohbet paylaşımı ve geri dönüş sınırı",
+      "source": "reference__commands",
+      "target": "17-teslim-yayin",
+      "condition": "Paylaşılan içerik gözden geçirilir; dış işlem geri alınmaz",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F69",
+      "name": "Pets ve Mini",
+      "source": "pets",
+      "target": "02-uygulama",
+      "condition": "İsteğe bağlı masaüstü yüzeyi; düşünme niteliğini değiştirmez",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F70",
+      "name": "Codex Micro",
+      "source": "features__codex-micro",
+      "target": "02-uygulama",
+      "condition": "Uyumlu fiziksel donanım; temel kullanım gereği değil",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F71",
+      "name": "Başka ajandan içe aktarma ve eşitleme",
+      "source": "import",
+      "target": "ileri-teknik",
+      "condition": "Masaüstü/CLI kaynak listesi farklı; Finish/yeniden giriş gerekebilir",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F72",
+      "name": "Space, Pages, Slides ve tablolar",
+      "source": "space",
+      "target": "ileri-teknik",
+      "condition": "Bulut ürün yüzeyi; her Codex hesabında aynı erişim varsayılmaz",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F73",
+      "name": "CLI ve etkileşimsiz koşum",
+      "source": "non-interactive-mode",
+      "target": "komutlar",
+      "condition": "Terminal yüzeyi; şema, olay akışı ve gerçek sonuç ayrı",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F74",
+      "name": "IDE bağlamı ve yüzeyler arası sınır",
+      "source": "reference__slash-commands",
+      "target": "komutlar",
+      "condition": "/ide-context; plugin/CLI komut kapsamı otomatik aktarılmaz",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    },
+    {
+      "id": "F75",
+      "name": "Geri bildirim ve sorun giderme",
+      "source": "reference__troubleshooting",
+      "target": "sorun-giderme",
+      "condition": "/feedback; logları göndermeden içeriği incele",
+      "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
+    }
+  ],
+  "item_map": {
+    "1.1": "11-talimatlar",
+    "1.2": "11-talimatlar",
+    "1.3": "11-talimatlar",
+    "1.4": "11-talimatlar",
+    "1.5": "11-talimatlar",
+    "1.6": "11-talimatlar",
+    "1.7": "11-talimatlar",
+    "2.1": "06-baglam-bellek",
+    "2.2": "07-model-hiz-kullanim",
+    "2.3": "06-baglam-bellek",
+    "2.4": "06-baglam-bellek",
+    "2.5": "06-baglam-bellek",
+    "2.6": "06-baglam-bellek",
+    "2.7": "06-baglam-bellek",
+    "3.1": "04-is-vermek",
+    "3.2": "04-is-vermek",
+    "3.3": "04-is-vermek",
+    "3.4": "04-is-vermek",
+    "3.5": "04-is-vermek",
+    "3.6": "04-is-vermek",
+    "3.7": "04-is-vermek",
+    "4.1": "04-is-vermek",
+    "4.2": "04-is-vermek",
+    "4.3": "04-is-vermek",
+    "4.4": "04-is-vermek",
+    "5.1": "07-model-hiz-kullanim",
+    "5.2": "07-model-hiz-kullanim",
+    "5.3": "07-model-hiz-kullanim",
+    "5.4": "07-model-hiz-kullanim",
+    "5.5": "07-model-hiz-kullanim",
+    "5.6": "18-iyilestirmek",
+    "6.1": "16-izinler-guvenlik",
+    "6.2": "ileri-teknik",
+    "6.3": "ileri-teknik",
+    "6.4": "ileri-teknik",
+    "6.5": "11-talimatlar",
+    "6.6": "16-izinler-guvenlik",
+    "6.7": "ileri-teknik",
+    "7.1": "16-izinler-guvenlik",
+    "7.2": "16-izinler-guvenlik",
+    "7.3": "16-izinler-guvenlik",
+    "7.4": "16-izinler-guvenlik",
+    "7.5": "16-izinler-guvenlik",
+    "7.6": "ileri-teknik",
+    "8.1": "ileri-teknik",
+    "8.2": "ileri-teknik",
+    "8.3": "ileri-teknik",
+    "8.4": "ileri-teknik",
+    "8.5": "ileri-teknik",
+    "8.6": "ileri-teknik",
+    "8.7": "ileri-teknik",
+    "9.1": "12-dogrulama",
+    "9.2": "10-baglantilar-skills",
+    "9.3": "10-baglantilar-skills",
+    "9.4": "10-baglantilar-skills",
+    "9.5": "10-baglantilar-skills",
+    "9.6": "10-baglantilar-skills",
+    "9.7": "10-baglantilar-skills",
+    "10.1": "11-talimatlar",
+    "10.2": "11-talimatlar",
+    "10.3": "11-talimatlar",
+    "11.1": "08-ortamlar",
+    "11.2": "17-teslim-yayin",
+    "11.3": "08-ortamlar",
+    "11.4": "14-buyuk-isler",
+    "11.5": "08-ortamlar",
+    "11.6": "14-buyuk-isler",
+    "12.1": "12-dogrulama",
+    "12.2": "12-dogrulama",
+    "12.3": "12-dogrulama",
+    "12.4": "12-dogrulama",
+    "12.5": "13-tasarim",
+    "12.6": "12-dogrulama",
+    "13.1": "14-buyuk-isler",
+    "13.2": "15-otomasyon",
+    "13.3": "ileri-teknik",
+    "13.4": "17-teslim-yayin",
+    "13.5": "17-teslim-yayin",
+    "14.1": "15-otomasyon",
+    "14.2": "komutlar",
+    "14.3": "15-otomasyon",
+    "14.4": "ileri-teknik",
+    "14.5": "15-otomasyon",
+    "14.6": "ileri-teknik",
+    "15.1": "17-teslim-yayin",
+    "15.2": "17-teslim-yayin",
+    "15.3": "17-teslim-yayin",
+    "15.4": "17-teslim-yayin",
+    "16.1": "13-tasarim",
+    "16.2": "13-tasarim",
+    "16.3": "13-tasarim",
+    "16.4": "13-tasarim",
+    "17.1": "ileri-teknik",
+    "17.2": "ileri-teknik",
+    "17.3": "ileri-teknik",
+    "17.4": "ileri-teknik",
+    "17.5": "ileri-teknik",
+    "18.1": "06-baglam-bellek",
+    "18.2": "06-baglam-bellek",
+    "18.3": "18-iyilestirmek",
+    "18.4": "11-talimatlar",
+    "19.1": "18-iyilestirmek",
+    "19.2": "17-teslim-yayin",
+    "19.3": "11-talimatlar",
+    "19.4": "ileri-teknik",
+    "19.5": "18-iyilestirmek",
+    "19.6": "ileri-teknik"
+  }
+}

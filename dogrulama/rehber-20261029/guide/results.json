@@ -1,0 +1,61 @@
+{
+  "results": [
+    {
+      "name": "checklist entry opens guide",
+      "status": "PASS"
+    },
+    {
+      "name": "complete index has 18 ordered chapters",
+      "status": "PASS"
+    },
+    {
+      "name": "sequential reading and current navigation",
+      "status": "PASS"
+    },
+    {
+      "name": "chapter contents jump reaches heading",
+      "status": "PASS"
+    },
+    {
+      "name": "all 107 checklist rows link to their mapped chapter",
+      "status": "PASS"
+    },
+    {
+      "name": "chapter returns to original checklist anchor",
+      "status": "PASS"
+    },
+    {
+      "name": "guide navigation preserves saved checkmarks",
+      "status": "PASS"
+    },
+    {
+      "name": "all guide pages return successful response with one heading",
+      "status": "PASS"
+    },
+    {
+      "name": "28 desktop commands and goal surface distinction",
+      "status": "PASS"
+    },
+    {
+      "name": "mobile 390 has readable scrolling tables without page overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "mobile 320 has readable scrolling tables without page overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "dark chapter layout has no horizontal overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "guide content and navigation work without JavaScript",
+      "status": "PASS"
+    },
+    {
+      "name": "no browser JavaScript errors",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

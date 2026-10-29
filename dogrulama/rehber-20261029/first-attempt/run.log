@@ -1,0 +1,15 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ undefined
+- 'm-1-1'
+
+    at <repo>/kaynak/test_guide_browser.cjs:23:225
+    at async check (<repo>/kaynak/test_guide_browser.cjs:14:35)
+    at async <repo>/kaynak/test_guide_browser.cjs:23:3 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: 'm-1-1',
+  operator: 'strictEqual'
+}

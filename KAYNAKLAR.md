@@ -1,5 +1,9 @@
 # Kaynak ve kapsam denetimi
 
+[29 Ekim 2026 ana rehber kaynakları ve sınırları](rehber/kaynaklar.md) · [Özellik envanteri](rehber/kapsam.md)
+
+Aşağıdaki kayıt 21 Ekim kontrol listesinin tarihli kaynak denetimidir; yeni rehberin kaynakları üstteki bağlantıda ayrı tutulur.
+
 Tarih: 21 Ekim 2026. İçerik: 19 bölüm · 107 madde · 25 temel · 82 ileri.
 
 Resmî OpenAI sayfalarının güncel birleşik kılavuzu indirilip ilgili bölümler okunmuştur. Aşağıdaki bağlantılar maddelerin dayanaklarını gösterir. Apple ve Git bağlantıları kendi platform belgeleridir.

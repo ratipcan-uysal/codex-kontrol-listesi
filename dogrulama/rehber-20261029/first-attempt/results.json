@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "name": "checklist entry opens guide",
+      "status": "PASS"
+    },
+    {
+      "name": "complete index has 18 ordered chapters",
+      "status": "PASS"
+    },
+    {
+      "name": "sequential reading and current navigation",
+      "status": "PASS"
+    },
+    {
+      "name": "chapter contents jump reaches heading",
+      "status": "PASS"
+    },
+    {
+      "name": "all 107 checklist rows link to their mapped chapter",
+      "status": "PASS"
+    },
+    {
+      "name": "chapter returns to original checklist anchor",
+      "status": "FAIL",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'm-1-1'\n"
+    }
+  ],
+  "errors": []
+}

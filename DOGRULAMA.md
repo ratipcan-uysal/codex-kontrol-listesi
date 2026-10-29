@@ -1,5 +1,47 @@
 # Doğrulama kaydı
 
+## 29 Ekim 2026 — Yeni rehberin yerel doğrulaması
+
+**Yerel kontrolün başlangıç durumu:** Aynı GitHub deposunun yerel kopyasında yayıma hazır değişiklikler. Bu kontroller alındığında commit, push ve canlı yayın yapılmamıştı. 29 Ekim gönderimi kullanıcı tarafından ayrıca yetkilendirildi; dış yayın sonucu ayrı kaydedilir. Aşağıdaki 21 Ekim yayın kaydı önceki kontrol listesine aittir.
+
+| Kontrol | Sonuç | Kanıt ve sınır |
+|---|---|---|
+| Üretim | PASS | `python3 kaynak/build.py`; Markdown/HTML aynı canonical içerikten oluşuyor. |
+| Eski içerik testleri | PASS | 6 Python testi. |
+| Rehber testleri | PASS | 12 Python testi; iç bağlantı/çapa, 107 eşleme, 28 komut, kaynak alanları, deterministik üretim ve renderer olumsuz girdileri. |
+| 107 maddeyi koruma | PASS | Bütün özgün madde alanları, kaynaklar ve ilk on sırası başlangıç commit'i ile aynı: [kanıt](dogrulama/rehber-20261029/legacy-preservation.json). |
+| JavaScript | PASS | Mevcut ve yeni tarayıcı betiklerinin sözdizimi kontrol edildi. |
+| Kontrol listesi tarayıcı regresyonu | PASS | [28 kontrol](dogrulama/rehber-20261029/checklist/browser-results.json). Eski işaret biçimi, içe/dışa aktarma ve filtreler dahil. |
+| Yeni rehber gezinmesi | PASS | [14 kontrol](dogrulama/rehber-20261029/guide/results.json). 28 sayfa, sıralı okuma, geri bağlantı, işaret koruma, 320/390 px ve JavaScript kapalı kullanım. |
+| Görsel inceleme | PASS | Açık masaüstü giriş ve komutlar, koyu bölüm, 320 px komut sayfası ve kontrol listesi giriş görüntüleri açıldı. Mobil komut bölünmesi düzeltildi. |
+| Kaynak denetimi | BELGE | [64 resmî sayfanın manifesti](rehber/kaynak-manifest.json); gerekli bölümler okundu. [75 özellik ailesi](rehber/kapsam.md) ve erişim sınırları eşlendi. |
+| Metin incelemesi | KOŞULLU ÖLÇÜM | [Önce/sonra ve pasaj değerlendirmesi](dogrulama/rehber-20261029/EDITORIAL.md). Üç regex eşiği korunmuş teknik anlatım nedeniyle açık; otomatik PASSED iddiası yok. |
+| Görev kaynakları | PASS | Test tarayıcıları ve localhost sunucuları kapandı; [son koşum temizliği](dogrulama/rehber-20261029/process-cleanup.json). |
+| Ürün özelliklerini uçtan uca çalıştırma | NOT_RUN | Rehber oluşturmak için hesap izinleri, otomasyonlar, gönderimler veya Goals senaryoları etkinleştirilmedi. |
+| Diğer tarayıcı/platform | NOT_RUN | Otomasyon Chrome ile sınırlı. Safari/Firefox, fiziksel cihaz ve gerçek VoiceOver testi yapılmadı. |
+| Yeni rehberin uzak/canlı durumu | NOT_PUBLISHED | Yerel değişiklikler hazır; eski canlı yayın yeni rehberin kanıtı değildir. |
+
+### Bulunan sorunlar ve korunmuş başarısızlık
+
+Yeni rehberden kontrol maddesine tam sayfa dönüşünde ayrıntı açıldı, klavye odağı kayboldu. [İlk başarısız kontrol](dogrulama/rehber-20261029/first-attempt/results.json) saklandı. Başlangıç hash işleme `pageshow` ile sayfanın yerel odak davranışından sonra yürütüldü; aynı kontrol ve mevcut regresyon geçti. Bu değişiklik same-document `hashchange` davranışını korur.
+
+Mobil görsel incelemede uzun komut adı satır ortasında bölünüyordu. Tablo içi kodu bölmeden gösterecek stil ve yatay kaydırma açıklaması eklendi. Rehberin 14 tarayıcı kontrolü yeni stil üzerinde yeniden geçti. Kontrol listesi aynı kaynakla daha önce geçtiği için bu son CSS değişikliğinde gereksiz yere yeniden çalıştırılmadı.
+
+### Yeniden üretme
+
+```sh
+python3 kaynak/build.py
+python3 kaynak/test_build.py
+python3 kaynak/test_guide.py
+node --check kaynak/app.js
+node --check kaynak/test_guide_browser.cjs
+python3 -m http.server 8769 --bind 127.0.0.1
+```
+
+Ayrı terminalde Playwright ve Chrome/Chromium varsa `node kaynak/test_browser.cjs` ve `node kaynak/test_guide_browser.cjs` çalıştırılır. Gerekirse `PLAYWRIGHT_MODULE`, `CHROME_PATH`, `BASE_URL`, `EVIDENCE_DIR` belirtilir. Derleme için üçüncü taraf paket kurulumu gerekmez. Tarayıcılar görev için geçici profil açıp kapatır; sunucu da işlem sonunda kapatılmalıdır.
+
+## 21 Ekim 2026 — Önceki kontrol listesinin tarihsel kaydı
+
 Tarih: 21 Ekim 2026. Kapsam: 19 bölüm, 107 madde, 25 temel / 82 ileri.
 
 | Kontrol | Sonuç | Kanıt / sınır |

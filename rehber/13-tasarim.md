@@ -1,0 +1,61 @@
+# 13. Tasarım ve yaratıcı üretim
+
+Belge kontrolü: 2026-10-29.
+
+Teknik olarak çalışan bir çıktı, iyi tasarlanmış veya iyi yazılmış olmayabilir. Görsel ve yaratıcı işte beğeniyi somutlaştırmak, model seçmekten önce gelen bir iştir.
+
+## Referansın hangi yönünü istediğini söyle
+
+Bir ekranı “bunun gibi” diye vermek renk, boşluk, içerik yapısı ve etkileşimin birlikte kopyalanmasına yol açabilir. Referansı parçala:
+
+> Bu örneğin sakin tipografisini ve bölüm aralıklarını kullan. Kart yapısını kopyalama; bizim içerik uzun paragraflardan oluşuyor. Başlıkların daha kolay taranmasını istiyorum.
+
+Karşı örnek de yararlıdır: “Büyük tanıtım başlıkları ve boş kartlar istemiyorum; ilk ekranda gerçek içerik görünsün.” Böylece yalnız beğenilen değil, kaçınılacak yön de belli olur.
+
+## Sorunu doğru katmanda düzelt
+
+| Şikâyet | Önce bakılacak katman |
+|---|---|
+| “Sayfa sıkıcı.” | İçerik seçimi, anlatı sırası, vurgu |
+| “Nereye basacağım anlaşılmıyor.” | Görev akışı ve bilgi hiyerarşisi |
+| “Her şey aynı görünüyor.” | Tipografik farklar ve görsel ağırlık |
+| “Hareket rahatsız ediyor.” | Animasyon gereği, süre, yön ve azaltılmış hareket |
+| “Çalışıyor ama ucuz görünüyor.” | Gerçek içerik, boşluk, tutarlılık, durum ayrıntıları |
+
+Her eleştiriye yeni renk, gölge veya animasyon eklemek çözüm değildir. Önce sorunun hangi karar düzeyinde olduğunu bul.
+
+## Prototip neden değerlidir?
+
+Prototip, belirsiz bir kararı görülebilir hâle getirir. İki seçenek aynı içerik, ekran boyutu ve başlangıç durumuyla karşılaştırılırsa fark anlaşılır. Birinde iyi içerik, diğerinde boş kutular varsa tasarım karşılaştırması yanıltıcıdır.
+
+> Aynı örnek içerikle iki farklı okuma düzeni göster. Biri uzun okumayı, diğeri hızlı taramayı öne çıkarsın. Açıp inceleyebileceğim prototipler üret; hangisinin ana ürüne gireceğine görüntüler üzerinden karar vereceğim.
+
+Bu kurgu istek yeni yönü seçmeden üretime taşıma yetkisi vermez. Mevcut kabul edilmiş yöndeki küçük taşma ve hizalama düzeltmeleri ise yeni tasarım seçimi gerektirmeyebilir.
+
+## Görsel üretimi ayrı bir araçtır
+
+Görsel girdisi, elindeki görüntüyü modele göstermek içindir. Görsel üretimi/düzenleme aracı yeni görüntü yaratır veya mevcut görüntüyü değiştirir. Referans, hedef boyut, kullanılacak alan ve korunacak öğeleri belirtmek sonucu iyileştirir. Şeffaf arka plan gerekiyorsa açıkça iste. Oluşan dosyayı açmadan yalnız üretim komutunun başarılı olduğuna dayanarak görsel kalite iddiasında bulunma. [Görsel üretimi](https://learn.chatgpt.com/docs/image-generation) · [Görsel girdileri](https://learn.chatgpt.com/docs/image-inputs)
+
+Sites gibi yayın odaklı araçlar ve HTML prototipler farklı teslim yollarıdır. Önizleme, yayımlanmış site ve kendi depondaki uygulama aynı çıktı değildir. Hangi kaynağın daha sonra düzenleneceğini baştan bil. [Sites](https://learn.chatgpt.com/docs/sites)
+
+## Gerçek deneyim: teknik başarı, yaratıcı kararın yerini tutmadı
+
+Bir kitap videosunda kapak sayısı, benzersizlik ve video çözümleme kontrolü geçti. Müzik için yapılan öneri ise kullanıcıya sıkıcı geldi; daha yaratıcı yön arayışı ayrı kaldı. Sonunda istenen sessiz sürümün teslimi, müzik revizyonunun tamamlandığı anlamına gelmedi. Video dosyasının gönderilmesi de sosyal ağda yayın sayılmadı. [Vaka C04](deneyimler.md#c04)
+
+## Kurgu senaryo: daha yaratıcı müzik isteğini açmak
+
+“Daha yaratıcı ol” yerine şu sınırlar seçenekleri karşılaştırılır yapar:
+
+> Kitap geçişleri sakin kalsın, müzik klişe kurumsal fon gibi duyulmasın. Üç yön öner: minimal ritim, akustik doku ve deneysel ama dikkat dağıtmayan atmosfer. Her yönün geçişlerle ilişkisini açıkla. Lisans koşulu belirsiz dosyayı kullanılabilir diye sunma.
+
+Burada beklenen ilk sonuç son müzik değil, seçilebilir yaratıcı yönlerdir. Tercihten sonra uygulama ve dinleyerek değerlendirme gelir.
+
+## Kontrol listesinde karşılığı
+
+- [12.5 Görsel değişikliği aynı koşullarda karşılaştır.](../codex-kontrol-listesi.md#m-12-5)
+- [16.1 İlhamı iş ve bağlamla ilişkilendir.](../codex-kontrol-listesi.md#m-16-1)
+- [16.2 Belirsiz yönleri temsili içerikle karşılaştır.](../codex-kontrol-listesi.md#m-16-2)
+- [16.3 Reddedilen tasarımın nedenini sonraki deneye taşı.](../codex-kontrol-listesi.md#m-16-3)
+- [16.4 Seçilen tasarım sözleşmesini tek yerde tut.](../codex-kontrol-listesi.md#m-16-4)
+
+[İçindekiler](README.md) · [← Güvenilir sonuç elde etmek](12-dogrulama.md) · [Büyük işleri ve paralel çalışmayı yönetmek →](14-buyuk-isler.md)

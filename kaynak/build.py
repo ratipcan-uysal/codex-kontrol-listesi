@@ -2,7 +2,8 @@
 from pathlib import Path
 import json
 import re
-from content import SOURCES, SECTIONS, TOP_TEN
+from content import SOURCES, SECTIONS, TOP_TEN, GUIDE_ITEM_MAP
+from guide_build import build_guide
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -34,8 +35,8 @@ def build():
     basic = sum(i['basic'] for i in items)
     counts = {'sections':len(SECTIONS), 'items':len(items), 'basic':basic, 'advanced':len(items)-basic}
     stats = f"{len(SECTIONS)} bölüm · {len(items)} madde · {basic} temel · {len(items)-basic} ileri"
-    payload = dict(sections=SECTIONS, sources=SOURCES, topTen=TOP_TEN, version=1,
-                   updated='2026-10-21', revision=2)
+    payload = dict(guideMap=GUIDE_ITEM_MAP, sections=SECTIONS, sources=SOURCES, topTen=TOP_TEN, version=1,
+                   updated='2026-10-21', guideUpdated='2026-10-29', revision=3)
     replacements = {
         '__CSS__':(HERE/'style.css').read_text(), '__JS__':(HERE/'app.js').read_text(),
         '__DATA__':json.dumps(payload, ensure_ascii=False).replace('</', '<\\/'),
@@ -47,9 +48,15 @@ def build():
         html = html.replace(key,value)
     assert not re.search(r'__[A-Z]+__', html), 'unresolved template token'
     (ROOT/'index.html').write_text(html, encoding='utf-8')
-    md = ['# Codex kullanım kontrol listesi', '', f'**{stats} · {DATE}**', '',
+    md = ['# Codex kullanım kontrol listesi', '',
+          f'## [Çevrimiçi ana rehberi oku →]({URL}rehber/)', '',
+          '18 bölümlük rehberi tarayıcıda aç: mobil uyumlu görünüm, bölüm bağlantıları ve önceki/sonraki gezinmesi. Aşağıdaki 107 madde hızlı başvuru için korunur.', '',
+          f'**{stats} · {DATE}**', '',
           f'[Etkileşimli rehberi aç]({URL}) · [Değişiklikler](GUNCELLEMELER.md) · [Kaynak denetimi](KAYNAKLAR.md)', '',
           'Codex ile çalışırken bağlamı, görev sınırını, araçları ve doğrulamayı düzenlemek için Türkçe bir rehber. Her maddede neden, nasıl, örnek ve doğrulama bulunur.', '',
+          '## Derinlemesine rehber · 29 Ekim 2026', '',
+          '[18 bölümlük ana rehber ve tam içindekiler](rehber/README.md) · [Komutlar](rehber/komutlar.md) · [Kurgu senaryolar](rehber/senaryolar.md) · [75 özellik ailesi](rehber/kapsam.md) · [107 madde eşlemesi](rehber/esleme.md)', '',
+          'Bu sayfa hızlı kontrol listesi olarak korunur. Yeni rehber gerçek deneyimleri, ürün özelliklerini, kullanım kararlarını ve örnek istekleri açıklayan sıralı okuma kaynağıdır. Eski maddelerin kimlikleri ve kullanıcı işaretleri değişmez. Kontrol listesinin tarihli CLI gözlemleri 21 Ekim; yeni rehberin belge kontrolü 29 Ekim 2026 tarihine aittir.', '',
           '## Kullanım', '',
           '- İlk turda aşağıdaki on maddeyle başla; her gelişmiş ayarı kurmak zorunda değilsin.',
           '- Etkileşimli sayfada arama, temel/ileri ve yapılmamış filtreleri vardır. İşaretler yalnız o tarayıcıda tutulur; JSON ile yedeklenir.',
@@ -66,13 +73,13 @@ def build():
     for s in SECTIONS:
         md += [f"## {s['number']}. {s['title']}", '', s['intro'], '']
         for i in s['items']:
-            md += [f"### {i['id']} {i['title']}", '',
+            md += [f'<a id="{i["anchor"]}"></a>', '', f"### {i['id']} {i['title']}", '',
                    f"**{'Temel' if i['basic'] else 'İleri'} · {i['surface']} · {i['kind']}**", '',
                    f"**Neden:** {i['why']}", '', f"**Nasıl:** {i['how']}", '',
                    '```text',i['example'],'```','',f"**Doğrula:** {i['verify']}",'']
             if i['note']: md += [i['note'],'']
             name,url = SOURCES[i['source']]
-            md += [f'Kaynak: [{name}]({url})','']
+            md += [f'Kaynak: [{name}]({url})', '', f'[Rehberde ayrıntılı açıklama](rehber/{GUIDE_ITEM_MAP[i["id"]]}.md)', '']
     md += ['## Kaynak, atıf ve lisans', '',
            f'Ratipcan Uysal’ın [Claude Code kontrol listesinin]({ORIGINAL}) Codex için yeniden yazılmış ve genişletilmiş sürümüdür. Resmî OpenAI yayını değildir.', '',
            'Copyright © 2026 Ratipcan Uysal. [CC BY 4.0](LICENSE). Kod, içerik ve değişiklikler bu depoda incelenebilir.', '',
@@ -83,7 +90,7 @@ def build():
     text = '\n'.join(md)
     (ROOT/'README.md').write_text(text, encoding='utf-8')
     (ROOT/'codex-kontrol-listesi.md').write_text(text, encoding='utf-8')
-    evidence = ['# Kaynak ve kapsam denetimi', '', f'Tarih: {DATE}. İçerik: {stats}.', '',
+    evidence = ['# Kaynak ve kapsam denetimi', '', '[29 Ekim 2026 ana rehber kaynakları ve sınırları](rehber/kaynaklar.md) · [Özellik envanteri](rehber/kapsam.md)', '', 'Aşağıdaki kayıt 21 Ekim kontrol listesinin tarihli kaynak denetimidir; yeni rehberin kaynakları üstteki bağlantıda ayrı tutulur.', '', f'Tarih: {DATE}. İçerik: {stats}.', '',
                 'Resmî OpenAI sayfalarının güncel birleşik kılavuzu indirilip ilgili bölümler okunmuştur. Aşağıdaki bağlantılar maddelerin dayanaklarını gösterir. Apple ve Git bağlantıları kendi platform belgeleridir.', '',
                 'Ürün davranışı, yerel CLI yardım doğrulaması ve editoryal öneri farklı kanıtlardır. Web sayfasının çalışması, örneklerdeki bütün Codex davranışlarının çalıştırıldığı anlamına gelmez.', '',
                 '| Kaynak | Bağlı maddeler |', '|---|---|']
@@ -95,6 +102,7 @@ def build():
                  '- NOT_RUN: gerçek model karşılaştırması, tüm hook/izin senaryoları, zamanlanmış görev koşumları ve rehberdeki mobil örnekler.',
                  '- Sayfa işlevleri ve yayın kontrolü ayrı olarak [doğrulama raporunda](DOGRULAMA.md) kaydedilir.', '']
     (ROOT/'KAYNAKLAR.md').write_text('\n'.join(evidence), encoding='utf-8')
+    counts['guide'] = build_guide()
     print(json.dumps(counts, ensure_ascii=False))
 
 if __name__ == '__main__':

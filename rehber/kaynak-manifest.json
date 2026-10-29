@@ -1,0 +1,453 @@
+{
+  "checked": "2026-10-29",
+  "sources": {
+    "app": {
+      "url": "https://learn.chatgpt.com/docs/app",
+      "title": "ChatGPT desktop app",
+      "sha256": "078985b0a2fedec6e187a68284122033a95ae39cd976fbbfd7537e1684c54a1e",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "reference__commands": {
+      "url": "https://learn.chatgpt.com/docs/reference/commands",
+      "title": "Commands",
+      "sha256": "03e14392312eb606bbe9df8a6202a4aeafc66758938cf8c135aec36b3bcd987a",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "reference__settings": {
+      "url": "https://learn.chatgpt.com/docs/reference/settings",
+      "title": "Settings",
+      "sha256": "b66dc62c6718eb2e48aaaaf76f98b1e3ebd2ef5f8bb5979e2f8a2f6fb4e973e0",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "projects": {
+      "url": "https://learn.chatgpt.com/docs/projects",
+      "title": "Projects and chats",
+      "sha256": "2492a9886d932e82999f827b963558927dbf952e06494344a3ff329526dc7007",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "use-chatgpt": {
+      "url": "https://learn.chatgpt.com/docs/use-chatgpt",
+      "title": "Use ChatGPT",
+      "sha256": "53cc375d4167155c9c915f755ba2325be231dffb90f714d3e5670536eec69a8c",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "artifacts-viewer": {
+      "url": "https://learn.chatgpt.com/docs/artifacts-viewer",
+      "title": "Work with files",
+      "sha256": "91f2b8597741b2da21dd8fcba0a1c4ea5991edf7928dfa6d04a0c8be60f5ca9c",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "integrated-terminal": {
+      "url": "https://learn.chatgpt.com/docs/integrated-terminal",
+      "title": "Integrated terminal",
+      "sha256": "3cc29632b2e735164939f14a834a2aea6a1fd249ce33dab738246b2d108b1f81",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "appshots": {
+      "url": "https://learn.chatgpt.com/docs/appshots",
+      "title": "Appshots",
+      "sha256": "a541048923cd2daf6e785d418d92dfed2d5cfabdc9f35910c7dce602bac4319e",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "features__voice": {
+      "url": "https://learn.chatgpt.com/docs/features/voice",
+      "title": "ChatGPT Voice",
+      "sha256": "b331ff43e76771168055f4fe88d656cea976a14dfc88d201435805e40195737a",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "features__codex-micro": {
+      "url": "https://learn.chatgpt.com/docs/features/codex-micro",
+      "title": "Codex Micro",
+      "sha256": "5324ce0987446a9e0861374eaeca44d388445dea7cde46f9c0b329bef4f70ec4",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "customization__memories": {
+      "url": "https://learn.chatgpt.com/docs/customization/memories",
+      "title": "Memories",
+      "sha256": "7412a5b573d678dbad5ea5ba162005a9e1d8b216e824238e53307333260a52f8",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "customization__computer-history": {
+      "url": "https://learn.chatgpt.com/docs/customization/computer-history",
+      "title": "Computer History",
+      "sha256": "46e7b7a51804f93c059872efa9d2dadbe657e5f7188f3c501ac13c9338ce1b03",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "models": {
+      "url": "https://learn.chatgpt.com/docs/models",
+      "title": "Models",
+      "sha256": "0a99a1a6e54f0a0b2e2d7409873b88308e9ccee0414a60d746452af4989bf34e",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "agent-configuration__speed": {
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/speed",
+      "title": "Speed",
+      "sha256": "7cf93ffefb0d7124564f032468eb2049eb383a38d2afb892cfe1cd94131adbce",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "pricing": {
+      "url": "https://learn.chatgpt.com/docs/pricing",
+      "title": "Pricing",
+      "sha256": "a0c502cccae440c42e790e4fec0a3733d670328dce9eb2d3904d1bce647cb246",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "environments__modes": {
+      "url": "https://learn.chatgpt.com/docs/environments/modes",
+      "title": "Codex environments",
+      "sha256": "64d4650883e84046be1dd727c0af6605be3dc9391006ce920114f68d15e470a8",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "environments__git-worktrees": {
+      "url": "https://learn.chatgpt.com/docs/environments/git-worktrees",
+      "title": "Worktrees",
+      "sha256": "3aba615b001d9933b341dd7e9b6b596b795ec43fa347e3d3da51d7313c4a16be",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "environments__cloud-environments": {
+      "url": "https://learn.chatgpt.com/docs/environments/cloud-environments",
+      "title": "Cloud environments",
+      "sha256": "525fdf88db88a1a272fa08b4a127b6fff22a55d71758a9531693afef9f97769d",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "browser": {
+      "url": "https://learn.chatgpt.com/docs/browser",
+      "title": "Browser",
+      "sha256": "8558ece2cd53b9a3e2fe110b87258630575c6146e10db559df7ea082c93b8210",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "chrome-extension": {
+      "url": "https://learn.chatgpt.com/docs/chrome-extension",
+      "title": "Browser extension",
+      "sha256": "3783565d3bf8c2a1671afed0fe8d833d0cd213ed83ef627c1c5f6c857e3c59f1",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "computer-use": {
+      "url": "https://learn.chatgpt.com/docs/computer-use",
+      "title": "Computer Use",
+      "sha256": "c0e4f883aa2abc1198ee40e5ce59cea130b055b97c48e9abf7a0e8d75277c819",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "extend__mcp": {
+      "url": "https://learn.chatgpt.com/docs/extend/mcp",
+      "title": "Model Context Protocol",
+      "sha256": "5e87f831d27e68f5c156438d710231d3052aa69fab8e57e3cf2b0ceda9f8530a",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "plugins": {
+      "url": "https://learn.chatgpt.com/docs/plugins",
+      "title": "Plugins",
+      "sha256": "612ebfed2779c4aa5c412d8b069ed723e8c2ea264a140ebed5ad52a0853d4db0",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "build-skills": {
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "title": "Build skills",
+      "sha256": "ed6e324f747d47adf6f60ee1fca13ba469b3671f55f58c3a78f35947af6919d5",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "build-plugins": {
+      "url": "https://learn.chatgpt.com/docs/build-plugins",
+      "title": "Build plugins",
+      "sha256": "727cd6c97e479b78a7c4fda175e6cd5cd76ae9ae4ac6f3efe798c327cb557a7d",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "skills-and-plugins": {
+      "url": "https://learn.chatgpt.com/docs/skills-and-plugins",
+      "title": "Skills & Plugins",
+      "sha256": "39aa27568d3b43caa874ddb3be384787ad57c83814d87723d3b1b8cde49ae153",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "extend__record-and-replay": {
+      "url": "https://learn.chatgpt.com/docs/extend/record-and-replay",
+      "title": "Record & Replay",
+      "sha256": "36f40000558f2bf2d52fb7b24bf75b1daf2f94d58d7ec2e3a384403814cbe757",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "agent-configuration__agents-md": {
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+      "title": "Custom instructions with AGENTS.md",
+      "sha256": "9d1f87a2d1cb55b4782b95abe710692b35b9659789c2db31a22c7074a3383e8e",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "agent-configuration__subagents": {
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+      "title": "Subagents",
+      "sha256": "e7469d41c5a18a4ee66ee40ca4a9a2617a697e42554a0198ac4481e1e597357f",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "config-file__config-basic": {
+      "url": "https://learn.chatgpt.com/docs/config-file/config-basic",
+      "title": "Config basics",
+      "sha256": "4f0275f5289e27d9d8b90857389fe94cefade24d9e42a394dffeb832301b91d4",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "hooks": {
+      "url": "https://learn.chatgpt.com/docs/hooks",
+      "title": "Hooks",
+      "sha256": "57166ef03e7059732dd90925d5c42dd4d187eb2625d66cc154d0fbd2edb65f92",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "code-review": {
+      "url": "https://learn.chatgpt.com/docs/code-review",
+      "title": "Code review",
+      "sha256": "c18b2fe184104facf5d044631ee151b2394baab1c44218be8b9d60c7dbd33020",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "automations": {
+      "url": "https://learn.chatgpt.com/docs/automations",
+      "title": "Scheduled tasks",
+      "sha256": "cd6ad46c3c8304a56fa64657492ce2585afda5212ba3fe0562d59cc9be9596db",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "permission-modes": {
+      "url": "https://learn.chatgpt.com/docs/permission-modes",
+      "title": "Permissions",
+      "sha256": "755f4d11d20f3f04311fab977e785164a152d5fbff48eb34a16a0f222e043550",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "permissions": {
+      "url": "https://learn.chatgpt.com/docs/permissions",
+      "title": "Permissions",
+      "sha256": "1af24fb0126aba2d5eb43f8a1094bcf9e465e21c94ffeae78ba7dad874466318",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "sandboxing__auto-review": {
+      "url": "https://learn.chatgpt.com/docs/sandboxing/auto-review",
+      "title": "Auto-review",
+      "sha256": "a16ccf51cff77ee1dad89abeaf2608c2ea89cc2cd070d5e4793a746ac1bbe373",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "agent-approvals-security": {
+      "url": "https://learn.chatgpt.com/docs/agent-approvals-security",
+      "title": "Agent approvals & security",
+      "sha256": "595db3a5a3276996071dcc2442e2cfcfef2c11c50cf46fccfd1de4a869a82017",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "remote-connections": {
+      "url": "https://learn.chatgpt.com/docs/remote-connections",
+      "title": "Remote connections",
+      "sha256": "c022b9bd19d73b43968acd3ea4a60538e4b9cacf12b3073819b423d6a2d6fe35",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "mobile": {
+      "url": "https://learn.chatgpt.com/docs/mobile",
+      "title": "Codex on mobile",
+      "sha256": "18748906f1404a2e6ce1544525a766060739589607d70707331b5dc15780dd5c",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "image-inputs": {
+      "url": "https://learn.chatgpt.com/docs/image-inputs",
+      "title": "Image inputs",
+      "sha256": "252e1571e2cb0f933d04846f52023861bd6d6168a7ab279a421787db287bd3d3",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "image-generation": {
+      "url": "https://learn.chatgpt.com/docs/image-generation",
+      "title": "Image generation",
+      "sha256": "0eedfcaca1d6cb8ed0a39b6e1b0b2dedc06e2f9b9d2bcff5c5dfffa5f6360daa",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "sites": {
+      "url": "https://learn.chatgpt.com/docs/sites",
+      "title": "Sites",
+      "sha256": "b3392ad65a36a213fb22ecdc55cfdd7aa9b3cfa2b5639e1033b8ef5fe9d69555",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "space": {
+      "url": "https://learn.chatgpt.com/docs/space",
+      "title": "ChatGPT Space",
+      "sha256": "ece0ff41f13e3cd0dc4bf4fad7af26e95e56b5abad830827f4a76fc6a5b7f182",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "import": {
+      "url": "https://learn.chatgpt.com/docs/import",
+      "title": "Import from another agent",
+      "sha256": "34893c4daf7be033d4313dc188b3b0e5b89c11f2899d5a3e3cdbe8108f31fac7",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "reference__troubleshooting": {
+      "url": "https://learn.chatgpt.com/docs/reference/troubleshooting",
+      "title": "Troubleshooting",
+      "sha256": "3a3db459876eca2722c150308e80a43545ac43b552e7379a64c4fb4a516dc564",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "windows__windows-app": {
+      "url": "https://learn.chatgpt.com/docs/windows/windows-app",
+      "title": "ChatGPT desktop app for Windows",
+      "sha256": "5bbae21f535849b2ab51ec9472d43e2f1ade4f954b3d5241bcec4674e7761ad7",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "linux__linux-app": {
+      "url": "https://learn.chatgpt.com/docs/linux/linux-app",
+      "title": "ChatGPT desktop app for Linux",
+      "sha256": "82b5e912a89b1e11e428ec021fd11e67f93024f5095ecf34044a7bf208f48105",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "security__plugin__workbench": {
+      "url": "https://learn.chatgpt.com/docs/security/plugin/workbench",
+      "title": "Use the Codex Security workbench",
+      "sha256": "2f90053b15a0195a88a72a651cbfe574c5f52f750e7de88b740ed3cb496986f6",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "non-interactive-mode": {
+      "url": "https://learn.chatgpt.com/docs/non-interactive-mode",
+      "title": "Non-interactive mode",
+      "sha256": "b4bc8dbe1c39f6e5454db89d764813d82c0c1003f7caca6c8adf0532e1e76684",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "developer-commands": {
+      "url": "https://learn.chatgpt.com/docs/developer-commands",
+      "title": "Developer commands",
+      "sha256": "539a6793f7c8a76a7ef60f6f859ae09321660a69649aa587e59be30bab57fe11",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "using_goals_in_codex": {
+      "url": "https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex",
+      "title": "Using Goals in Codex: Persistent Objectives for Long-Running Work",
+      "sha256": "1aa0c0e22f11484f526b59e98cacabaa1ffa15227e064591f597cf202df26621",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "rethinking-skills-and-prompts-for-gpt-6-astra": {
+      "url": "https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra",
+      "title": "Rethinking skills and prompts for GPT-6 Astra",
+      "sha256": "a1deee4c0b3ca16a20385c27f0692e22d5150fdec81710c04742dd5da29f0468",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "pets": {
+      "url": "https://learn.chatgpt.com/docs/pets",
+      "title": "Pets",
+      "sha256": "b6cee933a7d2a784622d48d8fac87a72aa0c30eeb70cd844481b1c2bac08d292",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "prompting": {
+      "url": "https://learn.chatgpt.com/docs/prompting",
+      "title": "Prompting",
+      "sha256": "c43142cb5c847afb5a2292abe9260667e9001563dceb4e48c0550809e10306f2",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "environments__local-environment": {
+      "url": "https://learn.chatgpt.com/docs/environments/local-environment",
+      "title": "Local environments",
+      "sha256": "be1d914a3e59fb5a17f8b2c8247ff864236d12dc2c50b2b4cc58137a636b6e29",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "auth": {
+      "url": "https://learn.chatgpt.com/docs/auth",
+      "title": "Authentication",
+      "sha256": "67d3f0c64897ea26b48e62a634ced7dbd2763a47104e12a0923cc528986de588",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "agent-configuration__rules": {
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/rules",
+      "title": "Rules",
+      "sha256": "4ecdfe26ece03895220808a7aa4f05c91d837492300262baf5a5df35c3f44ce7",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "configuration": {
+      "url": "https://learn.chatgpt.com/docs/configuration",
+      "title": "Configuration",
+      "sha256": "c034411d817d6cc5bc12c75526a0e9c15bcfcae9d6429a630363fa710db00f6a",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "third-party__github": {
+      "url": "https://learn.chatgpt.com/docs/third-party/github",
+      "title": "Review GitHub pull requests with Codex",
+      "sha256": "1ab502138a121ac571faa37f161bf79224e1e23cdc0e70f7a0be835f2c2d3c9f",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "third-party__gitlab": {
+      "url": "https://learn.chatgpt.com/docs/third-party/gitlab",
+      "title": "Review GitLab merge requests with Codex",
+      "sha256": "fed924146abc455eb95808f4e4c30051f28f3bc71128e08dc4bba38dafffefa5",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "security": {
+      "url": "https://learn.chatgpt.com/docs/security",
+      "title": "Codex Security",
+      "sha256": "17e8fe44f75071a762aac8e60556f76c905c03b38cd2f77c6c7a85b1b96a06eb",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "security__plugin": {
+      "url": "https://learn.chatgpt.com/docs/security/plugin",
+      "title": "Codex Security plugin quickstart",
+      "sha256": "cd509ffd1f14ae14da274bcee62ee433b93a2e5191486a1a203ed3c418f5a43f",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "windows__windows-sandbox": {
+      "url": "https://learn.chatgpt.com/docs/windows/windows-sandbox",
+      "title": "Windows sandbox",
+      "sha256": "9ed22a1312fa2ff878979758a52b057324be4778619c276f607023ec0bd0a290",
+      "status": 200,
+      "checked": "2026-10-29"
+    },
+    "reference__slash-commands": {
+      "url": "https://learn.chatgpt.com/docs/reference/slash-commands",
+      "title": "Slash commands",
+      "sha256": "31116b5621fa26a4fe944a92517cab42941ca18f68495f04b1f19370571b7c07",
+      "status": 200,
+      "checked": "2026-10-29"
+    }
+  }
+}

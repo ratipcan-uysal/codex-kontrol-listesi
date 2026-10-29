@@ -1,0 +1,45 @@
+# 9. İnternet, tarayıcı ve bilgisayar kullanımı
+
+Belge kontrolü: 2026-10-29.
+
+Web araştırması, tarayıcı kontrolü ve bilgisayar kullanımı üç farklı iştir. Bir sayfanın metnini bulmak için bütün bilgisayarı kontrol etmeye gerek yoktur. Bir düğmenin gerçekten çalıştığını görmek için de yalnız kaynak metni yeterli olmaz.
+
+## Hangi yol hangi soruya cevap verir?
+
+| İhtiyaç | Başlangıç yolu | Kanıtın sınırı |
+|---|---|---|
+| Güncel ürün özelliğini öğrenmek | Web araması ve resmî sayfayı açma | Sayfanın iddiasını doğrular; hesabındaki erişimi değil |
+| Bağlı takvim veya belgeyi okumak | İlgili plugin/bağlı araç | Bağlantının izin verdiği veriyle sınırlıdır |
+| Yerel sayfadaki taşmayı görmek | Yerleşik tarayıcı | Açılan URL ve ekran boyutundaki görünümü gösterir |
+| Kendi tarayıcındaki oturumla çalışmak | Desteklenen tarayıcı eklentisi | Seçilen sekme ve alan izinlerine bağlıdır |
+| Yerel uygulamada işlem yapmak | Bilgisayar kullanımı | Platform, uygulama ve işletim sistemi izinlerine bağlıdır |
+
+Bu sıralama bir başlangıç önerisidir. Kullanıcı belirli bir araç istediğinde veya görsel inceleme gerektiğinde yolu ona göre seç.
+
+## Yerleşik tarayıcı
+
+Yeni tarayıcı sekmesi açıp URL'ye gidebilir, sohbetten `@Browser` referansı verebilirsin. Yerel geliştirici sunucusu çalışıyorsa önizlemeyi aynı panelde incelemek yararlıdır. Tarayıcı profili, normal Chrome oturumunla aynı değildir; başka tarayıcıda giriş yapmış olman burada da girişli olduğunu göstermez. [Tarayıcı](https://learn.chatgpt.com/docs/browser)
+
+Annotate ile bir öğeyi veya bölgeyi işaretlemek “şu boşluğu azalt” isteğinin hedefini netleştirir. Önizlemede yapılan geçici stil ayarı, kaynak dosyaya kaydedildiği veya canlıya çıktığı anlamına gelmez. Kaynak değişikliği ve hedef görünümü ayrı doğrula.
+
+Belge kontrol tarihinde yerleşik tarayıcıda otomatik dosya yükleme desteklenmiyor. Bir yükleme adımı varsa desteklenen başka araç veya tarayıcı yolunu kullanmak gerekir. Bu sınırı bütün tarayıcı araçlarına genelleme.
+
+## Chrome ve diğer desteklenen tarayıcılar
+
+Resmî eklenti Chrome, Edge, Brave, Opera ve Vivaldi için belgelenmiştir. Sekme referansı ve kontrol ile tarayıcı içi yan sohbet aynı kapsamda değildir; örneğin Opera için yan sohbet desteği farklıdır. Kurulumda hem Codex tarafındaki plugin hem tarayıcı eklentisi gerekir. Alan adı izinlerini Manage üzerinden sınırlandırabilirsin. [Tarayıcı eklentisi](https://learn.chatgpt.com/docs/chrome-extension)
+
+YouTube altyazısından zaman damgalı metin almak, videonun bütün görsel içeriğini incelemek demek değildir. Görsel bir iddiayı altyazıya dayandırma. Oturum açılan hesabı da işleme başlamadan kontrol et; aynı sitenin kişisel ve kurumsal hesabı farklı hedeflerdir.
+
+## Bilgisayar kullanımı ve ekran bağlamı
+
+macOS ve Windows yollarının çalışma şekli farklıdır. Windows'ta bilgisayar kullanımı etkin ve kilidi açık masaüstü koşullarına bağlıdır; desteklenen macOS akışları farklı arka plan davranışları sunabilir. Ekran kaydı ve erişilebilirlik gibi işletim sistemi izinleri, Codex'in kendi araç izninden ayrıdır. [Bilgisayar kullanımı](https://learn.chatgpt.com/docs/computer-use)
+
+Appshots ön plandaki pencereyi belirli anda sohbete ekler. macOS'ta iki Command, Windows'ta iki Alt tuşu varsayılan giriş yolları arasındadır; atama değişebilir. Görünen görüntüye ek erişilebilirlik metni de gelebilir. Paylaşılmasını istemediğin bilgiyi önce kapat. Sesli sohbette ekran bağlamı ise desteklenen ayarla o konuşmaya bağlanır; sürekli her şeyi gören bir ajan varsayımı yanlıştır. [Appshots](https://learn.chatgpt.com/docs/appshots) · [Ses](https://learn.chatgpt.com/docs/features/voice)
+
+Dikte, konuşmanı metin girdisine dönüştürür. Sesli sohbet ise karşılıklı, kesilebilen konuşma akışıdır. Mikrofon/hesap desteği ve aynı anda etkin oturum sınırlarını mevcut uygulamada kontrol et.
+
+## Kurgu senaryo: form başarı mesajı yeterli mi?
+
+Atölye'nin etkinliğine bir deneme kaydı gönderildiğini düşün. Ekranda “Başarılı” yazması, doğru hesapta doğru kaydın oluştuğunu tek başına kanıtlamaz. Yetkili denemede hedef listede kaydı tekrar açıp bilgileri doğrula. Çift kayıt yaratmamak için belirsiz sonuçta yeniden göndermeden önce hedefi oku. İnceleme için gönderim gerekmiyorsa formu doldurup göndermeden görünümü değerlendirmek yeterlidir.
+
+[İçindekiler](README.md) · [← Dosyalar ve çalışma ortamları](08-ortamlar.md) · [Bağlantılar, MCP, plugin ve skill →](10-baglantilar-skills.md)
