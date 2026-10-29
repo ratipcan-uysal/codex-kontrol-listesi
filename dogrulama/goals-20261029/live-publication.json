@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-29T20:30:30.447053+00:00",
+  "content_commit": "0d17d1413843c1cf2fb8b6d9a000b9c41080a5e3",
+  "pages_status": "built",
+  "files": [
+    {
+      "file": "rehber/14-buyuk-isler.html",
+      "status": 200,
+      "local_sha256": "caf2ebc71244cd0e0317924b8149e03ff22c5c4d0ff65c0275e717305e944348",
+      "live_sha256": "caf2ebc71244cd0e0317924b8149e03ff22c5c4d0ff65c0275e717305e944348",
+      "match": true
+    },
+    {
+      "file": "rehber/14-buyuk-isler.md",
+      "status": 200,
+      "local_sha256": "0f969bd672548c0ab37eeeec12154bd2a4b9763f855c26156af9ac3de442e042",
+      "live_sha256": "0f969bd672548c0ab37eeeec12154bd2a4b9763f855c26156af9ac3de442e042",
+      "match": true
+    },
+    {
+      "file": "rehber/tam-rehber.md",
+      "status": 200,
+      "local_sha256": "9c9ccc17b6a38d5919e8858192f75b9107cff2199187cf0ddd44ea91c6a53367",
+      "live_sha256": "9c9ccc17b6a38d5919e8858192f75b9107cff2199187cf0ddd44ea91c6a53367",
+      "match": true
+    }
+  ]
+}

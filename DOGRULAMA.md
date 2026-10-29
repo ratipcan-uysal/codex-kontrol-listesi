@@ -1,5 +1,16 @@
 # Doğrulama kaydı
 
+## 29 Ekim 2026 — Goals örneği ve karar şeması yayında
+
+**PASS:** [Genişletilmiş Goals bölümü](https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/14-buyuk-isler.html#goals-ne-zaman-yararli) yayımlandı. İçerik commit’i `0d17d1413843c1cf2fb8b6d9a000b9c41080a5e3`; Pages aynı commit için `built` döndü. Değişen üç rehber çıktısının canlı SHA-256 özetleri yerelle aynı. [Yayın kanıtı](dogrulama/goals-20261029/live-publication.json).
+
+- 24 Python testi ve JavaScript sözdizimi geçti. 107 madde ve eşleme değişmedi; yalnız 14. bölüm ve yeni akış verisi değişti.
+- Altı yerel ve altı canlı odaklı tarayıcı kontrolü geçti; altı parçalı tablo, korunmuş çapa, dört akış adımı, 1440/390/320 px taşma ve mevcut görsel dahil. [Yerel](dogrulama/goals-20261029/local/results.json) · [Canlı](dogrulama/goals-20261029/live/results.json).
+- Yerel masaüstü tablo ve mobil şema ile canlı 320 px şema açılıp incelendi. Her koşumun 10 görev süreci kapandı. [Canlı temizlik](dogrulama/goals-20261029/live/cleanup.json). Göreve ait Python önbelleği kaldırıldı.
+- Yeni etkileşim eklenmedi; önceki tam tarayıcı paketi yeniden koşulmadı. Kurgu hedef örneği bir gerçek Goals koşumunun kanıtı değildir. [Kapsam ve kaynaklar](dogrulama/goals-20261029/README.md).
+
+Bu doğrulama kaydı sonraki belge commit’inde eklenir; doğrulanan rehber dosyalarını değiştirmez.
+
 ## 29 Ekim 2026 — Eğitim anlatısı canlıda doğrulandı
 
 **PASS:** [Çevrimiçi rehber](https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/) üç baştan sona iş, dokuz örnek dosya ve öğretici görsellerle yayında.
