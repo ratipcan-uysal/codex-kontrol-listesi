@@ -1,6 +1,6 @@
 # İleri teknik ayrıntılar
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Bu ek, ana anlatıyı kesmeden geliştirici ve yoğun kullanıcıların ihtiyaç duyacağı ayrıntıları toplar. Gereken yerde başvur; başlangıç için hepsini kurmak zorunda değilsin.
 
@@ -28,7 +28,7 @@ Shell komutuna kullanıcı metni yerleştirmek kod ile veriyi karıştırabilir.
 
 Bir sonraki programın okuyacağı çıktı için alanları ve türleri belirle. Serbest metindeki “tamam” sözcüğünü başarı bayrağı yapmak kırılgandır. JSON şemasında durum, üretilen dosya ve doğrulama sonucunu ayrı alanlarda tut. Şemaya uymak, alanların doğru olduğu anlamına gelmez; hedefi yine kontrol et. [Etkileşimsiz çalışma](https://learn.chatgpt.com/docs/non-interactive-mode)
 
-Kurgu veri dönüşümünde sonuç şu alanları taşıyabilir: `status`, `input_rows`, `output_rows`, `unresolved_rows`, `output_file`. Bu alanlar eğitim örneğidir, ürünün zorunlu API'si değildir. Çıktı parse edilemiyorsa başarı varsayılanı kullanma.
+Kurgu veri dönüşümünde sonuç şu alanları taşıyabilir: `status`, `input_rows`, `output_rows`, `unresolved_rows`, `output_file`. Bu alanlar eğitim örneğidir, ürünün zorunlu API'si değildir. Çıktı parse edilemiyorsa başarı varsayılanı kullanma. Eski GitLab Cookbook tarifinin güncelleme notu da bu riski açıkça uyarıyor: gövdedeki geçersiz çıktıyı boş bulgu listesine çeviren örneği ve kullanımdan kalkmış `--full-auto` bayrağını güncel öneri gibi kopyalama. “Bulgu yok”, “kontrol başarısız” ve “kontrol çalışmadı” ayrı durumlar olmalı. [Tarihsel tarif ve güncelleme uyarısı](https://developers.openai.com/cookbook/examples/codex/secure_quality_gitlab)
 
 <a id="tekrar-baslatilabilir-uzun-isler"></a>
 

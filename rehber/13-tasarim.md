@@ -1,6 +1,6 @@
 # 13. Tasarım ve yaratıcı üretim
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Teknik olarak çalışan bir çıktı, iyi tasarlanmış veya iyi yazılmış olmayabilir. Görsel ve yaratıcı işte beğeniyi somutlaştırmak, model seçmekten önce gelen bir iştir.
 
@@ -45,6 +45,24 @@ Bu kurgu istek yeni yönü seçmeden üretime taşıma yetkisi vermez. Mevcut ka
 Görsel girdisi, elindeki görüntüyü modele göstermek içindir. Görsel üretimi/düzenleme aracı yeni görüntü yaratır veya mevcut görüntüyü değiştirir. Referans, hedef boyut, kullanılacak alan ve korunacak öğeleri belirtmek sonucu iyileştirir. Şeffaf arka plan gerekiyorsa açıkça iste. Oluşan dosyayı açmadan yalnız üretim komutunun başarılı olduğuna dayanarak görsel kalite iddiasında bulunma. [Görsel üretimi](https://learn.chatgpt.com/docs/image-generation) · [Görsel girdileri](https://learn.chatgpt.com/docs/image-inputs)
 
 Sites gibi yayın odaklı araçlar ve HTML prototipler farklı teslim yollarıdır. Önizleme, yayımlanmış site ve kendi depondaki uygulama aynı çıktı değildir. Hangi kaynağın daha sonra düzenleneceğini baştan bil. [Sites](https://learn.chatgpt.com/docs/sites)
+
+<a id="tek-afis-yerine-yeniden-kullanilabilir-parcalar"></a>
+
+### Tek afiş yerine yeniden kullanılabilir parçalar
+
+**Kurgu kampanya:** Atölye için aynı illüstrasyon hem açık renkli web sayfasında hem koyu sunumda kullanılacak. İllüstrasyonu şeffaf dosya, başlıkları düzenlenebilir metin, zemini ayrı katman olarak istemek sonraki değişikliği kolaylaştırır. Tarih değiştiğinde bütün afişi yeniden çizdirmek gerekmez.
+
+> İllüstrasyonu yazısız ve şeffaf arka planlı ayrı PNG olarak üret. Başlık ve tarihi sayfada düzenlenebilir metin tut. Aynı görseli açık ve koyu zeminde göster; kenarlarda beyaz hale veya kesilmiş ayrıntı var mı incele.
+
+Damalı arka planın resme çizilmiş olması gerçek şeffaflık değildir. Dosyada şeffaflığı taşıyan **alfa kanalı** bulunmalı; yarı saydam kenarlar ve ince ayrıntılar kullanılacağı zeminlerde incelenmeli. [Şeffaf görsel örnekleri](https://developers.openai.com/cookbook/examples/multimodal/transparent-image-assets-for-campaigns-and-presentations)
+
+<a id="sayisal-grafik-bir-resimden-daha-fazla-dogruluk-ister"></a>
+
+### Sayısal grafik bir resimden daha fazla doğruluk ister
+
+Görsel üretim aracına doğru sayıları vermek, çizilen çubukların oranlarını veya etiketleri otomatik olarak doğrulamaz. Hassas raporda grafiği kaynak veriden programla çizdir; illüstrasyonu ayrı üret. [Grafik üretiminin sınırı](https://developers.openai.com/cookbook/examples/multimodal/transparent-image-assets-for-campaigns-and-presentations)
+
+Bizim [veri örneğindeki](is-veri.md) 3 katıldı, 2 iptal, 1 bekliyor dağılımında hem etiketler hem çubuk uzunlukları 3:2:1 oranını taşımalı. Güzel bir görsel uğruna yeni sayı veya tahsilat iddiası eklenmemeli.
 
 <a id="gercek-deneyim-teknik-basari-yaratici-kararin-yerini-tutmadi"></a>
 

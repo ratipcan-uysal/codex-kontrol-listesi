@@ -1,6 +1,6 @@
 # Görsel sorundan doğrulanmış yayına
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 **Kurgu iş:** Atölye'nin etkinlik sayfasındaki kart telefonda taşıyor. Kullanıcı mevcut metinleri ve görsel yönü seviyor; yalnız dar ekranda okunabilirlik istiyor. Bu rehber için gerçekten üretilmiş iki küçük HTML dosyası üzerinden ilerliyoruz. Bir müşteri sitesinin çalışma kaydı veya mağaza dağıtımı değil.
 

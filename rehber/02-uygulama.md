@@ -1,6 +1,6 @@
 # 2. Uygulamanın tamamını tanımak
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Uygulamayı öğrenmenin pratik yolu, bir işin nerede başladığını, hangi kaynaklara dayandığını ve çıktısının nerede incelendiğini takip etmek. Menüler bu akış içinde anlam kazanır.
 

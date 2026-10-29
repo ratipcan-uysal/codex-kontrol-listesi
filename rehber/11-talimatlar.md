@@ -1,6 +1,6 @@
 # 11. Talimatları ve kişisel çalışma düzenini kurmak
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Kalıcı talimat, aynı düzeltmeyi tekrar söyleme ihtiyacını azaltır. Ancak her başarısızlığın ardından yeni bir yasak eklemek, kısa işi uzun bir prosedüre çevirebilir. İyi kural belirli bir sürtüşmeyi çözer.
 
@@ -11,6 +11,8 @@ Kalıcı talimat, aynı düzeltmeyi tekrar söyleme ihtiyacını azaltır. Ancak
 Global talimat, projeler arasında değişmeyen tercih içindir: kullanılan dil, kanıt standardı, dış işlem sınırı gibi. Proje kökündeki `AGENTS.md`, o projenin çalışma ve doğrulama bilgisini tutar. Alt dizindeki talimat daha dar alanın gereğini açıklayabilir. Dosyanın kapsamı ve uygulanan öncelik zinciri önemlidir; farklı yerlerde aynı kuralı çoğaltmak çelişki riskini artırır. [AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
 
 Codex'in yapılandırma dosyası `config.toml`, arayüz tercihleri ve çalışma politikalarının başka bir katmanıdır. Her ayar doğal dil talimatıyla aynı etkiye sahip değildir. Proje güveni, kullanıcı ayarı, yönetilen kurum ayarı ve çalışma sırasında verilen seçenekler farklı kapsamlar taşır. Belgedeki katman sırasını esas al; rastgele kopyalanmış bir dosyanın yüklendiğini varsayma. [Yapılandırma](https://learn.chatgpt.com/docs/config-file/config-basic) · [Ayar katmanları](https://learn.chatgpt.com/docs/configuration)
+
+**Dosya adı ile uygulama özelliğini ayır.** Bazı Cookbook örnekleri `PLANS.md`, `GOALS.md` ve `PROMPTS.md` kullanır. Bunlar isteğe bağlı belge düzenidir: `GOALS.md` yazmak `/goal` başlatmaz, `PLANS.md` oluşturmak plan modunu açmaz. Mevcut karar ve ilerleme notların aynı işi görüyorsa yeni kopyalar üretme. [Çalışma düzeni örneği](https://developers.openai.com/cookbook/examples/codex/iterating-development-workflows-with-codex)
 
 <a id="zayif-ve-ise-yarayan-kural"></a>
 

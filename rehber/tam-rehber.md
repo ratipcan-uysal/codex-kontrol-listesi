@@ -828,6 +828,24 @@ Aynı kuralla bin dosya adı değişiyorsa betik daha uygundur. Kaynak kalitesin
 
 Desteklenen macOS kurulumunda Plugins → + → Record a skill yolu bilgisayarda gösterdiğin akıştan skill üretmeye yardımcı olur. Computer Use kurulumu gerekir. Kaydı durdurduktan sonra oluşan yönergeleri incele: sabit kişi adı, tarih, dosya yolu veya tek seferlik tıklama genel kurala dönüşmüş olabilir. Replay, değişen ekranda araçlarla yürütülen akıştır; her pikseli aynı sırayla basan kusursuz makro garantisi değildir. [Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay)
 
+<a id="arac-dogru-calisti-cevap-dogru-mu"></a>
+
+## Araç doğru çalıştı; cevap doğru mu?
+
+Kurulumdan sonraki okuma denemesi yalnız başlangıçtır. Araç sonucunu, Codex’in seçimini ve son cevabı ayrı incele. Kontrollü araç testinin başarısı, gerçek uygulamadaki talimatlar ve araç erişimiyle aynı davranışın oluşacağını garanti etmez. [Plugin değerlendirmesi](https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals)
+
+**Kurgu takvim örneği:** “Yarınki Atölye toplantısının saatini söyle.”
+
+| Kontrol | Doğru davranış | Kaçabilecek hata |
+|---|---|---|
+| Araç | Seçilen günün kayıtlarını getirir. | Yanlış tarih veya saat dilimi kullanılır. |
+| Araç seçimi | Doğru takvimi ve ilgili kaydı seçer. | Aynı adlı iki toplantıdan birini gerekçesiz seçer. |
+| Son cevap | Seçilen kaydın 14.00 saatini doğru aktarır. | Araç 14.00 döndürdüğü hâlde cevap 15.00 der. |
+
+> Aynı isteği bu sohbette sınayalım. Hangi kaydı seçtiğini ve araçtaki saatle son cevabın eşleştiğini göster. İki kayıt ayırt edilemiyorsa gerekli ayrımı sor; kayıt bulunmazsa saat uydurma. Takvimi değiştirme.
+
+İlk örneği özellikle belirsiz veya sonuçsuz bir durumla karşılaştır. Bir aracın çağrılmış olması, doğru kullanıldığına tek başına kanıt değildir. Genel kanıt ölçütleri [doğrulama bölümünde](12-dogrulama.md).
+
 <a id="baglanti-calismiyorsa"></a>
 
 ## Bağlantı çalışmıyorsa
@@ -857,6 +875,8 @@ Kalıcı talimat, aynı düzeltmeyi tekrar söyleme ihtiyacını azaltır. Ancak
 Global talimat, projeler arasında değişmeyen tercih içindir: kullanılan dil, kanıt standardı, dış işlem sınırı gibi. Proje kökündeki `AGENTS.md`, o projenin çalışma ve doğrulama bilgisini tutar. Alt dizindeki talimat daha dar alanın gereğini açıklayabilir. Dosyanın kapsamı ve uygulanan öncelik zinciri önemlidir; farklı yerlerde aynı kuralı çoğaltmak çelişki riskini artırır. [AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
 
 Codex'in yapılandırma dosyası `config.toml`, arayüz tercihleri ve çalışma politikalarının başka bir katmanıdır. Her ayar doğal dil talimatıyla aynı etkiye sahip değildir. Proje güveni, kullanıcı ayarı, yönetilen kurum ayarı ve çalışma sırasında verilen seçenekler farklı kapsamlar taşır. Belgedeki katman sırasını esas al; rastgele kopyalanmış bir dosyanın yüklendiğini varsayma. [Yapılandırma](https://learn.chatgpt.com/docs/config-file/config-basic) · [Ayar katmanları](https://learn.chatgpt.com/docs/configuration)
+
+**Dosya adı ile uygulama özelliğini ayır.** Bazı Cookbook örnekleri `PLANS.md`, `GOALS.md` ve `PROMPTS.md` kullanır. Bunlar isteğe bağlı belge düzenidir: `GOALS.md` yazmak `/goal` başlatmaz, `PLANS.md` oluşturmak plan modunu açmaz. Mevcut karar ve ilerleme notların aynı işi görüyorsa yeni kopyalar üretme. [Çalışma düzeni örneği](https://developers.openai.com/cookbook/examples/codex/iterating-development-workflows-with-codex)
 
 <a id="zayif-ve-ise-yarayan-kural"></a>
 
@@ -955,6 +975,23 @@ Test komutunun çıkış kodu sıfır olabilir ama hiç test seçilmemiş olabil
 
 Geçen testleri gerekçesiz tekrar etmek de güvenilirliği artırmaz. Kaynak, yapılandırma, ortam ve kapsam aynı kaldıysa kanıt yeniden kullanılabilir. İlgili değişiklik veya yeni hata varsa kontrol yenilenir.
 
+<a id="onarim-isin-amacini-koruyor-mu"></a>
+
+### Onarım işin amacını koruyor mu?
+
+**Kurgu örnek:** CSV’yi okuyamayan rapor betiğinden dosya okuma adımı kaldırılıyor. Program artık hata vermiyor, fakat sabit örnek rakamları yazıyor. Çalıştırmanın geçmesi, raporun gerçek girdiyi işlediğini göstermez. Cookbook’ın onarım örneği de çalışabilirlik yanında özgün öğretim amacını korumayı denetler. [Onarım döngüleri](https://developers.openai.com/cookbook/examples/codex/build_iterative_repair_loops_with_codex)
+
+Anlatıcı şu küçük deneme kaydını gösterebilir:
+
+| Deneme | Değişiklik | Kontrol | Kalan sorun |
+|---|---|---|---|
+| 1 — yanlış kestirme | CSV okuma kaldırıldı. | Program açılıyor; girdi değişince sonuç aynı. | Veri işleme amacı kayboldu. |
+| 2 — hedefli düzeltme | Dosya yolu düzeltildi. | Aynı CSV doğru okunuyor; bir tutar değişince toplam değişiyor. | Eksik tutar hâlâ ayrı belirtilmeli. |
+
+> Geçen kontrolün hangi davranışı kanıtladığını yaz. Hata veren işi silerek veya kabul ölçütünü gevşeterek başarı üretme. Kalan bulguyu sonraki denemeye taşı.
+
+Bu son istek bizim uygulama önerimizdir. Kayıt, kapsamlı bir günlük olmak zorunda değil; değişiklik, gözlenen sonuç ve kalan sorun yeterli. Aynı sorun değişmeden sürüyorsa [Goals karar akışına](14-buyuk-isler.md#goals-ne-zaman-yararli) dön; açıklamasız yeni deneme ekleme.
+
 <a id="gercek-deneyim-klavye-kontrolu-gecti-metin-ortuldu"></a>
 
 ## Gerçek deneyim: klavye kontrolü geçti, metin örtüldü
@@ -1048,6 +1085,24 @@ Görsel girdisi, elindeki görüntüyü modele göstermek içindir. Görsel üre
 
 Sites gibi yayın odaklı araçlar ve HTML prototipler farklı teslim yollarıdır. Önizleme, yayımlanmış site ve kendi depondaki uygulama aynı çıktı değildir. Hangi kaynağın daha sonra düzenleneceğini baştan bil. [Sites](https://learn.chatgpt.com/docs/sites)
 
+<a id="tek-afis-yerine-yeniden-kullanilabilir-parcalar"></a>
+
+### Tek afiş yerine yeniden kullanılabilir parçalar
+
+**Kurgu kampanya:** Atölye için aynı illüstrasyon hem açık renkli web sayfasında hem koyu sunumda kullanılacak. İllüstrasyonu şeffaf dosya, başlıkları düzenlenebilir metin, zemini ayrı katman olarak istemek sonraki değişikliği kolaylaştırır. Tarih değiştiğinde bütün afişi yeniden çizdirmek gerekmez.
+
+> İllüstrasyonu yazısız ve şeffaf arka planlı ayrı PNG olarak üret. Başlık ve tarihi sayfada düzenlenebilir metin tut. Aynı görseli açık ve koyu zeminde göster; kenarlarda beyaz hale veya kesilmiş ayrıntı var mı incele.
+
+Damalı arka planın resme çizilmiş olması gerçek şeffaflık değildir. Dosyada şeffaflığı taşıyan **alfa kanalı** bulunmalı; yarı saydam kenarlar ve ince ayrıntılar kullanılacağı zeminlerde incelenmeli. [Şeffaf görsel örnekleri](https://developers.openai.com/cookbook/examples/multimodal/transparent-image-assets-for-campaigns-and-presentations)
+
+<a id="sayisal-grafik-bir-resimden-daha-fazla-dogruluk-ister"></a>
+
+### Sayısal grafik bir resimden daha fazla doğruluk ister
+
+Görsel üretim aracına doğru sayıları vermek, çizilen çubukların oranlarını veya etiketleri otomatik olarak doğrulamaz. Hassas raporda grafiği kaynak veriden programla çizdir; illüstrasyonu ayrı üret. [Grafik üretiminin sınırı](https://developers.openai.com/cookbook/examples/multimodal/transparent-image-assets-for-campaigns-and-presentations)
+
+Bizim [veri örneğindeki](is-veri.md) 3 katıldı, 2 iptal, 1 bekliyor dağılımında hem etiketler hem çubuk uzunlukları 3:2:1 oranını taşımalı. Güzel bir görsel uğruna yeni sayı veya tahsilat iddiası eklenmemeli.
+
 <a id="gercek-deneyim-teknik-basari-yaratici-kararin-yerini-tutmadi"></a>
 
 ## Gerçek deneyim: teknik başarı, yaratıcı kararın yerini tutmadı
@@ -1117,6 +1172,24 @@ Bu, yeni kullanıcı sohbetleri oluşturma talimatı değildir. Yeni sohbet gere
 İki çalışma aynı kavrama farklı ad verir, biri eski dosyayı okur, diğeri farklı sürümde test yapar. “Her parça geçti” sonucu birleşmiş ürünün çalıştığını göstermez. Başlangıç sürümü, ortak veri sözleşmesi ve dokunulacak alanlar belirlenirse bu risk azalır.
 
 Son aşamada değişikliklerin aynı kaynak üzerinde buluştuğunu kontrol et. Çelişen önerileri sessizce birleştirmek yerine hangisinin neden seçildiğini kaydet. Bağımsız incelemede kaynak değişiyorsa eski bulgunun hâlâ geçerli olup olmadığını yeniden değerlendir.
+
+<a id="buyuk-donusumde-ayni-girdiyi-iki-surumde-calistir"></a>
+
+## Büyük dönüşümde aynı girdiyi iki sürümde çalıştır
+
+Bir sistemi yeniden yazarken önce sınırlı bir kullanıcı akışı seç. Eski ve yeni sürüme aynı girdiyi ver; hangi çıktıların eşleşmesi, hangi farkların kabul edilmesi gerektiğini belirle. Bu, davranış eşliğini sınamaktır. [Modernizasyon örneği](https://developers.openai.com/cookbook/examples/codex/code_modernization)
+
+**Bu rehbere uyarlanmış kurgu:** İçeriği HTML’ye dönüştüren üreticiyi değiştireceğiz. “Yeni sayfa açılıyor” tek başına kabul ölçütü olamaz.
+
+| Ortak girdi | Korunacak sonuç | Ayrı kararla değişebilecek yön |
+|---|---|---|
+| Aynı 107 kontrol maddesi | Madde kimlikleri ve bağlantı hedefleri | Yazı tipi ve boşluklar |
+| Eski işaret yedeği | İşaretlerin aynı maddelere yüklenmesi | İşaret sayacının görünümü |
+| Aynı rehber metni | Bölüm sırası ve eski çapalar | Sayfa düzeni |
+
+> Önce tek bir bölümle eski ve yeni üreticiyi aynı girdide karşılaştır. Farkları içerik, kimlik/bağlantı ve görünüm olarak ayır. Kabul edilmeyen farkları düzeltmeden tüm rehbere yayma.
+
+Bu örnekte gerçek bir üretici geçişi yapılmıyor. Eski sürümün hatalı davranışını da körlemesine korumak gerekmez: düzeltilecek hata ayrı karar olsun, bilinçli değişiklik ile kazara kayıp birbirine karışmasın. Bu son ayrım bizim uygulama önerimizdir.
 
 <a id="goals-ne-zaman-yararli"></a>
 
@@ -1440,7 +1513,20 @@ Bu tablo modelin hiç hata yapmadığını söylemez. Yalnız çözümü seçmed
 
 Bir model veya talimat değişikliğini değerlendirirken aynı başlangıç dosyası, aynı hedef ve aynı bitiş ölçütünü kullan. Kolay bir yazım düzeltmesindeki başarıyı karmaşık hata ayıklamaya genelleme. Senin işlerinden birkaç temsilî tür seç: kaynaklı metin, kod hatası, görsel karar, veri dönüşümü gibi.
 
-Karşılaştırmada yalnız sonucu değil, senin müdahale ihtiyacını da gözle. Kaç kez yanlış varsayımı düzelttin? Hangi adım tekrarlandı? Gerçek süre veya kullanım ölçülmediyse sayısal hız iddiası ekleme. Bir kez iyi çıkan örnek eğilim gösterebilir; evrensel sıralama oluşturmaz.
+Karşılaştırmada sonucu, müdahale ihtiyacını ve örnek bazında tutarlılığı birlikte gözle. Gerçek süre veya kullanım ölçülmediyse sayısal hız iddiası ekleme. Tek başarılı deneme evrensel sıralama oluşturmaz.
+
+**Kurgu karşılaştırma:** Aşağıdaki iki koşumun toplamı aynı; geçen işler farklı.
+
+| Örnek | İlk koşum | İkinci koşum |
+|---|---|---|
+| Eksik ödemeyi koruma | Geçti | Kaldı |
+| Belirsiz takvim kaydını ayırma | Kaldı | Geçti |
+| Kaynaktaki tarihi doğru aktarma | Geçti | Geçti |
+| Toplam | 2/3 | 2/3 |
+
+Bu tablo gerçek model ölçümü değildir. Öğrettiği ayrım şu: aynı başarı oranı, aynı güvenilir davranış demek olmayabilir. Model içeren değerlendirmede birkaç temsilî örneği aynı koşullarda tekrar çalıştır; hangi örneklerin değişken olduğunu ve kaç müdahale istediğini kaydet. Önbellekten eski cevabı yeniden okumak yeni deneme sayılmaz. [Tutarlılık değerlendirmesi](https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals)
+
+Bu tekrarlar değişken model davranışını araştırır. Değişmeyen deterministik testleri, yani aynı girdide aynı sonucu veren kontrolleri gerekçesiz yeniden çalıştırma önerisi değildir.
 
 <a id="i-yi-yontemi-sakla-gecici-ayrintiyi-birak"></a>
 
@@ -1449,6 +1535,25 @@ Karşılaştırmada yalnız sonucu değil, senin müdahale ihtiyacını da gözl
 Tekrarlanan düzeltmeyi uygun yere taşı: genel tercih global talimata, proje kuralı `AGENTS.md` dosyasına, tekrar eden yöntem skill'e, mekanik dönüşüm betiğe. Her olay için yeni bir katman ekleme. Aynı işi iki talimat farklı biçimde tarif ediyorsa birleştir.
 
 > Son çalışmadaki tekrarları incele. Hangisi eksik bilgi, hangisi araç sınırı, hangisi kalıcı yöntem sorunu? Yalnız tekrar etmesi muhtemel ve somut karşılığı olan dersleri proje notlarına yaz.
+
+<a id="duzeltmeni-kucuk-bir-kabul-ornegine-donustur"></a>
+
+### Düzeltmeni küçük bir kabul örneğine dönüştür
+
+Bir kuralın dosyaya yazılması, sonraki işte uygulandığını göstermez. Girdi, beklenen davranış, kaçınılacak hata ve kontrol yöntemi birlikte saklanırsa aynı ders yeniden sınanabilir. Modelin önerdiği değerlendirme ölçütünü de insan gözden geçirmeli. [Geri bildirimden değerlendirmeye](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop)
+
+[Veri örneğimizden](is-veri.md) bir kontrol kartı:
+
+| Alan | İçerik |
+|---|---|
+| Girdi | K04’ün tahsilatı boş olan altı satırlık ham CSV. |
+| Beklenen | K04 boş kalır; bilinen tahsilat 1.800 TL diye adlandırılır. |
+| Kaçınılacak hata | Boşluğu 0/600 ile doldurmak veya 1.800 TL’yi kesin toplam diye sunmak. |
+| Kontrol | Kayıt kimlikleri ve değerler betikle; raporun iddiası kaynakla karşılaştırılarak incelenir. |
+
+> Bu düzeltmeyi gelecekte kullanabileceğimiz bir kontrol örneğine dönüştür. Başlangıç girdisini, beklenen sonucu ve yanlış sayılacak davranışı kaydet. Yeni yöntemi aynı örnekte dene; yalnız talimat metninin değiştiğini başarı sayma.
+
+Kart, mevcut kurgu dosyalara dayanır; geçmişte yaşandığı iddia edilen yeni bir vaka değildir. Sayı ve kimlik gibi kesin koşulları kodla kontrol etmek, anlam ve iddia gücünü ayrıca değerlendirmek daha açıklanabilir sonuç verir. Her küçük iş için test sistemi kurmak gerekmez; tekrar eden veya etkisi önemli düzeltmelerle başla.
 
 <a id="guncellemede-neye-bakmali"></a>
 
@@ -1998,7 +2103,7 @@ Shell komutuna kullanıcı metni yerleştirmek kod ile veriyi karıştırabilir.
 
 Bir sonraki programın okuyacağı çıktı için alanları ve türleri belirle. Serbest metindeki “tamam” sözcüğünü başarı bayrağı yapmak kırılgandır. JSON şemasında durum, üretilen dosya ve doğrulama sonucunu ayrı alanlarda tut. Şemaya uymak, alanların doğru olduğu anlamına gelmez; hedefi yine kontrol et. [Etkileşimsiz çalışma](https://learn.chatgpt.com/docs/non-interactive-mode)
 
-Kurgu veri dönüşümünde sonuç şu alanları taşıyabilir: `status`, `input_rows`, `output_rows`, `unresolved_rows`, `output_file`. Bu alanlar eğitim örneğidir, ürünün zorunlu API'si değildir. Çıktı parse edilemiyorsa başarı varsayılanı kullanma.
+Kurgu veri dönüşümünde sonuç şu alanları taşıyabilir: `status`, `input_rows`, `output_rows`, `unresolved_rows`, `output_file`. Bu alanlar eğitim örneğidir, ürünün zorunlu API'si değildir. Çıktı parse edilemiyorsa başarı varsayılanı kullanma. Eski GitLab Cookbook tarifinin güncelleme notu da bu riski açıkça uyarıyor: gövdedeki geçersiz çıktıyı boş bulgu listesine çeviren örneği ve kullanımdan kalkmış `--full-auto` bayrağını güncel öneri gibi kopyalama. “Bulgu yok”, “kontrol başarısız” ve “kontrol çalışmadı” ayrı durumlar olmalı. [Tarihsel tarif ve güncelleme uyarısı](https://developers.openai.com/cookbook/examples/codex/secure_quality_gitlab)
 
 <a id="tekrar-baslatilabilir-uzun-isler"></a>
 
@@ -2240,6 +2345,8 @@ Kurallar yerleştiğinde otomasyona şu işi ver: “Belirlenen klasördeki yeni
 **Teslim:** Kaynak korunmuş, temiz CSV açılabilir, kimlik eşlemesi tamam, eksik tutar görünür ve rapordaki dört sonuç kaynakla tutarlı. Gerçek işte XLSX gerekiyorsa hesaplamaları ve düzenlenebilirliği o dosyada ayrıca kontrol et.
 
 **Başka işte kullanacağın ders:** Kimliği koru, bilinmeyeni sıfıra çevirme, ölçünün neyi temsil ettiğini yaz. Bu üç karar müşteri listesi, stok, anket veya bütçe dosyasında da yararlıdır. Sonraki örnekte aynı netlik görsel bir düzeltmeye uygulanıyor: [sayfadan doğrulanmış yayına](is-sayfa.md).
+
+Bu sonucu grafiğe taşırken sayıları [veriden çizdirme yöntemini](13-tasarim.md#sayisal-grafik-bir-resimden-daha-fazla-dogruluk-ister), aynı hatanın dönmesini önlemek için [kontrol kartını](18-iyilestirmek.md#duzeltmeni-kucuk-bir-kabul-ornegine-donustur) kullanabilirsin.
 
 
 # Görsel sorundan doğrulanmış yayına
@@ -2566,7 +2673,7 @@ Mevcut 107 maddenin kimliği, bağlantı çapası ve içeriği korunur. Her madd
 
 Ürün açıklamaları ile deneyimden çıkan öneriler farklı kanıtlardır. Aşağıdaki resmî sayfalar indirilip rehberin ilgili iddiaları için gerekli bölümleri incelendi. Listenin tamamını baştan sona satır satır denetlediğimiz veya her davranışı çalıştırdığımız iddia edilmez. Menü adları resmî belgedeki adları izler; kurulu sürüm ve hesabında ayrıca farklılık olabilir.
 
-**Tarih:** 29 Ekim 2026. Kaynak URL'si, indirme durumu ve içerik SHA-256 özeti [kaynak manifestinde](kaynak-manifest.json) kayıtlıdır. SHA-256, kontrol edilen dosya sürümünü ayırt eder; doğruluğunu veya gelecekte değişmeyeceğini garanti etmez. Kaynakların tam metin kopyaları bu depoda yayımlanmaz.
+**Kontrol tarihleri:** Her kaynağın tarihi aşağıdaki dizinde ayrı gösterilir. Kaynak URL'si, indirme durumu ve içerik SHA-256 özeti [kaynak manifestinde](kaynak-manifest.json) kayıtlıdır. SHA-256, kontrol edilen dosya sürümünü ayırt eder; doğruluğunu veya gelecekte değişmeyeceğini garanti etmez. Kaynakların tam metin kopyaları bu depoda yayımlanmaz.
 
 Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu öğretim örnekleri [senaryo ekinde](senaryolar.md) açıklanır. Özel proje dosyaları ve ham sohbetler kamuya eklenmez. Tarihli ürün bilgisi ile kendi iş akışı önerimizi aynı kesinlikle sunmayız.
 
@@ -2646,6 +2753,13 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Long-running work](https://learn.chatgpt.com/docs/long-running-work) | 2026-10-29 |
 | [Web search](https://learn.chatgpt.com/docs/web-search) | 2026-10-29 |
 | [Sign in with ChatGPT](https://learn.chatgpt.com/docs/sign-in-with-chatgpt) | 2026-10-29 |
+| [Build an Agent Improvement Loop with Traces, Evals, and Codex](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop) | 2026-10-30 |
+| [Build iterative repair loops with Codex](https://developers.openai.com/cookbook/examples/codex/build_iterative_repair_loops_with_codex) | 2026-10-30 |
+| [Modernizing your Codebase with Codex](https://developers.openai.com/cookbook/examples/codex/code_modernization) | 2026-10-30 |
+| [Iterating development workflows with Codex](https://developers.openai.com/cookbook/examples/codex/iterating-development-workflows-with-codex) | 2026-10-30 |
+| [Automating Code Quality and Security Fixes with Codex CLI in GitLab](https://developers.openai.com/cookbook/examples/codex/secure_quality_gitlab) | 2026-10-30 |
+| [Generate Transparent Image Assets for Campaigns and Presentations](https://developers.openai.com/cookbook/examples/multimodal/transparent-image-assets-for-campaigns-and-presentations) | 2026-10-30 |
+| [Harness-aware evaluation of plugins](https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals) | 2026-10-30 |
 
 <a id="arayuz-gorselleri-ve-atif"></a>
 

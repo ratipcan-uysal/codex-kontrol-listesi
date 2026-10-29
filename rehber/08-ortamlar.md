@@ -1,6 +1,6 @@
 # 8. Dosyalar ve çalışma ortamları
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Bir dosyanın nerede değiştiği, o dosyayla ne yapıldığı kadar önemlidir. “Bende çalışıyor” ifadesinin anlamı çalışma ortamı açıklanınca ortaya çıkar.
 

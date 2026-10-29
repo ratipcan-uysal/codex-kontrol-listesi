@@ -1,6 +1,6 @@
 # 10. Bağlantılar, MCP, plugin ve skill
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Codex'e yeni bir yetenek eklerken önce eksik olanı adlandır: veriye erişim mi, doğru yöntemi bilmek mi, tekrarlı işlemi yürütmek mi? Her ihtiyaç için yeni plugin kurmak gerekmez.
 
@@ -50,6 +50,24 @@ Aynı kuralla bin dosya adı değişiyorsa betik daha uygundur. Kaynak kalitesin
 ## Record & Replay
 
 Desteklenen macOS kurulumunda Plugins → + → Record a skill yolu bilgisayarda gösterdiğin akıştan skill üretmeye yardımcı olur. Computer Use kurulumu gerekir. Kaydı durdurduktan sonra oluşan yönergeleri incele: sabit kişi adı, tarih, dosya yolu veya tek seferlik tıklama genel kurala dönüşmüş olabilir. Replay, değişen ekranda araçlarla yürütülen akıştır; her pikseli aynı sırayla basan kusursuz makro garantisi değildir. [Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay)
+
+<a id="arac-dogru-calisti-cevap-dogru-mu"></a>
+
+## Araç doğru çalıştı; cevap doğru mu?
+
+Kurulumdan sonraki okuma denemesi yalnız başlangıçtır. Araç sonucunu, Codex’in seçimini ve son cevabı ayrı incele. Kontrollü araç testinin başarısı, gerçek uygulamadaki talimatlar ve araç erişimiyle aynı davranışın oluşacağını garanti etmez. [Plugin değerlendirmesi](https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals)
+
+**Kurgu takvim örneği:** “Yarınki Atölye toplantısının saatini söyle.”
+
+| Kontrol | Doğru davranış | Kaçabilecek hata |
+|---|---|---|
+| Araç | Seçilen günün kayıtlarını getirir. | Yanlış tarih veya saat dilimi kullanılır. |
+| Araç seçimi | Doğru takvimi ve ilgili kaydı seçer. | Aynı adlı iki toplantıdan birini gerekçesiz seçer. |
+| Son cevap | Seçilen kaydın 14.00 saatini doğru aktarır. | Araç 14.00 döndürdüğü hâlde cevap 15.00 der. |
+
+> Aynı isteği bu sohbette sınayalım. Hangi kaydı seçtiğini ve araçtaki saatle son cevabın eşleştiğini göster. İki kayıt ayırt edilemiyorsa gerekli ayrımı sor; kayıt bulunmazsa saat uydurma. Takvimi değiştirme.
+
+İlk örneği özellikle belirsiz veya sonuçsuz bir durumla karşılaştır. Bir aracın çağrılmış olması, doğru kullanıldığına tek başına kanıt değildir. Genel kanıt ölçütleri [doğrulama bölümünde](12-dogrulama.md).
 
 <a id="baglanti-calismiyorsa"></a>
 

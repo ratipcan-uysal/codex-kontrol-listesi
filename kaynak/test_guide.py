@@ -10,8 +10,9 @@ import unittest
 import csv
 import io
 from decimal import Decimal
+from datetime import date
 from collections import Counter
-from content import GUIDE_CHAPTERS,GUIDE_APPENDICES,GUIDE_FEATURES,GUIDE_ITEM_MAP,GUIDE_SOURCES,GUIDE_FIGURES,GUIDE_PATHS,GUIDE_FLOWS,GUIDE_EXAMPLES,SECTIONS
+from content import GUIDE_UPDATED,GUIDE_CHAPTERS,GUIDE_APPENDICES,GUIDE_FEATURES,GUIDE_ITEM_MAP,GUIDE_SOURCES,GUIDE_FIGURES,GUIDE_PATHS,GUIDE_FLOWS,GUIDE_EXAMPLES,SECTIONS
 from guide_build import ROOT,OUT,build_guide,validate_guide,render_markdown,slugify,inline,markdown_output
 
 class Links(HTMLParser):
@@ -41,7 +42,8 @@ class GuideTests(unittest.TestCase):
         for s in GUIDE_SOURCES.values():
             self.assertIn(urlsplit(s['url']).netloc,{'learn.chatgpt.com','developers.openai.com','platform.openai.com'})
             self.assertEqual(s['status'],200)
-            self.assertEqual(s['checked'],'2026-10-29')
+            self.assertEqual(date.fromisoformat(s['checked']).isoformat(),s['checked'])
+            self.assertLessEqual(date.fromisoformat(s['checked']),date.fromisoformat(GUIDE_UPDATED))
             self.assertRegex(s['sha256'],r'^[a-f0-9]{64}$')
 
     def test_all_28_app_commands_explained(self):

@@ -1,0 +1,37 @@
+{
+  "base": "92feba7899637ce4fe3238383fc7ca715b1afd4d",
+  "changed_chapters": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    18
+  ],
+  "changed_appendices": [
+    "ileri-teknik",
+    "is-veri"
+  ],
+  "preserved_old_html_anchors": 229,
+  "missing_anchors": [],
+  "checklist_107_all_fields_unchanged": true,
+  "source_count": 77,
+  "existing_sources_unchanged": true,
+  "unchanged_fields": [
+    "SOURCES",
+    "SECTIONS",
+    "TOP_TEN",
+    "GUIDE_DATE",
+    "GUIDE_INTRO",
+    "GUIDE_FEATURES",
+    "GUIDE_ITEM_MAP",
+    "GUIDE_FIGURES",
+    "GUIDE_PATHS",
+    "GUIDE_FLOWS",
+    "GUIDE_EXAMPLES"
+  ],
+  "python_tests": 24,
+  "python_failures": 0,
+  "javascript_syntax": "PASS",
+  "diff_check": "PASS"
+}

@@ -1,6 +1,6 @@
 # 6. Bağlam, bellek ve devamlılık
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Codex'in bir bilgiyi daha önce duymuş olması, o bilginin şu anda eksiksiz ve güncel biçimde elinde olduğu anlamına gelmez. Devamlılık için bilginin nerede tutulduğunu bilmek gerekir.
 

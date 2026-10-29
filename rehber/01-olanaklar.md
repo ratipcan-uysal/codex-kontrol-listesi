@@ -1,6 +1,6 @@
 # 1. Codex ile neler yapabilirsin?
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Codex ile çalışırken kazanacağın beceri, bir isteği güzel cümlelerle anlatmaktan daha geniş. Dosyayı bulmak, doğru ortamda çalışmak, bir fikri görünür çıktıya çevirmek ve sonucun gerçekten istediğin şey olup olmadığını anlamak aynı işin parçaları. Bu rehber bunları birlikte öğretiyor.
 

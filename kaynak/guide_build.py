@@ -6,7 +6,7 @@ import re
 import hashlib
 import struct
 from urllib.parse import urlsplit
-from content import (GUIDE_DATE, GUIDE_INTRO, GUIDE_CHAPTERS, GUIDE_APPENDICES,
+from content import (GUIDE_DATE, GUIDE_UPDATED, GUIDE_INTRO, GUIDE_CHAPTERS, GUIDE_APPENDICES,
                      GUIDE_SOURCES, GUIDE_FEATURES, GUIDE_ITEM_MAP, GUIDE_FIGURES,
                      GUIDE_PATHS, GUIDE_FLOWS, GUIDE_EXAMPLES, SECTIONS)
 
@@ -211,7 +211,7 @@ def page_html(title, markdown, current, prev=None, next_=None):
     return f'''<!doctype html>
 <html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{html.escape(title)} · Codex rehberi</title><meta name="description" content="Gerçek deneyimler, kaynaklı açıklamalar ve kurgu senaryolarla Türkçe Codex uygulaması rehberi."><style>{css}</style></head>
 <body class="guide"><a class="skip" href="#icerik">İçeriğe geç</a><header class="topbar"><a class="brand" href="index.html"><span class="brandmark" aria-hidden="true">›_</span>Codex <span class="brandlight">/ derinlemesine rehber</span></a><a class="top-source" href="../index.html">107 madde ↗</a></header>
-<div class="layout"><aside class="sidebar"><div class="eyebrow">İÇİNDEKİLER</div><nav aria-label="Rehber bölümleri">{nav}</nav></aside><main id="icerik"><nav class="breadcrumb" aria-label="Sayfa yolu"><a href="index.html">Rehber</a> / <a href="{current+'.md' if current!='index' else 'README.md'}">Markdown</a></nav><div class="eyebrow">BELGE KONTROLÜ · {GUIDE_DATE}</div><h1>{html.escape(title)}</h1>{local}<article class="prose">{rendered}</article><nav class="page-next" aria-label="Sıralı okuma">{''.join(moves)}</nav><footer><span>© 2026 Ratipcan Uysal · Metin: <a href="../LICENSE">CC BY 4.0</a><br>Arayüz görselleri: OpenAI; bu lisansa dahil değildir.<br>Bağımsız rehber; resmî OpenAI yayını değildir.</span><a href="kaynaklar.html">Kaynak ve erişim sınırları</a></footer></main></div></body></html>'''
+<div class="layout"><aside class="sidebar"><div class="eyebrow">İÇİNDEKİLER</div><nav aria-label="Rehber bölümleri">{nav}</nav></aside><main id="icerik"><nav class="breadcrumb" aria-label="Sayfa yolu"><a href="index.html">Rehber</a> / <a href="{current+'.md' if current!='index' else 'README.md'}">Markdown</a></nav><div class="eyebrow">İÇERİK GÜNCELLEMESİ · {GUIDE_UPDATED}</div><h1>{html.escape(title)}</h1>{local}<article class="prose">{rendered}</article><nav class="page-next" aria-label="Sıralı okuma">{''.join(moves)}</nav><footer><span>© 2026 Ratipcan Uysal · Metin: <a href="../LICENSE">CC BY 4.0</a><br>Arayüz görselleri: OpenAI; bu lisansa dahil değildir.<br>Bağımsız rehber; resmî OpenAI yayını değildir.</span><a href="kaynaklar.html">Kaynak ve erişim sınırları</a></footer></main></div></body></html>'''
 
 
 def build_guide():
@@ -250,7 +250,7 @@ def build_guide():
     pages.append(dict(slug='esleme',title='107 maddenin rehberle eşlemesi',body=mapping_md))
     source_md='''Ürün açıklamaları ile deneyimden çıkan öneriler farklı kanıtlardır. Aşağıdaki resmî sayfalar indirilip rehberin ilgili iddiaları için gerekli bölümleri incelendi. Listenin tamamını baştan sona satır satır denetlediğimiz veya her davranışı çalıştırdığımız iddia edilmez. Menü adları resmî belgedeki adları izler; kurulu sürüm ve hesabında ayrıca farklılık olabilir.
 
-**Tarih:** 29 Ekim 2026. Kaynak URL'si, indirme durumu ve içerik SHA-256 özeti [kaynak manifestinde](kaynak-manifest.json) kayıtlıdır. SHA-256, kontrol edilen dosya sürümünü ayırt eder; doğruluğunu veya gelecekte değişmeyeceğini garanti etmez. Kaynakların tam metin kopyaları bu depoda yayımlanmaz.
+**Kontrol tarihleri:** Her kaynağın tarihi aşağıdaki dizinde ayrı gösterilir. Kaynak URL'si, indirme durumu ve içerik SHA-256 özeti [kaynak manifestinde](kaynak-manifest.json) kayıtlıdır. SHA-256, kontrol edilen dosya sürümünü ayırt eder; doğruluğunu veya gelecekte değişmeyeceğini garanti etmez. Kaynakların tam metin kopyaları bu depoda yayımlanmaz.
 
 Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu öğretim örnekleri [senaryo ekinde](senaryolar.md) açıklanır. Özel proje dosyaları ve ham sohbetler kamuya eklenmez. Tarihli ürün bilgisi ile kendi iş akışı önerimizi aynı kesinlikle sunmayız.
 
@@ -286,11 +286,11 @@ Yerel çıktı, uzak depoya gönderim ve canlı yayın ayrı durumlardır. Eski 
         if prev: navigation+=f' · [← {prev["title"]}]({prev["slug"]}.md)'
         if next_: navigation+=f' · [{next_["title"]} →]({next_["slug"]}.md)'
         title=(str(p['number'])+'. ' if 'number' in p else '')+p['title']
-        (OUT/(p['slug']+'.md')).write_text(f'# {title}\n\nBelge kontrolü: {GUIDE_DATE}.\n\n'+markdown_output(p['body'])+navigation+'\n')
+        (OUT/(p['slug']+'.md')).write_text(f'# {title}\n\nİçerik güncellemesi: {GUIDE_UPDATED}. Kaynak kontrol tarihleri kaynak dizinindedir.\n\n'+markdown_output(p['body'])+navigation+'\n')
         (OUT/(p['slug']+'.html')).write_text(page_html(title,p['body'],p['slug'],prev,next_))
         full += ['\n# '+title,markdown_output(p['body'])]
     (OUT/'tam-rehber.md').write_text('\n\n'.join(full)+'\n')
-    (OUT/'kaynak-manifest.json').write_text(json.dumps(dict(checked=GUIDE_DATE,sources=GUIDE_SOURCES),ensure_ascii=False,indent=2)+'\n')
+    (OUT/'kaynak-manifest.json').write_text(json.dumps(dict(initial_checked=GUIDE_DATE,updated=GUIDE_UPDATED,sources=GUIDE_SOURCES),ensure_ascii=False,indent=2)+'\n')
     (OUT/'kapsam.json').write_text(json.dumps(dict(date=GUIDE_DATE,features=GUIDE_FEATURES,item_map=GUIDE_ITEM_MAP),ensure_ascii=False,indent=2)+'\n')
     (OUT/'gorsel-manifest.json').write_text(json.dumps(dict(date=GUIDE_DATE,figures=GUIDE_FIGURES),ensure_ascii=False,indent=2)+'\n')
     return dict(chapters=18,appendices=len(pages)-18,features=len(GUIDE_FEATURES),mapped=len(GUIDE_ITEM_MAP))

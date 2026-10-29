@@ -1,6 +1,6 @@
 # Sade terimler sözlüğü
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Bir terimi bilmek, bütün teknik ayrıntısını öğrenmeyi gerektirmez. Aşağıdaki karşılıklar rehberdeki kararları takip etmek için yeterli başlangıcı verir.
 

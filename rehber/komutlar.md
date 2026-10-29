@@ -1,6 +1,6 @@
 # Komutlar ve kısayollar
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Bir komutun başındaki işaret, nerede kullanılacağını değiştirir. Masaüstü mesaj alanındaki `/review`, işletim sistemi terminalindeki `codex review` ve doğal dilde “incele” aynı giriş biçimi değildir. Önce doğru yüzeyi seç.
 

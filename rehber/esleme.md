@@ -1,6 +1,6 @@
 # 107 maddenin rehberle eşlemesi
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Mevcut 107 maddenin kimliği, bağlantı çapası ve içeriği korunur. Her madde aşağıda bir ana açıklamaya bağlanır; ilgili bölümden kontrol listesine geri dönülebilir. Dar teknik konular ileri eklerde ve özgün maddede ayrıntılı kalır. Bu eşleme, bilgiyi kaldırıp yerine yalnız genel bölüm adı koymak için kullanılmaz.
 

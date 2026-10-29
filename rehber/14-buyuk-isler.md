@@ -1,6 +1,6 @@
 # 14. Büyük işleri ve paralel çalışmayı yönetmek
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Büyük işi parçalamak, bütün dosyaları eşit gruplara ayırmak değildir. Parçalar ayrı sonuç üretebilmeli ve bir araya geldiklerinde aynı hedefe hizmet etmelidir.
 
@@ -31,6 +31,24 @@ Bu, yeni kullanıcı sohbetleri oluşturma talimatı değildir. Yeni sohbet gere
 İki çalışma aynı kavrama farklı ad verir, biri eski dosyayı okur, diğeri farklı sürümde test yapar. “Her parça geçti” sonucu birleşmiş ürünün çalıştığını göstermez. Başlangıç sürümü, ortak veri sözleşmesi ve dokunulacak alanlar belirlenirse bu risk azalır.
 
 Son aşamada değişikliklerin aynı kaynak üzerinde buluştuğunu kontrol et. Çelişen önerileri sessizce birleştirmek yerine hangisinin neden seçildiğini kaydet. Bağımsız incelemede kaynak değişiyorsa eski bulgunun hâlâ geçerli olup olmadığını yeniden değerlendir.
+
+<a id="buyuk-donusumde-ayni-girdiyi-iki-surumde-calistir"></a>
+
+## Büyük dönüşümde aynı girdiyi iki sürümde çalıştır
+
+Bir sistemi yeniden yazarken önce sınırlı bir kullanıcı akışı seç. Eski ve yeni sürüme aynı girdiyi ver; hangi çıktıların eşleşmesi, hangi farkların kabul edilmesi gerektiğini belirle. Bu, davranış eşliğini sınamaktır. [Modernizasyon örneği](https://developers.openai.com/cookbook/examples/codex/code_modernization)
+
+**Bu rehbere uyarlanmış kurgu:** İçeriği HTML’ye dönüştüren üreticiyi değiştireceğiz. “Yeni sayfa açılıyor” tek başına kabul ölçütü olamaz.
+
+| Ortak girdi | Korunacak sonuç | Ayrı kararla değişebilecek yön |
+|---|---|---|
+| Aynı 107 kontrol maddesi | Madde kimlikleri ve bağlantı hedefleri | Yazı tipi ve boşluklar |
+| Eski işaret yedeği | İşaretlerin aynı maddelere yüklenmesi | İşaret sayacının görünümü |
+| Aynı rehber metni | Bölüm sırası ve eski çapalar | Sayfa düzeni |
+
+> Önce tek bir bölümle eski ve yeni üreticiyi aynı girdide karşılaştır. Farkları içerik, kimlik/bağlantı ve görünüm olarak ayır. Kabul edilmeyen farkları düzeltmeden tüm rehbere yayma.
+
+Bu örnekte gerçek bir üretici geçişi yapılmıyor. Eski sürümün hatalı davranışını da körlemesine korumak gerekmez: düzeltilecek hata ayrı karar olsun, bilinçli değişiklik ile kazara kayıp birbirine karışmasın. Bu son ayrım bizim uygulama önerimizdir.
 
 <a id="goals-ne-zaman-yararli"></a>
 

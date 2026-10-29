@@ -1,5 +1,6 @@
 {
-  "checked": "2026-10-29",
+  "initial_checked": "2026-10-29",
+  "updated": "2026-10-30",
   "sources": {
     "app": {
       "url": "https://learn.chatgpt.com/docs/app",
@@ -490,6 +491,55 @@
       "status": 200,
       "title": "Sign in with ChatGPT",
       "checked": "2026-10-29"
+    },
+    "cb-improvement": {
+      "url": "https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop",
+      "title": "Build an Agent Improvement Loop with Traces, Evals, and Codex",
+      "sha256": "e4974f3b65d46cea41ba7561497e8602ad0731cfc5d1ab4d976c4f0246ea610a",
+      "status": 200,
+      "checked": "2026-10-30"
+    },
+    "cb-repair": {
+      "url": "https://developers.openai.com/cookbook/examples/codex/build_iterative_repair_loops_with_codex",
+      "title": "Build iterative repair loops with Codex",
+      "sha256": "fe7eab303096479fa593b463ec18e8d3a700490cd3fe79326004ea2d824941e2",
+      "status": 200,
+      "checked": "2026-10-30"
+    },
+    "cb-modernization": {
+      "url": "https://developers.openai.com/cookbook/examples/codex/code_modernization",
+      "title": "Modernizing your Codebase with Codex",
+      "sha256": "63a65eb12f72144943c6bc1a03534a26025cae8d911eb9c90ced901998ea1822",
+      "status": 200,
+      "checked": "2026-10-30"
+    },
+    "cb-workflows": {
+      "url": "https://developers.openai.com/cookbook/examples/codex/iterating-development-workflows-with-codex",
+      "title": "Iterating development workflows with Codex",
+      "sha256": "ac2e49b839cbd65fc8f812f4a8a604e675eec686af7377b2965fa3e57a1b47b1",
+      "status": 200,
+      "checked": "2026-10-30"
+    },
+    "cb-gitlab": {
+      "url": "https://developers.openai.com/cookbook/examples/codex/secure_quality_gitlab",
+      "title": "Automating Code Quality and Security Fixes with Codex CLI in GitLab",
+      "sha256": "9c9fe860d0c33da39c2794b4c3eb7f0ffa1b1bef857e6e23825ebd4d541399df",
+      "status": 200,
+      "checked": "2026-10-30"
+    },
+    "cb-transparent": {
+      "url": "https://developers.openai.com/cookbook/examples/multimodal/transparent-image-assets-for-campaigns-and-presentations",
+      "title": "Generate Transparent Image Assets for Campaigns and Presentations",
+      "sha256": "4f710c6386dbb29933c10372ddc0568d76f0350f4f9234d8a34141bc1d934766",
+      "status": 200,
+      "checked": "2026-10-30"
+    },
+    "cb-plugin-evals": {
+      "url": "https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals",
+      "title": "Harness-aware evaluation of plugins",
+      "sha256": "6763893e62b931af668486334344309bbb5eaf8fa4d5af8083d2446f4dc7fba8",
+      "status": 200,
+      "checked": "2026-10-30"
     }
   }
 }

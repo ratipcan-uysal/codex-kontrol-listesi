@@ -1,6 +1,6 @@
 # 7. Model, düşünme seviyesi, hız ve kullanım
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 En yüksek düşünme ayarı her işin en iyi seçimi değildir. İyi seçim, görevin hangi kısmının zor olduğuna bağlıdır: karar vermek, kaynak bulmak, dosya düzenlemek veya uzun süren bir aracı beklemek.
 

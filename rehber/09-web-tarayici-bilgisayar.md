@@ -1,6 +1,6 @@
 # 9. İnternet, tarayıcı ve bilgisayar kullanımı
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Web araştırması, tarayıcı kontrolü ve bilgisayar kullanımı üç farklı iştir. Bir sayfanın metnini bulmak için bütün bilgisayarı kontrol etmeye gerek yoktur. Bir düğmenin gerçekten çalıştığını görmek için de yalnız kaynak metni yeterli olmaz.
 

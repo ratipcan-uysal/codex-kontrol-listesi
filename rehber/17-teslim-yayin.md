@@ -1,6 +1,6 @@
 # 17. Teslim, yayın ve geri dönüş
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Bir işin tamamlanma noktası, kullanıcının istediği hedefte tanımlanır. Yerel dosya üretimi, canlı yayın isteyen bir görev için ara adımdır. Taslak isteyen görevde ise yayın yapmak kapsamı aşar.
 

@@ -1,6 +1,6 @@
 # 18. Kendi kullanımını sürekli iyileştirmek
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Kullanımını geliştirmek için bütün ayarları açmak veya her yeni modeli denemek gerekmez. En çok tekrarlanan sürtüşmenin nedenini bulmak daha fazla değer üretebilir.
 
@@ -25,7 +25,20 @@ Bu tablo modelin hiç hata yapmadığını söylemez. Yalnız çözümü seçmed
 
 Bir model veya talimat değişikliğini değerlendirirken aynı başlangıç dosyası, aynı hedef ve aynı bitiş ölçütünü kullan. Kolay bir yazım düzeltmesindeki başarıyı karmaşık hata ayıklamaya genelleme. Senin işlerinden birkaç temsilî tür seç: kaynaklı metin, kod hatası, görsel karar, veri dönüşümü gibi.
 
-Karşılaştırmada yalnız sonucu değil, senin müdahale ihtiyacını da gözle. Kaç kez yanlış varsayımı düzelttin? Hangi adım tekrarlandı? Gerçek süre veya kullanım ölçülmediyse sayısal hız iddiası ekleme. Bir kez iyi çıkan örnek eğilim gösterebilir; evrensel sıralama oluşturmaz.
+Karşılaştırmada sonucu, müdahale ihtiyacını ve örnek bazında tutarlılığı birlikte gözle. Gerçek süre veya kullanım ölçülmediyse sayısal hız iddiası ekleme. Tek başarılı deneme evrensel sıralama oluşturmaz.
+
+**Kurgu karşılaştırma:** Aşağıdaki iki koşumun toplamı aynı; geçen işler farklı.
+
+| Örnek | İlk koşum | İkinci koşum |
+|---|---|---|
+| Eksik ödemeyi koruma | Geçti | Kaldı |
+| Belirsiz takvim kaydını ayırma | Kaldı | Geçti |
+| Kaynaktaki tarihi doğru aktarma | Geçti | Geçti |
+| Toplam | 2/3 | 2/3 |
+
+Bu tablo gerçek model ölçümü değildir. Öğrettiği ayrım şu: aynı başarı oranı, aynı güvenilir davranış demek olmayabilir. Model içeren değerlendirmede birkaç temsilî örneği aynı koşullarda tekrar çalıştır; hangi örneklerin değişken olduğunu ve kaç müdahale istediğini kaydet. Önbellekten eski cevabı yeniden okumak yeni deneme sayılmaz. [Tutarlılık değerlendirmesi](https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals)
+
+Bu tekrarlar değişken model davranışını araştırır. Değişmeyen deterministik testleri, yani aynı girdide aynı sonucu veren kontrolleri gerekçesiz yeniden çalıştırma önerisi değildir.
 
 <a id="i-yi-yontemi-sakla-gecici-ayrintiyi-birak"></a>
 
@@ -34,6 +47,25 @@ Karşılaştırmada yalnız sonucu değil, senin müdahale ihtiyacını da gözl
 Tekrarlanan düzeltmeyi uygun yere taşı: genel tercih global talimata, proje kuralı `AGENTS.md` dosyasına, tekrar eden yöntem skill'e, mekanik dönüşüm betiğe. Her olay için yeni bir katman ekleme. Aynı işi iki talimat farklı biçimde tarif ediyorsa birleştir.
 
 > Son çalışmadaki tekrarları incele. Hangisi eksik bilgi, hangisi araç sınırı, hangisi kalıcı yöntem sorunu? Yalnız tekrar etmesi muhtemel ve somut karşılığı olan dersleri proje notlarına yaz.
+
+<a id="duzeltmeni-kucuk-bir-kabul-ornegine-donustur"></a>
+
+### Düzeltmeni küçük bir kabul örneğine dönüştür
+
+Bir kuralın dosyaya yazılması, sonraki işte uygulandığını göstermez. Girdi, beklenen davranış, kaçınılacak hata ve kontrol yöntemi birlikte saklanırsa aynı ders yeniden sınanabilir. Modelin önerdiği değerlendirme ölçütünü de insan gözden geçirmeli. [Geri bildirimden değerlendirmeye](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop)
+
+[Veri örneğimizden](is-veri.md) bir kontrol kartı:
+
+| Alan | İçerik |
+|---|---|
+| Girdi | K04’ün tahsilatı boş olan altı satırlık ham CSV. |
+| Beklenen | K04 boş kalır; bilinen tahsilat 1.800 TL diye adlandırılır. |
+| Kaçınılacak hata | Boşluğu 0/600 ile doldurmak veya 1.800 TL’yi kesin toplam diye sunmak. |
+| Kontrol | Kayıt kimlikleri ve değerler betikle; raporun iddiası kaynakla karşılaştırılarak incelenir. |
+
+> Bu düzeltmeyi gelecekte kullanabileceğimiz bir kontrol örneğine dönüştür. Başlangıç girdisini, beklenen sonucu ve yanlış sayılacak davranışı kaydet. Yeni yöntemi aynı örnekte dene; yalnız talimat metninin değiştiğini başarı sayma.
+
+Kart, mevcut kurgu dosyalara dayanır; geçmişte yaşandığı iddia edilen yeni bir vaka değildir. Sayı ve kimlik gibi kesin koşulları kodla kontrol etmek, anlam ve iddia gücünü ayrıca değerlendirmek daha açıklanabilir sonuç verir. Her küçük iş için test sistemi kurmak gerekmez; tekrar eden veya etkisi önemli düzeltmelerle başla.
 
 <a id="guncellemede-neye-bakmali"></a>
 

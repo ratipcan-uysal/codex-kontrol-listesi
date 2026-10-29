@@ -1,6 +1,6 @@
 # 12. Güvenilir sonuç elde etmek
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Güvenilir sonuç, yalnız doğru görünen cevap değildir. İddiaya uygun kanıtın bulunması gerekir. Aynı doğrulama yöntemi kod, çeviri ve tasarım için yeterli olmaz.
 
@@ -34,6 +34,23 @@ Güvenilir sonuç, yalnız doğru görünen cevap değildir. İddiaya uygun kan�
 Test komutunun çıkış kodu sıfır olabilir ama hiç test seçilmemiş olabilir. Yanlış klasördeki eski derleme test edilmiş olabilir. Kontrol, yalnız dosyanın varlığını ölçüyor olabilir. Rapor bu ayrımları göstermeli: hangi kaynak, hangi komut, kaç test, hangi ortam ve hangi davranış.
 
 Geçen testleri gerekçesiz tekrar etmek de güvenilirliği artırmaz. Kaynak, yapılandırma, ortam ve kapsam aynı kaldıysa kanıt yeniden kullanılabilir. İlgili değişiklik veya yeni hata varsa kontrol yenilenir.
+
+<a id="onarim-isin-amacini-koruyor-mu"></a>
+
+### Onarım işin amacını koruyor mu?
+
+**Kurgu örnek:** CSV’yi okuyamayan rapor betiğinden dosya okuma adımı kaldırılıyor. Program artık hata vermiyor, fakat sabit örnek rakamları yazıyor. Çalıştırmanın geçmesi, raporun gerçek girdiyi işlediğini göstermez. Cookbook’ın onarım örneği de çalışabilirlik yanında özgün öğretim amacını korumayı denetler. [Onarım döngüleri](https://developers.openai.com/cookbook/examples/codex/build_iterative_repair_loops_with_codex)
+
+Anlatıcı şu küçük deneme kaydını gösterebilir:
+
+| Deneme | Değişiklik | Kontrol | Kalan sorun |
+|---|---|---|---|
+| 1 — yanlış kestirme | CSV okuma kaldırıldı. | Program açılıyor; girdi değişince sonuç aynı. | Veri işleme amacı kayboldu. |
+| 2 — hedefli düzeltme | Dosya yolu düzeltildi. | Aynı CSV doğru okunuyor; bir tutar değişince toplam değişiyor. | Eksik tutar hâlâ ayrı belirtilmeli. |
+
+> Geçen kontrolün hangi davranışı kanıtladığını yaz. Hata veren işi silerek veya kabul ölçütünü gevşeterek başarı üretme. Kalan bulguyu sonraki denemeye taşı.
+
+Bu son istek bizim uygulama önerimizdir. Kayıt, kapsamlı bir günlük olmak zorunda değil; değişiklik, gözlenen sonuç ve kalan sorun yeterli. Aynı sorun değişmeden sürüyorsa [Goals karar akışına](14-buyuk-isler.md#goals-ne-zaman-yararli) dön; açıklamasız yeni deneme ekleme.
 
 <a id="gercek-deneyim-klavye-kontrolu-gecti-metin-ortuldu"></a>
 

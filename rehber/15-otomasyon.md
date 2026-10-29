@@ -1,6 +1,6 @@
 # 15. Otomasyon ve tekrar eden işler
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Otomasyon, iyi tanımlanmış işi tekrar eder. Belirsiz işi zamanlamak, belirsizliği düzenli aralıklarla yeniden üretir. Önce bir gerçek örnekte yöntemi çalıştır, sonra takvime bağla.
 

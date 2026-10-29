@@ -1,5 +1,13 @@
 # Güncellemeler
 
+## 30 Ekim 2026 — Cookbook’tan somut kullanım dersleri
+
+- Kullanıcı düzeltmesini kontrol kartına dönüştürme ve örnek bazında tutarlılık karşılaştırması 18. bölüme işlendi.
+- Araç, araç seçimi ve son cevabın ayrı kontrolü 10. bölümde; aynı girdilerle eski–yeni davranış karşılaştırması 14. bölümde somutlaştırıldı.
+- İşin amacını kaldırarak test geçirme karşı örneği 12. bölüme, bağımsız görsel parçalar ve veriden grafik üretme 13. bölüme eklendi.
+- Dosya adı ile uygulama özelliği ayrımı 11. bölüme; tarihsel GitLab örneğinin güncellik uyarısı mevcut ileri teknik açıklamaya eklendi.
+- 107 madde, mevcut çapalar ve örnek dosyalar korundu. Yedi yeni resmî kaynakla kaynak dizini 77 kayda ulaştı. İçerik güncelleme tarihi, tek tek kaynakların kontrol tarihinden ayrıldı.
+
 ## 29 Ekim 2026 — Goals ile kanıta göre ilerleme
 
 - Mevcut Goals bölümüne altı parçalı hedef tablosu, taslak/başlatma ayrımı ve zayıf–güçlü istek örneği eklendi.

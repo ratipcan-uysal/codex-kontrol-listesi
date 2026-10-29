@@ -1,6 +1,6 @@
 # Sorun giderme tablosu
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Bir hata mesajı nedeni daraltır; her zaman tek nedeni belirlemez. Aşağıdaki tablo ilk ayırıcı kontrolü gösterir. İşe yaramayan yolu aynı biçimde tekrarlamak yerine yeni kanıt topla. [Resmî sorun giderme](https://learn.chatgpt.com/docs/reference/troubleshooting)
 

@@ -1,6 +1,6 @@
 # 4. İş vermenin incelikleri
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 İyi bir istek, Codex'in yanlış seçmesi pahalı olacak kararları açık eder. Her adımı önceden yazmak zorunda değilsin. İşin amacı belli olduğu hâlde uygulamanın bütün ayrıntılarını dayatmak, daha iyi bir çözüm bulma alanını daraltabilir.
 

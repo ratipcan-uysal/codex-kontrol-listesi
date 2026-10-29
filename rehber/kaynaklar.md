@@ -1,10 +1,10 @@
 # Kaynaklar, kanıt türleri ve güncellik
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Ürün açıklamaları ile deneyimden çıkan öneriler farklı kanıtlardır. Aşağıdaki resmî sayfalar indirilip rehberin ilgili iddiaları için gerekli bölümleri incelendi. Listenin tamamını baştan sona satır satır denetlediğimiz veya her davranışı çalıştırdığımız iddia edilmez. Menü adları resmî belgedeki adları izler; kurulu sürüm ve hesabında ayrıca farklılık olabilir.
 
-**Tarih:** 29 Ekim 2026. Kaynak URL'si, indirme durumu ve içerik SHA-256 özeti [kaynak manifestinde](kaynak-manifest.json) kayıtlıdır. SHA-256, kontrol edilen dosya sürümünü ayırt eder; doğruluğunu veya gelecekte değişmeyeceğini garanti etmez. Kaynakların tam metin kopyaları bu depoda yayımlanmaz.
+**Kontrol tarihleri:** Her kaynağın tarihi aşağıdaki dizinde ayrı gösterilir. Kaynak URL'si, indirme durumu ve içerik SHA-256 özeti [kaynak manifestinde](kaynak-manifest.json) kayıtlıdır. SHA-256, kontrol edilen dosya sürümünü ayırt eder; doğruluğunu veya gelecekte değişmeyeceğini garanti etmez. Kaynakların tam metin kopyaları bu depoda yayımlanmaz.
 
 Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu öğretim örnekleri [senaryo ekinde](senaryolar.md) açıklanır. Özel proje dosyaları ve ham sohbetler kamuya eklenmez. Tarihli ürün bilgisi ile kendi iş akışı önerimizi aynı kesinlikle sunmayız.
 
@@ -84,6 +84,13 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Long-running work](https://learn.chatgpt.com/docs/long-running-work) | 2026-10-29 |
 | [Web search](https://learn.chatgpt.com/docs/web-search) | 2026-10-29 |
 | [Sign in with ChatGPT](https://learn.chatgpt.com/docs/sign-in-with-chatgpt) | 2026-10-29 |
+| [Build an Agent Improvement Loop with Traces, Evals, and Codex](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop) | 2026-10-30 |
+| [Build iterative repair loops with Codex](https://developers.openai.com/cookbook/examples/codex/build_iterative_repair_loops_with_codex) | 2026-10-30 |
+| [Modernizing your Codebase with Codex](https://developers.openai.com/cookbook/examples/codex/code_modernization) | 2026-10-30 |
+| [Iterating development workflows with Codex](https://developers.openai.com/cookbook/examples/codex/iterating-development-workflows-with-codex) | 2026-10-30 |
+| [Automating Code Quality and Security Fixes with Codex CLI in GitLab](https://developers.openai.com/cookbook/examples/codex/secure_quality_gitlab) | 2026-10-30 |
+| [Generate Transparent Image Assets for Campaigns and Presentations](https://developers.openai.com/cookbook/examples/multimodal/transparent-image-assets-for-campaigns-and-presentations) | 2026-10-30 |
+| [Harness-aware evaluation of plugins](https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals) | 2026-10-30 |
 
 <a id="arayuz-gorselleri-ve-atif"></a>
 

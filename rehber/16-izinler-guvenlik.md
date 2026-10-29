@@ -1,6 +1,6 @@
 # 16. İzinler, gizlilik ve güvenlik
 
-Belge kontrolü: 2026-10-29.
+İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Güvenli çalışmanın amacı her adımda onay istemek değildir. Kullanıcının verdiği yetkiyle teknik erişimin sınırlarını doğru eşleştirmektir.
 
