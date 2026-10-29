@@ -49,5 +49,15 @@
     ],
     "exit_code": 0,
     "output": ""
+  },
+  {
+    "command": [
+      "node",
+      "--check",
+      "kaynak/test_guide_browser.cjs"
+    ],
+    "exit_code": 0,
+    "output": "",
+    "note": "Repeated after adding image decode before screenshot; final live browser run also passed 18 checks."
   }
 ]

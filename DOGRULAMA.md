@@ -1,5 +1,15 @@
 # Doğrulama kaydı
 
+## 29 Ekim 2026 — Görselli revizyon GitHub Pages üzerinde doğrulandı
+
+**PASS:** [Güncel çevrimiçi rehber](https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/) yeni içerik, altı arayüz gösterimi ve nötr paletle yayında.
+
+- İçerik commit’i: `2fee67c517b058e3e5703d47dfb4959772f76c13`. GitHub `main` dalına gönderildi ve Pages aynı commit için `built` döndü.
+- Canlı 29 HTML dosyası ve 6 PNG, yerel dosyalarla SHA-256 düzeyinde birebir aynı. [35 dosyanın yayın kanıtı](dogrulama/rehber-revizyon-20261029/live-publication.json).
+- Boş Chrome profilinde **18 canlı tarayıcı kontrolü** geçti. Altı görselin yüklenmesi/atıfları, klavyeyle tam boyut açılması, mobil taşma, açık/koyu renkler, bölüm geçişleri ve eski işaretin korunması dahil. [Sonuçlar](dogrulama/rehber-revizyon-20261029/live/results.json).
+- İlk canlı masaüstü çekimi görsel yüklenmeden alınmıştı; [erken çekim](dogrulama/rehber-revizyon-20261029/live-first-capture/README.md) korundu. Çekim öncesinde görselin decode edilmesini bekleyen kontrol eklendi. Canlı masaüstü/mobil görsel sayfası ve koyu tema görüntüleri açılıp incelendi. 14 görev süreci kapandı; [temizlik kaydı](dogrulama/rehber-revizyon-20261029/live/cleanup.json). Görevce oluşturulan Python önbelleği de kaldırıldı ve yokluğu doğrulandı.
+- Bu yayın kaydı ve kanıtları sonraki belgeleme commit’inde eklenir; rehberin doğrulanan HTML ve görsellerini değiştirmez.
+
 ## 29 Ekim 2026 — Başlangıç ve görsel revizyonu: yerel kontroller
 
 18 bölüm ve altı yazılmış ek yeniden okundu. [Bölüm bazında inceleme](dogrulama/rehber-revizyon-20261029/INCELEME.md), [metin ölçümü ve sınırları](dogrulama/rehber-revizyon-20261029/EDITORIAL.md).
@@ -12,7 +22,7 @@
 - Görsel yakalamanın 12 ve yerel tarayıcı koşumunun 29 görev süreci kapandı. [Yakalama](dogrulama/rehber-revizyon-20261029/capture-cleanup.json) · [Yerel test](dogrulama/rehber-revizyon-20261029/process-cleanup.json).
 - Ürün envanteri 84 aile / 70 resmî kaynak. Bu, bütün Codex özelliklerinin canlı çalıştırılması veya tüm hesaplarda erişim garantisi değildir. Safari, Firefox, fiziksel cihaz ve VoiceOver testleri yapılmadı.
 
-Bu kayıt yerel revizyonu doğrular. Bu revizyonun push ve canlı hedef kontrolü, tamamlanınca ayrı yayın kaydıyla eklenecek; aşağıdaki önceki yayın kanıtı yeni değişikliklerin kanıtı değildir.
+Bu kayıt yerel revizyonu doğrular. Push ve canlı hedef sonucu üstteki ayrı yayın kaydındadır; aşağıdaki ilk rehber yayını tarihsel kayıttır.
 
 ## 29 Ekim 2026 — GitHub ve çevrimiçi rehber yayında
 

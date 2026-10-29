@@ -45,6 +45,7 @@ const out=path.resolve(process.env.EVIDENCE_DIR || 'work/guide-browser');
    assert.equal(await page.evaluate(()=>getComputedStyle(document.body).backgroundColor),'rgb(255, 255, 255)');
    assert.equal(await page.locator('#i-lk-dosyani-uret-ac-duzelt').count(),1);
    await page.locator('.app-figure').first().scrollIntoViewIfNeeded();
+   await page.locator('.app-figure img').first().evaluate(e=>e.decode());
   });
   await page.screenshot({path:path.join(out,'guide-app-figure-desktop.png')});
   await check('keyboard opens full-size figure and back restores guide',async()=>{
