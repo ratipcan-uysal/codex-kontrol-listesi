@@ -1,0 +1,31 @@
+{
+  "base": "https://ratipcan-uysal.github.io/codex-kontrol-listesi/",
+  "browser": "156.0.8078.73",
+  "results": [
+    {
+      "name": "public checklist opens online guide",
+      "status": "PASS"
+    },
+    {
+      "name": "next and previous chapters resolve under GitHub Pages project path",
+      "status": "PASS"
+    },
+    {
+      "name": "guide returns to correct checklist detail and focus",
+      "status": "PASS"
+    },
+    {
+      "name": "saved checkmark survives guide round trip",
+      "status": "PASS"
+    },
+    {
+      "name": "mobile command guide and all 28 commands",
+      "status": "PASS"
+    },
+    {
+      "name": "no JavaScript errors",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

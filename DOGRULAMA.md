@@ -1,5 +1,15 @@
 # Doğrulama kaydı
 
+## 29 Ekim 2026 — GitHub ve çevrimiçi rehber yayında
+
+**PASS:** [Çevrimiçi ana rehber](https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/) GitHub Pages üzerinden giriş gerektirmeden açılıyor. [GitHub deposunun](https://github.com/ratipcan-uysal/codex-kontrol-listesi) girişine doğrudan çevrimiçi okuma bağlantısı eklendi.
+
+- İçerik commit'i: `8e6ffa6d3da49460a1ab38056d439454972c9945`. `main` dalına gönderildi; Pages bu commit için `built` döndü.
+- 28 rehber sayfası ve kontrol listesi dahil 29 HTML dosyasının canlı SHA-256 özeti yerel dosyayla birebir aynı. [Yayın kanıtı](dogrulama/rehber-20261029/live-publication.json).
+- Boş Chrome profilinde 6 canlı kontrol geçti: giriş bağlantısı, bölüm geçişleri, maddeye geri dönüş ve odak, işaret koruma, 320 px komut görünümü ve JavaScript hatası kontrolü. [Sonuçlar](dogrulama/rehber-20261029/live/results.json).
+- Canlı masaüstü ve mobil ekran görüntüleri açılıp incelendi. Teste ait süreçler kapandı; [temizlik kaydı](dogrulama/rehber-20261029/live/cleanup.json).
+- Bu yayın kaydı ve kanıtları içerik commit'inden sonraki belgeleme commit'inde eklenir. Rehber HTML'sini değiştirmez.
+
 ## 29 Ekim 2026 — Yeni rehberin yerel doğrulaması
 
 **Yerel kontrolün başlangıç durumu:** Aynı GitHub deposunun yerel kopyasında yayıma hazır değişiklikler. Bu kontroller alındığında commit, push ve canlı yayın yapılmamıştı. 29 Ekim gönderimi kullanıcı tarafından ayrıca yetkilendirildi; dış yayın sonucu ayrı kaydedilir. Aşağıdaki 21 Ekim yayın kaydı önceki kontrol listesine aittir.
@@ -19,7 +29,7 @@
 | Görev kaynakları | PASS | Test tarayıcıları ve localhost sunucuları kapandı; [son koşum temizliği](dogrulama/rehber-20261029/process-cleanup.json). |
 | Ürün özelliklerini uçtan uca çalıştırma | NOT_RUN | Rehber oluşturmak için hesap izinleri, otomasyonlar, gönderimler veya Goals senaryoları etkinleştirilmedi. |
 | Diğer tarayıcı/platform | NOT_RUN | Otomasyon Chrome ile sınırlı. Safari/Firefox, fiziksel cihaz ve gerçek VoiceOver testi yapılmadı. |
-| Yeni rehberin uzak/canlı durumu | NOT_PUBLISHED | Yerel değişiklikler hazır; eski canlı yayın yeni rehberin kanıtı değildir. |
+| Yeni rehberin uzak/canlı durumu | PASS | Üstteki 29 Ekim yayın kaydı yeni rehberin commit, dağıtım ve canlı doğrulamasını gösterir. |
 
 ### Bulunan sorunlar ve korunmuş başarısızlık
 

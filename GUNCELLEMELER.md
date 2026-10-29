@@ -1,6 +1,6 @@
 # Güncellemeler
 
-## 29 Ekim 2026 — Derinlemesine rehber, yerel yayın adayı
+## 29 Ekim 2026 — Derinlemesine rehber ve çevrimiçi yayın
 
 - 18 ana bölüm ve 9 ek sayfa: 6 yazılmış ek, özellik envanteri, 107 madde eşlemesi ve kaynak dizini.
 - Gerçek işlerden anonimleştirilmiş 8 vaka; kullanım yollarını anlatan 12 ayrıntılı kurgu senaryo ve bölümlerde kısa örnekler.
@@ -10,7 +10,7 @@
 - `kaynak/content.py` tek içerik kaynağı olarak genişletildi. Markdown, HTML, envanter ve eşleme aynı üretim komutundan çıkıyor.
 - Rehberden maddeye dönüşte başlangıç hash odağı sayfa yüklemesiyle uzlaştırıldı. Mobil tabloda komut adları bölünmüyor; yatay kaydırma açıklaması var.
 - Yerel 18 Python testi, mevcut 28 ve yeni 14 tarayıcı kontrolü geçti. Gerçek Codex özelliklerinin tamamı canlı çalıştırılmadı.
-- Bu kayıt yeni rehberin uzak depoya gönderildiği veya canlı yayımlandığı anlamına gelmez. [Teslim durumu](DOGRULAMA.md) ayrı tutulur.
+- Yeni rehber GitHub main ve Pages üzerinde yayımlandı. 29 canlı HTML yerel sürümle aynı; 6 canlı tarayıcı kontrolü geçti. [Yayın kanıtı](DOGRULAMA.md) kaydedildi.
 
 ## 21 Ekim 2026 — Herkese açık GitHub sürümü
 
