@@ -22,4 +22,4 @@ Bölüm 11'de PLANS.md / GOALS.md gibi dosya adlarının komut olmadığı açı
 - 7 yeni kaynakla toplam 77 kaynak. Eski 70 kaynağın tarihleri değiştirilmedi. İçerik güncelleme tarihi kaynak inceleme tarihinden ayrıldı.
 - Cookbook notebook/API/benchmark örnekleri çalıştırılmadı. Kurgu senaryolar gerçek kullanıcı oturumu veya başarı ölçümü değildir. Öğrenme etkisi ölçülmedi. Safari, Firefox, fiziksel cihaz ve VoiceOver bu revizyonda sınanmadı. Değişmeyen kontrol listesinin 28 ayrı etkileşim kontrolü yeniden koşulmadı.
 
-Canlı yayın kanıtı, yayın tamamlandıktan sonra ayrı kaydedilir.
+Canlı yayın tamamlandı: 63 değişen rehber çıktısı eşleşti, 33 tarayıcı kontrolü geçti. Masaüstü bölüm 18 ve dar ekran bölüm 10 görüntüleri açılarak incelendi. Canlı koşumun 15 süreci kapandı. [Yayın kanıtı](live-publication.json), [tarayıcı sonuçları](live/results.json), [temizlik](live/cleanup.json). İlk HTTP 503 koşumu [ayrı kayıt](first-live-attempt.md) olarak korunur.

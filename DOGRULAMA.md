@@ -1,5 +1,13 @@
 # Doğrulama kaydı
 
+## 30 Ekim 2026 — Cookbook dersleri yayında
+
+**PASS:** [Güncel rehber](https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/) altı dersi mevcut bölümlerde somut örneklerle açıklıyor. İçerik commit’i `9464e0d398da857683ea5cfbcb998ac3edc3d15c`; Pages aynı commit için `built` döndü. Değişen **63 rehber çıktısı** canlıda SHA-256 düzeyinde eşleşti. [Yayın kanıtı](dogrulama/cookbook-20261030/live-publication.json).
+
+24 Python testi, JavaScript sözdizimi ve diff kontrolü geçti. **33 yerel + 33 canlı tarayıcı kontrolü** geçti. [Yerel sonuçlar](dogrulama/cookbook-20261030/guide/results.json), [canlı sonuçlar](dogrulama/cookbook-20261030/live/results.json). Masaüstü kabul kartı ve dar ekran araç/cevap örneği canlı görüntülerde açılıp incelendi. [107 madde ve 229 eski çapanın korunduğu karşılaştırma](dogrulama/cookbook-20261030/preservation.json).
+
+İlk dosya indirme koşumu HTTP 503 ile durdu; hata ve sonraki sınırlı yeniden deneme [ayrı kaydedildi](dogrulama/cookbook-20261030/first-live-attempt.md). Son tamamlanan karşılaştırmada eşleşmeyen dosya yok. Yerel ve canlı koşumların 15’er görev süreci kapandı; test sunucusu kapalı, Python önbelleği yok. [İçerik kapsamı ve sınırlar](dogrulama/cookbook-20261030/INCELEME.md), [editoryal kontrol](dogrulama/cookbook-20261030/EDITORIAL.md). Cookbook API/notebook örnekleri çalıştırılmadı; kurgu senaryolar gerçek başarı ölçümü sayılmadı.
+
 ## 29 Ekim 2026 — Goals örneği ve karar şeması yayında
 
 **PASS:** [Genişletilmiş Goals bölümü](https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/14-buyuk-isler.html#goals-ne-zaman-yararli) yayımlandı. İçerik commit’i `0d17d1413843c1cf2fb8b6d9a000b9c41080a5e3`; Pages aynı commit için `built` döndü. Değişen üç rehber çıktısının canlı SHA-256 özetleri yerelle aynı. [Yayın kanıtı](dogrulama/goals-20261029/live-publication.json).
