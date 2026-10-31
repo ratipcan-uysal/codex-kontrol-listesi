@@ -1,5 +1,17 @@
 # Doğrulama kaydı
 
+## 31 Ekim 2026 — Atölye hikâyesi ve ilk kullanım revizyonu yayında
+
+**PASS:** Atölye'nin ücretsiz buluşması ile ücretli programı ayrıldı. Tekrarlar kısaltıldı; eğitim rotası öğretim sahnelerine açılıyor. Araştırmaya kısa soru-cevap, sayfa örneğine iki olasılığı ayıran küçük kontrol eklendi. İlk kullanım üç indirilebilir kaynak/önce/sonra dosyasıyla somutlaştırıldı.
+
+İçerik commit’i `715de2537122528968621791faf01c0d880f77ad`; Pages aynı commit için `built`. Değişen **62 rehber dosyası** canlıda yerelle birebir eşleşti. [Yayın kanıtı](dogrulama/dinleyici-20261031/live-publication.json).
+
+**27 Python, 26 yerel ve 26 canlı tarayıcı kontrolü PASS.** [Yerel](dogrulama/dinleyici-20261031/local/guide/results.json) · [Canlı](dogrulama/dinleyici-20261031/live/guide/results.json). 107 maddelik kontrol listesi, eşlemeler, mevcut CSV/görseller/sunumlar ve eski HTML kimlikleri korundu. [Koruma](dogrulama/dinleyici-20261031/preservation.json).
+
+Dört yerel ve iki canlı masaüstü/dar ekran görüntüsü açılıp incelendi. **BLOCKED:** Atölye'nin kendi Codex oturumuna ait yeni ekran çekimleri, bilgisayar kontrolünün Codex erişimini reddetmesi nedeniyle üretilemedi. Mevcut gerçek resmî uygulama gösterimleri ilk adımlara taşındı; farklı örnekler oldukları açıkça belirtiliyor. Hazırlanan dosyalar gerçek oturum kaydı olarak sunulmuyor. [Kapsam ve başarısızlıklar](dogrulama/dinleyici-20261031/INCELEME.md).
+
+Son yerel koşumun 14, canlı koşumun 15 görev süreci kapandı; kalan yok. [Yerel temizlik](dogrulama/dinleyici-20261031/local/process-cleanup.json) · [Canlı temizlik](dogrulama/dinleyici-20261031/live/process-cleanup.json). Kesin görev sahipliği kurulamayan ortak MCP altyapısı korundu; oturum sıfırlama, sunucunun çıktığı şeklinde yorumlanmadı. Yeni bağımlılık, simülatör veya derleme ürünü yok. Bu kayıt commit'i doğrulanmış rehber dosyalarını değiştirmez.
+
 ## 31 Ekim 2026 — Altı kullanım dersi yayında
 
 **PASS:** Girdi biçimini seçme, düzenlenebilir teslim, değişikliğin etkileri, toplu işlem önizlemesi, bağımsız kanıt ve okuma kapsamı mevcut bölümlere işlendi. Her dersin tek ayrıntılı anlatımı var; Atölye örnek işleri ilgili anlatıma bağlanıyor. Yeni alıştırma veya bölüm eklenmedi.

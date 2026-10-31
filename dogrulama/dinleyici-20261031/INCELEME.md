@@ -28,3 +28,5 @@ Yerel masaüstü proje adımı, dar ekran düzeltme adımı, masaüstü soru-cev
 İlk içerik hazırlama denemesinde dört kaynak takma adı doğrulamadan geçmedi; yazımdan önce düzeltildi. Bir üretim komutu yanlış klasörden çağrıldığı için çalışmadı; doğru klasörde başarılı oldu. Süreç envanteri ilk izinli ortamda okunamadı, yetkili salt-okunur kontrolle alındı.
 
 Uygulama erişimi reddedildikten sonra CUA oturumu sıfırlandı; bu işlem ortak Node sunucusunun kapandığı iddiası değildir. Kesin görev sahipliği kurulamayan ortak MCP altyapısına dokunulmadı. Tarayıcı koşumlarının kendi süreçleri ayrı izlendi ve kapatıldı. Yeni bağımlılık veya simülatör kurulmadı; yayımlanacak dosyalar ve kanıtlar korundu.
+
+İlk GitHub gönderimi ağ kısıtı nedeniyle alan adını çözemedi. Yetkili ağ erişimiyle aynı commit gönderildi; uzak main güncellendi. İlk Pages sorgusu building, sonraki sorgu built döndü. İçeriğin 62 değişen rehber dosyası canlıda yerelle birebir eşleşti.
