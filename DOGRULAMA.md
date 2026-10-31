@@ -1,5 +1,17 @@
 # Doğrulama kaydı
 
+## 31 Ekim 2026 — Dinleyici rotası ve somut çıktılar yayında
+
+**PASS:** [Güncel rehber](https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/) yeni eğitim rotası, düzenlenebilir Atölye sunumu, veri grafiği ve devam örnekleriyle yayımlandı. İçerik commit’i `9d7e38bbd90bc550767f83b9b46fa08003206ad6`; Pages aynı sürüm için `built` döndü. Değişen **81 rehber dosyası** canlıda yerelle birebir eşleşti. [Yayın kanıtı](dogrulama/egitim-20261031/live-publication.json).
+
+**27 Python, 24 yerel ve 24 canlı tarayıcı kontrolü geçti.** [Yerel](dogrulama/egitim-20261031/guide/results.json) · [Canlı](dogrulama/egitim-20261031/live/results.json). 107 madde/eşleme, 84 özellik ailesi ve 235 eski HTML kimliği korundu. [Karşılaştırma](dogrulama/egitim-20261031/preservation.json).
+
+Üç slayt gerçek PPTX’ten render edilip açıldı; karşılaştırma tablosu düzenlenebilir. Önce/sonra slaytı, veriden hesaplanan grafik ve iki program prototipi incelendi. Canlı masaüstü sunum ve 320 px grafik görüntüsü açıldı. PowerPoint uygulamasında test veya öğrenme başarısı ölçümü yapılmadı. [Kapsam ve ilk hatalar](dogrulama/egitim-20261031/INCELEME.md) · [Editoryal inceleme](dogrulama/egitim-20261031/EDITORIAL.md).
+
+Yerel tarayıcının 14, canlı tarayıcının 13 görev süreci kapandı. Sunum üretiminin izlenen süreçleri kapandı; görev derleme klasörü ve görev modül bağlantısı kaldırıldı, ortak kurulum korundu. Python önbelleği kalmadı. [Yerel temizlik](dogrulama/egitim-20261031/process-cleanup.json) · [Canlı temizlik](dogrulama/egitim-20261031/live/cleanup.json) · [Sunum temizliği](dogrulama/egitim-20261031/artifact-cleanup.json).
+
+Bu kayıt sonraki belge commit’inde eklenir; doğrulanan rehber dosyalarını değiştirmez. Skill, otomasyon ve worktree anlatıları kurgu gösterimdir; gerçek hesapta bu işlemler çalıştırılmadı.
+
 ## 30 Ekim 2026 — Cookbook dersleri yayında
 
 **PASS:** [Güncel rehber](https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/) altı dersi mevcut bölümlerde somut örneklerle açıklıyor. İçerik commit’i `9464e0d398da857683ea5cfbcb998ac3edc3d15c`; Pages aynı commit için `built` döndü. Değişen **63 rehber çıktısı** canlıda SHA-256 düzeyinde eşleşti. [Yayın kanıtı](dogrulama/cookbook-20261030/live-publication.json).

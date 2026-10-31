@@ -1,0 +1,31 @@
+{
+  "artifact_runs": [
+    {
+      "attempt": "artifact-processes",
+      "owned_processes": 3,
+      "remaining": 0
+    },
+    {
+      "attempt": "artifact-processes3",
+      "owned_processes": 4,
+      "remaining": 0
+    },
+    {
+      "attempt": "artifact-processes4",
+      "owned_processes": 5,
+      "remaining": 0
+    },
+    {
+      "attempt": "artifact-processes5",
+      "owned_processes": 4,
+      "remaining": 0
+    }
+  ],
+  "removed_task_paths": [
+    "build",
+    "node_modules"
+  ],
+  "shared_dependencies_preserved": true,
+  "python_cache_exists": false,
+  "limitations": "First restricted process snapshot failed; subsequent process inspection found no remaining task renderer. Shared pre-existing artifact host was preserved."
+}
