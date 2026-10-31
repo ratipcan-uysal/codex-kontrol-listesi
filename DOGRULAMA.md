@@ -1,5 +1,17 @@
 # Doğrulama kaydı
 
+## 31 Ekim 2026 — Model seçimi ve işe yarayan kullanım kararları yayında
+
+**PASS:** [Model bölümü](https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/07-model-hiz-kullanim.html) artık dört modeli örnek işlerle eşleştiriyor. Model/düşünme/hız seçimi, müdahale tablosu ve öğretim şeması eklendi; model bölümü eğitim rotasına girdi. Sohbet seçimi, skill çağrısı ve otomasyona geçiş somutlaştırıldı. Şema örnekleri ve eksik duyuru tamamlandı; tekrarlar kısaltıldı.
+
+İçerik commit’i `290a20e70996b96de12bc6bc0e537e8197620915`; Pages bu sürüm için `built`. Değişen **27 rehber dosyası** canlıda yerelle birebir aynı. [Yayın kanıtı](dogrulama/secimler-20261031/live-publication.json).
+
+**27 Python, 25 yerel ve 25 canlı tarayıcı kontrolü PASS.** [Yerel](dogrulama/secimler-20261031/local/guide/results.json) · [Canlı](dogrulama/secimler-20261031/live/guide/results.json). 107 madde, eşleme, mevcut örnekler/görseller ve 251 eski HTML kimliği korundu. [Koruma kontrolü](dogrulama/secimler-20261031/preservation.json).
+
+Masaüstü ve 320 px model tablosu/şeması açılıp incelendi; canlı masaüstü tablo ve mobil şema ayrıca incelendi. Kaynaklar tarihli; model eşleştirmeleri kullanım önerisi, karşılaştırmalı ölçüm değil. Gerçek skill/otomasyon kurulumu veya uygulama ekran kaydı yapılmadı. [Kapsam ve ilk hatalar](dogrulama/secimler-20261031/INCELEME.md).
+
+Son yerel koşumun 16, canlı koşumun 15 görev süreci kapandı; kalan yok. [Yerel temizlik](dogrulama/secimler-20261031/local/process-cleanup.json) · [Canlı temizlik](dogrulama/secimler-20261031/live/process-cleanup.json). Yeni bağımlılık kurulmadı; kaynak ve kanıtlar korundu. Bu kayıt sonraki belge commit’inde eklenir ve doğrulanmış rehber içeriğini değiştirmez.
+
 ## 31 Ekim 2026 — Dinleyici rotası ve somut çıktılar yayında
 
 **PASS:** [Güncel rehber](https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/) yeni eğitim rotası, düzenlenebilir Atölye sunumu, veri grafiği ve devam örnekleriyle yayımlandı. İçerik commit’i `9d7e38bbd90bc550767f83b9b46fa08003206ad6`; Pages aynı sürüm için `built` döndü. Değişen **81 rehber dosyası** canlıda yerelle birebir eşleşti. [Yayın kanıtı](dogrulama/egitim-20261031/live-publication.json).
