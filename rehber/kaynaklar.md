@@ -17,7 +17,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [ChatGPT desktop app](https://learn.chatgpt.com/docs/app) | 2026-10-29 |
 | [Commands](https://learn.chatgpt.com/docs/reference/commands) | 2026-10-29 |
 | [Settings](https://learn.chatgpt.com/docs/reference/settings) | 2026-10-29 |
-| [Projects and chats](https://learn.chatgpt.com/docs/projects) | 2026-10-29 |
+| [Projects and chats](https://learn.chatgpt.com/docs/projects) | 2026-10-31 |
 | [Use ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt) | 2026-10-29 |
 | [Work with files](https://learn.chatgpt.com/docs/artifacts-viewer) | 2026-10-31 |
 | [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal) | 2026-10-29 |
@@ -53,7 +53,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Agent approvals & security](https://learn.chatgpt.com/docs/agent-approvals-security) | 2026-10-29 |
 | [Remote connections](https://learn.chatgpt.com/docs/remote-connections) | 2026-10-29 |
 | [Codex on mobile](https://learn.chatgpt.com/docs/mobile) | 2026-10-29 |
-| [Image inputs](https://learn.chatgpt.com/docs/image-inputs) | 2026-10-29 |
+| [Image inputs](https://learn.chatgpt.com/docs/image-inputs) | 2026-10-31 |
 | [Image generation](https://learn.chatgpt.com/docs/image-generation) | 2026-10-29 |
 | [Sites](https://learn.chatgpt.com/docs/sites) | 2026-10-29 |
 | [ChatGPT Space](https://learn.chatgpt.com/docs/space) | 2026-10-29 |
@@ -92,6 +92,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Generate Transparent Image Assets for Campaigns and Presentations](https://developers.openai.com/cookbook/examples/multimodal/transparent-image-assets-for-campaigns-and-presentations) | 2026-10-30 |
 | [Harness-aware evaluation of plugins](https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals) | 2026-10-30 |
 | [Model selection](https://learn.chatgpt.com/docs/model-selection) | 2026-10-31 |
+| [Best practices](https://learn.chatgpt.com/docs/learn/best-practices) | 2026-10-31 |
 
 <a id="arayuz-gorselleri-ve-atif"></a>
 

@@ -89,4 +89,4 @@ Plugin, MCP ve işletim sistemi izinleri farklı erişim katmanlarıdır. Birini
 
 Bir komutun başarılı bitmesiyle istediğin sonucun doğrulanması arasındaki farkı [güvenilir sonuç bölümünde](12-dogrulama.md) ayrıntılı ele alıyoruz. Burada temel alışkanlık, yanıtın hangi kaynağa dayandığını ve dosyada neyin değiştiğini takip etmek.
 
-[İçindekiler](README.md) · [← Uygulamanın tamamını tanımak](02-uygulama.md) · [İş vermenin incelikleri →](04-is-vermek.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← Uygulamanın tamamını tanımak](02-uygulama.md) · [İş vermenin incelikleri →](04-is-vermek.md)

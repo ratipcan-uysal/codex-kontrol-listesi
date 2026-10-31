@@ -33,7 +33,7 @@ Hand off, desteklenen akışlarda sohbeti ve kod durumunu Local ile worktree ara
 
 ## Ayrı denemeden ana çalışmaya dön
 
-**Kurgu masaüstü gösterimi:** Ana klasörde etkinlik metni üzerinde çalışıyorsun. Ayrı worktree’de yalnız kart genişliği düzeltildi. Checkout, üzerinde çalışılan dosya kopyasıdır; bu iki kopyanın adresleri farklıdır.
+Worktree, aynı Git geçmişine bağlı ayrı dosya çalışma kopyasıdır. **Kurgu masaüstü gösterimi:** Ana klasörde etkinlik metni üzerinde çalışıyorsun. Ayrı worktree’de yalnız kart genişliği düzeltildi. Checkout, üzerinde çalışılan dosya kopyasıdır; bu iki kopyanın adresleri farklıdır.
 
 | Aşama | Anlatıcının göstereceği şey | Karar |
 |---|---|---|
@@ -92,9 +92,9 @@ Atölye'nin başlık düzeltmesi worktree'de yapılmış, tarayıcı ise ana kla
 
 > Önizlemeyi sunan sürecin çalışma klasörünü ve portunu doğrula. Düzenlediğin worktree ile aynı kaynaktan çalıştığını göster. Sonra görsel kontrolü tekrarla.
 
-Bu kontrol, kodun yanlış olduğu varsayımını sınar. Sonuç raporunda klasör, sürüm ve URL birlikte anlam taşır.
+Bu kontrol, kodun yanlış olduğu varsayımını sınar. İki olasılığın sonraki adımı nasıl değiştirdiğini [sayfa örneğinde](is-sayfa.md#nedenini-bilmiyorsan-once-ayirici-kontrol-sec) gör. Sonuç raporunda klasör, sürüm ve URL birlikte anlam taşır.
 
-**Eğitimde sıradaki:** [Alt işleri tek kararda birleştir](14-buyuk-isler.md)
+**Eğitimde sıradaki:** [Alt işleri tek kararda birleştir](14-buyuk-isler.md#i-ki-bulgudan-tek-karara)
 
 
 <a id="kontrol-listesinde-karsiligi"></a>
@@ -105,4 +105,4 @@ Bu kontrol, kodun yanlış olduğu varsayımını sınar. Sonuç raporunda klas�
 - [11.3 Port ve tarayıcı bağlamını göreve bağla.](../codex-kontrol-listesi.md#m-11-3)
 - [11.5 Buluta yalnız uygun bağımlılıkları olan işi gönder.](../codex-kontrol-listesi.md#m-11-5)
 
-[İçindekiler](README.md) · [← Model, düşünme seviyesi, hız ve kullanım](07-model-hiz-kullanim.md) · [İnternet, tarayıcı ve bilgisayar kullanımı →](09-web-tarayici-bilgisayar.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← Model, düşünme seviyesi, hız ve kullanım](07-model-hiz-kullanim.md) · [İnternet, tarayıcı ve bilgisayar kullanımı →](09-web-tarayici-bilgisayar.md)

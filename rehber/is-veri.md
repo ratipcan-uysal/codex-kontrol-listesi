@@ -2,9 +2,9 @@
 
 İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
-**Kurgu iş:** Atölye'nin etkinlik kayıtları farklı biçimlerde tutulmuş. Altı kayıt var; iki kişinin adı aynı, bir tahsilat boş. Amaç, kimseyi kaybetmeden düzenli tablo ve kısa rapor üretmek. İsimler ve tutarlar eğitim için kurgulandı. Dosyalar gerçek katılımcı verisi içermiyor.
+**Kurgu iş:** Atölye'nin ücretli Uygulama Programı kayıtları farklı biçimlerde tutulmuş. Bu, önceki örneğin ücretsiz Tanışma Buluşması’ndan ayrı bir iş. Altı kayıt var; iki kişinin adı aynı, bir tahsilat boş. Amaç, kimseyi kaybetmeden düzenli tablo ve kısa rapor üretmek. İsimler ve tutarlar eğitim için kurgulandı. Dosyalar gerçek katılımcı verisi içermiyor.
 
-Anlatıcı [ham CSV'yi](ornekler/katilim-ham.csv) ve [beklenen temiz çıktıyı](ornekler/katilim-temiz.csv) yan yana açabilir. CSV, satır ve sütunlardan oluşan, birçok tablo uygulamasında açılabilen düz metin biçimidir. Hesap için görüntü yerine bu girdiyi seçmenin nedeni [girdi karşılaştırmasında](02-uygulama.md#ayni-bilgi-farkli-girdi-hangisini-vermeli) açıklanıyor. Bu dosyalar bir oturumun otomatik kaydı değil, yöntemi incelemek için hazırlanmış örnek girdiler ve çıktılardır.
+Anlatıcı [ham CSV'yi](ornekler/katilim-ham.csv) ve [beklenen temiz çıktıyı](ornekler/katilim-temiz.csv) yan yana açabilir. CSV, satır ve sütunlardan oluşan, birçok tablo uygulamasında açılabilen düz metin biçimidir. Anlatıcı hesabı başlatmadan [girdi karşılaştırmasını](02-uygulama.md#ayni-bilgi-farkli-girdi-hangisini-vermeli) açar, sonra buraya döner. Dosyalar yöntemi incelemek için hazırlanmış kurgu girdi ve çıktılardır.
 
 **Dönüşüm boyunca kayıt kimliğini izle**
 
@@ -76,7 +76,7 @@ Tablo programında sonucu açıp kontrol edebilirsin. Desteklenen masaüstü ön
 2. **Ne yap?:** Dağılımı kayit_id bazındaki altı kayıtla karşılaştır.
 3. **Ne gör?:** Katılım durumu tahsilat toplamını söylemez; K04’ün boş tutarı bu grafikte gizlice doldurulmaz.
 
-Grafik, [ham CSV’den](ornekler/katilim-ham.csv) sayılar hesaplanarak gerçekten üretildi. Üç çubuğun değerleri 3, 2 ve 1; toplam altı kayıt. Tahsilat ayrı kaldı. “1.800 TL gelir” başlıklı aynı grafiği üretmek bu sorunun cevabı olmazdı. [Grafiğin veri tablosu](ornekler/katilim-grafik.csv).
+Grafik [ham CSV’den](ornekler/katilim-ham.csv) gerçekten hesaplandı; [veri tablosu](ornekler/katilim-grafik.csv) da indirilebilir.
 
 Anlatıcı önce grafiği, sonra K05 satırını gösterir: bekleyen kişinin tahsilatı olabilir. Böylece katılım dağılımıyla ödeme toplamının neden ayrı ölçüler olduğu görünür.
 
@@ -84,20 +84,13 @@ Anlatıcı önce grafiği, sonra K05 satırını gösterir: bekleyen kişinin ta
 
 ## 5. İş tekrarlanacaksa önce sabit kalan kısmı ayır
 
-Bir kez çalışan rapordan hemen otomasyon kurmak yerine yöntemi sonraki gerçek dosyada da kontrol et. Yeni bir durum etiketi veya farklı sayı biçimi gelirse betik bunu sessizce yanlış dönüştürmesin; belirsiz satır olarak ayırsın. Rapor her çalıştırıldığında aynı haftaya ikinci kopya üretmek yerine aynı hedefi güncelleme kuralı belirle.
+**Teslim:** Temiz CSV, kimlik eşlemesi ve dört sonuçlu rapor birlikte açılır. Anlatıcı son kontrolde kayıp kayıt olmadığını ve K04’ün belirsizliğinin korunduğunu gösterir. XLSX gerekiyorsa hesaplama ve düzenlenebilirlik o dosyada ayrıca kontrol edilir.
 
-Kurallar yerleştiğinde otomasyona şu işi ver: “Belirlenen klasördeki yeni kayıt dosyasını bu yöntemle işle, raporu kaydet; yeni durum etiketi veya eksik veri varsa bana bildir.” Kullanıcıya mesaj gönderme ya da dış sisteme yayın yapma bu isteğin kendiliğinden parçası olmaz. [Tekrar eden işler](15-otomasyon.md)
+İkinci haftanın yeni durum etiketiyle yöntemi [skill gösteriminde](10-baglantilar-skills.md#yontem-ikinci-haftada-neyi-koruyor) sınayacağız. [Otomasyona geçiş kararı](15-otomasyon.md#ne-zaman-zamanlamaya-hazir) o bölümde; burada raporu zamanlamıyoruz.
 
-**Teslim:** Kaynak korunmuş, temiz CSV açılabilir, kimlik eşlemesi tamam, eksik tutar görünür ve rapordaki dört sonuç kaynakla tutarlı. Gerçek işte XLSX gerekiyorsa hesaplamaları ve düzenlenebilirliği o dosyada ayrıca kontrol et.
-
-**Başka işte kullanacağın ders:** Kimliği koru, bilinmeyeni sıfıra çevirme, ölçünün neyi temsil ettiğini yaz. Bu üç karar müşteri listesi, stok, anket veya bütçe dosyasında da yararlıdır. Sonraki örnekte aynı netlik görsel bir düzeltmeye uygulanıyor: [sayfadan doğrulanmış yayına](is-sayfa.md).
-
-Bu sonucu grafiğe taşırken sayıları [veriden çizdirme yöntemini](13-tasarim.md#sayisal-grafik-bir-resimden-daha-fazla-dogruluk-ister), aynı hatanın dönmesini önlemek için [kontrol kartını](18-iyilestirmek.md#duzeltmeni-kucuk-bir-kabul-ornegine-donustur) kullanabilirsin.
-
-
-İkinci girdide yöntemin ne yaptığını [skill gösteriminde](10-baglantilar-skills.md#yontem-ikinci-haftada-neyi-koruyor) görebilirsin.
+Bu düzeltmenin sonraki işte unutulmaması için [küçük kabul örneğine](18-iyilestirmek.md#duzeltmeni-kucuk-bir-kabul-ornegine-donustur) bağlan. Sıradaki sayfa örneği, benzer bir hedefli müdahaleyi görsel soruna uygular.
 
 
 **Eğitimde sıradaki:** [Görsel sorundan doğrulanmış yayına](is-sayfa.md)
 
-[İçindekiler](README.md) · [← Araştırmadan karar ve sunuma](is-arastirma.md) · [Görsel sorundan doğrulanmış yayına →](is-sayfa.md)
+[İçindekiler](README.md)

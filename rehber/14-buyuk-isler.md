@@ -134,7 +134,7 @@ Tek paragrafı üç ajana bölmek gereksiz koordinasyon yaratabilir.
 
 ## İki bulgudan tek karara
 
-Aynı Atölye kararında bir alt iş zorunlu koşulları, diğeri listelenen maliyetleri incelesin.
+Alt ajan, ana görevin sınırlı bir parçasını çalışan yardımcı ajandır. Aynı Atölye kararında bir alt iş zorunlu koşulları, diğeri listelenen maliyetleri incelesin.
 
 | Ayrı bulgu | Tek başına çıkarılabilecek yanlış karar | Birleştirilmiş karar |
 |---|---|---|
@@ -147,10 +147,10 @@ Aynı Atölye kararında bir alt iş zorunlu koşulları, diğeri listelenen mal
 
 ## Bu iş gerçekten paralellik gerektiriyor mu?
 
-Yukarıdaki küçük örnek tek sohbetle de çözülebilir. Daha büyük bir işte bağımsız kanıt veya ayrı çıktı gerekiyorsa aynı paylaşımı kullan. Ajan sayısı yerine hangi alt sonucun tek başına incelenebileceğine bak; birleşmiş sonucun kontrolü ana sorumluda kalsın.
+Yukarıdaki küçük örnek tek sohbetle de çözülebilir. Daha büyük bir işte bağımsız kanıt veya ayrı çıktı gerekiyorsa aynı paylaşımı kullan. Ajan sayısı yerine hangi alt sonucun tek başına incelenebileceğine bak; birleşmiş sonucun kontrolü ana sorumluda kalsın. Sonraki adımın kontrol sonucuna göre seçileceği uzun bir işte [Goals gösterimine](14-buyuk-isler.md#goals-ne-zaman-yararli) geç; tek düzeltmede normal istek yeterli.
 
 
-**Eğitimde sıradaki:** [Yöntemi tekrar eden işe dönüştür](15-otomasyon.md)
+**Eğitimde sıradaki:** [Yöntemi tekrar eden işe dönüştür](15-otomasyon.md#ne-zaman-zamanlamaya-hazir)
 
 
 <a id="kontrol-listesinde-karsiligi"></a>
@@ -161,4 +161,4 @@ Yukarıdaki küçük örnek tek sohbetle de çözülebilir. Daha büyük bir iş
 - [11.6 Ajan sayısını bağımsız iş miktarıyla sınırla.](../codex-kontrol-listesi.md#m-11-6)
 - [13.1 Sen yokken hangi kararın verilebileceğini yaz.](../codex-kontrol-listesi.md#m-13-1)
 
-[İçindekiler](README.md) · [← Tasarım ve yaratıcı üretim](13-tasarim.md) · [Otomasyon ve tekrar eden işler →](15-otomasyon.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← Tasarım ve yaratıcı üretim](13-tasarim.md) · [Otomasyon ve tekrar eden işler →](15-otomasyon.md)

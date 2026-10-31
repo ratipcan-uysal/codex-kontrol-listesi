@@ -79,9 +79,10 @@ Kontrol listesinin önceki çalışmasında kısıtlı ağ ortamındaki kimlik k
 
 ## Kurgu senaryo: yeni özellik için karar
 
-Atölye'nin haftalık raporu her seferinde elle başlatılıyor, içerik yöntemi artık tutarlı. Yeni otomasyon özelliği bu sürtüşmeyi çözebilir. Buna karşılık rapor her hafta yanlış kaynakları seçiyorsa önce kaynak seçme yöntemi düzeltilir. Zamanlamayı otomatikleştirmek yanlış seçimi iyileştirmez.
+Yeni özelliği mevcut bir sürtüşmeye bağla. Atölye raporunda zamanlama kararını [otomasyon tablosuyla](15-otomasyon.md#ne-zaman-zamanlamaya-hazir) zaten verdik; burada yeni karar, güncelleme sonrasında eski kabul örneğinin hâlâ geçip geçmediğidir.
 
-Bu rehberi de aynı biçimde güncelle: kaynak tarihi değiştiğinde ilgili bölümü ve envanter satırını birlikte kontrol et. Bir özelliğin adı değişirse eski komut örneklerini sessizce geçerli bırakma; hangi yüzeyde neyin yerini aldığını belirt.
+Örneğin yeni model K04’ü korurken `yedek` durumunu yanlış değiştiriyorsa genel puan yerine bu farkı kaydet. Yöntemi buna göre daralt. Ürün adı veya komut değiştiğinde de ilgili bölümü ve envanteri birlikte güncelle; eski örneği sessizce geçerli bırakma.
+
 
 **Eğitim rotası tamamlandı.** Konu ayrıntıları için [içindekilere dön](README.md).
 
@@ -95,4 +96,4 @@ Bu rehberi de aynı biçimde güncelle: kaynak tarihi değiştiğinde ilgili bö
 - [19.1 Düzenli aralıkla kullanım ve bekleyen işleri karşılaştır.](../codex-kontrol-listesi.md#m-19-1)
 - [19.5 Geçmiş kullanımını ölçülü ve mahremiyeti koruyarak değerlendir.](../codex-kontrol-listesi.md#m-19-5)
 
-[İçindekiler](README.md) · [← Teslim, yayın ve geri dönüş](17-teslim-yayin.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← Teslim, yayın ve geri dönüş](17-teslim-yayin.md)

@@ -30,7 +30,11 @@ def teaching_next(slug):
     index=route.index(slug)
     if index==len(route)-1: return '\n\n**Eğitim rotası tamamlandı.** Konu ayrıntıları için [içindekilere dön](README.md).\n'
     item=GUIDE_ROUTE[index+1]
-    return f'\n\n**Eğitimde sıradaki:** [{item["title"]}]({item["slug"]}.md)\n'
+    return f'\n\n**Eğitimde sıradaki:** [{item["title"]}]({route_href(item, "md")})\n'
+
+
+def route_href(item, extension):
+    return item['slug']+'.'+extension+('#'+item['anchor'] if item.get('anchor') else '')
 
 def figure_html(key):
     f = GUIDE_FIGURES[key]
@@ -225,7 +229,12 @@ def page_html(title, markdown, current, prev=None, next_=None):
     local='<details class="page-toc"><summary>Bu sayfada</summary><ul>'+''.join(f'<li><a href="#{a}">{html.escape(t)}</a></li>' for a,t in heads)+'</ul></details>' if heads else ''
     moves=[]
     if prev: moves.append(f'<a rel="prev" href="{prev["slug"]}.html">← {html.escape(prev["title"])}</a>')
-    if next_: moves.append(f'<a rel="next" href="{next_["slug"]}.html">{html.escape(next_["title"])} →</a>')
+    if next_: moves.append(f'<a rel="next" href="{route_href(next_, "html")}">{html.escape(next_["title"])} →</a>')
+    # The teaching path is the primary continuation. Numbered topic order is a
+    # separately labelled reference path, not a competing unlabeled next step.
+    if current != 'index':
+        numbered = any(c['slug']==current for c in GUIDE_CHAPTERS)
+        moves = ['<details class="reference-order"><summary>Konu sırasıyla oku</summary>'+''.join(moves)+'</details>'] if numbered else []
     css=(HERE/'style.css').read_text()+'\n'+(HERE/'guide.css').read_text()
     return f'''<!doctype html>
 <html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{html.escape(title)} · Codex rehberi</title><meta name="description" content="Gerçek deneyimler, kaynaklı açıklamalar ve kurgu senaryolarla Türkçe Codex uygulaması rehberi."><style>{css}</style></head>
@@ -303,8 +312,10 @@ Yerel çıktı, uzak depoya gönderim ve canlı yayın ayrı durumlardır. Eski 
             route_index=next(i for i,item in enumerate(GUIDE_ROUTE) if item['slug']==p['slug'])
             next_=GUIDE_ROUTE[route_index+1] if route_index+1<len(GUIDE_ROUTE) else None
         navigation='\n\n[İçindekiler](README.md)'
-        if prev: navigation+=f' · [← {prev["title"]}]({prev["slug"]}.md)'
-        if next_: navigation+=f' · [{next_["title"]} →]({next_["slug"]}.md)'
+        if 'number' in p:
+            navigation+=' · Konu sırasıyla oku:'
+            if prev: navigation+=f' [← {prev["title"]}]({prev["slug"]}.md)'
+            if next_: navigation+=f' · [{next_["title"]} →]({next_["slug"]}.md)'
         title=(str(p['number'])+'. ' if 'number' in p else '')+p['title']
         (OUT/(p['slug']+'.md')).write_text(f'# {title}\n\nİçerik güncellemesi: {GUIDE_UPDATED}. Kaynak kontrol tarihleri kaynak dizinindedir.\n\n'+markdown_output(p['body'])+navigation+'\n')
         (OUT/(p['slug']+'.html')).write_text(page_html(title,p['body'],p['slug'],prev,next_))

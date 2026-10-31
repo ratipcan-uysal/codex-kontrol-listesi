@@ -1,5 +1,7 @@
 # Kurgu kaynak paketi
 
+Hedef: 60 kişilik ücretsiz Tanışma Buluşması için kayıt hizmeti. Listedeki bedeller katılımcı bileti değil, hizmet sağlayıcının etkinlik bedelidir.
+
 Bütün isim, tutar ve özellikler eğitim için kurgulanmıştır. Bunlar gerçek hizmet belgeleri değildir.
 
 ## Kayıt A / kurgu belge A

@@ -98,7 +98,7 @@ Daha küçük bir çözüm aynı sonucu sağlıyorsa karşılaştır.
 Önerini mevcut malzemeye dayandır; yeni ihtiyaç uydurma.
 ```
 
-Bir fikir eleştirisi uygulama yetkisi vermez. Karar netleşince üretim isteğine dönmek, analizin sonsuza kadar sürmesini önler.
+Kararın henüz net değilse [Atölye’deki üç soruluk görüşmeyi](is-arastirma.md#henuz-ne-isteyecegini-bilmiyorsan) kullan. Fikir netleşince üretim isteğine geç; eleştiri tek başına uygulama yetkisi vermez.
 
 <a id="kucuk-ornekle-yontemi-netlestir-sonra-genislet"></a>
 
@@ -133,4 +133,4 @@ Beklentiyi yanlış anlamışsa kelimeleri çoğaltmak yerine amaç farkını d�
 - [4.3 Ayrıntıyı değerle ilişkilendir.](../codex-kontrol-listesi.md#m-4-3)
 - [4.4 Tekrarlanan çıktıya alan şablonu ver.](../codex-kontrol-listesi.md#m-4-4)
 
-[İçindekiler](README.md) · [← Codex gerçekte nasıl çalışıyor?](03-calisma-mantigi.md) · [İş sürerken yönü yönetmek →](05-yonetmek.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← Codex gerçekte nasıl çalışıyor?](03-calisma-mantigi.md) · [İş sürerken yönü yönetmek →](05-yonetmek.md)

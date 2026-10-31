@@ -90,4 +90,4 @@ Dikte, konuşmanı metin girdisine dönüştürür. Sesli sohbet ise karşılık
 
 Atölye'nin etkinliğine bir deneme kaydı gönderildiğini düşün. Ekranda “Başarılı” yazması, doğru hesapta doğru kaydın oluştuğunu tek başına kanıtlamaz. Yetkili denemede hedef listede kaydı tekrar açıp bilgileri doğrula. Çift kayıt yaratmamak için belirsiz sonuçta yeniden göndermeden önce hedefi oku. İnceleme için gönderim gerekmiyorsa formu doldurup göndermeden görünümü değerlendirmek yeterlidir.
 
-[İçindekiler](README.md) · [← Dosyalar ve çalışma ortamları](08-ortamlar.md) · [Bağlantılar, MCP, plugin ve skill →](10-baglantilar-skills.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← Dosyalar ve çalışma ortamları](08-ortamlar.md) · [Bağlantılar, MCP, plugin ve skill →](10-baglantilar-skills.md)

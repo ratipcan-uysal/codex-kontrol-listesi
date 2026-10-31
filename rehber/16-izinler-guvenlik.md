@@ -63,4 +63,4 @@ Bu ayrım çalışmayı yavaşlatmak zorunda değildir. Codex, yetkili özetleme
 - [7.4 Ağ erişimi ile indirilen kodu çalıştırmayı ayır.](../codex-kontrol-listesi.md#m-7-4)
 - [7.5 Tanımadığın depoyu sınırlı ortamda incele.](../codex-kontrol-listesi.md#m-7-5)
 
-[İçindekiler](README.md) · [← Otomasyon ve tekrar eden işler](15-otomasyon.md) · [Teslim, yayın ve geri dönüş →](17-teslim-yayin.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← Otomasyon ve tekrar eden işler](15-otomasyon.md) · [Teslim, yayın ve geri dönüş →](17-teslim-yayin.md)

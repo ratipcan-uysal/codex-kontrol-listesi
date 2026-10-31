@@ -1799,8 +1799,8 @@ GUIDE_INTRO = ('Codex ile iyi çalışmak, hangi komutun nerede olduğunu bilmen
  '\n'
  'İlk dosya → model ve düşünme seçimi → araştırma ve sunum → veri ve grafik → sayfa düzeltmesi → '
  'skill → devir → worktree → paralel iş → otomasyon → yöntemi iyileştirme. Her sayfanın sonundaki '
- '**Eğitimde sıradaki** bağlantısı bu yolu izler. Numaralı konu rehberi ayrı başvuru sırasını '
- 'korur.\n'
+ '**Eğitimde sıradaki** bağlantısı bu yolu izler. Eğitim bağlantıları ilgili gösterime gider. '
+ '“Konu sırasıyla oku” ayrı başvuru düzenidir; eğitimde onu izlemek zorunda değilsin.\n'
  '\n'
  'Anlatıcı örnek dosyaları açar, bir kararın çıktıyı nasıl değiştirdiğini gösterir ve devam eder. '
  'Dinleyiciden kurulum veya alıştırma beklenmez. Platform ayrıntıları, komut envanteri ve teknik '
@@ -1861,10 +1861,12 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '## Kurgu senaryo: Atölye adlı bir öğrenme topluluğu\n'
           '\n'
-          'Bu rehberin bazı örneklerinde Atölye adlı hayalî bir topluluk kullanılıyor. Elinde '
-          'etkinlik notları, katılımcı tablosu ve basit bir internet sitesi var. Bu örneklerde '
-          'geçen dosyalar ve beklenen sonuçlar öğretim amacıyla kurgulandı. Gerçek müşteri veya '
-          'ölçülmüş kazanç anlatılmıyor.\n'
+          'Bu rehberin bazı örneklerinde Atölye adlı hayalî bir topluluk kullanılıyor. Ücretsiz '
+          'Tanışma Buluşması için etkinlik notları ve bir internet sitesi; ayrı ücretli Uygulama '
+          'Programı için katılımcı/tahsilat tablosu var. [İki işin '
+          'kapsamı](is-arastirma.md#atolye-nin-iki-isi) örneklerin başında açıklanıyor. Bu '
+          'örneklerde geçen dosyalar ve beklenen sonuçlar öğretim amacıyla kurgulandı. Gerçek '
+          'müşteri veya ölçülmüş kazanç anlatılmıyor.\n'
           '\n'
           '```text\n'
           'Bu klasördeki etkinlik notlarından gelecek ayın program taslağını çıkar.\n'
@@ -1917,37 +1919,67 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '## İlk dosyanı üret, aç, düzelt\n'
           '\n'
-          'Kod yazmak veya Git kurmak ilk belge işi için gerekmez. Git, dosyaların sürüm geçmişini '
-          'tutan araçtır; kod projeleri ve değişiklik yönetiminde daha sonra işimize yarayacak.\n'
+          'İlk işte kod veya Git kurman gerekmiyor. Git, dosyaların sürüm geçmişini tutan araçtır; '
+          'değişiklik yönetiminde daha sonra işimize yarayacak. Burada ücretsiz Tanışma Buluşması '
+          'için kısa program üretiyoruz.\n'
           '\n'
-          '1. Bilgisayarında bu iş için bir klasör seç. Uygulamada **Projects → +** ile bu klasörü '
-          'yerel proje olarak ekle. Proje ekleme yolu arayüzünde farklı görünüyorsa komut '
-          'menüsünde “project” ara.\n'
-          '2. O projenin içinde yeni sohbet aç. İlk dosya işinde **Local / Work locally** ortamını '
-          'seç. Bu, işin kendi bilgisayarındaki proje klasöründe yürütülmesidir.\n'
-          '3. Kaynak notu mesaj alanına ekle veya proje içindeki dosyayı adıyla belirt. “Bu nottan '
-          '`program-taslagi.md` oluştur. Kesinleşmemiş tarihleri açık sorulara ayır. Dosyayı '
-          'önizlemede aç” de. `.md`, düz metin olarak da açılan Markdown belge biçimidir.\n'
-          '4. Yanıttaki dosya bağlantısını aç. Bağlantı görünmüyorsa “Oluşturduğun dosyayı '
-          'uygulamanın panelinde aç” diye iste. Taslağın gerçekten kaydedildiği konumu ve '
-          'içeriğini görebilirsin.\n'
-          '5. Aynı sohbette “Açık soruları en alta taşı; tarih ve isimleri değiştirme” de. Son '
-          'dosyayı yeniden açıp istediğin kısmın değiştiğine bak.\n'
+          '### 1. Projeyi ve kaynağı seç\n'
           '\n'
-          'Dosya henüz yoksa ilk istekte “Boş proje klasöründe, kurgu bir etkinlik için program '
-          'taslağı oluştur; bütün tarih ve isimlerin örnek olduğunu yaz” diyebilirsin. Bu yol '
-          'herhangi bir hesabı bağlamadan üretim–önizleme–düzeltme döngüsünü gösterir. [Başlangıç '
-          've proje akışı](source:projects) · [Yerel çalışma](source:environments__modes)\n'
+          'Bilgisayarında iş klasörü seç; **Projects → +** ile yerel proje ekle ve içinde yeni '
+          'sohbet aç. **Local / Work locally**, dosyanın kendi bilgisayarındaki klasörde '
+          'düzenleneceği anlamına gelir. [Proje akışı](source:projects) · [Yerel '
+          'çalışma](source:environments__modes)\n'
           '\n'
-          'Bu noktada CLI (terminalden kullanılan istemci), IDE (kod editörü) veya MCP kurman '
-          'gerekmiyor. Bunlar ihtiyaca göre öğreneceğin ek yollar. Dosya üretmek için bir servise '
-          'yükleme veya yayınlama da gerekmez.\n'
+          '[FIGURE:projects]\n'
           '\n'
-          '**Anlatıcı gösterimi:** Solda proje klasörünü, sağda açılan dosyayı göster. “Açık '
-          'soruları sona taşı” dedikten sonra aynı dosyadaki değişikliği göster. Bu üç hareketi '
-          'tamamlayınca [işe göre model seçimine '
-          'geç](07-model-hiz-kullanim.md#hangi-ise-hangi-modelle-baslamali); aşağıdaki menüler '
-          'ihtiyaç anında başvurmak için duruyor.\n'
+          '[Hazır kaynak notunu aç](ornekler/ilk-kaynak-notu.md). Bu dosyayı proje klasörüne '
+          'kaydet ve adıyla belirt veya içeriğini mesaja ekle. Notta 19.00 ve 19.30 oturumları '
+          'kesin; kapanış bilgisi eksik. Kaynağı görmeden boşlukları doldurmak gerekmiyor.\n'
+          '\n'
+          '### 2. Sonucu iste\n'
+          '\n'
+          '> İlk kaynak notundan program-taslagi.md oluştur. Yalnız kesinleşen oturumları programa '
+          'al. Eksik saat ve konuşmacıyı açık sorulara ayır. Dosyayı kaydet ve önizlemede aç.\n'
+          '\n'
+          '[İlk çıktı dosyası](ornekler/ilk-program-once.md) açık soruları üstte gösteriyor. '
+          'Tarih, saat ve isimler kaynakla aynı. Bu, düzenleyeceğimiz gerçek Markdown örnek '
+          'dosyasıdır; bir Codex oturumunun otomatik kaydı değildir.\n'
+          '\n'
+          '### 3. Dosyayı aç\n'
+          '\n'
+          'Yanıttaki dosya bağlantısını aç. Bağlantı görünmüyorsa “Oluşturduğun dosyayı '
+          'uygulamanın panelinde aç” de. Aşağıdaki resmî ekranda solda istek ve çıktı bağlantısı, '
+          'sağda açılmış dosya görülür.\n'
+          '\n'
+          '[FIGURE:preview]\n'
+          '\n'
+          '**Ekranların kapsamı:** Bunlar OpenAI’nin gerçek uygulama arayüzü gösterimleridir; '
+          'farklı örnek işleri gösterir, Atölye için çekilmiş dört adımlık oturum kaydı değildir. '
+          'Burada okunacak hareket, proje seçmekten kaydedilmiş dosyanın önizlemesine geçmektir. '
+          'Atölye’nin kendi içeriğini yukarıdaki ve aşağıdaki dosyalarda karşılaştır.\n'
+          '\n'
+          '### 4. Aynı çıktıyı düzelt\n'
+          '\n'
+          '> Açık soruları en alta taşı. Etkinlik tarihini, saatleri ve kişi adlarını değiştirme. '
+          'Aynı program-taslagi.md dosyasını güncelle ve aç.\n'
+          '\n'
+          '[Önce](ornekler/ilk-program-once.md) · [Sonra](ornekler/ilk-program-sonra.md). İki '
+          'dosya bu rehberin karşılaştırma kopyalarıdır; gerçek işte aynı çalışma dosyası '
+          'güncellenir.\n'
+          '\n'
+          '| Bakılacak fark | Önce | Sonra |\n'
+          '|---|---|---|\n'
+          '| İlk bölüm | Açık sorular | Kesinleşen program |\n'
+          '| Eksik kapanış bilgisi | Soru olarak durur | En altta soru olarak durur |\n'
+          '| 14 Kasım, 19.00/19.30, Ada/Deniz | Kaynakla aynı | Değişmedi |\n'
+          '\n'
+          'Anlatıcı iki dosyayı yan yana açıp yalnız bölüm sırasının değiştiğini gösterir. `.md`, '
+          'sade metin olarak da açılan Markdown belge biçimidir. Bu küçük döngü için CLI, IDE, MCP '
+          'veya dışarıya yayın gerekmez. [Dosya önizleme](source:artifacts-viewer)\n'
+          '\n'
+          'Buradan [işe göre model seçimine '
+          'geç](07-model-hiz-kullanim.md#hangi-ise-hangi-modelle-baslamali). Aşağıdaki platform ve '
+          'menü ayrıntıları başvuru için duruyor.\n'
           '\n'
           '### Platform ayrıntısına ihtiyaç duyarsan\n'
           '\n'
@@ -1976,8 +2008,6 @@ GUIDE_CHAPTERS = [{'number': 1,
           'Sabitleme yalnız görünürlüğü değiştirir. Arşivleme, sohbeti aktif listeden kaldırır. '
           'Dosyalarının yedeği için ayrı bir yöntem gerekir. Arşivlenmiş sohbetlere Settings '
           'içinden dönebilirsin.\n'
-          '\n'
-          '[FIGURE:projects]\n'
           '\n'
           '**Yerel proje ile ChatGPT projesi farklı kaynakları bağlar.** Yerel proje '
           'bilgisayarındaki klasörlerle çalışır. ChatGPT projesindeki Sources ise yüklenen veya '
@@ -2056,11 +2086,9 @@ GUIDE_CHAPTERS = [{'number': 1,
           'açıklamasını isteyebilirsin. Terminali açmak bir sunucuyu kendiliğinden başlatmaz. '
           '[Terminal](source:integrated-terminal)\n'
           '\n'
-          '[FIGURE:preview]\n'
-          '\n'
-          'Ekranda bir sunum görünse de aynı alışkanlık rapor ve tablo için geçerli: dosyayı aç, '
-          'sorunlu bölgeyi tarif et, değişikliği aynı çıktı üzerinde iste. “Yeni dosya üret” '
-          'demediğin sürece hangi dosyanın son sürüm olduğu belli kalsın.\n'
+          '[İlk dosya gösterimindeki](02-uygulama.md#3-dosyayi-ac) açma hareketi rapor ve tablo '
+          'için de geçerli: dosyayı aç, sorunlu bölgeyi tarif et, değişikliği aynı çıktı üzerinde '
+          'iste. “Yeni dosya üret” demediğin sürece hangi dosyanın son sürüm olduğu belli kalsın.\n'
           '\n'
           '## Günlük işte değerli kısayollar\n'
           '\n'
@@ -2362,8 +2390,9 @@ GUIDE_CHAPTERS = [{'number': 1,
           'Önerini mevcut malzemeye dayandır; yeni ihtiyaç uydurma.\n'
           '```\n'
           '\n'
-          'Bir fikir eleştirisi uygulama yetkisi vermez. Karar netleşince üretim isteğine dönmek, '
-          'analizin sonsuza kadar sürmesini önler.\n'
+          'Kararın henüz net değilse [Atölye’deki üç soruluk '
+          'görüşmeyi](is-arastirma.md#henuz-ne-isteyecegini-bilmiyorsan) kullan. Fikir netleşince '
+          'üretim isteğine geç; eleştiri tek başına uygulama yetkisi vermez.\n'
           '\n'
           '## Küçük örnekle yöntemi netleştir, sonra genişlet\n'
           '\n'
@@ -2457,9 +2486,10 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '## Bir değişiklik nerelere yayılıyor?\n'
           '\n'
-          "**Atölye'nin kurgu devamı:** Etkinlik 14 Kasım'dan 21 Kasım'a taşınacak. Yalnız sayfa "
-          'başlığını düzeltmek yeterli olmayabilir. Bir bilgi başka dosyalara kopyalanmış veya bir '
-          'zamanlamada kullanılmışsa onları birlikte gör.\n'
+          "**Atölye'nin kurgu devamı:** Ücretsiz Tanışma Buluşması 14 Kasım'dan 21 Kasım'a "
+          'taşınacak. Ücretli Uygulama Programı’nın kayıtları bu değişikliğe dahil değil. Yalnız '
+          'sayfa başlığını düzeltmek yeterli olmayabilir. Bir bilgi başka dosyalara kopyalanmış '
+          'veya bir zamanlamada kullanılmışsa onları birlikte gör.\n'
           '\n'
           '> Tarihi değiştirmeden önce 14 Kasım bilgisinin kullanıldığı yerleri ve ona bağlı '
           'işlemleri bul. Güncellenecek yerel dosyaları, dış kayıtları ve yalnız geçmiş olarak '
@@ -2608,10 +2638,10 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '## Kurgu senaryo: iki hafta sonra dönüş\n'
           '\n'
-          'Atölye takvimine döndüğünde katılımcı sayısı 20’den 35’e çıkmışsa yalnız “devam” demek '
-          'yetmez. “35 kişi eski varsayımın yerini alıyor; kapasite ve bütçede etkilenen yerleri '
-          'güncelle” de. Yukarıdaki devir yönteminin ikinci kullanımı budur; diğer kararları '
-          'yeniden açman gerekmez.\n'},
+          'Ayrı bir kapasite denemesinde Uygulama Programı’nın planlanan kontenjanı 20’den 35’e '
+          'çıkmışsa yalnız “devam” demek yetmez. “35 kişilik kontenjan eski varsayımın yerini '
+          'alıyor; kapasite ve bütçede etkilenen yerleri güncelle” de. Yukarıdaki devir yönteminin '
+          'ikinci kullanımı budur; diğer kararları yeniden açman gerekmez.\n'},
  {'number': 7,
   'slug': '07-model-hiz-kullanim',
   'title': 'Model, düşünme seviyesi, hız ve kullanım',
@@ -2820,9 +2850,10 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '## Ayrı denemeden ana çalışmaya dön\n'
           '\n'
-          '**Kurgu masaüstü gösterimi:** Ana klasörde etkinlik metni üzerinde çalışıyorsun. Ayrı '
-          'worktree’de yalnız kart genişliği düzeltildi. Checkout, üzerinde çalışılan dosya '
-          'kopyasıdır; bu iki kopyanın adresleri farklıdır.\n'
+          'Worktree, aynı Git geçmişine bağlı ayrı dosya çalışma kopyasıdır. **Kurgu masaüstü '
+          'gösterimi:** Ana klasörde etkinlik metni üzerinde çalışıyorsun. Ayrı worktree’de yalnız '
+          'kart genişliği düzeltildi. Checkout, üzerinde çalışılan dosya kopyasıdır; bu iki '
+          'kopyanın adresleri farklıdır.\n'
           '\n'
           '| Aşama | Anlatıcının göstereceği şey | Karar |\n'
           '|---|---|---|\n'
@@ -2914,8 +2945,10 @@ GUIDE_CHAPTERS = [{'number': 1,
           '> Önizlemeyi sunan sürecin çalışma klasörünü ve portunu doğrula. Düzenlediğin worktree '
           'ile aynı kaynaktan çalıştığını göster. Sonra görsel kontrolü tekrarla.\n'
           '\n'
-          'Bu kontrol, kodun yanlış olduğu varsayımını sınar. Sonuç raporunda klasör, sürüm ve URL '
-          'birlikte anlam taşır.'},
+          'Bu kontrol, kodun yanlış olduğu varsayımını sınar. İki olasılığın sonraki adımı nasıl '
+          'değiştirdiğini [sayfa '
+          'örneğinde](is-sayfa.md#nedenini-bilmiyorsan-once-ayirici-kontrol-sec) gör. Sonuç '
+          'raporunda klasör, sürüm ve URL birlikte anlam taşır.'},
  {'number': 9,
   'slug': '09-web-tarayici-bilgisayar',
   'title': 'İnternet, tarayıcı ve bilgisayar kullanımı',
@@ -3091,9 +3124,11 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '## Üç kaynaktan bir toplantı notu\n'
           '\n'
-          '**Kurgu iş:** Takvimdeki Atölye toplantısı, bağlı belgedeki önceki karar ve yerel '
-          'katılım raporu tek hazırlık notunda birleşecek. [Örnek kaynak ve '
-          'çıktı](ornekler/toplanti-hazirligi.md) her cümlenin nereden geldiğini gösterir.\n'
+          '**Kurgu iş:** Takvimdeki Atölye hazırlık toplantısı iki ayrı işi görüşecek: Tanışma '
+          'Buluşması’nın kayıt sistemi kararı ve ücretli Uygulama Programı’nın tahsilat raporu. '
+          'Kaynaklar tek notta birleşir; iki etkinliğin bilgileri birbirine karışmaz. [Örnek '
+          'kaynak ve çıktı](ornekler/toplanti-hazirligi.md) her cümlenin nereden geldiğini '
+          'gösterir.\n'
           '\n'
           '> Bağlı takvimde 14 Kasım Atölye toplantısını bul. Önceki karar belgesini ve yerel '
           'katılım raporunu oku. Gündemi, açık soruyu ve dayanak bağlantısını içeren tek hazırlık '
@@ -3125,11 +3160,11 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '## Skill dosyadan kullanılabilir yönteme nasıl geçer?\n'
           '\n'
-          'Yerel projeye ait örnek için `SKILL.md`, proje kökündeki '
-          '`.agents/skills/atolye-raporu/` klasörüne konur. Başındaki `name` ve `description` '
-          'alanları yöntemin adını ve ne zaman seçileceğini tanımlar. Bu yapı, sıradan bir metin '
-          'dosyasını yalnız sohbete eklemekten farklıdır. [Yerel skill '
-          'keşfi](source:build-skills)\n'
+          'Skill, tekrar kullanacağın yöntemi saklayan yönerge paketidir. Yerel projeye ait örnek '
+          'için `SKILL.md`, proje kökündeki `.agents/skills/atolye-raporu/` klasörüne konur. '
+          'Başındaki `name` ve `description` alanları yöntemin adını ve ne zaman seçileceğini '
+          'tanımlar. Bu yapı, sıradan bir metin dosyasını yalnız sohbete eklemekten farklıdır. '
+          '[Yerel skill keşfi](source:build-skills)\n'
           '\n'
           '1. Skills görünümünde veya mesaj alanındaki `$` seçicisinde **atolye-raporu** adını '
           'bul. Görünmüyorsa yanlış proje, klasör, ad/açıklama veya devre dışı bırakılma '
@@ -3435,11 +3470,12 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '## Kurgu senaryo: kayıt sayısı doğru, anlam yanlış\n'
           '\n'
-          "Atölye'nin 80 katılımcı kaydı dönüşümden sonra yine 80 satır. Bu iyi bir ilk kontrol, "
-          'ama iki kişinin e-postası yer değiştirmiş olabilir. Sabit kayıt anahtarıyla eşleştirme, '
-          'alan bazlı karşılaştırma ve temsilî uç durumlar gerekir. Toplamın eşit olması kimliğin '
-          'korunduğunu tek başına göstermez. Bu yüzden “80 satır korundu” ile “dönüşüm doğru” aynı '
-          'rapor cümlesi olmamalı.\n'
+          'Uygulama Programı’nın ileride 80 kayda büyüdüğü ayrı bir kurgu denemede, dönüşümden '
+          'sonra yine 80 satır var. Bu iyi bir ilk kontrol, ama iki kişinin e-postası yer '
+          'değiştirmiş olabilir. Sabit kayıt anahtarıyla eşleştirme, alan bazlı karşılaştırma ve '
+          'temsilî uç durumlar gerekir. Toplamın eşit olması kimliğin korunduğunu tek başına '
+          'göstermez. Bu yüzden “80 satır korundu” ile “dönüşüm doğru” aynı rapor cümlesi '
+          'olmamalı.\n'
           '\n'
           '## Kanıtı sonucun içinde gör\n'
           '\n'
@@ -3754,8 +3790,8 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '## İki bulgudan tek karara\n'
           '\n'
-          'Aynı Atölye kararında bir alt iş zorunlu koşulları, diğeri listelenen maliyetleri '
-          'incelesin.\n'
+          'Alt ajan, ana görevin sınırlı bir parçasını çalışan yardımcı ajandır. Aynı Atölye '
+          'kararında bir alt iş zorunlu koşulları, diğeri listelenen maliyetleri incelesin.\n'
           '\n'
           '| Ayrı bulgu | Tek başına çıkarılabilecek yanlış karar | Birleştirilmiş karar |\n'
           '|---|---|---|\n'
@@ -3773,7 +3809,10 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           'Yukarıdaki küçük örnek tek sohbetle de çözülebilir. Daha büyük bir işte bağımsız kanıt '
           'veya ayrı çıktı gerekiyorsa aynı paylaşımı kullan. Ajan sayısı yerine hangi alt sonucun '
-          'tek başına incelenebileceğine bak; birleşmiş sonucun kontrolü ana sorumluda kalsın.\n'},
+          'tek başına incelenebileceğine bak; birleşmiş sonucun kontrolü ana sorumluda kalsın. '
+          'Sonraki adımın kontrol sonucuna göre seçileceği uzun bir işte [Goals '
+          'gösterimine](14-buyuk-isler.md#goals-ne-zaman-yararli) geç; tek düzeltmede normal istek '
+          'yeterli.\n'},
  {'number': 15,
   'slug': '15-otomasyon',
   'title': 'Otomasyon ve tekrar eden işler',
@@ -4183,14 +4222,13 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '## Kurgu senaryo: yeni özellik için karar\n'
           '\n'
-          "Atölye'nin haftalık raporu her seferinde elle başlatılıyor, içerik yöntemi artık "
-          'tutarlı. Yeni otomasyon özelliği bu sürtüşmeyi çözebilir. Buna karşılık rapor her hafta '
-          'yanlış kaynakları seçiyorsa önce kaynak seçme yöntemi düzeltilir. Zamanlamayı '
-          'otomatikleştirmek yanlış seçimi iyileştirmez.\n'
+          'Yeni özelliği mevcut bir sürtüşmeye bağla. Atölye raporunda zamanlama kararını '
+          '[otomasyon tablosuyla](15-otomasyon.md#ne-zaman-zamanlamaya-hazir) zaten verdik; burada '
+          'yeni karar, güncelleme sonrasında eski kabul örneğinin hâlâ geçip geçmediğidir.\n'
           '\n'
-          'Bu rehberi de aynı biçimde güncelle: kaynak tarihi değiştiğinde ilgili bölümü ve '
-          'envanter satırını birlikte kontrol et. Bir özelliğin adı değişirse eski komut '
-          'örneklerini sessizce geçerli bırakma; hangi yüzeyde neyin yerini aldığını belirt.'}]
+          'Örneğin yeni model K04’ü korurken `yedek` durumunu yanlış değiştiriyorsa genel puan '
+          'yerine bu farkı kaydet. Yöntemi buna göre daralt. Ürün adı veya komut değiştiğinde de '
+          'ilgili bölümü ve envanteri birlikte güncelle; eski örneği sessizce geçerli bırakma.\n'}]
 
 GUIDE_APPENDICES = [{'slug': 'komutlar',
   'title': 'Komutlar ve kısayollar',
@@ -4958,7 +4996,7 @@ GUIDE_APPENDICES = [{'slug': 'komutlar',
  {'slug': 'is-arastirma',
   'title': 'Araştırmadan karar ve sunuma',
   'journey': 1,
-  'body': '**Kurgu iş:** Atölye, 60 kişilik ücretsiz bir buluşma için kayıt sistemi seçecek. '
+  'body': '**Kurgu iş:** Atölye, 60 kişilik ücretsiz Tanışma Buluşması için kayıt sistemi seçecek. '
           'Katılımcıya hesap açtırmak istemiyor; katılımcı listesini CSV olarak indirebilmesi '
           'gerekiyor. Etkinlik başına bütçe 3.000 TL. Aşağıdaki platform adları, fiyatlar ve belge '
           'parçaları eğitim için uyduruldu. Gerçek bir ürün karşılaştırması veya yapılmış satın '
@@ -4969,6 +5007,47 @@ GUIDE_APPENDICES = [{'slug': 'komutlar',
           'birbirini besliyor.\n'
           '\n'
           '[FLOW:research]\n'
+          '\n'
+          '## Atölye’nin iki işi\n'
+          '\n'
+          'Atölye bu rehberin kurgu öğrenme topluluğu. **Tanışma Buluşması**, 14 Kasım 2026’da '
+          'yapılan, 60 kişilik ücretsiz etkinlik; kayıt sistemi ve web sayfası bunun için '
+          'hazırlanıyor. **Uygulama Programı** ise ayrı, ücretli bir çalışma; tahsilat örneğindeki '
+          'altı kayıt bu programa ait. Altı satır, 60 kişilik buluşmanın katılımcı listesinin '
+          'tamamı veya örneklemi değil. Sonraki hafta yeni kayıtlar aynı ücretli programın '
+          'raporuna gelir.\n'
+          '\n'
+          'Tarih değişikliği ve bütçe denemeleri açıkça kurgu devam diye işaretlenir; önceki '
+          'kaynak kendiliğinden değişmiş sayılmaz. Bu ayrım, bir topluluğun farklı işleri arasında '
+          'bilgiyi yanlışlıkla taşımamayı da öğretir.\n'
+          '\n'
+          '## Henüz ne isteyeceğini bilmiyorsan\n'
+          '\n'
+          'İlk cümlen yalnız “Atölye için kayıt sistemi lazım” olabilir. Ölçütleri tek başına '
+          'bulmak zorunda değilsin. Codex’ten kararını şekillendiren kısa bir görüşme iste; resmî '
+          'rehber de belirsiz fikri sorularla somutlaştırmayı öneriyor. [Planlama ve '
+          'sorular](source:best-practices)\n'
+          '\n'
+          '> Önce mevcut notları oku. Kararı değiştirecek en fazla üç eksik bilgiyi sor; her '
+          'soruda seçenekleri ve önerini açıkla. Kaynaklarda cevabı olanı tekrar sorma. Henüz '
+          'hizmet seçme veya hesap açma.\n'
+          '\n'
+          '**Kurgu konuşma:** Notlarda yalnız ücretsiz Tanışma Buluşması’nın adı var. Anlatıcı şu '
+          'üç soru–cevabı gösterir:\n'
+          '\n'
+          '| Codex’in ayırıcı sorusu | Kullanıcının cevabı | Karara etkisi |\n'
+          '|---|---|---|\n'
+          '| Kaç kişi ve hizmet için ne kadar bütçe? Tahmini aralık da başlangıç olabilir. | 60 '
+          'kişi, etkinlik başına en fazla 3.000 TL. | Kapasite ve maliyet sınırı belirlenir. |\n'
+          '| Katılımcı hesabı zorunlu olabilir mi? Giriş engelini azaltmak istiyorsan hesapsız '
+          'kayıt öneririm. | Hesap açtırmayalım. | Bu koşulu karşılamayan seçenek elenir. |\n'
+          '| Kayıtlar sonra nerede kullanılacak? Tabloya aktaracaksan CSV dışa aktarmayı koşul '
+          'yapalım. | Listeyi kendi tablomda kullanacağım. | CSV zorunlu olur. |\n'
+          '\n'
+          'Çıkan kısa görev: “60 kişi, hesapsız kayıt, CSV ve 3.000 TL sınırıyla seçenekleri '
+          'karşılaştır.” Bu bir zorunlu soru formu değil; cevapları zaten biliyorsan doğrudan '
+          'aşağıdaki isteğe geç. Teknik kurulum ayrıntılarını kullanıcıya soru diye geri yüklemek '
+          'bu görüşmenin amacı değildir.\n'
           '\n'
           '## 1. İstekten önce kararın ölçüsünü kur\n'
           '\n'
@@ -5023,8 +5102,8 @@ GUIDE_APPENDICES = [{'slug': 'komutlar',
           '> Önce B’nin ek ücretinin bütçeyi aşıp aşmadığını araştır. Yeni özellik listesi '
           'toplama. Bilgi bulunamazsa öneriyi koşullu bırak ve gereken soruyu yaz.\n'
           '\n'
-          'Aynı ürün açıklamasını aktaran üç sayfa bulursan bunları [üç bağımsız doğrulama '
-          'sayma](09-web-tarayici-bilgisayar.md#cok-baglanti-kac-bagimsiz-dayanak). Bu kurgu '
+          'Anlatıcı burada [üç bağlantının neden tek dayanak olabileceğini '
+          'gösterir](09-web-tarayici-bilgisayar.md#cok-baglanti-kac-bagimsiz-dayanak). Bu kurgu '
           'pakette ek ücret yanıtı yoktur. Dolayısıyla sonuç “kesin satın al” değil, koşullu '
           'öneridir. Daha fazla aramanın hangi kararı değiştireceği belli olduğunda araştırma '
           'sınır kazanır.\n'
@@ -5107,18 +5186,19 @@ GUIDE_APPENDICES = [{'slug': 'komutlar',
  {'slug': 'is-veri',
   'title': 'Dağınık tablodan güvenilir rapora',
   'journey': 2,
-  'body': "**Kurgu iş:** Atölye'nin etkinlik kayıtları farklı biçimlerde tutulmuş. Altı kayıt var; "
-          'iki kişinin adı aynı, bir tahsilat boş. Amaç, kimseyi kaybetmeden düzenli tablo ve kısa '
-          'rapor üretmek. İsimler ve tutarlar eğitim için kurgulandı. Dosyalar gerçek katılımcı '
-          'verisi içermiyor.\n'
+  'body': "**Kurgu iş:** Atölye'nin ücretli Uygulama Programı kayıtları farklı biçimlerde "
+          'tutulmuş. Bu, önceki örneğin ücretsiz Tanışma Buluşması’ndan ayrı bir iş. Altı kayıt '
+          'var; iki kişinin adı aynı, bir tahsilat boş. Amaç, kimseyi kaybetmeden düzenli tablo ve '
+          'kısa rapor üretmek. İsimler ve tutarlar eğitim için kurgulandı. Dosyalar gerçek '
+          'katılımcı verisi içermiyor.\n'
           '\n'
           "Anlatıcı [ham CSV'yi](ornekler/katilim-ham.csv) ve [beklenen temiz "
           'çıktıyı](ornekler/katilim-temiz.csv) yan yana açabilir. CSV, satır ve sütunlardan '
-          'oluşan, birçok tablo uygulamasında açılabilen düz metin biçimidir. Hesap için görüntü '
-          'yerine bu girdiyi seçmenin nedeni [girdi '
-          'karşılaştırmasında](02-uygulama.md#ayni-bilgi-farkli-girdi-hangisini-vermeli) '
-          'açıklanıyor. Bu dosyalar bir oturumun otomatik kaydı değil, yöntemi incelemek için '
-          'hazırlanmış örnek girdiler ve çıktılardır.\n'
+          'oluşan, birçok tablo uygulamasında açılabilen düz metin biçimidir. Anlatıcı hesabı '
+          'başlatmadan [girdi '
+          'karşılaştırmasını](02-uygulama.md#ayni-bilgi-farkli-girdi-hangisini-vermeli) açar, '
+          'sonra buraya döner. Dosyalar yöntemi incelemek için hazırlanmış kurgu girdi ve '
+          'çıktılardır.\n'
           '\n'
           '[FLOW:data]\n'
           '\n'
@@ -5198,10 +5278,8 @@ GUIDE_APPENDICES = [{'slug': 'komutlar',
           '\n'
           '[FIGURE:attendance-chart]\n'
           '\n'
-          'Grafik, [ham CSV’den](ornekler/katilim-ham.csv) sayılar hesaplanarak gerçekten '
-          'üretildi. Üç çubuğun değerleri 3, 2 ve 1; toplam altı kayıt. Tahsilat ayrı kaldı. '
-          '“1.800 TL gelir” başlıklı aynı grafiği üretmek bu sorunun cevabı olmazdı. [Grafiğin '
-          'veri tablosu](ornekler/katilim-grafik.csv).\n'
+          'Grafik [ham CSV’den](ornekler/katilim-ham.csv) gerçekten hesaplandı; [veri '
+          'tablosu](ornekler/katilim-grafik.csv) da indirilebilir.\n'
           '\n'
           'Anlatıcı önce grafiği, sonra K05 satırını gösterir: bekleyen kişinin tahsilatı '
           'olabilir. Böylece katılım dağılımıyla ödeme toplamının neden ayrı ölçüler olduğu '
@@ -5209,43 +5287,25 @@ GUIDE_APPENDICES = [{'slug': 'komutlar',
           '\n'
           '## 5. İş tekrarlanacaksa önce sabit kalan kısmı ayır\n'
           '\n'
-          'Bir kez çalışan rapordan hemen otomasyon kurmak yerine yöntemi sonraki gerçek dosyada '
-          'da kontrol et. Yeni bir durum etiketi veya farklı sayı biçimi gelirse betik bunu '
-          'sessizce yanlış dönüştürmesin; belirsiz satır olarak ayırsın. Rapor her '
-          'çalıştırıldığında aynı haftaya ikinci kopya üretmek yerine aynı hedefi güncelleme '
-          'kuralı belirle.\n'
+          '**Teslim:** Temiz CSV, kimlik eşlemesi ve dört sonuçlu rapor birlikte açılır. Anlatıcı '
+          'son kontrolde kayıp kayıt olmadığını ve K04’ün belirsizliğinin korunduğunu gösterir. '
+          'XLSX gerekiyorsa hesaplama ve düzenlenebilirlik o dosyada ayrıca kontrol edilir.\n'
           '\n'
-          'Kurallar yerleştiğinde otomasyona şu işi ver: “Belirlenen klasördeki yeni kayıt '
-          'dosyasını bu yöntemle işle, raporu kaydet; yeni durum etiketi veya eksik veri varsa '
-          'bana bildir.” Kullanıcıya mesaj gönderme ya da dış sisteme yayın yapma bu isteğin '
-          'kendiliğinden parçası olmaz. [Tekrar eden işler](15-otomasyon.md)\n'
+          'İkinci haftanın yeni durum etiketiyle yöntemi [skill '
+          'gösteriminde](10-baglantilar-skills.md#yontem-ikinci-haftada-neyi-koruyor) sınayacağız. '
+          '[Otomasyona geçiş kararı](15-otomasyon.md#ne-zaman-zamanlamaya-hazir) o bölümde; burada '
+          'raporu zamanlamıyoruz.\n'
           '\n'
-          '**Teslim:** Kaynak korunmuş, temiz CSV açılabilir, kimlik eşlemesi tamam, eksik tutar '
-          'görünür ve rapordaki dört sonuç kaynakla tutarlı. Gerçek işte XLSX gerekiyorsa '
-          'hesaplamaları ve düzenlenebilirliği o dosyada ayrıca kontrol et.\n'
-          '\n'
-          '**Başka işte kullanacağın ders:** Kimliği koru, bilinmeyeni sıfıra çevirme, ölçünün '
-          'neyi temsil ettiğini yaz. Bu üç karar müşteri listesi, stok, anket veya bütçe '
-          'dosyasında da yararlıdır. Sonraki örnekte aynı netlik görsel bir düzeltmeye '
-          'uygulanıyor: [sayfadan doğrulanmış yayına](is-sayfa.md).\n'
-          '\n'
-          'Bu sonucu grafiğe taşırken sayıları [veriden çizdirme '
-          'yöntemini](13-tasarim.md#sayisal-grafik-bir-resimden-daha-fazla-dogruluk-ister), aynı '
-          'hatanın dönmesini önlemek için [kontrol '
-          'kartını](18-iyilestirmek.md#duzeltmeni-kucuk-bir-kabul-ornegine-donustur) '
-          'kullanabilirsin.\n'
-          '\n'
-          '\n'
-          'İkinci girdide yöntemin ne yaptığını [skill '
-          'gösteriminde](10-baglantilar-skills.md#yontem-ikinci-haftada-neyi-koruyor) '
-          'görebilirsin.\n'},
+          'Bu düzeltmenin sonraki işte unutulmaması için [küçük kabul '
+          'örneğine](18-iyilestirmek.md#duzeltmeni-kucuk-bir-kabul-ornegine-donustur) bağlan. '
+          'Sıradaki sayfa örneği, benzer bir hedefli müdahaleyi görsel soruna uygular.\n'},
  {'slug': 'is-sayfa',
   'title': 'Görsel sorundan doğrulanmış yayına',
   'journey': 3,
-  'body': "**Kurgu iş:** Atölye'nin etkinlik sayfasındaki kart telefonda taşıyor. Kullanıcı mevcut "
-          'metinleri ve görsel yönü seviyor; yalnız dar ekranda okunabilirlik istiyor. Bu rehber '
-          'için gerçekten üretilmiş iki küçük HTML dosyası üzerinden ilerliyoruz. Bir müşteri '
-          'sitesinin çalışma kaydı veya mağaza dağıtımı değil.\n'
+  'body': "**Kurgu iş:** Atölye'nin ücretsiz Tanışma Buluşması sayfasındaki kart telefonda "
+          'taşıyor. Kullanıcı mevcut metinleri ve görsel yönü seviyor; yalnız dar ekranda '
+          'okunabilirlik istiyor. Bu rehber için gerçekten üretilmiş iki küçük HTML dosyası '
+          'üzerinden ilerliyoruz. Bir müşteri sitesinin çalışma kaydı veya mağaza dağıtımı değil.\n'
           '\n'
           '[Taşan örneği aç](ornekler/sayfa-once.html) · [Düzeltilmiş örneği '
           'aç](ornekler/sayfa-sonra.html). Anlatıcı sayfayı daraltıp aynı içeriği '
@@ -5325,20 +5385,41 @@ GUIDE_APPENDICES = [{'slug': 'komutlar',
           '\n'
           '## 5. Sohbetin yönünü hangi araçla değiştirirsin?\n'
           '\n'
-          '| Yeni ihtiyacın | Bu işte seçeceğin yol | Neden? |\n'
-          '|---|---|---|\n'
-          '| “Rengi değiştirme, yalnız genişliği düzelt” | Aynı sohbeti yönlendir | Mevcut hedefin '
-          'sınırını düzeltiyorsun |\n'
-          '| “Bu CSS ifadesi ne demek?” | `/side` | Ana işi kesmeden kavram açıklaması istiyorsun '
-          '|\n'
-          '| “Aynı geçmişten farklı bir tasarım deneyeyim” | `/fork` | Ayrı yön istiyorsun; dosya '
-          'yalıtımını ayrıca seçmelisin |\n'
-          '| “Bambaşka bir rapora başlayacağım” | `/new` | Aynı çalışma alanında boş sohbet '
-          'istiyorsun |\n'
+          'Kart düzeltmesi sürerken “renkleri koru” mesajını aynı sohbete ver. Yalnız “bu CSS ne '
+          'demek?” açıklaması için `/side` kullanabilirsin; farklı tasarım yönü denemek '
+          'istediğinde [sohbet seçimi '
+          'tablosuna](06-baglam-bellek.md#ayni-sohbet-mi-yeni-sohbet-mi) geç. `/fork` ile '
+          'dosyaların kendiliğinden yalıtıldığını varsayma. [Masaüstü '
+          'komutları](source:reference__slash-commands)\n'
           '\n'
-          'Komutların erişimi ortama bağlıdır. `/fork` sohbeti dallandırır; aynı klasördeki '
-          'dosyaları otomatik olarak iki bağımsız ürün yapmaz. Gerekiyorsa ayrı Git çalışma '
-          'kopyası olan worktree seçilir. [Masaüstü komutları](source:reference__slash-commands)\n'
+          '## Nedenini bilmiyorsan önce ayırıcı kontrol seç\n'
+          '\n'
+          '**Kurgu devam:** Tanışma Buluşması 21 Kasım’a taşınmış, ama açık önizlemede hâlâ 14 '
+          'Kasım görünüyor. Yeni tarihi tekrar yazdırmadan iki olasılığı ayır:\n'
+          '\n'
+          '| Olasılık | Küçük kontrol | Sonuca göre hareket |\n'
+          '|---|---|---|\n'
+          '| Kaynak dosya güncellenmedi. | Düzenlenen dosyadaki etkinlik tarihini oku. | Hâlâ 14 '
+          'Kasım ise doğru kaynakta tarih düzeltmesi yap. |\n'
+          '| Kaynak yeni, önizleme başka kopyayı gösteriyor. | Açık URL’yi sunan sürecin klasörünü '
+          'düzenlenen klasörle karşılaştır. | Klasörler farklıysa doğru önizlemeyi aç; metni '
+          'yeniden değiştirme. |\n'
+          '\n'
+          '> Yeni düzeltme yapmadan bu iki olasılığı ayıran en küçük kontrolü seç. Gözlediğin '
+          'sonuca göre devam et. İkisi de açıklamıyorsa bunu söyle; başka nedeni kanıtsız '
+          'kesinleştirme.\n'
+          '\n'
+          'Bu örnekte kontrolün kaynakta 21 Kasım, önizlemede başka klasör bulduğunu varsayıyoruz. '
+          'Sonraki hareket doğru klasörden önizleme açmaktır. Aynı tarih metnini bir kez daha '
+          'değiştirmek sorunu çözmez. Buradaki tablo yapılmış bir test günlüğü değil, deneme '
+          'seçimini gösteren kurgu akıştır.\n'
+          '\n'
+          '**Anlatıcı geçişi:** Tarih birden çok yerde kullanılıyorsa [etki '
+          'tablosunu](05-yonetmek.md#bir-degisiklik-nerelere-yayiliyor) aç; dosya adları da '
+          'değişecekse [çakışma '
+          'önizlemesini](08-ortamlar.md#toplu-islemden-once-degisiklik-listesini-gor) göster. '
+          'Sonra burada teslim adımına dön. Yanlış neden üzerine daha çok işlem yapmak yerine '
+          'doğru etkiyi kapsıyoruz.\n'
           '\n'
           '## 6. Yayın isteği gelince hedefi değiştir\n'
           '\n'
@@ -5378,7 +5459,7 @@ GUIDE_SOURCES = {'app': {'url': 'https://learn.chatgpt.com/docs/app',
               'title': 'Projects and chats',
               'sha256': '2492a9886d932e82999f827b963558927dbf952e06494344a3ff329526dc7007',
               'status': 200,
-              'checked': '2026-10-29'},
+              'checked': '2026-10-31'},
  'use-chatgpt': {'url': 'https://learn.chatgpt.com/docs/use-chatgpt',
                  'title': 'Use ChatGPT',
                  'sha256': '53cc375d4167155c9c915f755ba2325be231dffb90f714d3e5670536eec69a8c',
@@ -5558,7 +5639,7 @@ GUIDE_SOURCES = {'app': {'url': 'https://learn.chatgpt.com/docs/app',
                   'title': 'Image inputs',
                   'sha256': '252e1571e2cb0f933d04846f52023861bd6d6168a7ab279a421787db287bd3d3',
                   'status': 200,
-                  'checked': '2026-10-29'},
+                  'checked': '2026-10-31'},
  'image-generation': {'url': 'https://learn.chatgpt.com/docs/image-generation',
                       'title': 'Image generation',
                       'sha256': '0eedfcaca1d6cb8ed0a39b6e1b0b2dedc06e2f9b9d2bcff5c5dfffa5f6360daa',
@@ -5750,7 +5831,12 @@ GUIDE_SOURCES = {'app': {'url': 'https://learn.chatgpt.com/docs/app',
                      'sha256': 'b3ce4be1f893a1d7ec545fe22a05bdab4d273b39c943bb763159391696a626b3',
                      'status': 200,
                      'checked': '2026-10-31',
-                     'title': 'Model selection'}}
+                     'title': 'Model selection'},
+ 'best-practices': {'title': 'Best practices',
+                    'url': 'https://learn.chatgpt.com/docs/learn/best-practices',
+                    'status': 200,
+                    'sha256': '1ea68ec75676d0d7e190e22e77744c5aa83366e9b1759e3bb85053cfbdd82193',
+                    'checked': '2026-10-31'}}
 
 GUIDE_FEATURES = [{'id': 'F01',
   'name': 'Kurulum ve hesap girişi',
@@ -6588,6 +6674,10 @@ GUIDE_FLOWS = {'research': {'title': 'Karar bilgisini biçimler arasında koru',
 
 GUIDE_EXAMPLES = {'arastirma-kaynaklari.md': '# Kurgu kaynak paketi\n'
                             '\n'
+                            'Hedef: 60 kişilik ücretsiz Tanışma Buluşması için kayıt hizmeti. '
+                            'Listedeki bedeller katılımcı bileti değil, hizmet sağlayıcının '
+                            'etkinlik bedelidir.\n'
+                            '\n'
                             'Bütün isim, tutar ve özellikler eğitim için kurgulanmıştır. Bunlar '
                             'gerçek hizmet belgeleri değildir.\n'
                             '\n'
@@ -6607,7 +6697,8 @@ GUIDE_EXAMPLES = {'arastirma-kaynaklari.md': '# Kurgu kaynak paketi\n'
                             'belirtilmiyor.\n',
  'karar-notu.md': '# Atölye / Kurgu karar notu\n'
                   '\n'
-                  'Koşullar: 60 kişilik etkinlik; hesapsız kayıt ve CSV zorunlu; bütçe 3.000 TL.\n'
+                  'Koşullar: 60 kişilik ücretsiz Tanışma Buluşması; hesapsız kayıt ve CSV zorunlu; '
+                  'bütçe 3.000 TL.\n'
                   '\n'
                   'Öneri: Kurgu belgelerdeki koşullara göre Kayıt B. Listelenen 2.500 TL bedel '
                   'bütçenin 500 TL altında. Ek ücretler henüz doğrulanmış değil.\n'
@@ -6761,14 +6852,16 @@ GUIDE_EXAMPLES = {'arastirma-kaynaklari.md': '# Kurgu kaynak paketi\n'
                           '\n'
                           '## Kaynaklar\n'
                           '- Takvim K-T1: 14 Kasım, 14.00, Atölye hazırlık toplantısı.\n'
-                          '- Karar D-1: Kayıt B koşullu öneri; ek ücret doğrulanmalı.\n'
-                          '- Yerel rapor R-1: bilinen tahsilat 1.800 TL, K04 tutarı bilinmiyor.\n'
+                          '- Karar D-1 (ücretsiz Tanışma Buluşması): Kayıt B koşullu öneri; ek '
+                          'ücret doğrulanmalı.\n'
+                          '- Yerel rapor R-1 (ücretli Uygulama Programı): bilinen tahsilat 1.800 '
+                          'TL, K04 tutarı bilinmiyor.\n'
                           '\n'
                           '## Üretilmesi beklenen hazırlık notu\n'
                           '- Toplantı: 14 Kasım 14.00 (K-T1).\n'
-                          '- Karar gündemi: B’nin ek ücretini netleştir (D-1).\n'
-                          '- Açık veri: K04 tahsilatını öğren; bilinen 1.800 TL’yi tam toplam '
-                          'sayma (R-1).\n'
+                          '- Tanışma Buluşması gündemi: B’nin ek ücretini netleştir (D-1).\n'
+                          '- Uygulama Programı gündemi: K04 tahsilatını öğren; bilinen 1.800 TL’yi '
+                          'tam toplam sayma (R-1).\n'
                           '\n'
                           'Bu öğretim dosyası gerçek takvim/bağlı belge okuma kaydı değildir. '
                           'Gerçek kullanımda kaynak kimliklerinin yerini erişilen kayıtların '
@@ -6839,19 +6932,74 @@ GUIDE_EXAMPLES = {'arastirma-kaynaklari.md': '# Kurgu kaynak paketi\n'
                            'koruyan katılım raporu.</p></li></ol></section></div><p>Değişen: okuma '
                            'sırası. Korunan: üç oturumun saati, başlığı ve açıklaması.</p><p><a '
                            'href="../13-tasarim.html#ayni-bir-gunluk-program-iki-gercek-gorunum">Rehbere '
-                           'dön</a></p></main></html>'}
+                           'dön</a></p></main></html>',
+ 'ilk-kaynak-notu.md': '# Atölye — Tanışma Buluşması kaynak notu\n'
+                       '\n'
+                       'Kurgu eğitim verisi. Etkinlik 14 Kasım 2026, ücretsiz, kontenjan 60 kişi.\n'
+                       '\n'
+                       'Kesinleşen program:\n'
+                       '- 19.00 — Tanışma; yürütücü: Ada.\n'
+                       '- 19.30 — Örnek iş gösterimi; yürütücü: Deniz.\n'
+                       '\n'
+                       'Kesinleşmeyen: Kapanış konuşmasının saati ve konuşmacısı henüz belli '
+                       'değil.\n'
+                       'Kayıt hizmeti için bütçe en fazla 3.000 TL; katılımcı ücreti yok.\n',
+ 'ilk-program-once.md': '# Atölye — Tanışma Buluşması\n'
+                        '\n'
+                        'Kurgu eğitim verisi. 14 Kasım 2026 · Ücretsiz · 60 kişi.\n'
+                        '\n'
+                        '## Açık sorular\n'
+                        '\n'
+                        '- Kapanış konuşmasının saati ve konuşmacısı kim olacak?\n'
+                        '\n'
+                        '## Kesinleşen program\n'
+                        '\n'
+                        '| Saat | Oturum | Yürütücü |\n'
+                        '|---|---|---|\n'
+                        '| 19.00 | Tanışma | Ada |\n'
+                        '| 19.30 | Örnek iş gösterimi | Deniz |\n',
+ 'ilk-program-sonra.md': '# Atölye — Tanışma Buluşması\n'
+                         '\n'
+                         'Kurgu eğitim verisi. 14 Kasım 2026 · Ücretsiz · 60 kişi.\n'
+                         '\n'
+                         '## Kesinleşen program\n'
+                         '\n'
+                         '| Saat | Oturum | Yürütücü |\n'
+                         '|---|---|---|\n'
+                         '| 19.00 | Tanışma | Ada |\n'
+                         '| 19.30 | Örnek iş gösterimi | Deniz |\n'
+                         '\n'
+                         '## Açık sorular\n'
+                         '\n'
+                         '- Kapanış konuşmasının saati ve konuşmacısı kim olacak?\n'}
 
-GUIDE_ROUTE = [{'slug': '02-uygulama', 'title': 'İlk dosyayı üret, aç, düzelt'},
- {'slug': '07-model-hiz-kullanim', 'title': 'İşe göre model ve düşünme seç'},
+GUIDE_ROUTE = [{'slug': '02-uygulama',
+  'title': 'İlk dosyayı üret, aç, düzelt',
+  'anchor': 'i-lk-dosyani-uret-ac-duzelt'},
+ {'slug': '07-model-hiz-kullanim',
+  'title': 'İşe göre model ve düşünme seç',
+  'anchor': 'hangi-ise-hangi-modelle-baslamali'},
  {'slug': 'is-arastirma', 'title': 'Araştırmadan karar ve sunuma'},
  {'slug': 'is-veri', 'title': 'Dağınık tablodan güvenilir rapora'},
  {'slug': 'is-sayfa', 'title': 'Görsel sorundan doğrulanmış yayına'},
- {'slug': '10-baglantilar-skills', 'title': 'Yöntemi ikinci işte kullan'},
- {'slug': '06-baglam-bellek', 'title': 'Yeni sohbette kararı koru'},
- {'slug': '08-ortamlar', 'title': 'Ayrı denemeyi ana işe taşı'},
- {'slug': '14-buyuk-isler', 'title': 'Alt işleri tek kararda birleştir'},
- {'slug': '15-otomasyon', 'title': 'Yöntemi tekrar eden işe dönüştür'},
- {'slug': '18-iyilestirmek', 'title': 'Sonraki işte neyi koruyacağını seç'}]
+ {'slug': '10-baglantilar-skills',
+  'title': 'Yöntemi ikinci işte kullan',
+  'anchor': 'skill-dosyadan-kullanilabilir-yonteme-nasil-gecer'},
+ {'slug': '06-baglam-bellek',
+  'title': 'Yeni sohbette kararı koru',
+  'anchor': 'devir-notunu-ve-yeni-baslangici-yan-yana-gor'},
+ {'slug': '08-ortamlar',
+  'title': 'Ayrı denemeyi ana işe taşı',
+  'anchor': 'ayri-denemeden-ana-calismaya-don'},
+ {'slug': '14-buyuk-isler',
+  'title': 'Alt işleri tek kararda birleştir',
+  'anchor': 'i-ki-bulgudan-tek-karara'},
+ {'slug': '15-otomasyon',
+  'title': 'Yöntemi tekrar eden işe dönüştür',
+  'anchor': 'ne-zaman-zamanlamaya-hazir'},
+ {'slug': '18-iyilestirmek',
+  'title': 'Sonraki işte neyi koruyacağını seç',
+  'anchor': 'duzeltmeni-kucuk-bir-kabul-ornegine-donustur'}]
 
 GUIDE_DECK = {'title': 'Atölye için kayıt sistemi',
  'chosen': 'Kayıt B',

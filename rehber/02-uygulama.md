@@ -14,19 +14,65 @@ Resmî indirme sayfasından masaüstü uygulamasını kur, hesabınla giriş yap
 
 ## İlk dosyanı üret, aç, düzelt
 
-Kod yazmak veya Git kurmak ilk belge işi için gerekmez. Git, dosyaların sürüm geçmişini tutan araçtır; kod projeleri ve değişiklik yönetiminde daha sonra işimize yarayacak.
+İlk işte kod veya Git kurman gerekmiyor. Git, dosyaların sürüm geçmişini tutan araçtır; değişiklik yönetiminde daha sonra işimize yarayacak. Burada ücretsiz Tanışma Buluşması için kısa program üretiyoruz.
 
-1. Bilgisayarında bu iş için bir klasör seç. Uygulamada **Projects → +** ile bu klasörü yerel proje olarak ekle. Proje ekleme yolu arayüzünde farklı görünüyorsa komut menüsünde “project” ara.
-2. O projenin içinde yeni sohbet aç. İlk dosya işinde **Local / Work locally** ortamını seç. Bu, işin kendi bilgisayarındaki proje klasöründe yürütülmesidir.
-3. Kaynak notu mesaj alanına ekle veya proje içindeki dosyayı adıyla belirt. “Bu nottan `program-taslagi.md` oluştur. Kesinleşmemiş tarihleri açık sorulara ayır. Dosyayı önizlemede aç” de. `.md`, düz metin olarak da açılan Markdown belge biçimidir.
-4. Yanıttaki dosya bağlantısını aç. Bağlantı görünmüyorsa “Oluşturduğun dosyayı uygulamanın panelinde aç” diye iste. Taslağın gerçekten kaydedildiği konumu ve içeriğini görebilirsin.
-5. Aynı sohbette “Açık soruları en alta taşı; tarih ve isimleri değiştirme” de. Son dosyayı yeniden açıp istediğin kısmın değiştiğine bak.
+<a id="1-projeyi-ve-kaynagi-sec"></a>
 
-Dosya henüz yoksa ilk istekte “Boş proje klasöründe, kurgu bir etkinlik için program taslağı oluştur; bütün tarih ve isimlerin örnek olduğunu yaz” diyebilirsin. Bu yol herhangi bir hesabı bağlamadan üretim–önizleme–düzeltme döngüsünü gösterir. [Başlangıç ve proje akışı](https://learn.chatgpt.com/docs/projects) · [Yerel çalışma](https://learn.chatgpt.com/docs/environments/modes)
+### 1. Projeyi ve kaynağı seç
 
-Bu noktada CLI (terminalden kullanılan istemci), IDE (kod editörü) veya MCP kurman gerekmiyor. Bunlar ihtiyaca göre öğreneceğin ek yollar. Dosya üretmek için bir servise yükleme veya yayınlama da gerekmez.
+Bilgisayarında iş klasörü seç; **Projects → +** ile yerel proje ekle ve içinde yeni sohbet aç. **Local / Work locally**, dosyanın kendi bilgisayarındaki klasörde düzenleneceği anlamına gelir. [Proje akışı](https://learn.chatgpt.com/docs/projects) · [Yerel çalışma](https://learn.chatgpt.com/docs/environments/modes)
 
-**Anlatıcı gösterimi:** Solda proje klasörünü, sağda açılan dosyayı göster. “Açık soruları sona taşı” dedikten sonra aynı dosyadaki değişikliği göster. Bu üç hareketi tamamlayınca [işe göre model seçimine geç](07-model-hiz-kullanim.md#hangi-ise-hangi-modelle-baslamali); aşağıdaki menüler ihtiyaç anında başvurmak için duruyor.
+![Proje ve sohbetleri bulmak. Soldaki listede sabitlenmiş sohbet, diğer sohbetler ve Projects başlığı altındaki klasörleri ayırt et. Bir sohbet adı ile bağlı proje klasörü farklı öğelerdir.](assets/projects.png)
+
+**Proje ve sohbetleri bulmak.** Soldaki listede sabitlenmiş sohbet, diğer sohbetler ve Projects başlığı altındaki klasörleri ayırt et. Bir sohbet adı ile bağlı proje klasörü farklı öğelerdir. [Tam boyut](assets/projects.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/projects) · 2026-10-29.
+
+1. **Nereye bak:** Projects altındaki klasörlere ve üstteki sohbet adlarına.
+2. **Ne yap:** Dosya işi için ilgili yerel projeyi seç; sohbeti sonuç adıyla adlandır.
+3. **Ne gör:** Yeni konuşmanın hangi proje kaynaklarıyla başlayacağı anlaşılır olur.
+
+[Hazır kaynak notunu aç](ornekler/ilk-kaynak-notu.md). Bu dosyayı proje klasörüne kaydet ve adıyla belirt veya içeriğini mesaja ekle. Notta 19.00 ve 19.30 oturumları kesin; kapanış bilgisi eksik. Kaynağı görmeden boşlukları doldurmak gerekmiyor.
+
+<a id="2-sonucu-iste"></a>
+
+### 2. Sonucu iste
+
+> İlk kaynak notundan program-taslagi.md oluştur. Yalnız kesinleşen oturumları programa al. Eksik saat ve konuşmacıyı açık sorulara ayır. Dosyayı kaydet ve önizlemede aç.
+
+[İlk çıktı dosyası](ornekler/ilk-program-once.md) açık soruları üstte gösteriyor. Tarih, saat ve isimler kaynakla aynı. Bu, düzenleyeceğimiz gerçek Markdown örnek dosyasıdır; bir Codex oturumunun otomatik kaydı değildir.
+
+<a id="3-dosyayi-ac"></a>
+
+### 3. Dosyayı aç
+
+Yanıttaki dosya bağlantısını aç. Bağlantı görünmüyorsa “Oluşturduğun dosyayı uygulamanın panelinde aç” de. Aşağıdaki resmî ekranda solda istek ve çıktı bağlantısı, sağda açılmış dosya görülür.
+
+![Sohbetin yanında sunum önizlemesi. Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele.](assets/preview.png)
+
+**Sohbetin yanında sunum önizlemesi.** Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele. [Tam boyut](assets/preview.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/artifacts-viewer) · 2026-10-29.
+
+1. **Nereye bak:** Soldaki output.pptx bağlantısına, sağdaki slayt listesine.
+2. **Ne yap:** Sorunlu slaytı seç; yalnız o parçanın değişmesini, sayıların korunmasını iste.
+3. **Ne gör:** Son dosyada aynı karar ve verilerle daha okunur bir slayt.
+
+**Ekranların kapsamı:** Bunlar OpenAI’nin gerçek uygulama arayüzü gösterimleridir; farklı örnek işleri gösterir, Atölye için çekilmiş dört adımlık oturum kaydı değildir. Burada okunacak hareket, proje seçmekten kaydedilmiş dosyanın önizlemesine geçmektir. Atölye’nin kendi içeriğini yukarıdaki ve aşağıdaki dosyalarda karşılaştır.
+
+<a id="4-ayni-ciktiyi-duzelt"></a>
+
+### 4. Aynı çıktıyı düzelt
+
+> Açık soruları en alta taşı. Etkinlik tarihini, saatleri ve kişi adlarını değiştirme. Aynı program-taslagi.md dosyasını güncelle ve aç.
+
+[Önce](ornekler/ilk-program-once.md) · [Sonra](ornekler/ilk-program-sonra.md). İki dosya bu rehberin karşılaştırma kopyalarıdır; gerçek işte aynı çalışma dosyası güncellenir.
+
+| Bakılacak fark | Önce | Sonra |
+|---|---|---|
+| İlk bölüm | Açık sorular | Kesinleşen program |
+| Eksik kapanış bilgisi | Soru olarak durur | En altta soru olarak durur |
+| 14 Kasım, 19.00/19.30, Ada/Deniz | Kaynakla aynı | Değişmedi |
+
+Anlatıcı iki dosyayı yan yana açıp yalnız bölüm sırasının değiştiğini gösterir. `.md`, sade metin olarak da açılan Markdown belge biçimidir. Bu küçük döngü için CLI, IDE, MCP veya dışarıya yayın gerekmez. [Dosya önizleme](https://learn.chatgpt.com/docs/artifacts-viewer)
+
+Buradan [işe göre model seçimine geç](07-model-hiz-kullanim.md#hangi-ise-hangi-modelle-baslamali). Aşağıdaki platform ve menü ayrıntıları başvuru için duruyor.
 
 <a id="platform-ayrintisina-ihtiyac-duyarsan"></a>
 
@@ -43,14 +89,6 @@ Windows uygulaması PowerShell (Windows komut ortamı) veya WSL2 (Windows içind
 Proje, ilgili işleri bir arada tutar. Yerel projeye klasör bağladığında Codex o dosyalarla çalışabilir. Birden fazla klasör varsa birincil klasörün seçimi önemlidir: yeni sohbetin çalışma dizini ve otomatik proje talimatı keşfi buradan başlar. İkincil klasörün erişilebilir olması, içindeki bütün talimatların otomatik yüklendiğini göstermez. [Projeler](https://learn.chatgpt.com/docs/projects)
 
 Sohbetleri “web sitesi”, “notlar”, “test” gibi geniş adlar yerine sonuçlarıyla adlandır: “Etkinlik sayfasının mobil taşması”, “Mayıs programı kaynak kontrolü”. Sabitleme yalnız görünürlüğü değiştirir. Arşivleme, sohbeti aktif listeden kaldırır. Dosyalarının yedeği için ayrı bir yöntem gerekir. Arşivlenmiş sohbetlere Settings içinden dönebilirsin.
-
-![Proje ve sohbetleri bulmak. Soldaki listede sabitlenmiş sohbet, diğer sohbetler ve Projects başlığı altındaki klasörleri ayırt et. Bir sohbet adı ile bağlı proje klasörü farklı öğelerdir.](assets/projects.png)
-
-**Proje ve sohbetleri bulmak.** Soldaki listede sabitlenmiş sohbet, diğer sohbetler ve Projects başlığı altındaki klasörleri ayırt et. Bir sohbet adı ile bağlı proje klasörü farklı öğelerdir. [Tam boyut](assets/projects.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/projects) · 2026-10-29.
-
-1. **Nereye bak:** Projects altındaki klasörlere ve üstteki sohbet adlarına.
-2. **Ne yap:** Dosya işi için ilgili yerel projeyi seç; sohbeti sonuç adıyla adlandır.
-3. **Ne gör:** Yeni konuşmanın hangi proje kaynaklarıyla başlayacağı anlaşılır olur.
 
 **Yerel proje ile ChatGPT projesi farklı kaynakları bağlar.** Yerel proje bilgisayarındaki klasörlerle çalışır. ChatGPT projesindeki Sources ise yüklenen veya bağlanan bulut kaynaklarıdır; bilgisayarındaki klasöre otomatik erişim vermez. İki yerde aynı proje adını görmek dosyaların ortak olduğu anlamına gelmez.
 
@@ -93,15 +131,7 @@ Dosya önizlemesi, tarayıcı ve terminal sohbetin yanında açılabilir. Destek
 
 Terminal, komutların çalıştığı paneldir. New tab → Terminal ile açılır. Çalışan sunucunun çıktısı ve hataları burada görünür. Codex'ten terminaldeki son hatayı açıklamasını isteyebilirsin. Terminali açmak bir sunucuyu kendiliğinden başlatmaz. [Terminal](https://learn.chatgpt.com/docs/integrated-terminal)
 
-![Sohbetin yanında sunum önizlemesi. Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele.](assets/preview.png)
-
-**Sohbetin yanında sunum önizlemesi.** Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele. [Tam boyut](assets/preview.png) · OpenAI’nin resmî arayüz gösterimi · [Kaynak](https://learn.chatgpt.com/docs/artifacts-viewer) · 2026-10-29.
-
-1. **Nereye bak:** Soldaki output.pptx bağlantısına, sağdaki slayt listesine.
-2. **Ne yap:** Sorunlu slaytı seç; yalnız o parçanın değişmesini, sayıların korunmasını iste.
-3. **Ne gör:** Son dosyada aynı karar ve verilerle daha okunur bir slayt.
-
-Ekranda bir sunum görünse de aynı alışkanlık rapor ve tablo için geçerli: dosyayı aç, sorunlu bölgeyi tarif et, değişikliği aynı çıktı üzerinde iste. “Yeni dosya üret” demediğin sürece hangi dosyanın son sürüm olduğu belli kalsın.
+[İlk dosya gösterimindeki](02-uygulama.md#3-dosyayi-ac) açma hareketi rapor ve tablo için de geçerli: dosyayı aç, sorunlu bölgeyi tarif et, değişikliği aynı çıktı üzerinde iste. “Yeni dosya üret” demediğin sürece hangi dosyanın son sürüm olduğu belli kalsın.
 
 <a id="gunluk-iste-degerli-kisayollar"></a>
 
@@ -154,6 +184,6 @@ Settings içindeki bildirim tercihlerinde tur bitişi için Never, When in backg
 
 Atölye'nin program sayfasını düzenlerken solda sohbet, sağda yerel sayfa, altta terminal açık olsun. Görsel taşmayı sayfada işaretle, düzeltme isteğini sohbette ver, sunucu hatası varsa terminal çıktısına bak. Üç görünüm aynı sorunun farklı kanıtlarını sağlar. Kod değişikliği görünümüne geçerek değişikliğin beklediğin dosyada olduğunu ayrıca kontrol edebilirsin.
 
-**Eğitimde sıradaki:** [İşe göre model ve düşünme seç](07-model-hiz-kullanim.md)
+**Eğitimde sıradaki:** [İşe göre model ve düşünme seç](07-model-hiz-kullanim.md#hangi-ise-hangi-modelle-baslamali)
 
-[İçindekiler](README.md) · [← Codex ile neler yapabilirsin?](01-olanaklar.md) · [Codex gerçekte nasıl çalışıyor? →](03-calisma-mantigi.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← Codex ile neler yapabilirsin?](01-olanaklar.md) · [Codex gerçekte nasıl çalışıyor? →](03-calisma-mantigi.md)

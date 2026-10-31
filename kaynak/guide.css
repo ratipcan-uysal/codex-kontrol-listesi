@@ -38,3 +38,6 @@
 .guide .nav-group{font-size:10px;letter-spacing:1.2px;color:var(--muted);padding:18px 9px 6px}.guide .nav-group:first-child{padding-top:12px}
 .guide .figure-example .figure-open{max-width:390px;margin-inline:auto}
 @media(max-width:600px){.guide .figure-lesson{grid-template-columns:1fr;gap:12px}.guide .lesson-flow ol{grid-template-columns:1fr 1fr}}
+
+/* Reference order stays secondary to the teaching continuation. */
+.reference-order{width:100%;font-size:.9rem}.reference-order summary{cursor:pointer;color:var(--muted,#62676c)}.reference-order[open] a{display:inline-block;margin:.8rem 1rem 0 0}

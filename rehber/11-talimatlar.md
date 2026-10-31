@@ -86,4 +86,4 @@ Her yayında aynı dosyaları üretip bağlantıları sayıyorsan, bu adımları
 - [18.4 Kuralı kısa tut, gerekçeyi gerektiğinde aç.](../codex-kontrol-listesi.md#m-18-4)
 - [19.3 Eskimiş AGENTS.md kurallarını periyodik olarak gözden geçir.](../codex-kontrol-listesi.md#m-19-3)
 
-[İçindekiler](README.md) · [← Bağlantılar, MCP, plugin ve skill](10-baglantilar-skills.md) · [Güvenilir sonuç elde etmek →](12-dogrulama.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← Bağlantılar, MCP, plugin ve skill](10-baglantilar-skills.md) · [Güvenilir sonuç elde etmek →](12-dogrulama.md)

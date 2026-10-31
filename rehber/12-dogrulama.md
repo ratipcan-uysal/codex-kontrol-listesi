@@ -90,7 +90,7 @@ Beklenen ayırıcı bulgu: hesap 1.800 TL olsa da K04 boşken “kesin toplam ge
 
 ## Kurgu senaryo: kayıt sayısı doğru, anlam yanlış
 
-Atölye'nin 80 katılımcı kaydı dönüşümden sonra yine 80 satır. Bu iyi bir ilk kontrol, ama iki kişinin e-postası yer değiştirmiş olabilir. Sabit kayıt anahtarıyla eşleştirme, alan bazlı karşılaştırma ve temsilî uç durumlar gerekir. Toplamın eşit olması kimliğin korunduğunu tek başına göstermez. Bu yüzden “80 satır korundu” ile “dönüşüm doğru” aynı rapor cümlesi olmamalı.
+Uygulama Programı’nın ileride 80 kayda büyüdüğü ayrı bir kurgu denemede, dönüşümden sonra yine 80 satır var. Bu iyi bir ilk kontrol, ama iki kişinin e-postası yer değiştirmiş olabilir. Sabit kayıt anahtarıyla eşleştirme, alan bazlı karşılaştırma ve temsilî uç durumlar gerekir. Toplamın eşit olması kimliğin korunduğunu tek başına göstermez. Bu yüzden “80 satır korundu” ile “dönüşüm doğru” aynı rapor cümlesi olmamalı.
 
 <a id="kaniti-sonucun-icinde-gor"></a>
 
@@ -110,4 +110,4 @@ Atölye'nin 80 katılımcı kaydı dönüşümden sonra yine 80 satır. Bu iyi b
 - [12.4 Kalan belirsizliği somut adlarla yaz.](../codex-kontrol-listesi.md#m-12-4)
 - [12.6 Önemli diff’i bağımsız kod incelemesine ver.](../codex-kontrol-listesi.md#m-12-6)
 
-[İçindekiler](README.md) · [← Talimatları ve kişisel çalışma düzenini kurmak](11-talimatlar.md) · [Tasarım ve yaratıcı üretim →](13-tasarim.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← Talimatları ve kişisel çalışma düzenini kurmak](11-talimatlar.md) · [Tasarım ve yaratıcı üretim →](13-tasarim.md)

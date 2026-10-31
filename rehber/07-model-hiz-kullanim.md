@@ -125,4 +125,4 @@ Kötü sonucu tek bir “model zayıf” açıklamasına bağlama. Aşağıdaki 
 - [5.4 Kullanımı ve bekleme nedenini ayrı kaydet.](../codex-kontrol-listesi.md#m-5-4)
 - [5.5 Hız modunu ve güçlü ikinci görüşü seçerek kullan.](../codex-kontrol-listesi.md#m-5-5)
 
-[İçindekiler](README.md) · [← Bağlam, bellek ve devamlılık](06-baglam-bellek.md) · [Dosyalar ve çalışma ortamları →](08-ortamlar.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← Bağlam, bellek ve devamlılık](06-baglam-bellek.md) · [Dosyalar ve çalışma ortamları →](08-ortamlar.md)

@@ -102,4 +102,4 @@ Kurgu Atölye'nin program sayfasında teslim hedefi canlı URL ise uzak sürüm 
 - [15.4 Commit kimliği ve atfı için gerçek Git sonucunu incele.](../codex-kontrol-listesi.md#m-15-4)
 - [19.2 Eski worktree ve büyük çıktıları sahiplik bilgisiyle temizle.](../codex-kontrol-listesi.md#m-19-2)
 
-[İçindekiler](README.md) · [← İzinler, gizlilik ve güvenlik](16-izinler-guvenlik.md) · [Kendi kullanımını sürekli iyileştirmek →](18-iyilestirmek.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← İzinler, gizlilik ve güvenlik](16-izinler-guvenlik.md) · [Kendi kullanımını sürekli iyileştirmek →](18-iyilestirmek.md)

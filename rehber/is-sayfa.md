@@ -2,7 +2,7 @@
 
 İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
-**Kurgu iş:** Atölye'nin etkinlik sayfasındaki kart telefonda taşıyor. Kullanıcı mevcut metinleri ve görsel yönü seviyor; yalnız dar ekranda okunabilirlik istiyor. Bu rehber için gerçekten üretilmiş iki küçük HTML dosyası üzerinden ilerliyoruz. Bir müşteri sitesinin çalışma kaydı veya mağaza dağıtımı değil.
+**Kurgu iş:** Atölye'nin ücretsiz Tanışma Buluşması sayfasındaki kart telefonda taşıyor. Kullanıcı mevcut metinleri ve görsel yönü seviyor; yalnız dar ekranda okunabilirlik istiyor. Bu rehber için gerçekten üretilmiş iki küçük HTML dosyası üzerinden ilerliyoruz. Bir müşteri sitesinin çalışma kaydı veya mağaza dağıtımı değil.
 
 [Taşan örneği aç](ornekler/sayfa-once.html) · [Düzeltilmiş örneği aç](ornekler/sayfa-sonra.html). Anlatıcı sayfayı daraltıp aynı içeriği karşılaştırabilir. Dinleyicinin kurulum veya kod yazma yapması gerekmez.
 
@@ -89,14 +89,24 @@ Bizim başka bir prototipimizde klavye konum testi geçtiği hâlde ikinci metin
 
 ## 5. Sohbetin yönünü hangi araçla değiştirirsin?
 
-| Yeni ihtiyacın | Bu işte seçeceğin yol | Neden? |
-|---|---|---|
-| “Rengi değiştirme, yalnız genişliği düzelt” | Aynı sohbeti yönlendir | Mevcut hedefin sınırını düzeltiyorsun |
-| “Bu CSS ifadesi ne demek?” | `/side` | Ana işi kesmeden kavram açıklaması istiyorsun |
-| “Aynı geçmişten farklı bir tasarım deneyeyim” | `/fork` | Ayrı yön istiyorsun; dosya yalıtımını ayrıca seçmelisin |
-| “Bambaşka bir rapora başlayacağım” | `/new` | Aynı çalışma alanında boş sohbet istiyorsun |
+Kart düzeltmesi sürerken “renkleri koru” mesajını aynı sohbete ver. Yalnız “bu CSS ne demek?” açıklaması için `/side` kullanabilirsin; farklı tasarım yönü denemek istediğinde [sohbet seçimi tablosuna](06-baglam-bellek.md#ayni-sohbet-mi-yeni-sohbet-mi) geç. `/fork` ile dosyaların kendiliğinden yalıtıldığını varsayma. [Masaüstü komutları](https://learn.chatgpt.com/docs/reference/slash-commands)
 
-Komutların erişimi ortama bağlıdır. `/fork` sohbeti dallandırır; aynı klasördeki dosyaları otomatik olarak iki bağımsız ürün yapmaz. Gerekiyorsa ayrı Git çalışma kopyası olan worktree seçilir. [Masaüstü komutları](https://learn.chatgpt.com/docs/reference/slash-commands)
+<a id="nedenini-bilmiyorsan-once-ayirici-kontrol-sec"></a>
+
+## Nedenini bilmiyorsan önce ayırıcı kontrol seç
+
+**Kurgu devam:** Tanışma Buluşması 21 Kasım’a taşınmış, ama açık önizlemede hâlâ 14 Kasım görünüyor. Yeni tarihi tekrar yazdırmadan iki olasılığı ayır:
+
+| Olasılık | Küçük kontrol | Sonuca göre hareket |
+|---|---|---|
+| Kaynak dosya güncellenmedi. | Düzenlenen dosyadaki etkinlik tarihini oku. | Hâlâ 14 Kasım ise doğru kaynakta tarih düzeltmesi yap. |
+| Kaynak yeni, önizleme başka kopyayı gösteriyor. | Açık URL’yi sunan sürecin klasörünü düzenlenen klasörle karşılaştır. | Klasörler farklıysa doğru önizlemeyi aç; metni yeniden değiştirme. |
+
+> Yeni düzeltme yapmadan bu iki olasılığı ayıran en küçük kontrolü seç. Gözlediğin sonuca göre devam et. İkisi de açıklamıyorsa bunu söyle; başka nedeni kanıtsız kesinleştirme.
+
+Bu örnekte kontrolün kaynakta 21 Kasım, önizlemede başka klasör bulduğunu varsayıyoruz. Sonraki hareket doğru klasörden önizleme açmaktır. Aynı tarih metnini bir kez daha değiştirmek sorunu çözmez. Buradaki tablo yapılmış bir test günlüğü değil, deneme seçimini gösteren kurgu akıştır.
+
+**Anlatıcı geçişi:** Tarih birden çok yerde kullanılıyorsa [etki tablosunu](05-yonetmek.md#bir-degisiklik-nerelere-yayiliyor) aç; dosya adları da değişecekse [çakışma önizlemesini](08-ortamlar.md#toplu-islemden-once-degisiklik-listesini-gor) göster. Sonra burada teslim adımına dön. Yanlış neden üzerine daha çok işlem yapmak yerine doğru etkiyi kapsıyoruz.
 
 <a id="6-yayin-istegi-gelince-hedefi-degistir"></a>
 
@@ -111,6 +121,6 @@ Bu rehberin kendisi üzerinde gerçekten yapılan yayınlarda yerel test, uzak c
 **Başka işte kullanacağın ders:** Belirtiyi tarif et, korunacak boyutları söyle, kaynağı ve görünümü aynı koşulda kontrol et. Sonra kullanıcının istediği hedefte bitir. Bu yaklaşım bir slayttaki taşan başlık veya belgedeki kırık tablo için de uygulanabilir.
 
 
-**Eğitimde sıradaki:** [Yöntemi ikinci işte kullan](10-baglantilar-skills.md)
+**Eğitimde sıradaki:** [Yöntemi ikinci işte kullan](10-baglantilar-skills.md#skill-dosyadan-kullanilabilir-yonteme-nasil-gecer)
 
-[İçindekiler](README.md) · [← Dağınık tablodan güvenilir rapora](is-veri.md) · [Yöntemi ikinci işte kullan →](10-baglantilar-skills.md)
+[İçindekiler](README.md)

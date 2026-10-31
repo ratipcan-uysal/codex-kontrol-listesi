@@ -111,4 +111,4 @@ Etkileşim soruyu açıklamalı. Sırf hareket olsun diye ilgisiz düğmeler ekl
 - [16.3 Reddedilen tasarımın nedenini sonraki deneye taşı.](../codex-kontrol-listesi.md#m-16-3)
 - [16.4 Seçilen tasarım sözleşmesini tek yerde tut.](../codex-kontrol-listesi.md#m-16-4)
 
-[İçindekiler](README.md) · [← Güvenilir sonuç elde etmek](12-dogrulama.md) · [Büyük işleri ve paralel çalışmayı yönetmek →](14-buyuk-isler.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← Güvenilir sonuç elde etmek](12-dogrulama.md) · [Büyük işleri ve paralel çalışmayı yönetmek →](14-buyuk-isler.md)

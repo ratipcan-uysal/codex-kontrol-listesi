@@ -81,7 +81,7 @@ Bu kurgu örnek bir izleme mantığını öğretir; burada gerçek otomasyon olu
 
 “Zamanlandı”, “çalıştı” ve “istenen çıktı hedefte oluştu” farklı aşamalardır. İlk koşumun sonucunu incele. Yanlış kaynak, gereksiz bildirim veya tekrar kayıt varsa yöntem düzelmeden daha sık çalıştırma. Otomasyonun öneri üretmesi, önerileri otomatik yayınlama yetkisi vermez.
 
-**Eğitimde sıradaki:** [Sonraki işte neyi koruyacağını seç](18-iyilestirmek.md)
+**Eğitimde sıradaki:** [Sonraki işte neyi koruyacağını seç](18-iyilestirmek.md#duzeltmeni-kucuk-bir-kabul-ornegine-donustur)
 
 
 <a id="kontrol-listesinde-karsiligi"></a>
@@ -93,4 +93,4 @@ Bu kurgu örnek bir izleme mantığını öğretir; burada gerçek otomasyon olu
 - [14.3 Sessizliği başarı sayma.](../codex-kontrol-listesi.md#m-14-3)
 - [14.5 Aynı sohbete dönen takibi bağımsız rutinden ayır.](../codex-kontrol-listesi.md#m-14-5)
 
-[İçindekiler](README.md) · [← Büyük işleri ve paralel çalışmayı yönetmek](14-buyuk-isler.md) · [İzinler, gizlilik ve güvenlik →](16-izinler-guvenlik.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← Büyük işleri ve paralel çalışmayı yönetmek](14-buyuk-isler.md) · [İzinler, gizlilik ve güvenlik →](16-izinler-guvenlik.md)

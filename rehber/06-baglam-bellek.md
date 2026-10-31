@@ -73,10 +73,10 @@ Bu özellikleri öğrenmek için açmak zorunda değilsin. Kaynak dosyalar ve k�
 
 ## Kurgu senaryo: iki hafta sonra dönüş
 
-Atölye takvimine döndüğünde katılımcı sayısı 20’den 35’e çıkmışsa yalnız “devam” demek yetmez. “35 kişi eski varsayımın yerini alıyor; kapasite ve bütçede etkilenen yerleri güncelle” de. Yukarıdaki devir yönteminin ikinci kullanımı budur; diğer kararları yeniden açman gerekmez.
+Ayrı bir kapasite denemesinde Uygulama Programı’nın planlanan kontenjanı 20’den 35’e çıkmışsa yalnız “devam” demek yetmez. “35 kişilik kontenjan eski varsayımın yerini alıyor; kapasite ve bütçede etkilenen yerleri güncelle” de. Yukarıdaki devir yönteminin ikinci kullanımı budur; diğer kararları yeniden açman gerekmez.
 
 
-**Eğitimde sıradaki:** [Ayrı denemeyi ana işe taşı](08-ortamlar.md)
+**Eğitimde sıradaki:** [Ayrı denemeyi ana işe taşı](08-ortamlar.md#ayri-denemeden-ana-calismaya-don)
 
 
 <a id="kontrol-listesinde-karsiligi"></a>
@@ -92,4 +92,4 @@ Atölye takvimine döndüğünde katılımcı sayısı 20’den 35’e çıkmı�
 - [18.1 Yeni bilgiyi geçerli olduğu katmana yaz.](../codex-kontrol-listesi.md#m-18-1)
 - [18.2 Ertelenen işi kaybolmayacak bir durum kaydına geçir.](../codex-kontrol-listesi.md#m-18-2)
 
-[İçindekiler](README.md) · [← İş sürerken yönü yönetmek](05-yonetmek.md) · [Model, düşünme seviyesi, hız ve kullanım →](07-model-hiz-kullanim.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← İş sürerken yönü yönetmek](05-yonetmek.md) · [Model, düşünme seviyesi, hız ve kullanım →](07-model-hiz-kullanim.md)

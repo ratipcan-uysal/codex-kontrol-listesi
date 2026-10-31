@@ -33,7 +33,7 @@ Tablo, her iş için hangi doğruluk ölçütünü belirlemen gerektiğini göst
 
 ## Kurgu senaryo: Atölye adlı bir öğrenme topluluğu
 
-Bu rehberin bazı örneklerinde Atölye adlı hayalî bir topluluk kullanılıyor. Elinde etkinlik notları, katılımcı tablosu ve basit bir internet sitesi var. Bu örneklerde geçen dosyalar ve beklenen sonuçlar öğretim amacıyla kurgulandı. Gerçek müşteri veya ölçülmüş kazanç anlatılmıyor.
+Bu rehberin bazı örneklerinde Atölye adlı hayalî bir topluluk kullanılıyor. Ücretsiz Tanışma Buluşması için etkinlik notları ve bir internet sitesi; ayrı ücretli Uygulama Programı için katılımcı/tahsilat tablosu var. [İki işin kapsamı](is-arastirma.md#atolye-nin-iki-isi) örneklerin başında açıklanıyor. Bu örneklerde geçen dosyalar ve beklenen sonuçlar öğretim amacıyla kurgulandı. Gerçek müşteri veya ölçülmüş kazanç anlatılmıyor.
 
 ```text
 Bu klasördeki etkinlik notlarından gelecek ayın program taslağını çıkar.
@@ -64,4 +64,4 @@ Okurken her özelliği açmaya çalışma. Bir özelliğin hangi sorunu çözdü
 
 Araştırmadan karar ve sunuma giden [tam örnek işte](is-arastirma.md), aynı doğrulanmış bilginin üç farklı çıktıda nasıl korunduğunu izle.
 
-[İçindekiler](README.md) · [Uygulamanın tamamını tanımak →](02-uygulama.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: · [Uygulamanın tamamını tanımak →](02-uygulama.md)

@@ -52,7 +52,7 @@ Kapsam gerçekten değiştiyse bunu açıkça söyle: “Önceki web sitesi hede
 
 ## Bir değişiklik nerelere yayılıyor?
 
-**Atölye'nin kurgu devamı:** Etkinlik 14 Kasım'dan 21 Kasım'a taşınacak. Yalnız sayfa başlığını düzeltmek yeterli olmayabilir. Bir bilgi başka dosyalara kopyalanmış veya bir zamanlamada kullanılmışsa onları birlikte gör.
+**Atölye'nin kurgu devamı:** Ücretsiz Tanışma Buluşması 14 Kasım'dan 21 Kasım'a taşınacak. Ücretli Uygulama Programı’nın kayıtları bu değişikliğe dahil değil. Yalnız sayfa başlığını düzeltmek yeterli olmayabilir. Bir bilgi başka dosyalara kopyalanmış veya bir zamanlamada kullanılmışsa onları birlikte gör.
 
 > Tarihi değiştirmeden önce 14 Kasım bilgisinin kullanıldığı yerleri ve ona bağlı işlemleri bul. Güncellenecek yerel dosyaları, dış kayıtları ve yalnız geçmiş olarak korunacak kayıtları ayır. Saati ve diğer onaylı bilgileri değiştirme.
 
@@ -83,4 +83,4 @@ Uzun bir dönüşüm sürerken “worktree ne demek?” diye sormak isteyebilirs
 
 Ana işin kapsamını değiştireceksen bunu ana sohbette söyle. Yan sorudan çıkan kararı oraya taşı. Ana görevin yanlış yolda olduğunu görüyorsan yan sohbet yerine ana işi yönlendir veya durdur. [Yan sohbet ve komutlar](https://learn.chatgpt.com/docs/reference/slash-commands)
 
-[İçindekiler](README.md) · [← İş vermenin incelikleri](04-is-vermek.md) · [Bağlam, bellek ve devamlılık →](06-baglam-bellek.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← İş vermenin incelikleri](04-is-vermek.md) · [Bağlam, bellek ve devamlılık →](06-baglam-bellek.md)

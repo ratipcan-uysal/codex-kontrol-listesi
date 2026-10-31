@@ -45,7 +45,7 @@ Eğitimde aşağıdaki rotayı izle; 18 bölüm, ihtiyaç duyduğun anda açaca�
 
 ## Anlatıcının tek rotası
 
-İlk dosya → model ve düşünme seçimi → araştırma ve sunum → veri ve grafik → sayfa düzeltmesi → skill → devir → worktree → paralel iş → otomasyon → yöntemi iyileştirme. Her sayfanın sonundaki **Eğitimde sıradaki** bağlantısı bu yolu izler. Numaralı konu rehberi ayrı başvuru sırasını korur.
+İlk dosya → model ve düşünme seçimi → araştırma ve sunum → veri ve grafik → sayfa düzeltmesi → skill → devir → worktree → paralel iş → otomasyon → yöntemi iyileştirme. Her sayfanın sonundaki **Eğitimde sıradaki** bağlantısı bu yolu izler. Eğitim bağlantıları ilgili gösterime gider. “Konu sırasıyla oku” ayrı başvuru düzenidir; eğitimde onu izlemek zorunda değilsin.
 
 Anlatıcı örnek dosyaları açar, bir kararın çıktıyı nasıl değiştirdiğini gösterir ve devam eder. Dinleyiciden kurulum veya alıştırma beklenmez. Platform ayrıntıları, komut envanteri ve teknik ekler soru geldiğinde açılabilir.
 

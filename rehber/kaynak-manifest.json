@@ -28,7 +28,7 @@
       "title": "Projects and chats",
       "sha256": "2492a9886d932e82999f827b963558927dbf952e06494344a3ff329526dc7007",
       "status": 200,
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     "use-chatgpt": {
       "url": "https://learn.chatgpt.com/docs/use-chatgpt",
@@ -280,7 +280,7 @@
       "title": "Image inputs",
       "sha256": "252e1571e2cb0f933d04846f52023861bd6d6168a7ab279a421787db287bd3d3",
       "status": 200,
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     "image-generation": {
       "url": "https://learn.chatgpt.com/docs/image-generation",
@@ -547,6 +547,13 @@
       "status": 200,
       "checked": "2026-10-31",
       "title": "Model selection"
+    },
+    "best-practices": {
+      "title": "Best practices",
+      "url": "https://learn.chatgpt.com/docs/learn/best-practices",
+      "status": 200,
+      "sha256": "1ea68ec75676d0d7e190e22e77744c5aa83366e9b1759e3bb85053cfbdd82193",
+      "checked": "2026-10-31"
     }
   }
 }

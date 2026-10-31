@@ -31,7 +31,7 @@ Bir plugin'in masaüstü etiketi varsa web veya mobilde aynı aracı bekleme. G�
 
 ## Üç kaynaktan bir toplantı notu
 
-**Kurgu iş:** Takvimdeki Atölye toplantısı, bağlı belgedeki önceki karar ve yerel katılım raporu tek hazırlık notunda birleşecek. [Örnek kaynak ve çıktı](ornekler/toplanti-hazirligi.md) her cümlenin nereden geldiğini gösterir.
+**Kurgu iş:** Takvimdeki Atölye hazırlık toplantısı iki ayrı işi görüşecek: Tanışma Buluşması’nın kayıt sistemi kararı ve ücretli Uygulama Programı’nın tahsilat raporu. Kaynaklar tek notta birleşir; iki etkinliğin bilgileri birbirine karışmaz. [Örnek kaynak ve çıktı](ornekler/toplanti-hazirligi.md) her cümlenin nereden geldiğini gösterir.
 
 > Bağlı takvimde 14 Kasım Atölye toplantısını bul. Önceki karar belgesini ve yerel katılım raporunu oku. Gündemi, açık soruyu ve dayanak bağlantısını içeren tek hazırlık notu oluştur. Aynı adlı iki kayıt varsa ayır. Gönderim veya takvim değişikliği yapma.
 
@@ -53,7 +53,7 @@ Bu kurgu örnekte beklenen çıktı yalnız uzun bir talimat değildir: doğru t
 
 ## Skill dosyadan kullanılabilir yönteme nasıl geçer?
 
-Yerel projeye ait örnek için `SKILL.md`, proje kökündeki `.agents/skills/atolye-raporu/` klasörüne konur. Başındaki `name` ve `description` alanları yöntemin adını ve ne zaman seçileceğini tanımlar. Bu yapı, sıradan bir metin dosyasını yalnız sohbete eklemekten farklıdır. [Yerel skill keşfi](https://learn.chatgpt.com/docs/build-skills)
+Skill, tekrar kullanacağın yöntemi saklayan yönerge paketidir. Yerel projeye ait örnek için `SKILL.md`, proje kökündeki `.agents/skills/atolye-raporu/` klasörüne konur. Başındaki `name` ve `description` alanları yöntemin adını ve ne zaman seçileceğini tanımlar. Bu yapı, sıradan bir metin dosyasını yalnız sohbete eklemekten farklıdır. [Yerel skill keşfi](https://learn.chatgpt.com/docs/build-skills)
 
 1. Skills görünümünde veya mesaj alanındaki `$` seçicisinde **atolye-raporu** adını bul. Görünmüyorsa yanlış proje, klasör, ad/açıklama veya devre dışı bırakılma ihtimalini kontrol et. Kurulum değişikliği görünmüyorsa uygulamayı yeniden başlatmak resmî sorun giderme adımıdır.
 2. Adı seçip girdi dosyasını belirt: “İkinci haftayı bu yöntemle raporla.” Otomatik seçime güvenmek yerine ilk gösterimde açık çağrı kullan.
@@ -118,7 +118,7 @@ Kurulumdan sonraki okuma denemesi yalnız başlangıçtır. Araç sonucunu, Code
 
 Önce kurulum, hesap bağlantısı, izin kapsamı ve o sohbette araç keşfini ayrı kontrol et. Araç görünüyorsa küçük bir okuma denemesi yap. Ağ erişimi hatasını doğrudan yanlış parola diye yorumlama. Başka hesaba geçmek veya erişimi genişletmek, hata kanıtı olmadan ilk çözüm olmamalı.
 
-**Eğitimde sıradaki:** [Yeni sohbette kararı koru](06-baglam-bellek.md)
+**Eğitimde sıradaki:** [Yeni sohbette kararı koru](06-baglam-bellek.md#devir-notunu-ve-yeni-baslangici-yan-yana-gor)
 
 
 <a id="kontrol-listesinde-karsiligi"></a>
@@ -132,4 +132,4 @@ Kurulumdan sonraki okuma denemesi yalnız başlangıçtır. Araç sonucunu, Code
 - [9.6 Taşınacak yeteneği Codex plugin biçiminde paketle.](../codex-kontrol-listesi.md#m-9-6)
 - [9.7 MCP bağlantısını gerçek bir okuma işlemiyle sınayarak başla.](../codex-kontrol-listesi.md#m-9-7)
 
-[İçindekiler](README.md) · [← İnternet, tarayıcı ve bilgisayar kullanımı](09-web-tarayici-bilgisayar.md) · [Talimatları ve kişisel çalışma düzenini kurmak →](11-talimatlar.md)
+[İçindekiler](README.md) · Konu sırasıyla oku: [← İnternet, tarayıcı ve bilgisayar kullanımı](09-web-tarayici-bilgisayar.md) · [Talimatları ve kişisel çalışma düzenini kurmak →](11-talimatlar.md)

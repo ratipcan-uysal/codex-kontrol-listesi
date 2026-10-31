@@ -2,7 +2,7 @@
 
 İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
-**Kurgu iş:** Atölye, 60 kişilik ücretsiz bir buluşma için kayıt sistemi seçecek. Katılımcıya hesap açtırmak istemiyor; katılımcı listesini CSV olarak indirebilmesi gerekiyor. Etkinlik başına bütçe 3.000 TL. Aşağıdaki platform adları, fiyatlar ve belge parçaları eğitim için uyduruldu. Gerçek bir ürün karşılaştırması veya yapılmış satın alma yok.
+**Kurgu iş:** Atölye, 60 kişilik ücretsiz Tanışma Buluşması için kayıt sistemi seçecek. Katılımcıya hesap açtırmak istemiyor; katılımcı listesini CSV olarak indirebilmesi gerekiyor. Etkinlik başına bütçe 3.000 TL. Aşağıdaki platform adları, fiyatlar ve belge parçaları eğitim için uyduruldu. Gerçek bir ürün karşılaştırması veya yapılmış satın alma yok.
 
 Bu işin sonunda iki şey görünmeli: seçimin dayanağı olan kısa karar notu ve aynı kararı anlatan düzenlenebilir sunum. Araştırma, taslak ve görsel düzeltme tek bir iş içinde birbirini besliyor.
 
@@ -12,6 +12,32 @@ Bu işin sonunda iki şey görünmeli: seçimin dayanağı olan kısa karar notu
 2. **Seçim:** Zorunlu koşulla ele
 3. **Karar:** Gerekçeyi ve sınırı yaz
 4. **Çıktı:** Aynı bilgiden sunum
+
+<a id="atolye-nin-iki-isi"></a>
+
+## Atölye’nin iki işi
+
+Atölye bu rehberin kurgu öğrenme topluluğu. **Tanışma Buluşması**, 14 Kasım 2026’da yapılan, 60 kişilik ücretsiz etkinlik; kayıt sistemi ve web sayfası bunun için hazırlanıyor. **Uygulama Programı** ise ayrı, ücretli bir çalışma; tahsilat örneğindeki altı kayıt bu programa ait. Altı satır, 60 kişilik buluşmanın katılımcı listesinin tamamı veya örneklemi değil. Sonraki hafta yeni kayıtlar aynı ücretli programın raporuna gelir.
+
+Tarih değişikliği ve bütçe denemeleri açıkça kurgu devam diye işaretlenir; önceki kaynak kendiliğinden değişmiş sayılmaz. Bu ayrım, bir topluluğun farklı işleri arasında bilgiyi yanlışlıkla taşımamayı da öğretir.
+
+<a id="henuz-ne-isteyecegini-bilmiyorsan"></a>
+
+## Henüz ne isteyeceğini bilmiyorsan
+
+İlk cümlen yalnız “Atölye için kayıt sistemi lazım” olabilir. Ölçütleri tek başına bulmak zorunda değilsin. Codex’ten kararını şekillendiren kısa bir görüşme iste; resmî rehber de belirsiz fikri sorularla somutlaştırmayı öneriyor. [Planlama ve sorular](https://learn.chatgpt.com/docs/learn/best-practices)
+
+> Önce mevcut notları oku. Kararı değiştirecek en fazla üç eksik bilgiyi sor; her soruda seçenekleri ve önerini açıkla. Kaynaklarda cevabı olanı tekrar sorma. Henüz hizmet seçme veya hesap açma.
+
+**Kurgu konuşma:** Notlarda yalnız ücretsiz Tanışma Buluşması’nın adı var. Anlatıcı şu üç soru–cevabı gösterir:
+
+| Codex’in ayırıcı sorusu | Kullanıcının cevabı | Karara etkisi |
+|---|---|---|
+| Kaç kişi ve hizmet için ne kadar bütçe? Tahmini aralık da başlangıç olabilir. | 60 kişi, etkinlik başına en fazla 3.000 TL. | Kapasite ve maliyet sınırı belirlenir. |
+| Katılımcı hesabı zorunlu olabilir mi? Giriş engelini azaltmak istiyorsan hesapsız kayıt öneririm. | Hesap açtırmayalım. | Bu koşulu karşılamayan seçenek elenir. |
+| Kayıtlar sonra nerede kullanılacak? Tabloya aktaracaksan CSV dışa aktarmayı koşul yapalım. | Listeyi kendi tablomda kullanacağım. | CSV zorunlu olur. |
+
+Çıkan kısa görev: “60 kişi, hesapsız kayıt, CSV ve 3.000 TL sınırıyla seçenekleri karşılaştır.” Bu bir zorunlu soru formu değil; cevapları zaten biliyorsan doğrudan aşağıdaki isteğe geç. Teknik kurulum ayrıntılarını kullanıcıya soru diye geri yüklemek bu görüşmenin amacı değildir.
 
 <a id="1-i-stekten-once-kararin-olcusunu-kur"></a>
 
@@ -51,7 +77,7 @@ B’nin 500 TL bütçe payını aşan bir ek ücret seçimi değiştirebilir; lo
 
 > Önce B’nin ek ücretinin bütçeyi aşıp aşmadığını araştır. Yeni özellik listesi toplama. Bilgi bulunamazsa öneriyi koşullu bırak ve gereken soruyu yaz.
 
-Aynı ürün açıklamasını aktaran üç sayfa bulursan bunları [üç bağımsız doğrulama sayma](09-web-tarayici-bilgisayar.md#cok-baglanti-kac-bagimsiz-dayanak). Bu kurgu pakette ek ücret yanıtı yoktur. Dolayısıyla sonuç “kesin satın al” değil, koşullu öneridir. Daha fazla aramanın hangi kararı değiştireceği belli olduğunda araştırma sınır kazanır.
+Anlatıcı burada [üç bağlantının neden tek dayanak olabileceğini gösterir](09-web-tarayici-bilgisayar.md#cok-baglanti-kac-bagimsiz-dayanak). Bu kurgu pakette ek ücret yanıtı yoktur. Dolayısıyla sonuç “kesin satın al” değil, koşullu öneridir. Daha fazla aramanın hangi kararı değiştireceği belli olduğunda araştırma sınır kazanır.
 
 <a id="3-secimi-tek-cumleye-sigdir-gerekceyi-kaybetme"></a>
 
@@ -126,4 +152,4 @@ Aynı bilgiyi başka biçime taşırken kararı, tutarı ve belirsizliği koru. 
 
 **Eğitimde sıradaki:** [Dağınık tablodan güvenilir rapora](is-veri.md)
 
-[İçindekiler](README.md) · [Dağınık tablodan güvenilir rapora →](is-veri.md)
+[İçindekiler](README.md)
