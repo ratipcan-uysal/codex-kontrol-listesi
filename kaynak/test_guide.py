@@ -12,7 +12,7 @@ import io
 from decimal import Decimal
 from datetime import date
 from collections import Counter
-from content import GUIDE_UPDATED,GUIDE_CHAPTERS,GUIDE_APPENDICES,GUIDE_FEATURES,GUIDE_ITEM_MAP,GUIDE_SOURCES,GUIDE_FIGURES,GUIDE_PATHS,GUIDE_FLOWS,GUIDE_EXAMPLES,SECTIONS
+from content import GUIDE_ROUTE,GUIDE_ARTIFACTS,GUIDE_UPDATED,GUIDE_CHAPTERS,GUIDE_APPENDICES,GUIDE_FEATURES,GUIDE_ITEM_MAP,GUIDE_SOURCES,GUIDE_FIGURES,GUIDE_PATHS,GUIDE_FLOWS,GUIDE_EXAMPLES,SECTIONS
 from guide_build import ROOT,OUT,build_guide,validate_guide,render_markdown,slugify,inline,markdown_output
 
 class Links(HTMLParser):
@@ -161,6 +161,36 @@ class GuideTests(unittest.TestCase):
         for p in OUT.glob('*.html'):
             text=p.read_text().split('<article class="prose">')[1].split('</article>')[0]
             self.assertNotRegex(text,r'\]\(|\*\*|```|\x00',p.name)
+
+    def test_second_week_keeps_new_status_and_missing_amount(self):
+        from example_data import summarize
+        actual=summarize(GUIDE_EXAMPLES['katilim-hafta-2.csv'])
+        self.assertEqual(actual,dict(rows=3,counts={'yedek':1,'katıldı':1,'bekliyor':1},missing=['K08'],total=Decimal(600),unknown=[('K07','yedek')]))
+        duplicate=GUIDE_EXAMPLES['katilim-hafta-2.csv']+'K07,İkinci,yedek,100\n'
+        with self.assertRaises(ValueError):summarize(duplicate)
+        chart=list(csv.DictReader(io.StringIO(GUIDE_EXAMPLES['katilim-grafik.csv'])))
+        self.assertEqual([(r['durum'],int(r['kayit_sayisi'])) for r in chart],[('katıldı',3),('iptal',2),('bekliyor',1)])
+
+    def test_editable_deck_and_artifact_identity(self):
+        import zipfile
+        import xml.etree.ElementTree as ET
+        for name,m in GUIDE_ARTIFACTS.items():self.assertEqual(hashlib.sha256((OUT/name).read_bytes()).hexdigest(),m['sha256'])
+        ns={'a':'http://schemas.openxmlformats.org/drawingml/2006/main'}
+        with zipfile.ZipFile(OUT/'ornekler/atolye-karar.pptx') as z:
+            slides=[n for n in z.namelist() if re.fullmatch(r'ppt/slides/slide[0-9]+.xml',n)]
+            self.assertEqual(len(slides),3)
+            table=ET.fromstring(z.read('ppt/slides/slide2.xml')).findall('.//a:tbl',ns)
+            self.assertEqual(len(table),1)
+            strings=[t.text for t in table[0].findall('.//a:t',ns)]
+            for x in ['Kayıt A','Kayıt B','Kayıt C','2.500 TL']:self.assertIn(x,strings)
+
+    def test_teaching_route_has_one_next_step_and_no_restart(self):
+        for i,p in enumerate(GUIDE_ROUTE):
+            md=(OUT/(p['slug']+'.md')).read_text()
+            if i<len(GUIDE_ROUTE)-1:
+                self.assertIn('**Eğitimde sıradaki:** ['+GUIDE_ROUTE[i+1]['title']+']('+GUIDE_ROUTE[i+1]['slug']+'.md)',md)
+            else:self.assertIn('Eğitim rotası tamamlandı.',md)
+        self.assertNotIn('01-olanaklar',[p['slug'] for p in GUIDE_ROUTE])
 
     def test_deterministic_generation(self):
         def digest():return {str(p.relative_to(OUT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in OUT.rglob('*') if p.is_file()}

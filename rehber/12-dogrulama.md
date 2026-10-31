@@ -1,6 +1,6 @@
 # 12. Güvenilir sonuç elde etmek
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Güvenilir sonuç, yalnız doğru görünen cevap değildir. İddiaya uygun kanıtın bulunması gerekir. Aynı doğrulama yöntemi kod, çeviri ve tasarım için yeterli olmaz.
 
@@ -73,6 +73,16 @@ Bağımsız ikinci bakış, özellikle aynı akıl yürütmenin hatasını tekra
 1. **Nereye bak:** Kod satırına bağlı bulgunun gerekçesine; yalnız P1 etiketine değil.
 2. **Ne yap:** Bulgunun gerçek davranışı etkileyip etkilemediğini kontrol ettir.
 3. **Ne gör:** Geçerli bulgu için dar kapsamlı fark ve ilgili doğrulama.
+
+<a id="i-kinci-inceleyene-cevabi-degil-dayanagi-ver"></a>
+
+## İkinci inceleyene cevabı değil dayanağı ver
+
+**Kurgu inceleme paketi:** Ham CSV + dönüşüm kuralları + üretilmiş rapor. “Rapor doğru, onayla” yerine şu işi ver:
+
+> Kaynak ve raporu bağımsız karşılaştır. Kaynakta desteklenmeyen sonuçları, kayıp kayıtları ve gereğinden kesin ifadeleri bul. Yalnız raporun kendi açıklamasını doğruluk kanıtı sayma. Dosyaları değiştirme.
+
+Beklenen ayırıcı bulgu: hesap 1.800 TL olsa da K04 boşken “kesin toplam gelir” denemez. Aynı sohbette ikinci kez “kontrol et” demek bağımsız bağlamla eşdeğer değildir. Regresyon, bu düzeltme sırasında önceden çalışan başka davranışın bozulmasıdır; ilgili kontrol bunun için yapılır.
 
 <a id="kurgu-senaryo-kayit-sayisi-dogru-anlam-yanlis"></a>
 

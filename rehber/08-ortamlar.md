@@ -1,6 +1,6 @@
 # 8. Dosyalar ve çalışma ortamları
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Bir dosyanın nerede değiştiği, o dosyayla ne yapıldığı kadar önemlidir. “Bende çalışıyor” ifadesinin anlamı çalışma ortamı açıklanınca ortaya çıkar.
 
@@ -29,6 +29,25 @@ Yeni worktree ayrılmış HEAD durumunda başlayabilir: henüz adlandırılmış
 
 Hand off, desteklenen akışlarda sohbeti ve kod durumunu Local ile worktree arasında taşır. Her klasörü elle kopyalamakla aynı işlem değildir. Git tarafından izlenmeyen ve yok sayılan dosyaların taşınma davranışını ayrıca incele. `.worktreeinclude` desteklenen yerel worktree akışlarında seçili yok sayılmış dosyaları kopyalamaya yarar; sırları topluca ekleme. [Worktree ayrıntıları](https://learn.chatgpt.com/docs/environments/git-worktrees)
 
+<a id="ayri-denemeden-ana-calismaya-don"></a>
+
+## Ayrı denemeden ana çalışmaya dön
+
+**Kurgu masaüstü gösterimi:** Ana klasörde etkinlik metni üzerinde çalışıyorsun. Ayrı worktree’de yalnız kart genişliği düzeltildi. Checkout, üzerinde çalışılan dosya kopyasıdır; bu iki kopyanın adresleri farklıdır.
+
+| Aşama | Anlatıcının göstereceği şey | Karar |
+|---|---|---|
+| Deneme | Worktree’de tek genişlik farkı | Ana klasördeki metin değişikliği bu işe ait değil |
+| Önizleme | Denemenin kendi klasöründen açılan sayfa | Görüntü gerçekten denediğimiz koda ait |
+| İnceleme | Değişen dosya ve satır | Yalnız seçilen düzeltme taşınacak |
+| Dönüş | Sohbet başlığındaki Hand off → Local yolu | Yerel durum ve olası çakışmalar kontrol edilir |
+
+> Bu worktree’deki düzeltmeyi ana çalışmaya taşımadan mevcut değişiklikleri göster. Bana ait metin düzenlemesini koru. Uygun geçişi tamamlayınca ana klasörde aynı sayfayı açıp kontrol et.
+
+Hand off, sohbet ve Git durumunu taşıyan ürün akışıdır; her değişikliği otomatik birleştiren genel merge komutu değildir. Bir çatışma varsa hangi iki değişikliğin karşılaştığını görmeden taraf seçme. [Resmî geçiş yolu](https://learn.chatgpt.com/docs/environments/git-worktrees)
+
+[İki dosya alanının örnek kaydı](ornekler/worktree-gecis.md) bu gösterim için kurgu hazırlanmıştır; gerçek bir kullanıcı projesinde worktree açıldığı iddiası değildir. Ana kaynağa döndükten sonra doğrulama, deneme kopyasının görüntüsünü yeniden kullanmakla bitmez.
+
 <a id="ortam-kurulumu-ve-actions"></a>
 
 ## Ortam kurulumu ve Actions
@@ -56,6 +75,9 @@ Atölye'nin başlık düzeltmesi worktree'de yapılmış, tarayıcı ise ana kla
 > Önizlemeyi sunan sürecin çalışma klasörünü ve portunu doğrula. Düzenlediğin worktree ile aynı kaynaktan çalıştığını göster. Sonra görsel kontrolü tekrarla.
 
 Bu kontrol, kodun yanlış olduğu varsayımını sınar. Sonuç raporunda klasör, sürüm ve URL birlikte anlam taşır.
+
+**Eğitimde sıradaki:** [Alt işleri tek kararda birleştir](14-buyuk-isler.md)
+
 
 <a id="kontrol-listesinde-karsiligi"></a>
 

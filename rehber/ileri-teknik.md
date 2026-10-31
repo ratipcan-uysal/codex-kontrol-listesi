@@ -1,6 +1,6 @@
 # İleri teknik ayrıntılar
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Bu ek, ana anlatıyı kesmeden geliştirici ve yoğun kullanıcıların ihtiyaç duyacağı ayrıntıları toplar. Gereken yerde başvur; başlangıç için hepsini kurmak zorunda değilsin.
 

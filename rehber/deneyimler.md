@@ -1,6 +1,6 @@
 # Gerçek deneyimlerden dokuz ders
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşma parçaları üzerinden doğrulanan gerçek deneyimleri anonimleştirir. Tüm sohbet geçmişinin eksiksiz tarandığı iddiası yoktur. Özel kayıtlar, hesaplar, yerel yollar ve ham konuşmalar kamuya taşınmaz. Bölümlerdeki “Kurgu senaryo” metinleri bu vakaların kaydı değildir.
 
@@ -145,6 +145,8 @@ Bu bölüm, bu rehber hazırlanırken seçili proje raporları ve ilgili konuşm
 **Gözlenen değişiklik:** İlk dosyayı üretme yolu ve eksik kullanım başlıkları eklendi; altı resmî arayüz gösterimi açıklamalarıyla yerleştirildi. Geniş yeşil yüzeyler nötr renklere döndü, düzen korundu. 107 kontrol maddesi ve işaretleme biçimi değişmedi. Bu değişiklikler GitHub ve canlı Pages üzerinde kontrol edildi. [29 Ekim revizyonunun kanıtı](../dogrulama/rehber-revizyon-20261029/INCELEME.md) · [Yayın](../DOGRULAMA.md).
 
 **Sonraki ayrım:** “Yapabileceğimiz en iyi eğitim materyali bu mu?” sorusu, kapsamlı bir başvuru kaynağının eğitim anlatısını tek başına kurmadığını ortaya çıkardı. Şimdi okuduğun örnek işler bu ikinci isteğin uygulaması. Dinleyicilerin daha iyi öğrendiğine ilişkin ölçüm yapılmadı; içerik ve ürün kontrollerini öğrenme başarısı saymıyoruz.
+
+**Bu sohbetten dört somut yönlendirme:** “Dinleyiciler sadece dinleyecekler” demen alıştırma ağırlıklı planı değiştirdi. “Katma değerli bilgi seline odaklan” demen süreç anlatımı yerine kullanım kararını öne çıkardı. Görsel ve zemin itirazların ayrı müdahalelere dönüştü. Cookbook yazılarını mevcut bölümlere ekleme talebin de yeni bir paralel kurs açmadan eksik dersleri tamamlamayı belirledi. Bunlar kullanıcı talimatlarının gözlenen etkileridir; hız veya öğrenme artışı ölçümü değildir.
 
 **Başka işte kullan:** Geri bildirimde sorunlu boyutu ayır. Eksik bilgiye içerik, yanlış sıraya anlatı, yetersiz gösterime görsel, bunaltan zemine palet müdahalesi gerekir. Her eleştiride bütün ürünü baştan kurmak zorunda değilsin.
 

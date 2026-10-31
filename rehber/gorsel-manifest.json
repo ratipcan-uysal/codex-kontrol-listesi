@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-29",
+  "date": "2026-10-31",
   "figures": {
     "projects": {
       "file": "assets/projects.png",
@@ -190,6 +190,78 @@
         [
           "Ne gör",
           "Taşma giderildi mi, metin ve bağlantı korundu mu?"
+        ]
+      ]
+    },
+    "slide-before": {
+      "file": "assets/atolye-slayt-once.png",
+      "title": "Aynı ikinci slayt: paragraf hâlindeki ilk sonuç",
+      "caption": "Üç seçeneğin bedel ve koşulları bir paragrafta; karşılaştırmak için metni tekrar taramak gerekiyor.",
+      "alt": "Aynı ikinci slayt: paragraf hâlindeki ilk sonuç. Üç seçeneğin bedel ve koşulları bir paragrafta; karşılaştırmak için metni tekrar taramak gerekiyor.",
+      "kind": "artifact",
+      "source": "ornekler/atolye-karar.pptx",
+      "checked": "2026-10-31",
+      "sha256": "e5a947adff466654caf0dec813063ebd8ec109ab849d951e0265c033ab1d311a",
+      "lesson": [
+        [
+          "Nereye bak?",
+          "A, B ve C bilgileri aynı paragrafta."
+        ],
+        [
+          "Ne yap?",
+          "Yeni araştırma istemeden aynı bilgiyi karşılaştırma tablosuna dönüştür."
+        ],
+        [
+          "Ne gör?",
+          "Düzeltme bilgi miktarını değil kararın görünürlüğünü değiştirir."
+        ]
+      ]
+    },
+    "slide-after": {
+      "file": "assets/atolye-slayt-2.png",
+      "title": "Aynı ikinci slayt: karşılaştırılabilir sonuç",
+      "caption": "Düzenlenebilir sunumdaki tablo seçenekleri aynı ölçütlerde toplar; bütçe payı ve bilinmeyen ek ücret korunur.",
+      "alt": "Aynı ikinci slayt: karşılaştırılabilir sonuç. Düzenlenebilir sunumdaki tablo seçenekleri aynı ölçütlerde toplar; bütçe payı ve bilinmeyen ek ücret korunur.",
+      "kind": "artifact",
+      "source": "ornekler/atolye-karar.pptx",
+      "checked": "2026-10-31",
+      "sha256": "4f47826727566beb140374ce04d77e05eae0c0a2d1fbc64cd3c33dfb70afa902",
+      "lesson": [
+        [
+          "Nereye bak?",
+          "B satırındaki koşul ve 2.500 TL bedeli birlikte oku."
+        ],
+        [
+          "Ne yap?",
+          "Yalnız ikinci slaytı düzelt; karar notunu ve diğer slaytları koru."
+        ],
+        [
+          "Ne gör?",
+          "500 TL pay, bilinmeyen ek ücret için araştırma sınırını gösterir."
+        ]
+      ]
+    },
+    "attendance-chart": {
+      "file": "assets/katilim-grafik.png",
+      "title": "Altı kaydın durum dağılımı",
+      "caption": "Ham CSV’den sayılan 3 katıldı, 2 iptal, 1 bekliyor kaydı. Çubuklar aynı sıfır tabanında 3:2:1 oranındadır.",
+      "alt": "Altı kaydın durum dağılımı. Ham CSV’den sayılan 3 katıldı, 2 iptal, 1 bekliyor kaydı. Çubuklar aynı sıfır tabanında 3:2:1 oranındadır.",
+      "kind": "artifact",
+      "source": "ornekler/katilim-grafik.csv",
+      "checked": "2026-10-31",
+      "sha256": "6e4d7694bb663322bb34289a0b8017696d1d8a6b7d12310d013d61f52dc587dd",
+      "lesson": [
+        [
+          "Nereye bak?",
+          "Çubuk etiketleri ve ortak sıfır tabanı."
+        ],
+        [
+          "Ne yap?",
+          "Dağılımı kayit_id bazındaki altı kayıtla karşılaştır."
+        ],
+        [
+          "Ne gör?",
+          "Katılım durumu tahsilat toplamını söylemez; K04’ün boş tutarı bu grafikte gizlice doldurulmaz."
         ]
       ]
     }

@@ -1,0 +1,10 @@
+{
+  "before": {
+    "scope": "18 chapters and 12 appendices; body only",
+    "sha256": "4ea1a373cad4b399ce5edcc11a4f4b17fd94b0b28dbbf23f6a961003934e7c01"
+  },
+  "after": {
+    "scope": "18 chapters and 12 appendices; body only",
+    "sha256": "612f8a3cb68dc1ee0667394cbb23a270c20956433176092f8a150dd8f4907f62"
+  }
+}

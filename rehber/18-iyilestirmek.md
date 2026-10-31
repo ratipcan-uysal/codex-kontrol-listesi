@@ -1,6 +1,6 @@
 # 18. Kendi kullanımını sürekli iyileştirmek
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Kullanımını geliştirmek için bütün ayarları açmak veya her yeni modeli denemek gerekmez. En çok tekrarlanan sürtüşmenin nedenini bulmak daha fazla değer üretebilir.
 
@@ -44,28 +44,22 @@ Bu tekrarlar değişken model davranışını araştırır. Değişmeyen determi
 
 ## İyi yöntemi sakla, geçici ayrıntıyı bırak
 
-Tekrarlanan düzeltmeyi uygun yere taşı: genel tercih global talimata, proje kuralı `AGENTS.md` dosyasına, tekrar eden yöntem skill'e, mekanik dönüşüm betiğe. Her olay için yeni bir katman ekleme. Aynı işi iki talimat farklı biçimde tarif ediyorsa birleştir.
-
-> Son çalışmadaki tekrarları incele. Hangisi eksik bilgi, hangisi araç sınırı, hangisi kalıcı yöntem sorunu? Yalnız tekrar etmesi muhtemel ve somut karşılığı olan dersleri proje notlarına yaz.
+Tekrarlanan sürtüşmenin türünü seç: yöntem için [skill örneği](10-baglantilar-skills.md#yontem-ikinci-haftada-neyi-koruyor), proje kuralı için [talimat bölümü](11-talimatlar.md), açık iş için [devir notu](06-baglam-bellek.md#devir-notunu-ve-yeni-baslangici-yan-yana-gor). Buradaki yeni karar, kaydettiğin yöntemin sonraki girdide işe yarayıp yaramadığını sınamaktır.
 
 <a id="duzeltmeni-kucuk-bir-kabul-ornegine-donustur"></a>
 
 ### Düzeltmeni küçük bir kabul örneğine dönüştür
 
-Bir kuralın dosyaya yazılması, sonraki işte uygulandığını göstermez. Girdi, beklenen davranış, kaçınılacak hata ve kontrol yöntemi birlikte saklanırsa aynı ders yeniden sınanabilir. Modelin önerdiği değerlendirme ölçütünü de insan gözden geçirmeli. [Geri bildirimden değerlendirmeye](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop)
+Girdi, beklenen sonuç ve yanlış sayılacak davranışı birlikte sakla. Modelin önerdiği ölçütü de gözden geçir. [Geri bildirimden değerlendirmeye](https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop)
 
-[Veri örneğimizden](is-veri.md) bir kontrol kartı:
-
-| Alan | İçerik |
+| Alan | Veri örneğindeki karşılığı |
 |---|---|
-| Girdi | K04’ün tahsilatı boş olan altı satırlık ham CSV. |
-| Beklenen | K04 boş kalır; bilinen tahsilat 1.800 TL diye adlandırılır. |
-| Kaçınılacak hata | Boşluğu 0/600 ile doldurmak veya 1.800 TL’yi kesin toplam diye sunmak. |
-| Kontrol | Kayıt kimlikleri ve değerler betikle; raporun iddiası kaynakla karşılaştırılarak incelenir. |
+| Girdi | K04’ün tahsilatı boş olan altı satır |
+| Beklenen | K04 boş kalır; 1.800 TL bilinen tahsilat diye adlandırılır |
+| Hata | Boşluğu 0/600 yapmak veya kesin toplam demek |
+| Kontrol | Kimlik/değer betikle; raporun iddiası kaynakla karşılaştırılarak |
 
-> Bu düzeltmeyi gelecekte kullanabileceğimiz bir kontrol örneğine dönüştür. Başlangıç girdisini, beklenen sonucu ve yanlış sayılacak davranışı kaydet. Yeni yöntemi aynı örnekte dene; yalnız talimat metninin değiştiğini başarı sayma.
-
-Kart, mevcut kurgu dosyalara dayanır; geçmişte yaşandığı iddia edilen yeni bir vaka değildir. Sayı ve kimlik gibi kesin koşulları kodla kontrol etmek, anlam ve iddia gücünü ayrıca değerlendirmek daha açıklanabilir sonuç verir. Her küçük iş için test sistemi kurmak gerekmez; tekrar eden veya etkisi önemli düzeltmelerle başla.
+[İkinci hafta raporu](ornekler/hafta-2-raporu.md) aynı yöntemi yeni durumla karşılaştırmak için hazır. Her küçük iş için test sistemi kurmak gerekmez; tekrar eden veya etkisi önemli düzeltmeyle başla.
 
 <a id="guncellemede-neye-bakmali"></a>
 
@@ -88,6 +82,9 @@ Kontrol listesinin önceki çalışmasında kısıtlı ağ ortamındaki kimlik k
 Atölye'nin haftalık raporu her seferinde elle başlatılıyor, içerik yöntemi artık tutarlı. Yeni otomasyon özelliği bu sürtüşmeyi çözebilir. Buna karşılık rapor her hafta yanlış kaynakları seçiyorsa önce kaynak seçme yöntemi düzeltilir. Zamanlamayı otomatikleştirmek yanlış seçimi iyileştirmez.
 
 Bu rehberi de aynı biçimde güncelle: kaynak tarihi değiştiğinde ilgili bölümü ve envanter satırını birlikte kontrol et. Bir özelliğin adı değişirse eski komut örneklerini sessizce geçerli bırakma; hangi yüzeyde neyin yerini aldığını belirt.
+
+**Eğitim rotası tamamlandı.** Konu ayrıntıları için [içindekilere dön](README.md).
+
 
 <a id="kontrol-listesinde-karsiligi"></a>
 

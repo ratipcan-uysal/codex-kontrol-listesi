@@ -1,6 +1,6 @@
 # 1. Codex ile neler yapabilirsin?
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Codex ile çalışırken kazanacağın beceri, bir isteği güzel cümlelerle anlatmaktan daha geniş. Dosyayı bulmak, doğru ortamda çalışmak, bir fikri görünür çıktıya çevirmek ve sonucun gerçekten istediğin şey olup olmadığını anlamak aynı işin parçaları. Bu rehber bunları birlikte öğretiyor.
 
@@ -48,11 +48,7 @@ Bu istek üç kararı birlikte veriyor: kaynak belli, taslağa girecek bilginin 
 
 ## Tek çıktıyı birkaç işe dönüştür
 
-Bir kaynak paketinden önce karar notu, sonra onaylı nottan sunum ve kısa duyuru ürettirebilirsin. Böylece her biçimde konuyu yeniden araştırmak yerine doğrulanmış bilgiyi kullanırsın. Yeni biçim yeni iddia gerektiriyorsa o boşluğu ayrıca araştırırsın.
-
-> Önce kaynaklardan bir sayfalık karar notu çıkar. Ben bu notu onayladıktan sonra aynı bilgiyle beş slaytlık sunum ve 150 kelimelik duyuru hazırla. Her çıktıda tarih ve sayıları ana notla karşılaştır.
-
-Bu, rehberin iş akışı önerisi. Kazanç yalnız yazma hızından gelmez: aynı kararın üç belgede farklı anlatılması da önlenir. Hangi dosyayı üreteceğini ve nerede açacağını [ilk iş akışında](02-uygulama.md#i-lk-dosyani-uret-ac-duzelt) görebilirsin.
+[Araştırma örneğinde](is-arastirma.md) aynı kararın not, düzenlenebilir sunum ve duyuruda nasıl korunduğunu göreceksin. Bu bölümde yalnız çıktıyı seç: karar vermek için not, toplantıda anlatmak için sunum, paylaşmak için duyuru. Biçim değişince hangi bilginin sabit kalacağına o örnekte bak.
 
 <a id="i-yi-sonuc-icin-iki-ayri-karar-ver"></a>
 

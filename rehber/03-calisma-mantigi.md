@@ -1,6 +1,6 @@
 # 3. Codex gerçekte nasıl çalışıyor?
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Bir konuşma turunda Codex metin üretebilir, araç çağırabilir, aracın sonucunu değerlendirebilir ve sonraki adımı seçebilir. Aynı cümle farklı ortamda farklı sonuç verir: belgeyi düzenlemek için dosyaya erişim gerekir. Dosyanın adını mesajda anmak içeriğini sağlamaz.
 
@@ -16,6 +16,16 @@ Bir konuşma turunda Codex metin üretebilir, araç çağırabilir, aracın sonu
 | Ortam | İşin yürüdüğü dosyalar, yazılımlar ve izinler | Bilgisayardaki her şeyin bulutta da bulunduğu |
 
 Araç bir sonuç döndürdüğünde o sonuç da değerlendirme ister. “İşlem kabul edildi”, “işlem tamamlandı” ve “istenen kayıt değişti” farklı durumlardır. Dosya yüklenmiş olsa da onu ilgili sayfaya ayrıca bağlamak gerekebilir.
+
+<a id="hangi-kaynak-hangi-karari-yonetiyor"></a>
+
+## Hangi kaynak hangi kararı yönetiyor?
+
+**Kurgu kaynak paketi:** `onayli-program.md` son tarihleri, `eski-taslak.md` önceki önerileri, görsel referans yalnız düzeni gösteriyor. Hepsini aynı ağırlıkta kullanmak eski tarihi geri getirebilir.
+
+> İçerikte onaylı programı esas al. Eski taslağı yalnız değişiklik geçmişi için, görseli yalnız düzen için kullan. Çelişkiyi bu öncelikle çöz; onaylı belgenin kendi içinde tutarsızlık varsa belirt.
+
+Dinleyiciye iki tarih göster: eski taslakta 12 Kasım, onaylı belgede 14 Kasım. Beklenen çıktı 14 Kasım’dır. Daha çok dosya eklemekten önce dosyanın hangi kararda söz sahibi olduğunu belirledik.
 
 <a id="okumak-hatirlamak-ve-tahmin-etmek"></a>
 
@@ -37,16 +47,7 @@ Bu, bütün ara işlemleri raporlamasını istemekten farklı bir ihtiyaçtır. 
 
 ## Bir işlem zincirini doğru okumak
 
-Kurgu örnekte Atölye'nin internet sitesindeki etkinlik tarihini değiştirmek istiyorsun. Zincir şöyle olabilir:
-
-1. Codex tarihin kaynak dosyasını bulur.
-2. Kaynağı düzenler.
-3. Siteyi yeniden üretir.
-4. Yerel sayfada doğru tarihi kontrol eder.
-5. Yetkiliyse değişikliği uzak depoya gönderir.
-6. Yayın tamamlanınca canlı adresi yeniden okur.
-
-İkinci adımın başarısı altıncıyı kanıtlamaz. Dördüncü adım yanlış sunucuya bakıyorsa yerel doğrulama da yanlış olur. Bu nedenle “hangi çıktı, nerede?” sorusu her teslimde işe yarar.
+Atölye sayfasındaki tarih için kaynak dosya → üretilen sayfa → açılan görünüm zincirini takip et. Kaynak 14 Kasım iken önizleme 12 Kasım gösteriyorsa hemen metni tekrar yazdırma; hangi dosyanın üretildiğini ve açıldığını buldur. Commit, push ve canlı hedef aşamalarının tam karşılaştırması [teslim bölümünde](17-teslim-yayin.md#durumlari-birbirine-karistirma).
 
 <a id="kurgu-senaryo-listede-gorunen-ama-erismeyen-baglanti"></a>
 

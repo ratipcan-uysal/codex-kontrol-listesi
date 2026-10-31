@@ -1,6 +1,6 @@
 # 17. Teslim, yayın ve geri dönüş
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Bir işin tamamlanma noktası, kullanıcının istediği hedefte tanımlanır. Yerel dosya üretimi, canlı yayın isteyen bir görev için ara adımdır. Taslak isteyen görevde ise yayın yapmak kapsamı aşar.
 
@@ -27,6 +27,16 @@ Bir işin tamamlanma noktası, kullanıcının istediği hedefte tanımlanır. Y
 Review panelinde dosya ve değişiklik parçalarını görebilir, desteklenen akışlarda stage, revert, commit, push ve pull request işlemlerini yönetebilirsin. Stage, bir sonraki commit'e hangi değişikliğin gireceğini seçmektir. Revert/geri alma işleminin kapsamını okumadan topluca uygulama; depoda kullanıcının başka işi bulunabilir. [Git ve inceleme](https://learn.chatgpt.com/docs/code-review)
 
 Pull request, değişikliğin inceleme önerisidir. Oluşturulması birleştiği anlamına gelmez. GitHub/GitLab hesabı ve depo erişimi ilgili bağlantıya bağlıdır. Bir PR'ı okumak, yorum göndermek, onaylamak ve merge etmek farklı yetkiler gerektirir. Bazı inceleme alanlarında yorum gönderme anında gerçekleşebilir; metnin taslakta kalacağını varsayma. [GitHub](https://learn.chatgpt.com/docs/third-party/github) · [GitLab](https://learn.chatgpt.com/docs/third-party/gitlab)
+
+<a id="kucuk-farki-okuyarak-dogru-isi-teslim-et"></a>
+
+## Küçük farkı okuyarak doğru işi teslim et
+
+**Kurgu örnek:** Değişiklik görünümünde `sayfa.css` kart genişliğini, `program.md` kullanıcının tarih düzeltmesini içeriyor. Kırmızı satır kaldırılanı, yeşil satır ekleneni gösterir. Bu görev yalnız kartı düzeltmişse tarih değişikliğini kendine ait sayma.
+
+> Bu göreve ait farkları göster. Kullanıcının önceden yaptığı değişiklikleri ayır. Seçilen düzeltmeyi teslim et; ilgisiz dosyayı geri alma veya commit’e ekleme.
+
+[Sayfa örneğinin tek satırlık farkını](ornekler/sayfa-degisikligi.md) açıp sonucu önizlemeyle eşleştir. Yanlış düzeltmeyi geri alırken de aynı dosya/iş kapsamını kullan. Commit bir kayıt noktasıdır; başka sistemde gönderilmiş mesajı geri almaz.
 
 <a id="sonucu-hedefte-geri-oku"></a>
 

@@ -1,6 +1,6 @@
 # 14. Büyük işleri ve paralel çalışmayı yönetmek
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Büyük işi parçalamak, bütün dosyaları eşit gruplara ayırmak değildir. Parçalar ayrı sonuç üretebilmeli ve bir araya geldiklerinde aynı hedefe hizmet etmelidir.
 
@@ -126,15 +126,29 @@ Bizim [araştırmadan karara](is-arastirma.md) örneğimizde şu teslim isteği 
 
 ## Kurgu senaryo: paralelliğin faydasız olduğu iş
 
-Tek paragrafın üslubunu düzeltmek için üç ajan kurmak, görev dağıtımı ve uzlaştırmayı asıl işten uzun hâle getirebilir. Aynı yazının kaynak doğrulaması, anlam kontrolü ve görsel yerleşimi ise yeterince büyükse ayrılabilir. Karar verirken ajan sayısına değil, bağımsız kanıt ve bağımsız çıktı ihtiyacına bak.
+Tek paragrafı üç ajana bölmek gereksiz koordinasyon yaratabilir.
 
-Teslimde yalnız yardımcıların özetlerini aktarma. Ana sorumlu, birleşmiş sonucun istenen hedefi karşıladığını ve hangi kontrollerin hâlâ yapılmadığını söylemeli.
+<a id="i-ki-bulgudan-tek-karara"></a>
+
+## İki bulgudan tek karara
+
+Aynı Atölye kararında bir alt iş zorunlu koşulları, diğeri listelenen maliyetleri incelesin.
+
+| Ayrı bulgu | Tek başına çıkarılabilecek yanlış karar | Birleştirilmiş karar |
+|---|---|---|
+| Koşul incelemesi: yalnız B hem hesapsız kayıt hem CSV sunuyor | Maliyeti hiç sorgulamamak | B koşulları karşılıyor; ek ücret henüz bilinmiyor |
+| Maliyet incelemesi: C, B’den 800 TL ucuz | C’yi doğrudan seçmek | C zorunlu hesap koşuluna takılıyor |
+
+İki alt iş aynı kaynak paketini kullanır, ana sorumlu eleme ölçütünü koruyarak tek öneri yazar. Bu tablo kurgu çıktıları birleştirmeyi öğretir; ölçülmüş süre kazancı veya gerçekten çalıştırılmış alt ajan kaydı değildir. [Başlangıç kaynakları](is-arastirma.md#2-kaynak-yiginini-karsilastirilabilir-kanita-donustur)
 
 <a id="bu-is-gercekten-paralellik-gerektiriyor-mu"></a>
 
 ## Bu iş gerçekten paralellik gerektiriyor mu?
 
-Üç [örnek iş](README.md#uc-isi-bastan-sona-izle) tek sohbetle yönetilebilecek ölçekte. Önce bağımsız alt sonuç ihtiyacı doğmalı. Yalnız araç mevcut diye alt ajan veya ayrı sohbet açmak ek koordinasyon getirir.
+Yukarıdaki küçük örnek tek sohbetle de çözülebilir. Daha büyük bir işte bağımsız kanıt veya ayrı çıktı gerekiyorsa aynı paylaşımı kullan. Ajan sayısı yerine hangi alt sonucun tek başına incelenebileceğine bak; birleşmiş sonucun kontrolü ana sorumluda kalsın.
+
+
+**Eğitimde sıradaki:** [Yöntemi tekrar eden işe dönüştür](15-otomasyon.md)
 
 
 <a id="kontrol-listesinde-karsiligi"></a>

@@ -1,6 +1,6 @@
 # 4. İş vermenin incelikleri
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 İyi bir istek, Codex'in yanlış seçmesi pahalı olacak kararları açık eder. Her adımı önceden yazmak zorunda değilsin. İşin amacı belli olduğu hâlde uygulamanın bütün ayrıntılarını dayatmak, daha iyi bir çözüm bulma alanını daraltabilir.
 
@@ -33,6 +33,18 @@ Kaynak ve sonuç kayıt sayısını karşılaştır; fark varsa nedenini açıkl
 | İncelemek | “Somut kusurları ve etkilerini raporla; dosya değiştirme.” |
 
 Plan modu arayüzde mevcutsa onu kullanabilirsin. Normal mesajla “önce planla” diyerek de niyetini aktarabilirsin. Bu durumda arayüzdeki modun ayrıca değiştiğini varsayma. İsteğin sonunda “uygulama” ve “yalnız inceleme” yönlerinin çelişmemesine dikkat et. [İstek yazımı](https://learn.chatgpt.com/docs/prompting)
+
+<a id="tekrarli-ciktinin-alanlarini-sec"></a>
+
+## Tekrarlı çıktının alanlarını seç
+
+Haftalık raporları karşılaştıracaksan aynı dört alanı iste: **karar, dayanak, açık soru, sonraki adım**. Bir hafta uzun deneme, diğer hafta dağınık maddeler üretmek karşılaştırmayı zorlaştırır.
+
+> Bu haftaki bulguları bu dört alanla yaz. Kaynakta sorumlu veya tarih yoksa uydurma. İkinci haftada aynı alan sırasını kullan.
+
+Bu, teknik bir veri biçimi öğrenmeden çıktı sözleşmesi kurmaktır. İlk iki raporu yan yana aç: bilgi değişir, nerede aranacağı değişmez. Makinenin okuyacağı JSON gibi biçimler [ileri ekte](ileri-teknik.md#makineye-aktarilacak-cikti).
+
+Plan için de küçük bir karar yeterlidir: “Sunumda fiyat mı, katılım kolaylığı mı önce gelsin?” sorusunu `/plan` ile netleştir; tercihini verdikten sonra “Bu kararı uygula, üç slaytı üret” de. Planı tekrar tekrar genişletmek yerine incelenebilir ilk çıktıya geç.
 
 <a id="ornek-karsi-ornek-ve-korunacak-davranis"></a>
 

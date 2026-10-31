@@ -1,6 +1,6 @@
 # 15. Otomasyon ve tekrar eden işler
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Otomasyon, iyi tanımlanmış işi tekrar eder. Belirsiz işi zamanlamak, belirsizliği düzenli aralıklarla yeniden üretir. Önce bir gerçek örnekte yöntemi çalıştır, sonra takvime bağla.
 
@@ -15,6 +15,24 @@ Aynı sohbette takip, mevcut işteki bir durumun değişmesini beklemek için uy
 > Her pazartesi seçtiğim proje için geçen haftanın değişikliklerini yeni bir raporda özetle. Kaynak commit bağlantılarını ekle; değişiklik yoksa bunu kısa belirt.
 
 İlk örnek mevcut işin devamını, ikincisi bağımsız tekrar eden sonucu tarif eder. Kurulduğunu, zamanlama ve hedefi geri okuyarak doğrula.
+
+<a id="i-lk-rapordan-calisan-rutine"></a>
+
+## İlk rapordan çalışan rutine
+
+Aynı veri örneğini sürdür. Önce [ikinci hafta raporunu](ornekler/hafta-2-raporu.md) aç: yeni `yedek` etiketi görünür. Yöntem doğruysa zamanlama isteğine geç:
+
+> Bu raporu her pazartesi 09.00 Europe/Istanbul saat diliminde, seçtiğim yerel projede bağımsız rutin olarak hazırla. Haftanın dosyası yoksa bunu bildir. Aynı haftanın raporu varsa güncelle. Yeni durum etiketi veya eksik tahsilat varsa belirt; dışarıya gönderme.
+
+| Ekranda veya çıktıda görülecek | Anlatıcının kararı |
+|---|---|
+| Oluşturulan görevde saat, proje ve hedef | Yanlış saat dilimini çalışmadan düzelt |
+| Scheduled içindeki ilk koşum ve rapor bağlantısı | Zamanlama kaydıyla gerçekten oluşan dosyayı ayır |
+| Raporda yeni `yedek` etiketi | “Yedek ayrı kategori olarak kalacak” kararını yönteme ekle |
+| Sonraki koşumda aynı hafta anahtarı | Çift rapor oluşmadan mevcut çıktı güncellendi mi? |
+| Etkinlik bitti | İlgili rutini durdur ve durumunu geri oku |
+
+[Kurgu koşum günlüğü](ornekler/otomasyon-gunlugu.md) bu zinciri gösterir. Gerçek zamanlayıcı kurulmadı; örnek rapor betikle üretildi. Ürün ekranı gösterilecek eğitimde Scheduled’ın o hesaptaki görünümü kullanılmalı. Görev ve son koşumları izleme, doğal dille güncelleme yolları [resmî belgede](https://learn.chatgpt.com/docs/automations) açıklanır. Webdeki olay tetikleyicilerini masaüstü denetimleri diye gösterme.
 
 <a id="yerel-kosullar-devam-eder"></a>
 
@@ -47,6 +65,9 @@ Bu kurgu örnek bir izleme mantığını öğretir; burada gerçek otomasyon olu
 ## Otomasyon sonuçlarını değerlendirmek
 
 “Zamanlandı”, “çalıştı” ve “istenen çıktı hedefte oluştu” farklı aşamalardır. İlk koşumun sonucunu incele. Yanlış kaynak, gereksiz bildirim veya tekrar kayıt varsa yöntem düzelmeden daha sık çalıştırma. Otomasyonun öneri üretmesi, önerileri otomatik yayınlama yetkisi vermez.
+
+**Eğitimde sıradaki:** [Sonraki işte neyi koruyacağını seç](18-iyilestirmek.md)
+
 
 <a id="kontrol-listesinde-karsiligi"></a>
 

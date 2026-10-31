@@ -1,6 +1,6 @@
 # 10. Bağlantılar, MCP, plugin ve skill
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Codex'e yeni bir yetenek eklerken önce eksik olanı adlandır: veriye erişim mi, doğru yöntemi bilmek mi, tekrarlı işlemi yürütmek mi? Her ihtiyaç için yeni plugin kurmak gerekmez.
 
@@ -27,6 +27,16 @@ Plugins bölümünde gereken yeteneği bul, hangi hesabın ve izinlerin gerekti�
 
 Bir plugin'in masaüstü etiketi varsa web veya mobilde aynı aracı bekleme. Güncel belgeler plugin paketleriyle IDE'de kullanılan bağımsız skill/MCP yollarını da ayırır. “Bilgisayarımda kurulu” ile “bu sohbetin araçları arasında” farklı durumlardır.
 
+<a id="uc-kaynaktan-bir-toplanti-notu"></a>
+
+## Üç kaynaktan bir toplantı notu
+
+**Kurgu iş:** Takvimdeki Atölye toplantısı, bağlı belgedeki önceki karar ve yerel katılım raporu tek hazırlık notunda birleşecek. [Örnek kaynak ve çıktı](ornekler/toplanti-hazirligi.md) her cümlenin nereden geldiğini gösterir.
+
+> Bağlı takvimde 14 Kasım Atölye toplantısını bul. Önceki karar belgesini ve yerel katılım raporunu oku. Gündemi, açık soruyu ve dayanak bağlantısını içeren tek hazırlık notu oluştur. Aynı adlı iki kayıt varsa ayır. Gönderim veya takvim değişikliği yapma.
+
+Burada takvim zamanı, karar belgesi seçimi, rapor eksik tahsilatı sağlar. Bir kaynak diğerinin boşluğunu tahminle doldurmaz. Anlatıcı üç açık kaynaktan tek notun hangi satırlarının oluştuğunu gösterir. Gerçek hesaplara erişim yoksa bu dosyalarla yöntem anlatılır; bağlı araçlar çalıştırılmış gibi sunulmaz.
+
 <a id="i-yi-skill-neyi-saklar"></a>
 
 ## İyi skill neyi saklar?
@@ -39,6 +49,24 @@ Tekrar tekrar açıklamak zorunda kaldığın yöntemi saklar. Örneğin “kayn
 
 Bu kurgu örnekte beklenen çıktı yalnız uzun bir talimat değildir: doğru tetiklenen, ilgisiz işte devreye girmeyen, kaynakları belli bir paket gerekir.
 
+<a id="yontem-ikinci-haftada-neyi-koruyor"></a>
+
+## Yöntem ikinci haftada neyi koruyor?
+
+[Örnek skill metni](ornekler/rapor-skill.md), [ikinci haftanın girdisi](ornekler/katilim-hafta-2.csv) ve [üretilmiş ikinci rapor](ornekler/hafta-2-raporu.md) yan yana durur. Skill örneği, kurulacak paketin `SKILL.md` içeriğidir; indirmek tek başına kurmaz.
+
+İlk haftada öğrendiğimiz yöntem: kimliği koru, boş tutarı boş bırak, yeni durum etiketini sessizce düzeltme. İkinci haftada yeni `yedek` durumu geldi:
+
+| Yeni girdi | Yöntemin ürettiği sonuç |
+|---|---|
+| K07, durum `yedek` | Yeni durum olarak işaretlenir; katıldı diye çevrilmez |
+| K08, tahsilat boş | Bilinmeyen tutar olarak kalır |
+| K09, bekliyor, 600 TL | Durum ve tahsilat ayrı tutulur |
+
+Kurulum yapılan desteklenen ortamda `$` menüsünden **atolye-raporu** seçip “İkinci haftayı aynı yöntemle raporla” de. Buradaki rapor dosyası, örnek kuralları uygulayan betikle gerçekten üretildi; bir skill’in otomatik seçildiğine dair oturum kaydı değildir. [Skill oluşturma ve kullanım](https://learn.chatgpt.com/docs/build-skills)
+
+Anlatıcı, uzun ilk isteğin yerine kısa çağrıyı ve korunan üç kararı gösterir. Yalnız başlıkta yazım düzeltmesi istenince tüm rapor sürecinin başlamaması da skill’in kapsamının parçasıdır.
+
 <a id="betik-mi-skill-mi-ozel-arac-mi"></a>
 
 ## Betik mi, skill mi, özel araç mı?
@@ -50,6 +78,9 @@ Aynı kuralla bin dosya adı değişiyorsa betik daha uygundur. Kaynak kalitesin
 ## Record & Replay
 
 Desteklenen macOS kurulumunda Plugins → + → Record a skill yolu bilgisayarda gösterdiğin akıştan skill üretmeye yardımcı olur. Computer Use kurulumu gerekir. Kaydı durdurduktan sonra oluşan yönergeleri incele: sabit kişi adı, tarih, dosya yolu veya tek seferlik tıklama genel kurala dönüşmüş olabilir. Replay, değişen ekranda araçlarla yürütülen akıştır; her pikseli aynı sırayla basan kusursuz makro garantisi değildir. [Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay)
+
+
+**Kısa kurgu örneği:** Kaydedilen adım “Ekim raporunu indir” ise kasımda aynı kaydı körlemesine oynatmak yanlış ayı getirebilir. Yöntemi “istenen ayı seç, başlıkta aynı ayı doğrula, sonra indir” diye genelleştir. Çağrıdaki ay kasım olduğunda beklenen gözlem dosya başlığında kasımdır; yalnız indirme düğmesine basılması başarı değildir. Kaydı skill'e dönüştürme sırasında sabit ayrıntıyı değişkene çevirmenin değeri budur.
 
 <a id="arac-dogru-calisti-cevap-dogru-mu"></a>
 
@@ -74,6 +105,9 @@ Kurulumdan sonraki okuma denemesi yalnız başlangıçtır. Araç sonucunu, Code
 ## Bağlantı çalışmıyorsa
 
 Önce kurulum, hesap bağlantısı, izin kapsamı ve o sohbette araç keşfini ayrı kontrol et. Araç görünüyorsa küçük bir okuma denemesi yap. Ağ erişimi hatasını doğrudan yanlış parola diye yorumlama. Başka hesaba geçmek veya erişimi genişletmek, hata kanıtı olmadan ilk çözüm olmamalı.
+
+**Eğitimde sıradaki:** [Yeni sohbette kararı koru](06-baglam-bellek.md)
+
 
 <a id="kontrol-listesinde-karsiligi"></a>
 

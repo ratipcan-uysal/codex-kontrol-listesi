@@ -1,6 +1,6 @@
 # 13. Tasarım ve yaratıcı üretim
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Teknik olarak çalışan bir çıktı, iyi tasarlanmış veya iyi yazılmış olmayabilir. Görsel ve yaratıcı işte beğeniyi somutlaştırmak, model seçmekten önce gelen bir iştir.
 
@@ -37,6 +37,16 @@ Prototip, belirsiz bir kararı görülebilir hâle getirir. İki seçenek aynı 
 > Aynı örnek içerikle iki farklı okuma düzeni göster. Biri uzun okumayı, diğeri hızlı taramayı öne çıkarsın. Açıp inceleyebileceğim prototipler üret; hangisinin ana ürüne gireceğine görüntüler üzerinden karar vereceğim.
 
 Bu kurgu istek yeni yönü seçmeden üretime taşıma yetkisi vermez. Mevcut kabul edilmiş yöndeki küçük taşma ve hizalama düzeltmeleri ise yeni tasarım seçimi gerektirmeyebilir.
+
+<a id="ayni-bir-gunluk-program-iki-gercek-gorunum"></a>
+
+### Aynı bir günlük program, iki gerçek görünüm
+
+[İki düzeni yan yana aç](ornekler/program-iki-duzen.html). Soldaki zaman sırasını, sağdaki katılımcının elde edeceği çıktıları öne çıkarır. Saatler, konu ve açıklamalar aynıdır; fark renk seçimi değil okuma sırasıdır. İki görünüm bu rehber için hazırlanmış kurgu prototiplerdir.
+
+> Üç günlük programı henüz genişletme. Bu bir günlük örnekte iki düzeni göster. Katılımcı “ne kazanacağım?” sorusuna önce yanıt bulsun istiyorum; çıktı odaklı düzeni seçersek kalan günlere uygula.
+
+Anlatıcı önce iki görünümü açar, sonra kararı gösterir: tanıtım sayfasında çıktı odaklı düzen; gün içinde oturum takibinde zaman sırası. “Hangisi daha güzel?” yerine farklı ihtiyaca göre seçim yapılır. Bu iki prototip rehberin ana tasarımını değiştirmez.
 
 <a id="gorsel-uretimi-ayri-bir-aractir"></a>
 

@@ -15,3 +15,5 @@
 - Markdown ve HTML bölüm çapaları birlikte üretilir. Eski çapaları ve kullanıcı işareti biçimini koru; yeni bağlantıları iki çıktıda kontrol et.
 
 - Öğretim yolları GUIDE_PATHS, şemalar GUIDE_FLOWS, indirilebilir örnekler GUIDE_EXAMPLES alanlarından üretilir. Kurgu çıktıyı çalıştırılmış oturum kanıtı gibi sunma; gerçek vakada kronolojiden desteklenmeyen neden-sonuç çıkarma.
+
+- Eğitim rotası GUIDE_ROUTE; düzenlenebilir örnek sunumun karar verileri GUIDE_DECK ve dosya özetleri GUIDE_ARTIFACTS içindedir. Veri örneklerini example_data.py aynı canonical CSV’den hesaplar. Yeniden sunum üretimi kaynak/ORNEK-URETIMI.md içinde açıklanır. Kurgu ekran/çıktı ile gerçek uygulama oturumunu ayır.

@@ -5,10 +5,11 @@ import json
 import re
 import hashlib
 import struct
+from datetime import date
 from urllib.parse import urlsplit
 from content import (GUIDE_DATE, GUIDE_UPDATED, GUIDE_INTRO, GUIDE_CHAPTERS, GUIDE_APPENDICES,
                      GUIDE_SOURCES, GUIDE_FEATURES, GUIDE_ITEM_MAP, GUIDE_FIGURES,
-                     GUIDE_PATHS, GUIDE_FLOWS, GUIDE_EXAMPLES, SECTIONS)
+                     GUIDE_PATHS, GUIDE_FLOWS, GUIDE_EXAMPLES, GUIDE_ROUTE, GUIDE_ARTIFACTS, SECTIONS)
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -20,11 +21,22 @@ def resolve_sources(text):
     return re.sub(r'\(source:([\w-]+)\)', lambda m: '(' + GUIDE_SOURCES[m[1]]['url'] + ')', text)
 
 
+def figure_label(f):
+    return {'official':'OpenAI’nin resmî arayüz gösterimi', 'example':'Kurgu örnek HTML’nin gerçek tarayıcı görüntüsü', 'artifact':'Kurgu veriden üretilmiş gerçek çıktı'}[f['kind']]
+
+def teaching_next(slug):
+    route=[p['slug'] for p in GUIDE_ROUTE]
+    if slug not in route: return ''
+    index=route.index(slug)
+    if index==len(route)-1: return '\n\n**Eğitim rotası tamamlandı.** Konu ayrıntıları için [içindekilere dön](README.md).\n'
+    item=GUIDE_ROUTE[index+1]
+    return f'\n\n**Eğitimde sıradaki:** [{item["title"]}]({item["slug"]}.md)\n'
+
 def figure_html(key):
     f = GUIDE_FIGURES[key]
     width, height = struct.unpack('>II', (OUT/f['file']).read_bytes()[16:24])
     esc = lambda s: html.escape(s, quote=True)
-    label = 'OpenAI’nin resmî arayüz gösterimi' if f['kind']=='official' else 'Kurgu örnek HTML’nin gerçek tarayıcı görüntüsü'
+    label = figure_label(f)
     lesson='<ol class="figure-lesson">'+''.join('<li><strong>'+esc(a)+'</strong> '+esc(b)+'</li>' for a,b in f['lesson'])+'</ol>'
     return (f'<figure class="app-figure figure-{f["kind"]}"><a class="figure-open" href="{esc(f["file"])}" '
             f'aria-label="{esc(f["title"])} — görseli tam boyutta aç">'
@@ -44,7 +56,7 @@ def markdown_output(text):
     """Use the same figure metadata and explicit anchors in GitHub Markdown."""
     def figure(m):
         f=GUIDE_FIGURES[m[1]]
-        label='OpenAI’nin resmî arayüz gösterimi' if f['kind']=='official' else 'Kurgu örnek HTML’nin gerçek tarayıcı görüntüsü'
+        label=figure_label(f)
         return (f'![{f["alt"]}]({f["file"]})\n\n**{f["title"]}.** {f["caption"]} '
                 f'[Tam boyut]({f["file"]}) · {label} · '
                 f'[Kaynak]({f["source"]}) · {f["checked"]}.\n\n'+
@@ -187,11 +199,18 @@ def validate_guide():
         assert asset.is_relative_to((OUT/'assets').resolve()) and asset.suffix=='.png'
         assert asset.read_bytes()[:8]==b'\x89PNG\r\n\x1a\n'
         assert hashlib.sha256(asset.read_bytes()).hexdigest()==f['sha256']
-        assert f['alt'] and f['caption'] and f['title'] and f['checked']==GUIDE_DATE
+        assert f['alt'] and f['caption'] and f['title'] and date.fromisoformat(f['checked']) <= date.fromisoformat(GUIDE_UPDATED)
         assert len(f['lesson'])==3 and all(a and b for a,b in f['lesson'])
-        assert f['kind'] in {'official','example'}
+        assert f['kind'] in {'official','example','artifact'}
         if f['kind']=='official':assert f['source'].startswith('https://learn.chatgpt.com/docs/')
-        else:assert f['source'].startswith('ornekler/') and f['source'][9:] in GUIDE_EXAMPLES
+        elif f['kind']=='example':assert f['source'].startswith('ornekler/') and f['source'][9:] in GUIDE_EXAMPLES
+        else:assert f['source'] in GUIDE_ARTIFACTS or (f['source'].startswith('ornekler/') and f['source'][9:] in GUIDE_EXAMPLES)
+    assert len({p['slug'] for p in GUIDE_ROUTE})==len(GUIDE_ROUTE)
+    assert {p['slug'] for p in GUIDE_ROUTE} <= PAGE_SLUGS
+    for name,meta in GUIDE_ARTIFACTS.items():
+        asset=(OUT/name).resolve()
+        assert asset.is_relative_to((OUT/'ornekler').resolve())
+        assert hashlib.sha256(asset.read_bytes()).hexdigest()==meta['sha256']
     return ids
 
 
@@ -223,7 +242,7 @@ def build_guide():
     pages=[]
     for index,c in enumerate(GUIDE_CHAPTERS+GUIDE_APPENDICES):
         related=[id for id,target in GUIDE_ITEM_MAP.items() if target==c['slug']]
-        body=resolve_sources(c['body'])
+        body=resolve_sources(c['body'])+teaching_next(c['slug'])
         if related:
             body+='\n\n## Kontrol listesinde karşılığı\n\n'
             body+='\n'.join(f'- [{id} {lookup[id]["title"]}](../codex-kontrol-listesi.md#{lookup[id]["anchor"]})' for id in related)
@@ -260,7 +279,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 |---|---|
 '''
     for src in GUIDE_SOURCES.values(): source_md+=f'| [{src["title"]}]({src["url"]}) | {src["checked"]} |\n'
-    source_md+='\n## Arayüz görselleri ve atıf\n\nAltı resmî arayüz gösterimi OpenAI belgelerinden içerikleri değiştirilmeden alındı. İki önce/sonra görüntüsü ise bu rehber için üretilmiş kurgu HTML sayfalarının gerçek tarayıcı çekimidir; Codex uygulamasının oturum ekranı değildir. Her görselin türü ve kaynağı altında yazılıdır. Yanlarındaki Nereye bak / Ne yap / Ne gör açıklamaları bizim öğretim yorumumuzdur. Kaynak ve dosya özeti [görsel manifestinde](gorsel-manifest.json) kayıtlıdır. OpenAI ve diğer hak sahiplerine ait görseller metnin CC BY 4.0 lisansına dahil değildir. Rehber için yazılmış örnek dosyalar ve onların ekran görüntüleri rehber lisansını izler.\n\n'
+    source_md+='\n## Arayüz görselleri ve atıf\n\nAltı resmî arayüz gösterimi OpenAI belgelerinden içerikleri değiştirilmeden alındı. İki önce/sonra görüntüsü kurgu HTML sayfalarının gerçek tarayıcı çekimidir. Üç yeni görsel, düzenlenebilir Atölye sunumunun önce/sonra görünümünü ve CSV verisinden hesaplanan grafiği gösterir. Bunlar Codex uygulamasının oturum ekranı değildir. Her görselin türü ve kaynağı altında yazılıdır. Yanlarındaki Nereye bak / Ne yap / Ne gör açıklamaları bizim öğretim yorumumuzdur. Kaynak ve dosya özeti [görsel manifestinde](gorsel-manifest.json) kayıtlıdır. OpenAI ve diğer hak sahiplerine ait görseller metnin CC BY 4.0 lisansına dahil değildir. Rehber için yazılmış örnek dosyalar ve onların ekran görüntüleri rehber lisansını izler.\n\n'
     source_md+='| Görsel | Resmî sayfa | Kayıt tarihi |\n|---|---|---|\n'
     for f in GUIDE_FIGURES.values():source_md+=f'| [{f["title"]}]({f["file"]}) | [Kaynak]({f["source"]}) | {f["checked"]} |\n'
     source_md+='''
@@ -273,7 +292,7 @@ Yerel çıktı, uzak depoya gönderim ve canlı yayın ayrı durumlardır. Eski 
     pages.append(dict(slug='kaynaklar',title='Kaynaklar, kanıt türleri ve güncellik',body=source_md))
     intro=GUIDE_INTRO+'\n## Tam içindekiler\n\n'+'\n'.join(f'{c["number"]}. [{c["title"]}]({c["slug"]}.md)' for c in GUIDE_CHAPTERS)+'\n\n## Ekler ve hızlı erişim\n\n'+'\n'.join(f'- [{p["title"]}]({p["slug"]}.md)' for p in pages[18:] if 'journey' not in p)+'\n\n[107 maddelik hızlı kontrol listesine dön](../codex-kontrol-listesi.md) · [Tek dosyada rehberi indir](tam-rehber.md)\n'
     (OUT/'README.md').write_text('# Codex’i Derinlemesine Kullanma Rehberi\n\n'+markdown_output(intro))
-    (OUT/'index.html').write_text(page_html('Codex’i Derinlemesine Kullanma Rehberi',intro,'index',next_=GUIDE_PATHS[0]))
+    (OUT/'index.html').write_text(page_html('Codex’i Derinlemesine Kullanma Rehberi',intro,'index',next_=GUIDE_ROUTE[0]))
     full=['# Codex’i Derinlemesine Kullanma Rehberi',GUIDE_INTRO]
     for index,p in enumerate(pages):
         prev=GUIDE_CHAPTERS[index-1] if 0<index<18 else None
@@ -281,7 +300,7 @@ Yerel çıktı, uzak depoya gönderim ve canlı yayın ayrı durumlardır. Eski 
         if 'journey' in p:
             pos=p['journey']-1
             prev=GUIDE_PATHS[pos-1] if pos>0 else None
-            next_=GUIDE_PATHS[pos+1] if pos<2 else GUIDE_CHAPTERS[0]
+            next_=GUIDE_PATHS[pos+1] if pos<2 else GUIDE_ROUTE[4]
         navigation='\n\n[İçindekiler](README.md)'
         if prev: navigation+=f' · [← {prev["title"]}]({prev["slug"]}.md)'
         if next_: navigation+=f' · [{next_["title"]} →]({next_["slug"]}.md)'
@@ -292,7 +311,8 @@ Yerel çıktı, uzak depoya gönderim ve canlı yayın ayrı durumlardır. Eski 
     (OUT/'tam-rehber.md').write_text('\n\n'.join(full)+'\n')
     (OUT/'kaynak-manifest.json').write_text(json.dumps(dict(initial_checked=GUIDE_DATE,updated=GUIDE_UPDATED,sources=GUIDE_SOURCES),ensure_ascii=False,indent=2)+'\n')
     (OUT/'kapsam.json').write_text(json.dumps(dict(date=GUIDE_DATE,features=GUIDE_FEATURES,item_map=GUIDE_ITEM_MAP),ensure_ascii=False,indent=2)+'\n')
-    (OUT/'gorsel-manifest.json').write_text(json.dumps(dict(date=GUIDE_DATE,figures=GUIDE_FIGURES),ensure_ascii=False,indent=2)+'\n')
+    (OUT/'gorsel-manifest.json').write_text(json.dumps(dict(date=GUIDE_UPDATED,figures=GUIDE_FIGURES),ensure_ascii=False,indent=2)+'\n')
+    (OUT/'cikti-manifest.json').write_text(json.dumps(GUIDE_ARTIFACTS,ensure_ascii=False,indent=2)+'\n')
     return dict(chapters=18,appendices=len(pages)-18,features=len(GUIDE_FEATURES),mapped=len(GUIDE_ITEM_MAP))
 
 if __name__=='__main__': print(build_guide())

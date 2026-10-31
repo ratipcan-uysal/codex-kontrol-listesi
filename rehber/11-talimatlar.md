@@ -1,6 +1,6 @@
 # 11. Talimatları ve kişisel çalışma düzenini kurmak
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Kalıcı talimat, aynı düzeltmeyi tekrar söyleme ihtiyacını azaltır. Ancak her başarısızlığın ardından yeni bir yasak eklemek, kısa işi uzun bir prosedüre çevirebilir. İyi kural belirli bir sürtüşmeyi çözer.
 
@@ -13,6 +13,18 @@ Global talimat, projeler arasında değişmeyen tercih içindir: kullanılan dil
 Codex'in yapılandırma dosyası `config.toml`, arayüz tercihleri ve çalışma politikalarının başka bir katmanıdır. Her ayar doğal dil talimatıyla aynı etkiye sahip değildir. Proje güveni, kullanıcı ayarı, yönetilen kurum ayarı ve çalışma sırasında verilen seçenekler farklı kapsamlar taşır. Belgedeki katman sırasını esas al; rastgele kopyalanmış bir dosyanın yüklendiğini varsayma. [Yapılandırma](https://learn.chatgpt.com/docs/config-file/config-basic) · [Ayar katmanları](https://learn.chatgpt.com/docs/configuration)
 
 **Dosya adı ile uygulama özelliğini ayır.** Bazı Cookbook örnekleri `PLANS.md`, `GOALS.md` ve `PROMPTS.md` kullanır. Bunlar isteğe bağlı belge düzenidir: `GOALS.md` yazmak `/goal` başlatmaz, `PLANS.md` oluşturmak plan modunu açmaz. Mevcut karar ve ilerleme notların aynı işi görüyorsa yeni kopyalar üretme. [Çalışma düzeni örneği](https://developers.openai.com/cookbook/examples/codex/iterating-development-workflows-with-codex)
+
+<a id="init-taslagindan-ise-yarayan-proje-kuralina"></a>
+
+## /init taslağından işe yarayan proje kuralına
+
+Masaüstünde `/init`, mevcut proje için `AGENTS.md` başlangıç taslağı üretir. [Komut belgesi](https://learn.chatgpt.com/docs/reference/slash-commands)
+
+**Kurgu gösterim:** Taslakta “her değişiklikte tüm tarayıcı testlerini çalıştır” yazıyor. Projede yalnız başlık düzeltirken bu gereksiz; etkileşim değişirken ise gerekli olabilir. Taslağı “içerikte üretici ve bağlantılar, etkileşimde tarayıcı kontrolü” diye daralt. Sonraki küçük başlık işinde doğru kontrollerin seçildiğini gör.
+
+> Bu projenin mevcut komutlarına dayanarak talimat taslağını gözden geçir. Projede olmayan araçları çıkar; her kuralın hangi durumda uygulanacağını belirt.
+
+Dosyanın oluşması, bütün kuralların sonraki işte doğru uygulandığını tek başına göstermez. İlk ilgili görev, kuralı sınama fırsatıdır. Başka projeye ait kaynak yolunu bu dosyaya kopyalama.
 
 <a id="zayif-ve-ise-yarayan-kural"></a>
 

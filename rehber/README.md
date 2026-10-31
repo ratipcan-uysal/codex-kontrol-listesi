@@ -36,9 +36,18 @@ Uygulamayı ilk kez açıyorsan önce [ilk dosyayı üretme yolunu](02-uygulama.
 
 ## Eğitim yolu ve başvuru rehberi birlikte nasıl kullanılır?
 
-Üç örnekten sonra aşağıdaki 18 bölümle bilgiyi derinleştirebilirsin. Başlangıçta talimat dosyası, MCP, hook veya otomasyon kurman gerekmiyor. Tekrarlanan bir ihtiyaç ortaya çıktığında ilgili bölüm değer kazanır. [Komutlar](komutlar.md), [sorun giderme](sorun-giderme.md) ve 107 maddelik kontrol listesi iş sırasında hızlı başvuru için duruyor.
+Eğitimde aşağıdaki rotayı izle; 18 bölüm, ihtiyaç duyduğun anda açacağın başvuru kaynağıdır. Üç örnekten sonra bölüm 1’den yeniden başlaman gerekmez. Başlangıçta talimat dosyası, MCP, hook veya otomasyon kurman gerekmiyor. Tekrarlanan bir ihtiyaç ortaya çıktığında ilgili bölüm değer kazanır. [Komutlar](komutlar.md), [sorun giderme](sorun-giderme.md) ve 107 maddelik kontrol listesi iş sırasında hızlı başvuru için duruyor.
 
-**Belge kontrolü: 29 Ekim 2026.** Ürün bilgisi resmî kaynaklara, gerçek vakalar seçili kayıtlara dayanır. Üç örneğin verileri kurgu; mini web sayfaları bu rehber için üretildi. Resmî uygulama görselleri ile örnek HTML'nin gerçek tarayıcı görüntüleri ayrı etiketlidir. Görsellerin altındaki “Nereye bak / Ne yap / Ne gör” açıklamaları öğretim yorumumuzdur. Erişim koşulları ve doğrulama sınırları [kaynaklarda](kaynaklar.md).
+**İçerik güncellemesi: 31 Ekim 2026.** Kaynakların kendi kontrol tarihleri kaynak dizininde yer alır. Ürün bilgisi resmî kaynaklara, gerçek vakalar seçili kayıtlara dayanır. Üç örneğin verileri kurgu; mini web sayfaları bu rehber için üretildi. Resmî uygulama görselleri ile örnek HTML'nin gerçek tarayıcı görüntüleri ayrı etiketlidir. Görsellerin altındaki “Nereye bak / Ne yap / Ne gör” açıklamaları öğretim yorumumuzdur. Erişim koşulları ve doğrulama sınırları [kaynaklarda](kaynaklar.md).
+
+
+<a id="anlaticinin-tek-rotasi"></a>
+
+## Anlatıcının tek rotası
+
+İlk dosya → araştırma ve sunum → veri ve grafik → sayfa düzeltmesi → skill → devir → worktree → paralel iş → otomasyon → yöntemi iyileştirme. Her sayfanın sonundaki **Eğitimde sıradaki** bağlantısı bu yolu izler. Numaralı konu rehberi ayrı başvuru sırasını korur.
+
+Anlatıcı örnek dosyaları açar, bir kararın çıktıyı nasıl değiştirdiğini gösterir ve devam eder. Dinleyiciden kurulum veya alıştırma beklenmez. Platform ayrıntıları, komut envanteri ve teknik ekler soru geldiğinde açılabilir.
 
 <a id="tam-icindekiler"></a>
 

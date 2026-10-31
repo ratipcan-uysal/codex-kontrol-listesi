@@ -1,6 +1,6 @@
 # Kaynaklar, kanıt türleri ve güncellik
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Ürün açıklamaları ile deneyimden çıkan öneriler farklı kanıtlardır. Aşağıdaki resmî sayfalar indirilip rehberin ilgili iddiaları için gerekli bölümleri incelendi. Listenin tamamını baştan sona satır satır denetlediğimiz veya her davranışı çalıştırdığımız iddia edilmez. Menü adları resmî belgedeki adları izler; kurulu sürüm ve hesabında ayrıca farklılık olabilir.
 
@@ -30,23 +30,23 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) | 2026-10-29 |
 | [Pricing](https://learn.chatgpt.com/docs/pricing) | 2026-10-29 |
 | [Codex environments](https://learn.chatgpt.com/docs/environments/modes) | 2026-10-29 |
-| [Worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees) | 2026-10-29 |
+| [Worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees) | 2026-10-31 |
 | [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environments) | 2026-10-29 |
 | [Browser](https://learn.chatgpt.com/docs/browser) | 2026-10-29 |
 | [Browser extension](https://learn.chatgpt.com/docs/chrome-extension) | 2026-10-29 |
 | [Computer Use](https://learn.chatgpt.com/docs/computer-use) | 2026-10-29 |
 | [Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp) | 2026-10-29 |
 | [Plugins](https://learn.chatgpt.com/docs/plugins) | 2026-10-29 |
-| [Build skills](https://learn.chatgpt.com/docs/build-skills) | 2026-10-29 |
+| [Build skills](https://learn.chatgpt.com/docs/build-skills) | 2026-10-31 |
 | [Build plugins](https://learn.chatgpt.com/docs/build-plugins) | 2026-10-29 |
 | [Skills & Plugins](https://learn.chatgpt.com/docs/skills-and-plugins) | 2026-10-29 |
 | [Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay) | 2026-10-29 |
-| [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md) | 2026-10-29 |
+| [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md) | 2026-10-31 |
 | [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents) | 2026-10-29 |
 | [Config basics](https://learn.chatgpt.com/docs/config-file/config-basic) | 2026-10-29 |
 | [Hooks](https://learn.chatgpt.com/docs/hooks) | 2026-10-29 |
 | [Code review](https://learn.chatgpt.com/docs/code-review) | 2026-10-29 |
-| [Scheduled tasks](https://learn.chatgpt.com/docs/automations) | 2026-10-29 |
+| [Scheduled tasks](https://learn.chatgpt.com/docs/automations) | 2026-10-31 |
 | [Permissions](https://learn.chatgpt.com/docs/permission-modes) | 2026-10-29 |
 | [Permissions](https://learn.chatgpt.com/docs/permissions) | 2026-10-29 |
 | [Auto-review](https://learn.chatgpt.com/docs/sandboxing/auto-review) | 2026-10-29 |
@@ -77,7 +77,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Codex Security](https://learn.chatgpt.com/docs/security) | 2026-10-29 |
 | [Codex Security plugin quickstart](https://learn.chatgpt.com/docs/security/plugin) | 2026-10-29 |
 | [Windows sandbox](https://learn.chatgpt.com/docs/windows/windows-sandbox) | 2026-10-29 |
-| [Slash commands](https://learn.chatgpt.com/docs/reference/slash-commands) | 2026-10-29 |
+| [Slash commands](https://learn.chatgpt.com/docs/reference/slash-commands) | 2026-10-31 |
 | [Composer predictions](https://learn.chatgpt.com/docs/features/composer-predictions) | 2026-10-29 |
 | [Visualizations](https://learn.chatgpt.com/docs/visualizations) | 2026-10-29 |
 | [Notifications and Activity](https://learn.chatgpt.com/docs/notifications) | 2026-10-29 |
@@ -96,7 +96,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 
 ## Arayüz görselleri ve atıf
 
-Altı resmî arayüz gösterimi OpenAI belgelerinden içerikleri değiştirilmeden alındı. İki önce/sonra görüntüsü ise bu rehber için üretilmiş kurgu HTML sayfalarının gerçek tarayıcı çekimidir; Codex uygulamasının oturum ekranı değildir. Her görselin türü ve kaynağı altında yazılıdır. Yanlarındaki Nereye bak / Ne yap / Ne gör açıklamaları bizim öğretim yorumumuzdur. Kaynak ve dosya özeti [görsel manifestinde](gorsel-manifest.json) kayıtlıdır. OpenAI ve diğer hak sahiplerine ait görseller metnin CC BY 4.0 lisansına dahil değildir. Rehber için yazılmış örnek dosyalar ve onların ekran görüntüleri rehber lisansını izler.
+Altı resmî arayüz gösterimi OpenAI belgelerinden içerikleri değiştirilmeden alındı. İki önce/sonra görüntüsü kurgu HTML sayfalarının gerçek tarayıcı çekimidir. Üç yeni görsel, düzenlenebilir Atölye sunumunun önce/sonra görünümünü ve CSV verisinden hesaplanan grafiği gösterir. Bunlar Codex uygulamasının oturum ekranı değildir. Her görselin türü ve kaynağı altında yazılıdır. Yanlarındaki Nereye bak / Ne yap / Ne gör açıklamaları bizim öğretim yorumumuzdur. Kaynak ve dosya özeti [görsel manifestinde](gorsel-manifest.json) kayıtlıdır. OpenAI ve diğer hak sahiplerine ait görseller metnin CC BY 4.0 lisansına dahil değildir. Rehber için yazılmış örnek dosyalar ve onların ekran görüntüleri rehber lisansını izler.
 
 | Görsel | Resmî sayfa | Kayıt tarihi |
 |---|---|---|
@@ -108,6 +108,9 @@ Altı resmî arayüz gösterimi OpenAI belgelerinden içerikleri değiştirilmed
 | [Görünümü ayarlamak](assets/settings.png) | [Kaynak](https://learn.chatgpt.com/docs/reference/settings) | 2026-10-29 |
 | [Sabit genişlik dar ekranda taşıyor](assets/lesson-before.png) | [Kaynak](ornekler/sayfa-once.html) | 2026-10-29 |
 | [Aynı kart kapsayıcıya sığıyor](assets/lesson-after.png) | [Kaynak](ornekler/sayfa-sonra.html) | 2026-10-29 |
+| [Aynı ikinci slayt: paragraf hâlindeki ilk sonuç](assets/atolye-slayt-once.png) | [Kaynak](ornekler/atolye-karar.pptx) | 2026-10-31 |
+| [Aynı ikinci slayt: karşılaştırılabilir sonuç](assets/atolye-slayt-2.png) | [Kaynak](ornekler/atolye-karar.pptx) | 2026-10-31 |
+| [Altı kaydın durum dağılımı](assets/katilim-grafik.png) | [Kaynak](ornekler/katilim-grafik.csv) | 2026-10-31 |
 
 <a id="yapilan-ve-yapilmayan-dogrulama"></a>
 

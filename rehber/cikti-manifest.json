@@ -1,0 +1,20 @@
+{
+  "ornekler/atolye-karar.pptx": {
+    "sha256": "2fc2780e8f38af61ee8fae7ec8931c6693ba5ad1fa3b3231c3c5635bdec8f202",
+    "kind": "editable-presentation",
+    "checked": "2026-10-31",
+    "source": "GUIDE_DECK"
+  },
+  "ornekler/atolye-slayt-1.png": {
+    "sha256": "933368368afb393df3a23aad7dd1e74d63fb0be91f04a746ebba73118c579eea",
+    "kind": "presentation-preview",
+    "checked": "2026-10-31",
+    "source": "GUIDE_DECK"
+  },
+  "ornekler/atolye-slayt-3.png": {
+    "sha256": "b8f8eee22fc916f4386615a290f861842f30bfa9b3ede335530e03b8230b9369",
+    "kind": "presentation-preview",
+    "checked": "2026-10-31",
+    "source": "GUIDE_DECK"
+  }
+}

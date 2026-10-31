@@ -1,6 +1,6 @@
 # Dağınık tablodan güvenilir rapora
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 **Kurgu iş:** Atölye'nin etkinlik kayıtları farklı biçimlerde tutulmuş. Altı kayıt var; iki kişinin adı aynı, bir tahsilat boş. Amaç, kimseyi kaybetmeden düzenli tablo ve kısa rapor üretmek. İsimler ve tutarlar eğitim için kurgulandı. Dosyalar gerçek katılımcı verisi içermiyor.
 
@@ -56,7 +56,7 @@ K05 bekliyor durumunda ama 600 TL tahsilat kaydı var. “Katılan kişi sayıs�
 
 > 1.800 TL'yi bilinen tahsilat olarak adlandır. K04 için tutar bilinmediğini aynı yerde göster. Eksik tutara varsayılan değer koyma. Katılım ve ödeme dağılımlarını ayrı anlat.
 
-Bu müdahale hesap makinesini değiştirmiyor; rakamın temsil ettiği şeyi düzeltiyor. Bizim uygulama bulma vakasında da düzeltme raporun iddia sınırını değiştirmişti. “Baktığım yerde yok” ile “hiç yok” arasındaki fark burada “bilinen toplam” ile “bütün toplam” olarak karşımıza çıkıyor. [Gerçek vaka C01](deneyimler.md#c01)
+Bu müdahale rakamın temsil ettiği şeyi düzeltiyor.
 
 <a id="4-grafigi-cevabi-belli-soruya-cizdir"></a>
 
@@ -67,6 +67,18 @@ Bu müdahale hesap makinesini değiştirmiyor; rakamın temsil ettiği şeyi dü
 Burada durum dağılımını anlatan basit bir çubuk grafik yeterli olabilir. Tahsilat için etkileşimli gösterge paneli kurmaya gerek yok. Bir sonraki toplantıda fiyat değişimini tartışacaksan, o zaman ayrı bir kurgu bütçe görselleştirmesi yararlı olur. Gerçek kayıt ile varsayımsal bütçeyi aynı grafikte karıştırma. [Görselleştirme seçimi](13-tasarim.md#kavram-anlatmak-icin-etkilesimli-gorsellestirme)
 
 Tablo programında sonucu açıp kontrol edebilirsin. Desteklenen masaüstü önizlemesi kaynak ve çıktıyı inceleme akışına yardımcı olur; kullanılan dosya türüne göre özellikler değişir. [Dosyalarla çalışma](https://learn.chatgpt.com/docs/artifacts-viewer)
+
+![Altı kaydın durum dağılımı. Ham CSV’den sayılan 3 katıldı, 2 iptal, 1 bekliyor kaydı. Çubuklar aynı sıfır tabanında 3:2:1 oranındadır.](assets/katilim-grafik.png)
+
+**Altı kaydın durum dağılımı.** Ham CSV’den sayılan 3 katıldı, 2 iptal, 1 bekliyor kaydı. Çubuklar aynı sıfır tabanında 3:2:1 oranındadır. [Tam boyut](assets/katilim-grafik.png) · Kurgu veriden üretilmiş gerçek çıktı · [Kaynak](ornekler/katilim-grafik.csv) · 2026-10-31.
+
+1. **Nereye bak?:** Çubuk etiketleri ve ortak sıfır tabanı.
+2. **Ne yap?:** Dağılımı kayit_id bazındaki altı kayıtla karşılaştır.
+3. **Ne gör?:** Katılım durumu tahsilat toplamını söylemez; K04’ün boş tutarı bu grafikte gizlice doldurulmaz.
+
+Grafik, [ham CSV’den](ornekler/katilim-ham.csv) sayılar hesaplanarak gerçekten üretildi. Üç çubuğun değerleri 3, 2 ve 1; toplam altı kayıt. Tahsilat ayrı kaldı. “1.800 TL gelir” başlıklı aynı grafiği üretmek bu sorunun cevabı olmazdı. [Grafiğin veri tablosu](ornekler/katilim-grafik.csv).
+
+Anlatıcı önce grafiği, sonra K05 satırını gösterir: bekleyen kişinin tahsilatı olabilir. Böylece katılım dağılımıyla ödeme toplamının neden ayrı ölçüler olduğu görünür.
 
 <a id="5-i-s-tekrarlanacaksa-once-sabit-kalan-kismi-ayir"></a>
 
@@ -81,5 +93,11 @@ Kurallar yerleştiğinde otomasyona şu işi ver: “Belirlenen klasördeki yeni
 **Başka işte kullanacağın ders:** Kimliği koru, bilinmeyeni sıfıra çevirme, ölçünün neyi temsil ettiğini yaz. Bu üç karar müşteri listesi, stok, anket veya bütçe dosyasında da yararlıdır. Sonraki örnekte aynı netlik görsel bir düzeltmeye uygulanıyor: [sayfadan doğrulanmış yayına](is-sayfa.md).
 
 Bu sonucu grafiğe taşırken sayıları [veriden çizdirme yöntemini](13-tasarim.md#sayisal-grafik-bir-resimden-daha-fazla-dogruluk-ister), aynı hatanın dönmesini önlemek için [kontrol kartını](18-iyilestirmek.md#duzeltmeni-kucuk-bir-kabul-ornegine-donustur) kullanabilirsin.
+
+
+İkinci girdide yöntemin ne yaptığını [skill gösteriminde](10-baglantilar-skills.md#yontem-ikinci-haftada-neyi-koruyor) görebilirsin.
+
+
+**Eğitimde sıradaki:** [Görsel sorundan doğrulanmış yayına](is-sayfa.md)
 
 [İçindekiler](README.md) · [← Araştırmadan karar ve sunuma](is-arastirma.md) · [Görsel sorundan doğrulanmış yayına →](is-sayfa.md)

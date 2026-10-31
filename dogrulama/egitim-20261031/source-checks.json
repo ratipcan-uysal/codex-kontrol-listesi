@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://learn.chatgpt.com/docs/reference/slash-commands",
+    "status": 200,
+    "checked": "2026-10-31",
+    "sha256": "31116b5621fa26a4fe944a92517cab42941ca18f68495f04b1f19370571b7c07"
+  },
+  {
+    "url": "https://learn.chatgpt.com/docs/automations",
+    "status": 200,
+    "checked": "2026-10-31",
+    "sha256": "cd6ad46c3c8304a56fa64657492ce2585afda5212ba3fe0562d59cc9be9596db"
+  },
+  {
+    "url": "https://learn.chatgpt.com/docs/environments/git-worktrees",
+    "status": 200,
+    "checked": "2026-10-31",
+    "sha256": "3aba615b001d9933b341dd7e9b6b596b795ec43fa347e3d3da51d7313c4a16be"
+  },
+  {
+    "url": "https://learn.chatgpt.com/docs/build-skills",
+    "status": 200,
+    "checked": "2026-10-31",
+    "sha256": "ed6e324f747d47adf6f60ee1fca13ba469b3671f55f58c3a78f35947af6919d5"
+  },
+  {
+    "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+    "status": 200,
+    "checked": "2026-10-31",
+    "sha256": "9d1f87a2d1cb55b4782b95abe710692b35b9659789c2db31a22c7074a3383e8e"
+  }
+]

@@ -1,6 +1,6 @@
 # 5. İş sürerken yönü yönetmek
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 İlk istek bütün kararları taşımaz. İyi bir çalışma, yeni bilgi geldiğinde yönünü değiştirebilir. Bunun için Codex'e yalnız memnuniyetsizliğini değil, hangi varsayımın değiştiğini söylemek gerekir.
 

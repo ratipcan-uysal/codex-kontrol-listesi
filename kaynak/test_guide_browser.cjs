@@ -18,16 +18,16 @@ const out=path.resolve(process.env.EVIDENCE_DIR || 'work/guide-browser');
   await page.screenshot({path:path.join(out,'guide-desktop-light.png')});
   await check('complete index has 18 ordered chapters',async()=>{assert.equal(await page.locator('#tam-icindekiler + ol > li').count(),18);assert.equal(await page.locator('.prose > ul > li').count(),9);});
   await check('sequential reading and current navigation',async()=>{await page.goto(base+'rehber/01-olanaklar.html');assert.equal(await page.locator('[aria-current="page"]').count(),1);await page.locator('a[rel="next"]').click();await page.waitForURL('**/02-uygulama.html');assert.ok((await page.locator('h1').textContent()).startsWith('2.'));await page.locator('a[rel="prev"]').click();await page.waitForURL('**/01-olanaklar.html');});
-  await check('three teaching journeys lead into chapter reference',async()=>{await page.goto(base+'rehber/index.html');assert.equal(await page.locator('#uc-isi-bastan-sona-izle + p + ol > li').count(),3);for(const slug of ['is-arastirma','is-veri','is-sayfa','01-olanaklar']){await page.locator('a[rel="next"]').click();await page.waitForURL('**/'+slug+'.html');if(slug.startsWith('is-'))assert.equal(await page.locator('.lesson-flow li').count(),4);} });
+  await check('teaching route starts with first file then three journeys without restart',async()=>{await page.goto(base+'rehber/index.html');assert.equal(await page.locator('#uc-isi-bastan-sona-izle + p + ol > li').count(),3);for(const slug of ['02-uygulama','is-arastirma','is-veri','is-sayfa','10-baglantilar-skills']){if(slug==='02-uygulama')await page.locator('a[rel="next"]').click();else await page.locator('.prose p').filter({hasText:'Eğitimde sıradaki:'}).getByRole('link').click();await page.waitForURL('**/'+slug+'.html');if(slug.startsWith('is-'))assert.equal(await page.locator('.lesson-flow li').count(),4);} });
   await check('chapter contents jump reaches heading',async()=>{await page.locator('.page-toc summary').click();const link=page.locator('.page-toc a').first();const hash=await link.getAttribute('href');await link.click();assert.ok(page.url().endsWith(hash));assert.equal(await page.locator(hash).count(),1);});
   await check('all 107 checklist rows link to their mapped chapter',async()=>{await page.goto(base);assert.equal(await page.locator('.guide-link a').count(),107);await page.locator('#m-1-1 summary').click();await page.locator('#m-1-1 .guide-link a').click();await page.waitForURL('**/11-talimatlar.html');});
   await check('chapter returns to original checklist anchor',async()=>{await page.locator('.prose a[href="../index.html#m-1-1"]').click();await page.waitForFunction(()=>document.querySelector('#m-1-1 details')?.open);assert.equal(await page.evaluate(()=>document.activeElement.closest('article')?.id),'m-1-1');});
   await check('guide navigation preserves saved checkmarks',async()=>{await page.locator('#check-m-1-1').check();await page.locator('#m-1-1 .guide-link a').click();await page.getByRole('link',{name:'107 madde ↗'}).click();await page.waitForSelector('#check-m-1-1');assert.equal(await page.locator('#check-m-1-1').isChecked(),true);});
   await check('all guide pages return successful response with one heading',async()=>{await page.goto(base+'rehber/index.html');const paths=await page.locator('.sidebar nav a').evaluateAll(a=>a.map(x=>x.getAttribute('href')));for(const p of paths){const response=await page.goto(base+'rehber/'+p);assert.equal(response.status(),200,p);assert.equal(await page.locator('h1').count(),1,p);assert.ok((await page.locator('.prose').textContent()).length>1000,p);}});
-  await check('all eight figures load with teaching notes and correctly identified sources',async()=>{
+  await check('all eleven figures load with teaching notes and correctly identified sources',async()=>{
    const manifest=await (await page.request.get(base+'rehber/gorsel-manifest.json')).json();
    const seen=new Set();
-   for(const slug of ['02-uygulama','09-web-tarayici-bilgisayar','12-dogrulama','14-buyuk-isler','is-sayfa']){
+   for(const slug of ['02-uygulama','09-web-tarayici-bilgisayar','12-dogrulama','14-buyuk-isler','is-sayfa','is-arastirma','is-veri']){
     await page.goto(base+'rehber/'+slug+'.html');
     for(const figure of await page.locator('.app-figure').all()){
      const img=figure.locator('img');await img.scrollIntoViewIfNeeded();
@@ -36,7 +36,7 @@ const out=path.resolve(process.env.EVIDENCE_DIR || 'work/guide-browser');
      assert.ok(await img.evaluate(e=>e.complete&&e.naturalWidth>=780&&e.naturalHeight>0));
      assert.ok((await img.getAttribute('alt')).length>30);
      assert.equal(await figure.locator('.figure-open').getAttribute('href'),src);
-     const text=await figure.locator('figcaption').textContent();assert.ok(text.includes(src.includes('lesson-')?'Kurgu örnek HTML':'OpenAI'));assert.equal(await figure.locator('.figure-lesson li').count(),3);
+     const text=await figure.locator('figcaption').textContent();assert.ok(text.includes((await figure.getAttribute('class')).includes('figure-artifact')?'Kurgu veriden':src.includes('lesson-')?'Kurgu örnek HTML':'OpenAI'));assert.equal(await figure.locator('.figure-lesson li').count(),3);
     }
    }
    assert.deepEqual([...seen].sort(),Object.values(manifest.figures).map(f=>f.file).sort());
@@ -98,6 +98,26 @@ const out=path.resolve(process.env.EVIDENCE_DIR || 'work/guide-browser');
   await page.screenshot({path:path.join(out,'guide-chapter-dark.png')});
   const nojs=await browser.newContext({javaScriptEnabled:false});const p2=await nojs.newPage();
   await check('guide content and navigation work without JavaScript',async()=>{await p2.goto(base+'rehber/index.html');await p2.locator('.prose ol a').first().click();assert.equal(await p2.locator('h1').count(),1);assert.ok((await p2.locator('.prose').textContent()).includes('Kurgu'));});await nojs.close();
+  await page.emulateMedia({colorScheme:'light'});
+  await check('editable deck downloads with ZIP signature and second-week report is readable',async()=>{
+   for(const file of ['atolye-karar.pptx','hafta-2-raporu.md','katilim-grafik.csv','devir-notu.md','worktree-gecis.md','otomasyon-gunlugu.md']){
+    const response=await page.request.get(base+'rehber/ornekler/'+file);assert.equal(response.status(),200,file);
+    if(file.endsWith('pptx'))assert.equal((await response.body()).subarray(0,2).toString(),'PK');
+    if(file==='hafta-2-raporu.md'){const t=await response.text();assert.ok(t.includes('600 TL')&&t.includes('K08')&&t.includes('K07: yedek'));}
+   }
+  });
+  await check('two program prototypes retain the same content in different order',async()=>{
+   await page.goto(base+'rehber/ornekler/program-iki-duzen.html');
+   const [a,b]=await page.locator('section ol').evaluateAll(es=>es.map(e=>[...e.children].map(x=>x.textContent)));
+   assert.deepEqual([...a].sort(),[...b].sort());assert.notDeepEqual(a,b);
+   for(const width of [1280,390,320]){await page.setViewportSize({width,height:900});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await page.screenshot({path:path.join(out,'program-'+width+'.png'),fullPage:true});}
+  });
+  await check('new instructional figures and reports fit narrow screens',async()=>{
+   for(const width of [1440,320])for(const slug of ['is-arastirma','is-veri','10-baglantilar-skills','06-baglam-bellek','08-ortamlar','15-otomasyon']){
+    await page.setViewportSize({width,height:1000});await page.goto(base+'rehber/'+slug+'.html');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,slug);
+    if(slug==='is-arastirma'||slug==='is-veri'){const f=page.locator('.figure-artifact').last();await f.scrollIntoViewIfNeeded();await f.locator('img').evaluate(e=>e.decode());await page.screenshot({path:path.join(out,slug+'-'+width+'.png')});}
+   }
+  });
   await check('no browser JavaScript errors',async()=>{assert.deepEqual(errors,[]);});
  }finally{
   await fs.writeFile(path.join(out,'results.json'),JSON.stringify({results,errors},null,2));

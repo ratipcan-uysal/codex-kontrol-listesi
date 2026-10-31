@@ -1,6 +1,6 @@
 # On iki kurgu kullanım senaryosu
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Eğitimde ilk anlatılacak akışlar [araştırma](is-arastirma.md), [veri](is-veri.md) ve [sayfa düzeltme](is-sayfa.md) örnekleridir. Aşağıdaki on iki kısa senaryo farklı işlere uyarlamak için hızlı başvurudur.
 

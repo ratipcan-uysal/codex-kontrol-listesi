@@ -1,6 +1,6 @@
 # 7. Model, düşünme seviyesi, hız ve kullanım
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 En yüksek düşünme ayarı her işin en iyi seçimi değildir. İyi seçim, görevin hangi kısmının zor olduğuna bağlıdır: karar vermek, kaynak bulmak, dosya düzenlemek veya uzun süren bir aracı beklemek.
 
@@ -50,7 +50,7 @@ Bazı güç ayarları daha yoğun çalışma biçimleri sunar. Bu seçenekler he
 
 ## Kurgu senaryo: modeli yükseltmeden sorunu çözmek
 
-Atölye için 200 satırlık etkinlik verisi temizleniyor. Codex her satırı tek tek yeniden yorumlayıp yavaş ilerliyor. Sorun muhakeme zorluğu değil, tekrarlı dönüşüm. Önce tarih biçimi ve boş alan kurallarını birkaç temsilî satırda netleştir; sonra aynı kuralları betikle uygulat. Beklenen çıktı, kaynak satır sayısını koruyan ve değişen alanları gösteren bir dönüşüm raporudur. Örnekler başarısızsa bütün dosyaya geçilmez.
+Atölye’nin aynı kuralla işlenecek 200 satırında yavaşlık varsa [veri işindeki](is-veri.md#2-zor-orneklerde-yontemi-gorunur-yap) temsilî satır → sabit kural → betik yolunu kullan. Buradaki model kararı şudur: eksik erişimi ve mekanik tekrarı daha fazla düşünme ayarıyla çözmeye çalışma. Token, modelin işlediği metin parçasıdır; doğrudan kelime veya para birimi değildir.
 
 <a id="baska-uygulama-da-ayni-kullanim-hakkini-tuketebilir"></a>
 

@@ -1,6 +1,6 @@
 # 2. Uygulamanın tamamını tanımak
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Uygulamayı öğrenmenin pratik yolu, bir işin nerede başladığını, hangi kaynaklara dayandığını ve çıktısının nerede incelendiğini takip etmek. Menüler bu akış içinde anlam kazanır.
 
@@ -9,10 +9,6 @@ Uygulamayı öğrenmenin pratik yolu, bir işin nerede başladığını, hangi k
 ## İlk açılış ve doğru çalışma yüzeyi
 
 Resmî indirme sayfasından masaüstü uygulamasını kur, hesabınla giriş yap ve ürün seçicisinden Codex'i aç. Güncel belgelerde ortak uygulama ChatGPT desktop app adıyla geçiyor. Chat, Work ve Codex'in görünümü ve geçmişi aynı şey değildir. Codex'te geliştirici ayrıntıları, Git değişiklikleri ve inceleme araçları görünür. Aynı yüzeyde belge ve araştırma işleri de yapabilirsin. [Kurulum](https://learn.chatgpt.com/docs/app) · [Yüzey seçimi](https://learn.chatgpt.com/docs/use-chatgpt)
-
-macOS, Windows ve Linux için kurulum yolları farklıdır. Özellikle bilgisayar kullanımı gibi yeteneklerde her platformda eşit destek bekleme. Bir seçeneği göremiyorsan önce hesap, uygulama sürümü, çalışma yüzeyi ve kurum politikası ayrımını yap. Başka platformun menüsünü aramak sonuç vermez. [Windows](https://learn.chatgpt.com/docs/windows/windows-app) · [Linux](https://learn.chatgpt.com/docs/linux/linux-app)
-
-Windows uygulaması PowerShell (Windows komut ortamı) veya WSL2 (Windows içinde Linux ortamı) ile çalışabilir. Terminal tercihini değiştirmek açık oturumu kendiliğinden değiştirmeyebilir. Linux sürümü belge kontrol tarihinde önizleme durumunda; dağıtım ve işlemci mimarisine uygun paket seçmek gerekir. İndirme ve destek listesini yukarıdaki platform bağlantılarından kontrol et.
 
 <a id="i-lk-dosyani-uret-ac-duzelt"></a>
 
@@ -29,6 +25,16 @@ Kod yazmak veya Git kurmak ilk belge işi için gerekmez. Git, dosyaların sür�
 Dosya henüz yoksa ilk istekte “Boş proje klasöründe, kurgu bir etkinlik için program taslağı oluştur; bütün tarih ve isimlerin örnek olduğunu yaz” diyebilirsin. Bu yol herhangi bir hesabı bağlamadan üretim–önizleme–düzeltme döngüsünü gösterir. [Başlangıç ve proje akışı](https://learn.chatgpt.com/docs/projects) · [Yerel çalışma](https://learn.chatgpt.com/docs/environments/modes)
 
 Bu noktada CLI (terminalden kullanılan istemci), IDE (kod editörü) veya MCP kurman gerekmiyor. Bunlar ihtiyaca göre öğreneceğin ek yollar. Dosya üretmek için bir servise yükleme veya yayınlama da gerekmez.
+
+**Anlatıcı gösterimi:** Solda proje klasörünü, sağda açılan dosyayı göster. “Açık soruları sona taşı” dedikten sonra aynı dosyadaki değişikliği göster. Bu üç hareketi tamamlayınca [araştırma işine geç](is-arastirma.md); aşağıdaki menüler ihtiyaç anında başvurmak için duruyor.
+
+<a id="platform-ayrintisina-ihtiyac-duyarsan"></a>
+
+### Platform ayrıntısına ihtiyaç duyarsan
+
+macOS, Windows ve Linux için kurulum yolları farklıdır. Özellikle bilgisayar kullanımı gibi yeteneklerde her platformda eşit destek bekleme. Bir seçeneği göremiyorsan önce hesap, uygulama sürümü, çalışma yüzeyi ve kurum politikası ayrımını yap. Başka platformun menüsünü aramak sonuç vermez. [Windows](https://learn.chatgpt.com/docs/windows/windows-app) · [Linux](https://learn.chatgpt.com/docs/linux/linux-app)
+
+Windows uygulaması PowerShell (Windows komut ortamı) veya WSL2 (Windows içinde Linux ortamı) ile çalışabilir. Terminal tercihini değiştirmek açık oturumu kendiliğinden değiştirmeyebilir. Linux sürümü belge kontrol tarihinde önizleme durumunda; dağıtım ve işlemci mimarisine uygun paket seçmek gerekir. İndirme ve destek listesini yukarıdaki platform bağlantılarından kontrol et.
 
 <a id="proje-ve-sohbet-duzeni"></a>
 
@@ -128,5 +134,7 @@ Settings içindeki bildirim tercihlerinde tur bitişi için Never, When in backg
 ## Kurgu senaryo: aynı oturumda üç görünüm
 
 Atölye'nin program sayfasını düzenlerken solda sohbet, sağda yerel sayfa, altta terminal açık olsun. Görsel taşmayı sayfada işaretle, düzeltme isteğini sohbette ver, sunucu hatası varsa terminal çıktısına bak. Üç görünüm aynı sorunun farklı kanıtlarını sağlar. Kod değişikliği görünümüne geçerek değişikliğin beklediğin dosyada olduğunu ayrıca kontrol edebilirsin.
+
+**Eğitimde sıradaki:** [Araştırmadan karar ve sunuma](is-arastirma.md)
 
 [İçindekiler](README.md) · [← Codex ile neler yapabilirsin?](01-olanaklar.md) · [Codex gerçekte nasıl çalışıyor? →](03-calisma-mantigi.md)

@@ -1,6 +1,6 @@
 # Araştırmadan karar ve sunuma
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 **Kurgu iş:** Atölye, 60 kişilik ücretsiz bir buluşma için kayıt sistemi seçecek. Katılımcıya hesap açtırmak istemiyor; katılımcı listesini CSV olarak indirebilmesi gerekiyor. Etkinlik başına bütçe 3.000 TL. Aşağıdaki platform adları, fiyatlar ve belge parçaları eğitim için uyduruldu. Gerçek bir ürün karşılaştırması veya yapılmış satın alma yok.
 
@@ -43,6 +43,16 @@ Gerçek işte bu tabloyu güncel resmî sayfalarla kurdur. Kaynak URL'sini, okun
 
 Bu düzeltme bir sıfatı değiştirmiyor, karar yöntemini düzeltiyor. B'nin bütçenin altında kalan payı 500 TL; bu sayının rahatlık payı mı yoksa başka masraflara yetecek bütçe mi olduğu ayrı bir değerlendirme. Örnekte ek vergi veya ödeme komisyonu bilgisi yok; toplam maliyetin bunları içerdiği varsayılmıyor.
 
+<a id="siradaki-arastirmayi-karari-degistirecek-bosluga-ver"></a>
+
+### Sıradaki araştırmayı kararı değiştirecek boşluğa ver
+
+B’nin 500 TL bütçe payını aşan bir ek ücret seçimi değiştirebilir; logosunun rengi değiştirmez.
+
+> Önce B’nin ek ücretinin bütçeyi aşıp aşmadığını araştır. Yeni özellik listesi toplama. Bilgi bulunamazsa öneriyi koşullu bırak ve gereken soruyu yaz.
+
+Bu kurgu pakette ek ücret yanıtı yoktur. Dolayısıyla sonuç “kesin satın al” değil, koşullu öneridir. Daha fazla aramanın hangi kararı değiştireceği belli olduğunda araştırma sınır kazanır.
+
 <a id="3-secimi-tek-cumleye-sigdir-gerekceyi-kaybetme"></a>
 
 ## 3. Seçimi tek cümleye sığdır, gerekçeyi kaybetme
@@ -53,7 +63,7 @@ Bu düzeltme bir sıfatı değiştirmiyor, karar yöntemini düzeltiyor. B'nin b
 
 Öneriyi değiştirecek koşulu yazmak, kararın hangi varsayıma dayandığını görünür yapar. Kullanıcı daha sonra “hesap açmak sorun değilmiş” derse bütün araştırmayı baştan yapmak gerekmez; değişen ölçütle sıralama yenilenir.
 
-Bizim gerçek işimizde de yanlış katmanda çözüm üretme riski görüldü: İngilizce içerik kaynakta vardı ama uygulama paketine ulaşmamıştı. Sıfırdan çeviri istemek yerine aktarım zincirine bakmak gerekiyordu. Bu, araştırmayı tekrarlamadan önce eksik olanın bilgi mi, aktarım mı olduğunu ayırmayı öğretiyor. [Gerçek vaka C02](deneyimler.md#c02)
+Aktarım zincirindeki gerçek karşılık için [C02 vakasına](deneyimler.md#c02) bakabilirsin.
 
 <a id="4-dogrulanmis-nottan-yeni-bicimler-uret"></a>
 
@@ -61,7 +71,7 @@ Bizim gerçek işimizde de yanlış katmanda çözüm üretme riski görüldü: 
 
 > Bu karar notunu ana kaynak kabul et. Karar, dayanak ve açık koşulu taşıyan üç slaytlık sunum taslağı hazırla. Yeni fiyat veya özellik ekleme. Ayrıca aynı kararı 100 kelimeyi geçmeyen ekip duyurusuna dönüştür.
 
-Anlatıcı [örnek sunum taslağını](ornekler/sunum-taslagi.md) açar. Aynı B önerisi, aynı 2.500 TL ve aynı ek ücret belirsizliği korunuyor. Slayt için daha kısa yazılması, “ek ücretler bilinmiyor” cümlesinin silinmesini haklı çıkarmaz.
+Anlatıcı [düzenlenebilir üç slaytlık sunumu](ornekler/atolye-karar.pptx) açar. [Metin taslağı](ornekler/sunum-taslagi.md) aynı kararın sade kaynak karşılığıdır. Aynı B önerisi, aynı 2.500 TL ve aynı ek ücret belirsizliği korunuyor. Slayt için daha kısa yazılması, “ek ücretler bilinmiyor” cümlesinin silinmesini haklı çıkarmaz.
 
 ![Sohbetin yanında sunum önizlemesi. Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele.](assets/preview.png)
 
@@ -73,14 +83,41 @@ Anlatıcı [örnek sunum taslağını](ornekler/sunum-taslagi.md) açar. Aynı B
 
 Resmî görselde farklı bir sunum gösteriliyor; Atölye için çalıştırılmış oturum ekranı değil. Buradan öğrenilecek hareket, üretim mesajından dosyanın önizlemesine geçmek. Bir slayt kalabalıksa bütün sunumu yeniden yazdırmadan “yalnız ikinci slaytı sadeleştir; karar, sayı ve kaynakları koru” diye belirt. Desteklenen önizlemelerde işaretlenen alan bağlam olarak gönderilebilir. [Dosya önizleme ve yorum](https://learn.chatgpt.com/docs/artifacts-viewer)
 
+<a id="ayni-ikinci-slayti-sadelestir"></a>
+
+### Aynı ikinci slaytı sadeleştir
+
+Aşağıdaki iki görüntü, bu rehber için gerçekten oluşturulan PowerPoint örneğinden render edildi. Yoğun sürüm tek paragrafta A/B/C’yi anlatıyor; son sürüm aynı bilgiyi üç karşılaştırma satırına ayırıyor.
+
+![Aynı ikinci slayt: paragraf hâlindeki ilk sonuç. Üç seçeneğin bedel ve koşulları bir paragrafta; karşılaştırmak için metni tekrar taramak gerekiyor.](assets/atolye-slayt-once.png)
+
+**Aynı ikinci slayt: paragraf hâlindeki ilk sonuç.** Üç seçeneğin bedel ve koşulları bir paragrafta; karşılaştırmak için metni tekrar taramak gerekiyor. [Tam boyut](assets/atolye-slayt-once.png) · Kurgu veriden üretilmiş gerçek çıktı · [Kaynak](ornekler/atolye-karar.pptx) · 2026-10-31.
+
+1. **Nereye bak?:** A, B ve C bilgileri aynı paragrafta.
+2. **Ne yap?:** Yeni araştırma istemeden aynı bilgiyi karşılaştırma tablosuna dönüştür.
+3. **Ne gör?:** Düzeltme bilgi miktarını değil kararın görünürlüğünü değiştirir.
+
+> Yalnız ikinci slaytı sadeleştir. A’nın CSV eksiği, B’nin 2.500 TL bedeli ve C’nin hesap koşulu kalsın. Diğer slaytları değiştirme.
+
+![Aynı ikinci slayt: karşılaştırılabilir sonuç. Düzenlenebilir sunumdaki tablo seçenekleri aynı ölçütlerde toplar; bütçe payı ve bilinmeyen ek ücret korunur.](assets/atolye-slayt-2.png)
+
+**Aynı ikinci slayt: karşılaştırılabilir sonuç.** Düzenlenebilir sunumdaki tablo seçenekleri aynı ölçütlerde toplar; bütçe payı ve bilinmeyen ek ücret korunur. [Tam boyut](assets/atolye-slayt-2.png) · Kurgu veriden üretilmiş gerçek çıktı · [Kaynak](ornekler/atolye-karar.pptx) · 2026-10-31.
+
+1. **Nereye bak?:** B satırındaki koşul ve 2.500 TL bedeli birlikte oku.
+2. **Ne yap?:** Yalnız ikinci slaytı düzelt; karar notunu ve diğer slaytları koru.
+3. **Ne gör?:** 500 TL pay, bilinmeyen ek ücret için araştırma sınırını gösterir.
+
+[Birinci slayt](ornekler/atolye-slayt-1.png) kararı, [üçüncü slayt](ornekler/atolye-slayt-3.png) açık koşulu gösterir. “Sadeleştir” isteği bilginin silinmesi anlamına gelmedi. Resmî önizleme görseli uygulamadaki açma hareketini; bu iki görüntü ise bizim örneğimizin gerçek çıktısını gösterir.
+
 <a id="5-i-sin-bittigini-hangi-ciktida-gorursun"></a>
 
 ## 5. İşin bittiğini hangi çıktıda görürsün?
 
-Bu örnekte teslim, karar notu ve sunum taslağıdır. Bir satın alma veya herkese açık duyuru yok. Gerçek işte PPTX istersen oluşturulan dosyayı açıp slaytları incelet; bu sayfadaki indirilebilir Markdown taslağını PPTX dosyası sanma.
+Teslim, [karar notu](ornekler/karar-notu.md) ve [düzenlenebilir sunumdur](ornekler/atolye-karar.pptx). Slaytlar gerçek dosyadan üretilip açılarak incelendi; fiyat ve platformlar kurgu. Satın alma veya duyuru gönderimi yapılmadı.
 
-**Başka işte kullanacağın ders:** Önce karar ölçütünü sabitle, sonra uygun kaynakları araştır. Doğrulanmış ana metni yeni biçimlere dönüştürürken iddiaları sabit tut. Her biçim değişikliğini yeni araştırmaya çevirmek, onaylanmış bilgiye gereksiz değişken ekler.
+Aynı bilgiyi başka biçime taşırken kararı, tutarı ve belirsizliği koru. Sonraki iş bu yaklaşımı [sayısal veriye](is-veri.md) taşır.
 
-Sonraki örnek aynı yaklaşımı sayısal veriye taşır: [tablodan güvenilir rapora](is-veri.md).
+
+**Eğitimde sıradaki:** [Dağınık tablodan güvenilir rapora](is-veri.md)
 
 [İçindekiler](README.md) · [Dağınık tablodan güvenilir rapora →](is-veri.md)

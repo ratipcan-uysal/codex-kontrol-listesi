@@ -1,6 +1,6 @@
 # Görsel sorundan doğrulanmış yayına
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 **Kurgu iş:** Atölye'nin etkinlik sayfasındaki kart telefonda taşıyor. Kullanıcı mevcut metinleri ve görsel yönü seviyor; yalnız dar ekranda okunabilirlik istiyor. Bu rehber için gerçekten üretilmiş iki küçük HTML dosyası üzerinden ilerliyoruz. Bir müşteri sitesinin çalışma kaydı veya mağaza dağıtımı değil.
 
@@ -110,4 +110,7 @@ Bu rehberin kendisi üzerinde gerçekten yapılan yayınlarda yerel test, uzak c
 
 **Başka işte kullanacağın ders:** Belirtiyi tarif et, korunacak boyutları söyle, kaynağı ve görünümü aynı koşulda kontrol et. Sonra kullanıcının istediği hedefte bitir. Bu yaklaşım bir slayttaki taşan başlık veya belgedeki kırık tablo için de uygulanabilir.
 
-[İçindekiler](README.md) · [← Dağınık tablodan güvenilir rapora](is-veri.md) · [Codex ile neler yapabilirsin? →](01-olanaklar.md)
+
+**Eğitimde sıradaki:** [Yöntemi ikinci işte kullan](10-baglantilar-skills.md)
+
+[İçindekiler](README.md) · [← Dağınık tablodan güvenilir rapora](is-veri.md) · [Yöntemi ikinci işte kullan →](10-baglantilar-skills.md)

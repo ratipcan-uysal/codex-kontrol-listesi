@@ -1,6 +1,6 @@
 # 84 özellik ailesinin kapsam envanteri
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Envanter birimi, kullanıcıya dönük yetenek veya ilişkili özellik ailesidir. Resmî belgelerde tespit edilen masaüstü yetenekleri ve kullanım kararını etkileyen komşu yüzeyler kapsanır. Her satırın açıklaması/erişim sınırı ilgili bölümde bulunur. Hesaba özel görünmeyen dağıtımlar ve üçüncü taraf plugin'lerin bütün iç komutları için evrensel eksiksizlik iddiası yoktur.
 

@@ -1,0 +1,21 @@
+...........FF........
+======================================================================
+FAIL: test_html_local_links_and_anchors (__main__.GuideTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "kaynak/test_guide.py", line 75, in test_html_local_links_and_anchors
+    self.assertTrue(target.exists(),f'{p.name}: {url}')
+AssertionError: False is not true : is-arastirma.html: assets/atolye-slide-1.png
+
+======================================================================
+FAIL: test_markdown_local_links_and_anchors (__main__.GuideTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "kaynak/test_guide.py", line 90, in test_markdown_local_links_and_anchors
+    self.assertTrue(target.exists(),f'{p.name}: {url}')
+AssertionError: False is not true : is-arastirma.md: assets/atolye-slide-1.png
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.856s
+
+FAILED (failures=2)

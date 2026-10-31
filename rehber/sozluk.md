@@ -1,6 +1,6 @@
 # Sade terimler sözlüğü
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Bir terimi bilmek, bütün teknik ayrıntısını öğrenmeyi gerektirmez. Aşağıdaki karşılıklar rehberdeki kararları takip etmek için yeterli başlangıcı verir.
 

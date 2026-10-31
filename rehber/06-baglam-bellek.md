@@ -1,6 +1,6 @@
 # 6. Bağlam, bellek ve devamlılık
 
-İçerik güncellemesi: 2026-10-30. Kaynak kontrol tarihleri kaynak dizinindedir.
+İçerik güncellemesi: 2026-10-31. Kaynak kontrol tarihleri kaynak dizinindedir.
 
 Codex'in bir bilgiyi daha önce duymuş olması, o bilginin şu anda eksiksiz ve güncel biçimde elinde olduğu anlamına gelmez. Devamlılık için bilginin nerede tutulduğunu bilmek gerekir.
 
@@ -34,6 +34,25 @@ Bu seçimleri bir sayfa düzeltmesi içinde [yan yana görebilirsin](is-sayfa.md
 
 > Bu işin kararlarını proje notlarına geçir. Hangi dosyada çalıştığımızı, son doğrulanan sonucu ve açık kalan soruları kaydet. Ayrıntıları kopyalamak yerine ilgili kaynağa bağla.
 
+<a id="devir-notunu-ve-yeni-baslangici-yan-yana-gor"></a>
+
+## Devir notunu ve yeni başlangıcı yan yana gör
+
+[Örnek devir notunu](ornekler/devir-notu.md) aç. Bu, Atölye araştırmasının kurgu devam kaydıdır:
+
+| Notta saklanan | Yeni sohbette karşılığı |
+|---|---|
+| Kayıt B koşullu öneri; hesapsız kayıt zorunlu | Eski kararın nedenini bilir |
+| Ek ücret bilinmiyor | Satın alma tamamlandı demez |
+| Kaynak paketi ve karar notunun yolları | Özet yerine gerekince asıl dosyayı okur |
+| Sonraki adım: ek ücreti doğrula | Araştırmayı baştan başlatmaz |
+
+> Devir notunu ve bağlı kaynakları oku. Hesap açma koşulu artık kabul ediliyor; önceki zorunluluğun yerini bu karar alıyor. B ve C’yi yeniden değerlendir, diğer ölçütleri koru.
+
+**Gösterilecek sonuç:** C yeniden aday olur; ek ücretler hâlâ bilinmediğinden kesin toplam maliyet uydurulmaz. Notta “hesapsız kayıt zorunlu” kararının değiştiği belirtilir. Bu örnek, belleğin bütün sohbeti hatırlamasına ihtiyaç duymadan devamı gösterir.
+
+`/status` ile bağlam durumunu gördüğünde evrensel bir yüzde eşiği arama. Önemli kararlar yalnız uzun geçmişte kaldıysa önce bu kısa notu kaydet. `/compact` bir özetleme hareketidir; notun kaynaklara bağlanması ayrı iştir.
+
 <a id="eski-bilgiye-dogru-soru-sor"></a>
 
 ## Eski bilgiye doğru soru sor
@@ -59,6 +78,9 @@ Atölye için hazırlanan etkinlik takvimine iki hafta sonra dönüyorsun. Eski 
 > Önceki kararları oku. Katılımcı sayısı artık 35; bu bilgi eski 20 kişilik varsayımın yerini alıyor. Mekân kapasitesi ve bütçe hesabında etkilenen yerleri bul. Diğer kararları gerekmedikçe yeniden açma.
 
 Böylece değişiklik hem güncel işte kullanılır hem de sonraki dönüşte eski sayı yeniden canlanmaz.
+
+**Eğitimde sıradaki:** [Ayrı denemeyi ana işe taşı](08-ortamlar.md)
+
 
 <a id="kontrol-listesinde-karsiligi"></a>
 
