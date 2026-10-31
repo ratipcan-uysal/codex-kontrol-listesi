@@ -1,5 +1,17 @@
 # Doğrulama kaydı
 
+## 31 Ekim 2026 — Altı kullanım dersi yayında
+
+**PASS:** Girdi biçimini seçme, düzenlenebilir teslim, değişikliğin etkileri, toplu işlem önizlemesi, bağımsız kanıt ve okuma kapsamı mevcut bölümlere işlendi. Her dersin tek ayrıntılı anlatımı var; Atölye örnek işleri ilgili anlatıma bağlanıyor. Yeni alıştırma veya bölüm eklenmedi.
+
+İçerik commit’i `026dab63c68f380b28fdb8e3782e657bc8d30db8`; Pages bu sürüm için `built`. Değişen **24 rehber dosyası** canlıda yerelle birebir aynı. [Yayın kanıtı](dogrulama/alti-ders-20261031/live-publication.json).
+
+**27 Python, 26 yerel ve 26 canlı tarayıcı kontrolü PASS.** [Yerel](dogrulama/alti-ders-20261031/local/guide/results.json) · [Canlı](dogrulama/alti-ders-20261031/live/guide/results.json). 107 madde/eşleme, mevcut örnekler/görseller ve 256 eski HTML kimliği korundu. [Koruma kontrolü](dogrulama/alti-ders-20261031/preservation.json).
+
+Altı dersin yerel tablo görüntüleri açılıp incelendi; canlı masaüstü toplu işlem tablosu ve 320 px teslim tablosu ayrıca incelendi. Dar ekranda tablolar kendi içinde yatay kaydırılıyor. Kurgu örnekler gerçek işlem kaydı olarak sunulmuyor. Yeni XLSX üretilmedi; 1.800 → 1.900 TL kabul örneğinin hesabı mevcut CSV üzerinden bağımsız doğrulandı. [Hesap](dogrulama/alti-ders-20261031/example-calculation.json) · [Kapsam ve ilk hata](dogrulama/alti-ders-20261031/INCELEME.md).
+
+Yerel ve canlı koşumların 15’er görev süreci kapandı; kalan yok. [Yerel temizlik](dogrulama/alti-ders-20261031/local/process-cleanup.json) · [Canlı temizlik](dogrulama/alti-ders-20261031/live/process-cleanup.json). Yeni bağımlılık veya derleme ürünü oluşturulmadı; kaynak ve kanıtlar korundu. Bu belge commit’i doğrulanmış rehber içeriğini değiştirmez.
+
 ## 31 Ekim 2026 — Model seçimi ve işe yarayan kullanım kararları yayında
 
 **PASS:** [Model bölümü](https://ratipcan-uysal.github.io/codex-kontrol-listesi/rehber/07-model-hiz-kullanim.html) artık dört modeli örnek işlerle eşleştiriyor. Model/düşünme/hız seçimi, müdahale tablosu ve öğretim şeması eklendi; model bölümü eğitim rotasına girdi. Sohbet seçimi, skill çağrısı ve otomasyona geçiş somutlaştırıldı. Şema örnekleri ve eksik duyuru tamamlandı; tekrarlar kısaltıldı.

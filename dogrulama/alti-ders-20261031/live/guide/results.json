@@ -1,0 +1,109 @@
+{
+  "results": [
+    {
+      "name": "checklist entry opens guide",
+      "status": "PASS"
+    },
+    {
+      "name": "complete index has 18 ordered chapters",
+      "status": "PASS"
+    },
+    {
+      "name": "sequential reading and current navigation",
+      "status": "PASS"
+    },
+    {
+      "name": "teaching route includes model choice before journeys without restart",
+      "status": "PASS"
+    },
+    {
+      "name": "chapter contents jump reaches heading",
+      "status": "PASS"
+    },
+    {
+      "name": "all 107 checklist rows link to their mapped chapter",
+      "status": "PASS"
+    },
+    {
+      "name": "chapter returns to original checklist anchor",
+      "status": "PASS"
+    },
+    {
+      "name": "guide navigation preserves saved checkmarks",
+      "status": "PASS"
+    },
+    {
+      "name": "all guide pages return successful response with one heading",
+      "status": "PASS"
+    },
+    {
+      "name": "all eleven figures load with teaching notes and correctly identified sources",
+      "status": "PASS"
+    },
+    {
+      "name": "neutral light reading background and first-file instructions",
+      "status": "PASS"
+    },
+    {
+      "name": "keyboard opens full-size figure and back restores guide",
+      "status": "PASS"
+    },
+    {
+      "name": "mobile figure remains in page and opens at original resolution",
+      "status": "PASS"
+    },
+    {
+      "name": "teaching page flows and callouts fit desktop and mobile",
+      "status": "PASS"
+    },
+    {
+      "name": "example pages demonstrate only the intended width change",
+      "status": "PASS"
+    },
+    {
+      "name": "28 desktop commands and goal surface distinction",
+      "status": "PASS"
+    },
+    {
+      "name": "mobile 390 has readable scrolling tables without page overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "mobile 320 has readable scrolling tables without page overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "dark chapter uses neutral background without horizontal overflow",
+      "status": "PASS"
+    },
+    {
+      "name": "guide content and navigation work without JavaScript",
+      "status": "PASS"
+    },
+    {
+      "name": "editable deck downloads with ZIP signature and second-week report is readable",
+      "status": "PASS"
+    },
+    {
+      "name": "two program prototypes retain the same content in different order",
+      "status": "PASS"
+    },
+    {
+      "name": "new instructional figures and reports fit narrow screens",
+      "status": "PASS"
+    },
+    {
+      "name": "model choices and decision flow remain readable at desktop and mobile widths",
+      "status": "PASS"
+    },
+    {
+      "name": "six new lesson tables fit desktop and mobile and their incoming links resolve",
+      "status": "PASS"
+    },
+    {
+      "name": "no browser JavaScript errors",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}
