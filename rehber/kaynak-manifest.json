@@ -91,14 +91,14 @@
       "title": "Models",
       "sha256": "0a99a1a6e54f0a0b2e2d7409873b88308e9ccee0414a60d746452af4989bf34e",
       "status": 200,
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     "agent-configuration__speed": {
       "url": "https://learn.chatgpt.com/docs/agent-configuration/speed",
       "title": "Speed",
       "sha256": "7cf93ffefb0d7124564f032468eb2049eb383a38d2afb892cfe1cd94131adbce",
       "status": 200,
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     "pricing": {
       "url": "https://learn.chatgpt.com/docs/pricing",
@@ -540,6 +540,13 @@
       "sha256": "6763893e62b931af668486334344309bbb5eaf8fa4d5af8083d2446f4dc7fba8",
       "status": 200,
       "checked": "2026-10-30"
+    },
+    "model-selection": {
+      "url": "https://learn.chatgpt.com/docs/model-selection",
+      "sha256": "b3ce4be1f893a1d7ec545fe22a05bdab4d273b39c943bb763159391696a626b3",
+      "status": 200,
+      "checked": "2026-10-31",
+      "title": "Model selection"
     }
   }
 }

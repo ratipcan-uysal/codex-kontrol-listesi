@@ -300,7 +300,8 @@ Yerel çıktı, uzak depoya gönderim ve canlı yayın ayrı durumlardır. Eski 
         if 'journey' in p:
             pos=p['journey']-1
             prev=GUIDE_PATHS[pos-1] if pos>0 else None
-            next_=GUIDE_PATHS[pos+1] if pos<2 else GUIDE_ROUTE[4]
+            route_index=next(i for i,item in enumerate(GUIDE_ROUTE) if item['slug']==p['slug'])
+            next_=GUIDE_ROUTE[route_index+1] if route_index+1<len(GUIDE_ROUTE) else None
         navigation='\n\n[İçindekiler](README.md)'
         if prev: navigation+=f' · [← {prev["title"]}]({prev["slug"]}.md)'
         if next_: navigation+=f' · [{next_["title"]} →]({next_["slug"]}.md)'

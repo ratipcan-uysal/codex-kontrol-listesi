@@ -70,7 +70,7 @@
       "name": "Model, çaba ve hız seçimi",
       "source": "models",
       "target": "07-model-hiz-kullanim",
-      "condition": "Hesap/model kataloğu; benchmark iddiası yok",
+      "condition": "Hesap/model kataloğu; dört model ve işe göre başlangıç önerileri, benchmark değil",
       "status": "Belgeyle doğrulandı; özellik canlı çalıştırılmadı"
     },
     {

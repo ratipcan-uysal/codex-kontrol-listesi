@@ -26,8 +26,8 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Codex Micro](https://learn.chatgpt.com/docs/features/codex-micro) | 2026-10-29 |
 | [Memories](https://learn.chatgpt.com/docs/customization/memories) | 2026-10-29 |
 | [Computer History](https://learn.chatgpt.com/docs/customization/computer-history) | 2026-10-29 |
-| [Models](https://learn.chatgpt.com/docs/models) | 2026-10-29 |
-| [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) | 2026-10-29 |
+| [Models](https://learn.chatgpt.com/docs/models) | 2026-10-31 |
+| [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) | 2026-10-31 |
 | [Pricing](https://learn.chatgpt.com/docs/pricing) | 2026-10-29 |
 | [Codex environments](https://learn.chatgpt.com/docs/environments/modes) | 2026-10-29 |
 | [Worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees) | 2026-10-31 |
@@ -91,6 +91,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Automating Code Quality and Security Fixes with Codex CLI in GitLab](https://developers.openai.com/cookbook/examples/codex/secure_quality_gitlab) | 2026-10-30 |
 | [Generate Transparent Image Assets for Campaigns and Presentations](https://developers.openai.com/cookbook/examples/multimodal/transparent-image-assets-for-campaigns-and-presentations) | 2026-10-30 |
 | [Harness-aware evaluation of plugins](https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals) | 2026-10-30 |
+| [Model selection](https://learn.chatgpt.com/docs/model-selection) | 2026-10-31 |
 
 <a id="arayuz-gorselleri-ve-atif"></a>
 

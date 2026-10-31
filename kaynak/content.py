@@ -1734,72 +1734,84 @@ TOP_TEN = ['3.1', '2.1', '1.2', '6.1', '7.1', '5.3', '12.1', '15.3', '9.1', '1.7
 GUIDE_DATE = '2026-10-29'
 GUIDE_UPDATED = '2026-10-31'
 
-GUIDE_INTRO = ('Codex ile iyi çalışmak, hangi komutun nerede olduğunu bilmenin ötesine geçiyor. Bir araştırmanın yanlış '
- 'ölçütle sıralandığını, bir tablonun bilinmeyeni sıfıra çevirdiğini veya görsel sorunun yanlış katmanda '
- 'çözüldüğünü fark edebilmek sonucu değiştiriyor. Bu eğitim, o kararları görünür kılıyor.\n'
+GUIDE_INTRO = ('Codex ile iyi çalışmak, hangi komutun nerede olduğunu bilmenin ötesine geçiyor. Bir araştırmanın '
+ 'yanlış ölçütle sıralandığını, bir tablonun bilinmeyeni sıfıra çevirdiğini veya görsel sorunun '
+ 'yanlış katmanda çözüldüğünü fark edebilmek sonucu değiştiriyor. Bu eğitim, o kararları görünür '
+ 'kılıyor.\n'
  '\n'
  '## Üç işi baştan sona izle\n'
  '\n'
- 'Bu üç örnek eğitim anlatısının ana yolu. Her birinde girdi, istek, ara çıktı, düzeltme ve teslim var. '
- 'Kurgu verileri ve örnek dosyaları anlatıcı açıp gösterebilir; dinleyicinin kurulum yapması, alıştırma '
- 'çözmesi veya komut ezberlemesi gerekmez.\n'
+ 'Bu üç örnek eğitim anlatısının ana yolu. Her birinde girdi, istek, ara çıktı, düzeltme ve teslim '
+ 'var. Kurgu verileri ve örnek dosyaları anlatıcı açıp gösterebilir; dinleyicinin kurulum yapması, '
+ 'alıştırma çözmesi veya komut ezberlemesi gerekmez.\n'
  '\n'
- '1. [Araştırmadan karar ve sunuma](is-arastirma.md): seçenekleri doğru ölçütle ele, kararı gerekçelendir, '
- 'doğrulanmış bilgiden yeni çıktılar üret.\n'
- '2. [Dağınık tablodan güvenilir rapora](is-veri.md): kimliği koru, eksik veriyi görünür tut, bir sayının '
- 'neyi anlattığını doğru adlandır.\n'
- '3. [Görsel sorundan doğrulanmış yayına](is-sayfa.md): bölgeyi işaretle, yalnız gereken boyutu düzelt, '
- 'aynı koşulda kontrol et ve gerçek hedefte bitir.\n'
+ '1. [Araştırmadan karar ve sunuma](is-arastirma.md): seçenekleri doğru ölçütle ele, kararı '
+ 'gerekçelendir, doğrulanmış bilgiden yeni çıktılar üret.\n'
+ '2. [Dağınık tablodan güvenilir rapora](is-veri.md): kimliği koru, eksik veriyi görünür tut, bir '
+ 'sayının neyi anlattığını doğru adlandır.\n'
+ '3. [Görsel sorundan doğrulanmış yayına](is-sayfa.md): bölgeyi işaretle, yalnız gereken boyutu '
+ 'düzelt, aynı koşulda kontrol et ve gerçek hedefte bitir.\n'
  '\n'
  'Uygulamayı ilk kez açıyorsan önce [ilk dosyayı üretme '
- 'yolunu](02-uygulama.md#i-lk-dosyani-uret-ac-duzelt) gör. Sonra bu üç işe dön. Her örneğin içindeki '
- 'bağlantılar, ihtiyaç duyulduğu anda ilgili özelliği açıyor.\n'
+ 'yolunu](02-uygulama.md#i-lk-dosyani-uret-ac-duzelt) gör. Sonra bu üç işe dön. Her örneğin '
+ 'içindeki bağlantılar, ihtiyaç duyulduğu anda ilgili özelliği açıyor.\n'
  '\n'
  '## Önce hangi beş kararı öğrenmelisin?\n'
  '\n'
  '| Karar | Çalışırken söyleyebileceğin şey | Neden değerli? |\n'
  '|---|---|---|\n'
- '| Hangi sonuç gerekiyor? | “Karar notu ve düzenlenebilir sunum gerekiyor.” | İş, yalnız sohbet cevabında '
- 'kalmaz |\n'
- '| Hangi bilgi esas? | “Bu onaylı not ana kaynak; yeni iddia ekleme.” | Biçim değişirken anlam korunur |\n'
- '| Ne değişecek, ne kalacak? | “Yalnız kart genişliği değişsin; metin ve renk aynı kalsın.” | İyi çalışan '
- 'parçalar yeniden açılmaz |\n'
- '| Nerede belirsizlik var? | “Boş tahsilatı sıfır sayma; ayrı göster.” | Güzel görünen sonuç yanlış '
- 'kesinlik üretmez |\n'
- '| Ne zaman tamamlandı? | “Son dosyayı aç; yayın istediysem canlı hedefi de kontrol et.” | Ara adım son '
- 'teslimle karışmaz |\n'
+ '| Hangi sonuç gerekiyor? | “Karar notu ve düzenlenebilir sunum gerekiyor.” | İş, yalnız sohbet '
+ 'cevabında kalmaz |\n'
+ '| Hangi bilgi esas? | “Bu onaylı not ana kaynak; yeni iddia ekleme.” | Biçim değişirken anlam '
+ 'korunur |\n'
+ '| Ne değişecek, ne kalacak? | “Yalnız kart genişliği değişsin; metin ve renk aynı kalsın.” | İyi '
+ 'çalışan parçalar yeniden açılmaz |\n'
+ '| Nerede belirsizlik var? | “Boş tahsilatı sıfır sayma; ayrı göster.” | Güzel görünen sonuç '
+ 'yanlış kesinlik üretmez |\n'
+ '| Ne zaman tamamlandı? | “Son dosyayı aç; yayın istediysem canlı hedefi de kontrol et.” | Ara '
+ 'adım son teslimle karışmaz |\n'
  '\n'
  '## Bizim deneyimlerimiz bu anlatıda nerede?\n'
  '\n'
  '[Dokuz gerçek vaka](deneyimler.md), gözlenen sorun ile müdahalenin neyi değiştirdiğini ayırıyor. '
- 'Kullanıcının düzeltmesi kayıtlıysa anlatılıyor. Yalnız inceleme bulgusu varsa ona sonradan konuşma '
- 'uydurulmuyor. Örneğin uygulama bulma vakasında müdahale, yeniden derlemeyi başlatmadı; “uygulama yok” '
- 'iddiasının kapsamını düzeltti. Bu küçük ayrım, eğitimde doğru neden–sonuç kurmanın bir parçası.\n'
+ 'Kullanıcının düzeltmesi kayıtlıysa anlatılıyor. Yalnız inceleme bulgusu varsa ona sonradan '
+ 'konuşma uydurulmuyor. Örneğin uygulama bulma vakasında müdahale, yeniden derlemeyi başlatmadı; '
+ '“uygulama yok” iddiasının kapsamını düzeltti. Bu küçük ayrım, eğitimde doğru neden–sonuç '
+ 'kurmanın bir parçası.\n'
  '\n'
  '## Eğitim yolu ve başvuru rehberi birlikte nasıl kullanılır?\n'
  '\n'
- 'Eğitimde aşağıdaki rotayı izle; 18 bölüm, ihtiyaç duyduğun anda açacağın başvuru kaynağıdır. Üç örnekten '
- 'sonra bölüm 1’den yeniden başlaman gerekmez. Başlangıçta talimat dosyası, MCP, hook veya otomasyon '
- 'kurman gerekmiyor. Tekrarlanan bir ihtiyaç ortaya çıktığında ilgili bölüm değer kazanır. '
- '[Komutlar](komutlar.md), [sorun giderme](sorun-giderme.md) ve 107 maddelik kontrol listesi iş sırasında '
- 'hızlı başvuru için duruyor.\n'
+ 'Eğitimde aşağıdaki rotayı izle; 18 bölüm, ihtiyaç duyduğun anda açacağın başvuru kaynağıdır. Üç '
+ 'örnekten sonra bölüm 1’den yeniden başlaman gerekmez. Başlangıçta talimat dosyası, MCP, hook '
+ 'veya otomasyon kurman gerekmiyor. Tekrarlanan bir ihtiyaç ortaya çıktığında ilgili bölüm değer '
+ 'kazanır. [Komutlar](komutlar.md), [sorun giderme](sorun-giderme.md) ve 107 maddelik kontrol '
+ 'listesi iş sırasında hızlı başvuru için duruyor.\n'
  '\n'
- '**İçerik güncellemesi: 31 Ekim 2026.** Kaynakların kendi kontrol tarihleri kaynak dizininde yer alır. '
- 'Ürün bilgisi resmî kaynaklara, gerçek vakalar seçili kayıtlara dayanır. Üç örneğin verileri kurgu; mini '
- "web sayfaları bu rehber için üretildi. Resmî uygulama görselleri ile örnek HTML'nin gerçek tarayıcı "
- 'görüntüleri ayrı etiketlidir. Görsellerin altındaki “Nereye bak / Ne yap / Ne gör” açıklamaları öğretim '
- 'yorumumuzdur. Erişim koşulları ve doğrulama sınırları [kaynaklarda](kaynaklar.md).\n'
+ '**İçerik güncellemesi: 31 Ekim 2026.** Kaynakların kendi kontrol tarihleri kaynak dizininde yer '
+ 'alır. Ürün bilgisi resmî kaynaklara, gerçek vakalar seçili kayıtlara dayanır. Üç örneğin '
+ 'verileri kurgu; mini web sayfaları bu rehber için üretildi. Resmî uygulama görselleri ile örnek '
+ "HTML'nin gerçek tarayıcı görüntüleri ayrı etiketlidir. Görsellerin altındaki “Nereye bak / Ne "
+ 'yap / Ne gör” açıklamaları öğretim yorumumuzdur. Erişim koşulları ve doğrulama sınırları '
+ '[kaynaklarda](kaynaklar.md).\n'
  '\n'
  '\n'
  '## Anlatıcının tek rotası\n'
  '\n'
- 'İlk dosya → araştırma ve sunum → veri ve grafik → sayfa düzeltmesi → skill → devir → worktree → paralel '
- 'iş → otomasyon → yöntemi iyileştirme. Her sayfanın sonundaki **Eğitimde sıradaki** bağlantısı bu yolu '
- 'izler. Numaralı konu rehberi ayrı başvuru sırasını korur.\n'
+ 'İlk dosya → model ve düşünme seçimi → araştırma ve sunum → veri ve grafik → sayfa düzeltmesi → '
+ 'skill → devir → worktree → paralel iş → otomasyon → yöntemi iyileştirme. Her sayfanın sonundaki '
+ '**Eğitimde sıradaki** bağlantısı bu yolu izler. Numaralı konu rehberi ayrı başvuru sırasını '
+ 'korur.\n'
  '\n'
  'Anlatıcı örnek dosyaları açar, bir kararın çıktıyı nasıl değiştirdiğini gösterir ve devam eder. '
- 'Dinleyiciden kurulum veya alıştırma beklenmez. Platform ayrıntıları, komut envanteri ve teknik ekler '
- 'soru geldiğinde açılabilir.\n')
+ 'Dinleyiciden kurulum veya alıştırma beklenmez. Platform ayrıntıları, komut envanteri ve teknik '
+ 'ekler soru geldiğinde açılabilir.\n'
+ '\n'
+ '\n'
+ 'Model adlarını ezberlemek yerine [işe göre başlangıç '
+ 'tablosuna](07-model-hiz-kullanim.md#hangi-ise-hangi-modelle-baslamali), sonuç kötü olduğunda '
+ '[müdahale seçimine](07-model-hiz-kullanim.md#modeli-degistirmeden-once) dön. Aynı işte devam '
+ 'etmek, yan soru sormak veya yeni yön denemek için [sohbet '
+ 'kararlarını](06-baglam-bellek.md#ayni-sohbet-mi-yeni-sohbet-mi) kullan.\n')
 
 GUIDE_CHAPTERS = [{'number': 1,
   'slug': '01-olanaklar',
@@ -1933,8 +1945,9 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '**Anlatıcı gösterimi:** Solda proje klasörünü, sağda açılan dosyayı göster. “Açık '
           'soruları sona taşı” dedikten sonra aynı dosyadaki değişikliği göster. Bu üç hareketi '
-          'tamamlayınca [araştırma işine geç](is-arastirma.md); aşağıdaki menüler ihtiyaç anında '
-          'başvurmak için duruyor.\n'
+          'tamamlayınca [işe göre model seçimine '
+          'geç](07-model-hiz-kullanim.md#hangi-ise-hangi-modelle-baslamali); aşağıdaki menüler '
+          'ihtiyaç anında başvurmak için duruyor.\n'
           '\n'
           '### Platform ayrıntısına ihtiyaç duyarsan\n'
           '\n'
@@ -2221,9 +2234,21 @@ GUIDE_CHAPTERS = [{'number': 1,
           '> Bu haftaki bulguları bu dört alanla yaz. Kaynakta sorumlu veya tarih yoksa uydurma. '
           'İkinci haftada aynı alan sırasını kullan.\n'
           '\n'
-          'Bu, teknik bir veri biçimi öğrenmeden çıktı sözleşmesi kurmaktır. İlk iki raporu yan '
-          'yana aç: bilgi değişir, nerede aranacağı değişmez. Makinenin okuyacağı JSON gibi '
-          'biçimler [ileri ekte](ileri-teknik.md#makineye-aktarilacak-cikti).\n'
+          '**Kurgu karşılaştırma:** Araştırma işindeki kararın iki haftasını aynı alanlarla oku. '
+          'İkinci hafta hesap açma koşulunun kabul edildiğini varsayıyoruz.\n'
+          '\n'
+          '| Alan | İlk hafta | İkinci hafta |\n'
+          '|---|---|---|\n'
+          '| Karar | B koşullu öneri | C yeniden aday |\n'
+          '| Dayanak | Hesapsız kayıt ve CSV şartlarını B karşılıyor | Hesap açma artık kabul '
+          'ediliyor; C’nin 1.700 TL fiyatı yeniden değerlendirilebilir |\n'
+          '| Açık soru | Ek ücretler bilinmiyor | C’nin ek ücretleri bilinmiyor |\n'
+          '| Sonraki adım | B’nin ek ücretlerini doğrula | C’nin ek ücretlerini doğrula; toplam '
+          'maliyeti karşılaştır |\n'
+          '\n'
+          'Bilgi değişir, nerede aranacağı değişmez. Bu, teknik bir veri biçimi öğrenmeden çıktı '
+          'sözleşmesi kurmaktır. Makinenin okuyacağı JSON gibi biçimler [ileri '
+          'ekte](ileri-teknik.md#makineye-aktarilacak-cikti).\n'
           '\n'
           'Plan için de küçük bir karar yeterlidir: “Sunumda fiyat mı, katılım kolaylığı mı önce '
           'gelsin?” sorusunu `/plan` ile netleştir; tercihini verdikten sonra “Bu kararı uygula, '
@@ -2424,14 +2449,16 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '| İhtiyaç | Seçim | Korumak istediğin şey |\n'
           '|---|---|---|\n'
-          '| Aynı sonucun bir bölümünü düzeltmek | Mevcut sohbette devam et | Kararlar ve son '
-          'çıktı |\n'
-          '| Çalışan işi kesmeden kavram sormak | `/side` | Ana işin devamı |\n'
-          '| Aynı geçmişten farklı yön denemek | `/fork` | Başlangıç bağlamı; dosya yalıtımı '
-          'ayrıca seçilir |\n'
-          '| Bağımsız işe başlamak | `/new` | Aynı çalışma alanı, boş konuşma |\n'
-          '| Uzayan konuşmanın bağlamını sıkıştırmak | `/compact` | Çalışmaya yarayan özet; '
-          'eksiksiz arşiv değil |\n'
+          '| Sunumun yalnız başlığını düzeltmek | Mevcut sohbette devam et | Son dosya ve kararlar '
+          'korunur |\n'
+          '| Site üretilirken “worktree ne demek?” diye sormak | `/side` | Yan açıklama için ana '
+          'işin yönünü değiştirme |\n'
+          '| Aynı brief’ten farklı tasarım yönü denemek | `/fork` | Geçmiş kopyalanır; aynı '
+          'dosyaya yazmayı önlemek için ortamı ayrıca seç |\n'
+          '| Etkinlik sitesinden bağımsız kitap özetine geçmek | `/new` | Uygun olduğunda aynı '
+          'yerel çalışma alanında boş sohbet; gerekli dosyayı yeniden belirt |\n'
+          '| Aynı işi uzun konuşmadan sürdürmek | `/compact` | Önce önemli kararları dosyaya '
+          'geçir; özet tam arşiv değildir |\n'
           '\n'
           'Bu seçimleri bir sayfa düzeltmesi içinde [yan yana '
           'görebilirsin](is-sayfa.md#5-sohbetin-yonunu-hangi-aracla-degistirirsin). Komutların '
@@ -2494,15 +2521,10 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '## Kurgu senaryo: iki hafta sonra dönüş\n'
           '\n'
-          'Atölye için hazırlanan etkinlik takvimine iki hafta sonra dönüyorsun. Eski sohbette '
-          'bütçe 20 kişiye göreydi; şimdi 35 kişi var. İyi bir başlangıç:\n'
-          '\n'
-          '> Önceki kararları oku. Katılımcı sayısı artık 35; bu bilgi eski 20 kişilik varsayımın '
-          'yerini alıyor. Mekân kapasitesi ve bütçe hesabında etkilenen yerleri bul. Diğer '
-          'kararları gerekmedikçe yeniden açma.\n'
-          '\n'
-          'Böylece değişiklik hem güncel işte kullanılır hem de sonraki dönüşte eski sayı yeniden '
-          'canlanmaz.'},
+          'Atölye takvimine döndüğünde katılımcı sayısı 20’den 35’e çıkmışsa yalnız “devam” demek '
+          'yetmez. “35 kişi eski varsayımın yerini alıyor; kapasite ve bütçede etkilenen yerleri '
+          'güncelle” de. Yukarıdaki devir yönteminin ikinci kullanımı budur; diğer kararları '
+          'yeniden açman gerekmez.\n'},
  {'number': 7,
   'slug': '07-model-hiz-kullanim',
   'title': 'Model, düşünme seviyesi, hız ve kullanım',
@@ -2518,26 +2540,68 @@ GUIDE_CHAPTERS = [{'number': 1,
           'kurmaz; düşünmeyi yükseltmek eksik kaynak erişimini açmaz. [Modeller](source:models) · '
           '[Hız](source:agent-configuration__speed)\n'
           '\n'
-          "Güncel resmî rehber, en zor işler için Astra'yı; geniş günlük kullanım için Sol'u; "
-          "yazı, görsel ve bilgisayar kullanımı ağırlıklı işler için Terra'yı; daha dar ve "
-          "tekrarlı işler için Luna'yı başlangıç noktaları olarak sunuyor. Bunlar bizim "
-          'karşılaştırmalı ölçümümüz değil. Kullanılabilir model ve düşünme seçeneklerini kendi '
-          'mesaj alanında kontrol et; isimler ve hesap erişimi değişebilir.\n'
+          '## Hangi işe hangi modelle başlamalı?\n'
           '\n'
-          '| İş | Mantıklı başlangıç | Seçimi ne değiştirir? |\n'
+          '31 Ekim 2026’da kontrol edilen resmî rehberin dört güncel modeli aşağıda. Model rolleri '
+          'belgeye, Atölye örnekleri bizim kullanım önerimize dayanır; karşılaştırmalı performans '
+          'testi yapmadık. Kendi hesabında görünen seçenekleri esas al. [Güncel '
+          'modeller](source:models)\n'
+          '\n'
+          '| Model | İyi başlangıç olduğu işler | Atölye’de örnek istek |\n'
           '|---|---|---|\n'
-          '| Tek dosyada açık yazım hatası | Hızlı, düşük çabalı çalışma | Hata birçok dil veya '
-          'üretim zincirine yayılıyorsa kapsam büyür |\n'
-          '| Belirsiz ürün kararı | Daha fazla düşünme, önce seçenekler | Gerçek kullanıcı verisi '
-          'yoksa model gücü boşluğu kapatmaz |\n'
-          '| Zor hata ayıklama | Güçlü model, somut tekrar adımı | Log ve ortam eksikse önce '
-          'onları toplamak gerekir |\n'
-          '| Çok sayıda aynı dönüşüm | Küçük örneği doğrula, sonra betik | Her satır ayrı yorum '
-          'gerektiriyorsa otomatik dönüşüm uygun olmaz |\n'
-          '| Estetik yön arama | Referanslar ve karşılaştırılabilir prototipler | Daha uzun '
-          'açıklama yerine görsel seçim gerekir |\n'
+          '| **GPT-6 Luna** | Dar kapsamlı düzenleme, bilgi çıkarma, tekrarlı işler | “Bu onaylı '
+          'programdan tarih ve saatleri çıkar; bulunmayanı ekleme.” |\n'
+          '| **GPT-6.1 Terra** | Kaynağa dayalı yazı, görsel yorumlama, sonucu belirli bilgisayar '
+          'işleri | “Karar notunu kısa ekip duyurusuna dönüştür; belirsiz ücretleri koru.” |\n'
+          '| **GPT-6.1 Sol** | Karmaşık, birden çok dosya veya çıktı içeren, revizyon gerektiren '
+          'işler | “Bu brief’ten etkinlik sitesini üret; dar ekranı ve kayıt bağlantısını kontrol '
+          'et.” |\n'
+          '| **GPT-6 Astra** | Zor muhakeme, geniş bağlam ve sıkı gereksinimleri uzlaştırma | '
+          '“Birbirini tutmayan koşulları çöz; hangi seçeneğin neden elendiğini göster.” |\n'
           '\n'
-          'Tablo bir kullanım önerisidir; evrensel hız veya kalite sıralaması değildir.\n'
+          'Bu tablo görev yasağı değildir: Terra sınırlı kod düzeltmesi, Astra kısa yazı da '
+          'yapabilir. Seçimi “kod mu, yazı mı?” kadar belirsizlik ve birbirine bağlı kararların '
+          'sayısı belirler. Eski sürüm adlarını bu dört adla eşanlamlı sayma; sürüm değişince aynı '
+          'işi yeniden karşılaştır. [Seçim rehberi](source:model-selection)\n'
+          '\n'
+          '## Model, düşünme ve hızı uygulamada seç\n'
+          '\n'
+          'Mesaj alanının altındaki model/düşünme kontrolünü aç. Masaüstünde `/model` model seçer, '
+          '`/reasoning` düşünme çabasını değiştirir; `/fast` desteklenen Fast hizmet katmanını '
+          'açıp kapatır. Bunları mesajın içine süslü bir talimat olarak yazmak yerine komut '
+          'menüsünden seç. Görünür seçenekler ortama ve erişime bağlıdır. [Komutların '
+          'kapsamı](source:reference__slash-commands)\n'
+          '\n'
+          'Resmî başlangıç örnekleri: dar bir düzenleme için **Luna · Low**, revize edilecek çok '
+          'parçalı teknik iş için **Sol · Medium**, zor analiz ve sıkı koşullar için **Astra · '
+          'Extra high**. Emin değilsen varsayılan çabayla başla; gerekli bilgi elindeyken karar '
+          'kalitesi yetersiz kalıyorsa yükselt. Bunlar her iş için zorunlu ayarlar değil. [Model '
+          've çaba seçimi](source:model-selection)\n'
+          '\n'
+          'Fast bir hizmet hızı tercihidir; aynı şey daha güçlü model veya daha yüksek düşünme '
+          'seviyesi demek değildir. Kullanım tüketimini artırabilir. Model beklemesini azaltmakla '
+          'dosya yükleme veya derleme süresini azaltmayı ayır. [Hız ve '
+          'kullanım](source:agent-configuration__speed)\n'
+          '\n'
+          '[FLOW:model-choice]\n'
+          '\n'
+          '**Anlatıcı gösterimi:** Modelin adını, seçili düşünme seviyesini ve varsa hız tercihini '
+          'ayrı ayrı işaret et. Sonra [karar ve sunum işine geç](is-arastirma.md). Dinleyicinin '
+          'bütün seçenekleri ezberlemesi gerekmiyor; aynı işi yeniden değerlendirirken hangi '
+          'tercihi değiştirdiğini bilmesi gerekiyor.\n'
+          '\n'
+          '## Aynı iş büyüyünce seçim nasıl değişir?\n'
+          '\n'
+          '**Kurgu karşılaştırma:** Onaylı nottan beş tarih çıkarmak dar bir iştir; Luna ile '
+          'başlanabilir. Aynı notu farklı kitleye anlatmak için Terra denenebilir. Not, site ve '
+          'sunumu birlikte güncelleyip tutarlılığını korumak Sol için uygun bir başlangıçtır. '
+          'Kaynaklar birbiriyle çelişiyor ve seçim birçok koşula bağlıysa Astra’dan güçlü bir '
+          'ikinci görüş alınabilir.\n'
+          '\n'
+          'Her aşamada model değiştirmek zorunda değilsin. Mevcut modelin sonucu yeterliyse devam '
+          'et. Karşılaştıracaksan aynı kaynakları ve kabul koşullarını ver: “Tarihleri korudu mu, '
+          'açık ücreti kesinmiş gibi yazdı mı, istenen dosyayı üretti mi?” Daha uzun cevap '
+          'otomatik olarak daha iyi sonuç değildir. [Karşılaştırma yöntemi](18-iyilestirmek.md)\n'
           '\n'
           '## “Yavaş” olan kısmı ayır\n'
           '\n'
@@ -2565,8 +2629,13 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '## Ultra, paralellik ve görev kapsamı\n'
           '\n'
-          'Bazı güç ayarları daha yoğun çalışma biçimleri sunar. Bu seçenekler her istemcide aynı '
-          'araçlara veya alt ajan politikasına sahip olduğun anlamına gelmez. Paralel çalışma '
+          'Resmî model belgesi, Ultra modunu tek ajanlı çalışmanın ötesinde alt ajanlardan '
+          'yararlanan bir seçenek olarak anlatır. Bu yüzden yalnız “biraz daha uzun düşünme” '
+          'diye tanıtma. Ultra ile hız katmanı Ultrafast farklı tercihlerdir. Görünen seçenekler '
+          've alt ajan politikası istemciye bağlıdır. [Ultra](source:models) · '
+          '[Hız katmanları](source:agent-configuration__speed)\n'
+          '\n'
+          'Paralel çalışma '
           'bağımsız alt işler olduğunda yarar sağlar; ortak dosyayı aynı anda değiştiren üç '
           'çalışma yeni sorun yaratabilir. Ayrıntı 14. bölümde.\n'
           '\n'
@@ -2594,8 +2663,28 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '## Modeli değiştirmeden önce\n'
           '\n'
-          '[Karar örneğinde](is-arastirma.md) yanlış öneri model seçimiyle değil, eleme ölçütünün '
-          'düzeltilmesiyle değişiyor. Önce yanlış sonucun hangi karardan çıktığını belirle.\n'},
+          'Kötü sonucu tek bir “model zayıf” açıklamasına bağlama. Aşağıdaki müdahaleler aynı '
+          'maliyeti ve aynı sonucu üretmez:\n'
+          '\n'
+          '| Gözlenen sorun | İlk müdahale | Söylenebilecek kısa istek |\n'
+          '|---|---|---|\n'
+          '| Kaynak veya erişim eksik | Girdiyi tamamla | “Hangi bilgiye erişemediğini belirt; '
+          'tahminle kapatma.” |\n'
+          '| Bilgi doğru, amaç yanlış anlaşılmış | Ölçütü düzelt | “En ucuzu değil, hesapsız kayıt '
+          've CSV koşullarını karşılayanı seç.” |\n'
+          '| Bilgi yeterli, çoklu koşullar kaçıyor | Çabayı artır veya güçlü ikinci görüş al | “Bu '
+          'üç koşulu birlikte değerlendir; öneriyi kaynaklara karşı yeniden incele.” |\n'
+          '| Aynı mekanik işlem tekrarlanıyor | Kuralı sabitle, betikle uygula | “Önce üç zor '
+          'satırda yöntemi göster; sonra aynı kuralı uygula.” |\n'
+          '| Araç sonucu bekleniyor | Beklenen işlemi teşhis et | “Model mi, derleme mi bekliyor? '
+          'Çalışan işi gereksiz yeniden başlatma.” |\n'
+          '| Sonuç doğru, anlatım yetersiz | Hedefli editoryal revizyon yap | “Kararı ve '
+          'belirsizliği koru; teknik terimleri ilk kullanımda açıkla.” |\n'
+          '\n'
+          '[Araştırma örneğinde](is-arastirma.md) düzelen şey eleme ölçütüydü. Buna karşılık '
+          'gerekli kaynaklar verildiği hâlde birbiriyle ilişkili koşullar sürekli kaçıyorsa daha '
+          'güçlü muhakemeyi denemek anlamlıdır. Hangi müdahalenin işe yaradığını görmek için her '
+          'denemede tek ana değişkeni değiştir.\n'},
  {'number': 8,
   'slug': '08-ortamlar',
   'title': 'Dosyalar ve çalışma ortamları',
@@ -2890,6 +2979,26 @@ GUIDE_CHAPTERS = [{'number': 1,
           'Bu kurgu örnekte beklenen çıktı yalnız uzun bir talimat değildir: doğru tetiklenen, '
           'ilgisiz işte devreye girmeyen, kaynakları belli bir paket gerekir.\n'
           '\n'
+          '## Skill dosyadan kullanılabilir yönteme nasıl geçer?\n'
+          '\n'
+          'Yerel projeye ait örnek için `SKILL.md`, proje kökündeki '
+          '`.agents/skills/atolye-raporu/` klasörüne konur. Başındaki `name` ve `description` '
+          'alanları yöntemin adını ve ne zaman seçileceğini tanımlar. Bu yapı, sıradan bir metin '
+          'dosyasını yalnız sohbete eklemekten farklıdır. [Yerel skill '
+          'keşfi](source:build-skills)\n'
+          '\n'
+          '1. Skills görünümünde veya mesaj alanındaki `$` seçicisinde **atolye-raporu** adını '
+          'bul. Görünmüyorsa yanlış proje, klasör, ad/açıklama veya devre dışı bırakılma '
+          'ihtimalini kontrol et. Kurulum değişikliği görünmüyorsa uygulamayı yeniden başlatmak '
+          'resmî sorun giderme adımıdır.\n'
+          '2. Adı seçip girdi dosyasını belirt: “İkinci haftayı bu yöntemle raporla.” Otomatik '
+          'seçime güvenmek yerine ilk gösterimde açık çağrı kullan.\n'
+          '3. Sonuçta yöntemin kritik davranışını ara: yeni `yedek` durumu saklandı mı, boş '
+          'tahsilat korunuyor mu? Menüde görünmesi başarılı uygulamanın kanıtı değildir.\n'
+          '\n'
+          'Codex masaüstündeki `$` çağrısını diğer yüzeylere aynen taşımadan o yüzeyin seçicisini '
+          'kontrol et. [Masaüstü çağrı yolu](source:reference__slash-commands)\n'
+          '\n'
           '## Yöntem ikinci haftada neyi koruyor?\n'
           '\n'
           '[Örnek skill metni](ornekler/rapor-skill.md), [ikinci haftanın '
@@ -3022,8 +3131,6 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '| Belirsiz kural | Uygulanabilir kural |\n'
           '|---|---|\n'
-          '| “Her şeyi test et.” | “İçerik değişince üreticiyi ve bağlantı denetimini çalıştır; '
-          'etkileşim değişince tarayıcı regresyonunu da çalıştır.” |\n'
           '| “Asla hata yapma.” | “İddianın kanıtı yoksa gözlem, çıkarım ve açık soruyu ayır.” |\n'
           '| “Hiç soru sorma.” | “Geri alınabilir ayrıntıları çöz; yayın hedefi veya veri kaybı '
           'değişiyorsa karar iste.” |\n'
@@ -3488,8 +3595,10 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           '## Kurgu senaryo: paralelliğin faydasız olduğu iş\n'
           '\n'
-          'Tek paragrafı üç ajana bölmek gereksiz koordinasyon yaratabilir.\n\n'
-          '## İki bulgudan tek karara\n\n'
+          'Tek paragrafı üç ajana bölmek gereksiz koordinasyon yaratabilir.\n'
+          '\n'
+          '## İki bulgudan tek karara\n'
+          '\n'
           'Aynı Atölye kararında bir alt iş zorunlu koşulları, diğeri listelenen maliyetleri '
           'incelesin.\n'
           '\n'
@@ -3534,6 +3643,25 @@ GUIDE_CHAPTERS = [{'number': 1,
           '\n'
           'İlk örnek mevcut işin devamını, ikincisi bağımsız tekrar eden sonucu tarif eder. '
           'Kurulduğunu, zamanlama ve hedefi geri okuyarak doğrula.\n'
+          '\n'
+          '## Ne zaman zamanlamaya hazır?\n'
+          '\n'
+          'İlk raporun güzel görünmesi yeterli olmayabilir. Atölye’de ikinci haftanın yeni `yedek` '
+          'durumu, henüz kararlaştırılmamış kuralı ortaya çıkarıyor. Önce bu kararı ver; sonra '
+          'aynı yöntemi takvime bağla.\n'
+          '\n'
+          '| Gözlediğin durum | Uygun sonraki adım |\n'
+          '|---|---|\n'
+          '| Her raporda ne istediğini baştan değiştiriyorsun | Normal sohbette yöntemi oturt |\n'
+          '| Yöntem sabit, her seferinde elle çağırıyorsun | Skill veya betikle tekrar kullan |\n'
+          '| Yöntem sabit, girdi ve zaman belli | Otomasyon kur; ilk gerçek koşumun çıktısını aç '
+          '|\n'
+          '| Yalnız mevcut yayının bitmesini bekliyorsun | Kalıcı haftalık rutin yerine bu sohbeti '
+          'takip et |\n'
+          '\n'
+          '**Eksik girdi için somut kural:** Yeni haftanın dosyası gelmediyse geçen haftanın '
+          'raporunu bu haftaymış gibi sunmasın; eksik kaynağı belirtip o koşumu sonlandırsın. Bu, '
+          'sıklığı artırmaktan daha yararlı bir otomasyon kararıdır.\n'
           '\n'
           '## İlk rapordan çalışan rutine\n'
           '\n'
@@ -4658,8 +4786,8 @@ GUIDE_APPENDICES = [{'slug': 'komutlar',
           'alma yok.\n'
           '\n'
           'Bu işin sonunda iki şey görünmeli: seçimin dayanağı olan kısa karar notu ve aynı kararı '
-          'anlatan sunum taslağı. Araştırma, taslak ve görsel düzeltme tek bir iş içinde birbirini '
-          'besliyor.\n'
+          'anlatan düzenlenebilir sunum. Araştırma, taslak ve görsel düzeltme tek bir iş içinde '
+          'birbirini besliyor.\n'
           '\n'
           '[FLOW:research]\n'
           '\n'
@@ -4742,6 +4870,16 @@ GUIDE_APPENDICES = [{'slug': 'komutlar',
           '> Bu karar notunu ana kaynak kabul et. Karar, dayanak ve açık koşulu taşıyan üç '
           'slaytlık sunum taslağı hazırla. Yeni fiyat veya özellik ekleme. Ayrıca aynı kararı 100 '
           'kelimeyi geçmeyen ekip duyurusuna dönüştür.\n'
+          '\n'
+          '**Aynı kaynaktan kısa ekip duyurusu — kurgu çıktı:**\n'
+          '\n'
+          '> Atölye kaydı için B’yi koşullu olarak öneriyoruz. Hesap açmadan kayıt ve CSV dışa '
+          'aktarma gereksinimlerini karşılıyor. 2.500 TL fiyat, 3.000 TL bütçe içinde 500 TL pay '
+          'bırakıyor. Ek vergi ve ödeme komisyonu henüz bilinmiyor; toplam maliyeti doğrulamadan '
+          'satın alma kararı vermeyeceğiz.\n'
+          '\n'
+          'Karar notu gerekçeyi ayrıntılandırır, slayt karşılaştırmayı gösterir, duyuru ekibin '
+          'bilmesi gereken kararı özetler. Üçünde de belirsizlik korunur.\n'
           '\n'
           'Anlatıcı [düzenlenebilir üç slaytlık sunumu](ornekler/atolye-karar.pptx) açar. [Metin '
           'taslağı](ornekler/sunum-taslagi.md) aynı kararın sade kaynak karşılığıdır. Aynı B '
@@ -4832,7 +4970,7 @@ GUIDE_APPENDICES = [{'slug': 'komutlar',
           '\n'
           '## 3. Sonucun ne söylediğini sınırlarıyla oku\n'
           '\n'
-          '[Örnek raporda](ornekler/katilim-raporu.md) üç ayrı sayı var:\n'
+          '[Örnek raporda](ornekler/katilim-raporu.md) dört sonuç var:\n'
           '\n'
           '| Ölçü | Kurgu veriden çıkan sonuç | Anlamı |\n'
           '|---|---|---|\n'
@@ -5097,12 +5235,12 @@ GUIDE_SOURCES = {'app': {'url': 'https://learn.chatgpt.com/docs/app',
             'title': 'Models',
             'sha256': '0a99a1a6e54f0a0b2e2d7409873b88308e9ccee0414a60d746452af4989bf34e',
             'status': 200,
-            'checked': '2026-10-29'},
+            'checked': '2026-10-31'},
  'agent-configuration__speed': {'url': 'https://learn.chatgpt.com/docs/agent-configuration/speed',
                                 'title': 'Speed',
                                 'sha256': '7cf93ffefb0d7124564f032468eb2049eb383a38d2afb892cfe1cd94131adbce',
                                 'status': 200,
-                                'checked': '2026-10-29'},
+                                'checked': '2026-10-31'},
  'pricing': {'url': 'https://learn.chatgpt.com/docs/pricing',
              'title': 'Pricing',
              'sha256': 'a0c502cccae440c42e790e4fec0a3733d670328dce9eb2d3904d1bce647cb246',
@@ -5284,12 +5422,14 @@ GUIDE_SOURCES = {'app': {'url': 'https://learn.chatgpt.com/docs/app',
                         'status': 200,
                         'checked': '2026-10-29'},
  'using_goals_in_codex': {'url': 'https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex',
-                          'title': 'Using Goals in Codex: Persistent Objectives for Long-Running Work',
+                          'title': 'Using Goals in Codex: Persistent Objectives for Long-Running '
+                                   'Work',
                           'sha256': '1aa0c0e22f11484f526b59e98cacabaa1ffa15227e064591f597cf202df26621',
                           'status': 200,
                           'checked': '2026-10-29'},
  'rethinking-skills-and-prompts-for-gpt-6-astra': {'url': 'https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra',
-                                                   'title': 'Rethinking skills and prompts for GPT-6 Astra',
+                                                   'title': 'Rethinking skills and prompts for '
+                                                            'GPT-6 Astra',
                                                    'sha256': 'a1deee4c0b3ca16a20385c27f0692e22d5150fdec81710c04742dd5da29f0468',
                                                    'status': 200,
                                                    'checked': '2026-10-29'},
@@ -5417,7 +5557,12 @@ GUIDE_SOURCES = {'app': {'url': 'https://learn.chatgpt.com/docs/app',
                      'title': 'Harness-aware evaluation of plugins',
                      'sha256': '6763893e62b931af668486334344309bbb5eaf8fa4d5af8083d2446f4dc7fba8',
                      'status': 200,
-                     'checked': '2026-10-30'}}
+                     'checked': '2026-10-30'},
+ 'model-selection': {'url': 'https://learn.chatgpt.com/docs/model-selection',
+                     'sha256': 'b3ce4be1f893a1d7ec545fe22a05bdab4d273b39c943bb763159391696a626b3',
+                     'status': 200,
+                     'checked': '2026-10-31',
+                     'title': 'Model selection'}}
 
 GUIDE_FEATURES = [{'id': 'F01',
   'name': 'Kurulum ve hesap girişi',
@@ -5471,7 +5616,7 @@ GUIDE_FEATURES = [{'id': 'F01',
   'name': 'Model, çaba ve hız seçimi',
   'source': 'models',
   'target': '07-model-hiz-kullanim',
-  'condition': 'Hesap/model kataloğu; benchmark iddiası yok',
+  'condition': 'Hesap/model kataloğu; dört model ve işe göre başlangıç önerileri, benchmark değil',
   'status': 'Belgeyle doğrulandı; özellik canlı çalıştırılmadı'},
  {'id': 'F10',
   'name': 'Fast ve üst hız katmanları',
@@ -6240,7 +6385,18 @@ GUIDE_FLOWS = {'research': {'title': 'Karar bilgisini biçimler arasında koru',
                     ('Karar ver', 'Evet → tamamla. Hayır, geçerli yol var → yeni denemeye dön.'),
                     ('Engeli bildir',
                      'Geçerli yol kalmadıysa eksik bilgi veya erişimi yaz. Bütçe bittiyse '
-                     'ilerlemeyi özetle; başarı ilan etme.')]}}
+                     'ilerlemeyi özetle; başarı ilan etme.')]},
+ 'model-choice': {'title': 'Üç ayrı seçim, tek iş',
+                  'steps': [('İşin güçlüğü',
+                             'Dar işlem mi, birçok kararı birleştiren iş mi? Modeli buna göre '
+                             'seç.'),
+                            ('Karar kalitesi',
+                             'Bilgi tamam ama muhakeme yetmiyorsa düşünme çabasını değiştir.'),
+                            ('Bekleme',
+                             'Model yanıtını bekliyorsan hız seçeneğini değerlendir; araç '
+                             'beklemesini ayrı tut.'),
+                            ('Sonuç',
+                             'Aynı kaynak ve kabul koşullarıyla karşılaştır; yeterli sonucu veren seçimi koru.')]}}
 
 GUIDE_EXAMPLES = {'arastirma-kaynaklari.md': '# Kurgu kaynak paketi\n'
                             '\n'
@@ -6498,6 +6654,7 @@ GUIDE_EXAMPLES = {'arastirma-kaynaklari.md': '# Kurgu kaynak paketi\n'
                            'dön</a></p></main></html>'}
 
 GUIDE_ROUTE = [{'slug': '02-uygulama', 'title': 'İlk dosyayı üret, aç, düzelt'},
+ {'slug': '07-model-hiz-kullanim', 'title': 'İşe göre model ve düşünme seç'},
  {'slug': 'is-arastirma', 'title': 'Araştırmadan karar ve sunuma'},
  {'slug': 'is-veri', 'title': 'Dağınık tablodan güvenilir rapora'},
  {'slug': 'is-sayfa', 'title': 'Görsel sorundan doğrulanmış yayına'},

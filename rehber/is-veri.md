@@ -41,7 +41,7 @@ Anlatıcı bütün tabloyu okumak yerine üç ayırıcı durumu gösterir:
 
 ## 3. Sonucun ne söylediğini sınırlarıyla oku
 
-[Örnek raporda](ornekler/katilim-raporu.md) üç ayrı sayı var:
+[Örnek raporda](ornekler/katilim-raporu.md) dört sonuç var:
 
 | Ölçü | Kurgu veriden çıkan sonuç | Anlamı |
 |---|---|---|

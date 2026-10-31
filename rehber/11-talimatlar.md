@@ -32,7 +32,6 @@ Dosyanın oluşması, bütün kuralların sonraki işte doğru uygulandığını
 
 | Belirsiz kural | Uygulanabilir kural |
 |---|---|
-| “Her şeyi test et.” | “İçerik değişince üreticiyi ve bağlantı denetimini çalıştır; etkileşim değişince tarayıcı regresyonunu da çalıştır.” |
 | “Asla hata yapma.” | “İddianın kanıtı yoksa gözlem, çıkarım ve açık soruyu ayır.” |
 | “Hiç soru sorma.” | “Geri alınabilir ayrıntıları çöz; yayın hedefi veya veri kaybı değişiyorsa karar iste.” |
 | “Bütün bilgiyi hatırla.” | “Kalıcı kararları proje notlarına yaz; eski karar değişince yenisinin öncekini geçersiz kıldığını belirt.” |

@@ -64,7 +64,14 @@ Kaynak ve sonuç kayıt sayısını karşılaştır; fark varsa nedenini açıkl
 <h2 id="tekrarli-ciktinin-alanlarini-sec">Tekrarlı çıktının alanlarını seç</h2>
 <p>Haftalık raporları karşılaştıracaksan aynı dört alanı iste: <strong>karar, dayanak, açık soru, sonraki adım</strong>. Bir hafta uzun deneme, diğer hafta dağınık maddeler üretmek karşılaştırmayı zorlaştırır.</p>
 <blockquote><p>Bu haftaki bulguları bu dört alanla yaz. Kaynakta sorumlu veya tarih yoksa uydurma. İkinci haftada aynı alan sırasını kullan.</p></blockquote>
-<p>Bu, teknik bir veri biçimi öğrenmeden çıktı sözleşmesi kurmaktır. İlk iki raporu yan yana aç: bilgi değişir, nerede aranacağı değişmez. Makinenin okuyacağı JSON gibi biçimler <a href="ileri-teknik.html#makineye-aktarilacak-cikti">ileri ekte</a>.</p>
+<p><strong>Kurgu karşılaştırma:</strong> Araştırma işindeki kararın iki haftasını aynı alanlarla oku. İkinci hafta hesap açma koşulunun kabul edildiğini varsayıyoruz.</p>
+<p class="table-hint">Tablonun devamını görmek için yatay kaydır.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Kaydırılabilir karşılaştırma tablosu"><table><thead><tr><th scope="col">Alan</th><th scope="col">İlk hafta</th><th scope="col">İkinci hafta</th></tr></thead><tbody>
+<tr><td>Karar</td><td>B koşullu öneri</td><td>C yeniden aday</td></tr>
+<tr><td>Dayanak</td><td>Hesapsız kayıt ve CSV şartlarını B karşılıyor</td><td>Hesap açma artık kabul ediliyor; C’nin 1.700 TL fiyatı yeniden değerlendirilebilir</td></tr>
+<tr><td>Açık soru</td><td>Ek ücretler bilinmiyor</td><td>C’nin ek ücretleri bilinmiyor</td></tr>
+<tr><td>Sonraki adım</td><td>B’nin ek ücretlerini doğrula</td><td>C’nin ek ücretlerini doğrula; toplam maliyeti karşılaştır</td></tr>
+</tbody></table></div>
+<p>Bilgi değişir, nerede aranacağı değişmez. Bu, teknik bir veri biçimi öğrenmeden çıktı sözleşmesi kurmaktır. Makinenin okuyacağı JSON gibi biçimler <a href="ileri-teknik.html#makineye-aktarilacak-cikti">ileri ekte</a>.</p>
 <p>Plan için de küçük bir karar yeterlidir: “Sunumda fiyat mı, katılım kolaylığı mı önce gelsin?” sorusunu <code>/plan</code> ile netleştir; tercihini verdikten sonra “Bu kararı uygula, üç slaytı üret” de. Planı tekrar tekrar genişletmek yerine incelenebilir ilk çıktıya geç.</p>
 <h2 id="ornek-karsi-ornek-ve-korunacak-davranis">Örnek, karşı örnek ve korunacak davranış</h2>
 <p>“Profesyonel yaz” birçok farklı tona karşılık gelebilir. “Aşağıdaki örneğin bilgi yoğunluğunda, satış baskısı kurmadan yaz” isteği daha belirgin bir hedef verir. Verdiğin örnekte hangi niteliğin önemli olduğunu söyle. Örneğin uzunluğunu veya tek bir kelimesini neden korumak istediğin belli değilse bunları zorunlu kurala çevirme.</p>

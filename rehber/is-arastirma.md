@@ -4,7 +4,7 @@
 
 **Kurgu iş:** Atölye, 60 kişilik ücretsiz bir buluşma için kayıt sistemi seçecek. Katılımcıya hesap açtırmak istemiyor; katılımcı listesini CSV olarak indirebilmesi gerekiyor. Etkinlik başına bütçe 3.000 TL. Aşağıdaki platform adları, fiyatlar ve belge parçaları eğitim için uyduruldu. Gerçek bir ürün karşılaştırması veya yapılmış satın alma yok.
 
-Bu işin sonunda iki şey görünmeli: seçimin dayanağı olan kısa karar notu ve aynı kararı anlatan sunum taslağı. Araştırma, taslak ve görsel düzeltme tek bir iş içinde birbirini besliyor.
+Bu işin sonunda iki şey görünmeli: seçimin dayanağı olan kısa karar notu ve aynı kararı anlatan düzenlenebilir sunum. Araştırma, taslak ve görsel düzeltme tek bir iş içinde birbirini besliyor.
 
 **Karar bilgisini biçimler arasında koru**
 
@@ -70,6 +70,12 @@ Aktarım zincirindeki gerçek karşılık için [C02 vakasına](deneyimler.md#c0
 ## 4. Doğrulanmış nottan yeni biçimler üret
 
 > Bu karar notunu ana kaynak kabul et. Karar, dayanak ve açık koşulu taşıyan üç slaytlık sunum taslağı hazırla. Yeni fiyat veya özellik ekleme. Ayrıca aynı kararı 100 kelimeyi geçmeyen ekip duyurusuna dönüştür.
+
+**Aynı kaynaktan kısa ekip duyurusu — kurgu çıktı:**
+
+> Atölye kaydı için B’yi koşullu olarak öneriyoruz. Hesap açmadan kayıt ve CSV dışa aktarma gereksinimlerini karşılıyor. 2.500 TL fiyat, 3.000 TL bütçe içinde 500 TL pay bırakıyor. Ek vergi ve ödeme komisyonu henüz bilinmiyor; toplam maliyeti doğrulamadan satın alma kararı vermeyeceğiz.
+
+Karar notu gerekçeyi ayrıntılandırır, slayt karşılaştırmayı gösterir, duyuru ekibin bilmesi gereken kararı özetler. Üçünde de belirsizlik korunur.
 
 Anlatıcı [düzenlenebilir üç slaytlık sunumu](ornekler/atolye-karar.pptx) açar. [Metin taslağı](ornekler/sunum-taslagi.md) aynı kararın sade kaynak karşılığıdır. Aynı B önerisi, aynı 2.500 TL ve aynı ek ücret belirsizliği korunuyor. Slayt için daha kısa yazılması, “ek ücretler bilinmiyor” cümlesinin silinmesini haklı çıkarmaz.
 

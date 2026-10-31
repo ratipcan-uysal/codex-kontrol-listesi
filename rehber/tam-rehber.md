@@ -35,9 +35,12 @@ Eğitimde aşağıdaki rotayı izle; 18 bölüm, ihtiyaç duyduğun anda açaca�
 
 ## Anlatıcının tek rotası
 
-İlk dosya → araştırma ve sunum → veri ve grafik → sayfa düzeltmesi → skill → devir → worktree → paralel iş → otomasyon → yöntemi iyileştirme. Her sayfanın sonundaki **Eğitimde sıradaki** bağlantısı bu yolu izler. Numaralı konu rehberi ayrı başvuru sırasını korur.
+İlk dosya → model ve düşünme seçimi → araştırma ve sunum → veri ve grafik → sayfa düzeltmesi → skill → devir → worktree → paralel iş → otomasyon → yöntemi iyileştirme. Her sayfanın sonundaki **Eğitimde sıradaki** bağlantısı bu yolu izler. Numaralı konu rehberi ayrı başvuru sırasını korur.
 
 Anlatıcı örnek dosyaları açar, bir kararın çıktıyı nasıl değiştirdiğini gösterir ve devam eder. Dinleyiciden kurulum veya alıştırma beklenmez. Platform ayrıntıları, komut envanteri ve teknik ekler soru geldiğinde açılabilir.
+
+
+Model adlarını ezberlemek yerine [işe göre başlangıç tablosuna](07-model-hiz-kullanim.md#hangi-ise-hangi-modelle-baslamali), sonuç kötü olduğunda [müdahale seçimine](07-model-hiz-kullanim.md#modeli-degistirmeden-once) dön. Aynı işte devam etmek, yan soru sormak veya yeni yön denemek için [sohbet kararlarını](06-baglam-bellek.md#ayni-sohbet-mi-yeni-sohbet-mi) kullan.
 
 
 
@@ -132,7 +135,7 @@ Dosya henüz yoksa ilk istekte “Boş proje klasöründe, kurgu bir etkinlik i�
 
 Bu noktada CLI (terminalden kullanılan istemci), IDE (kod editörü) veya MCP kurman gerekmiyor. Bunlar ihtiyaca göre öğreneceğin ek yollar. Dosya üretmek için bir servise yükleme veya yayınlama da gerekmez.
 
-**Anlatıcı gösterimi:** Solda proje klasörünü, sağda açılan dosyayı göster. “Açık soruları sona taşı” dedikten sonra aynı dosyadaki değişikliği göster. Bu üç hareketi tamamlayınca [araştırma işine geç](is-arastirma.md); aşağıdaki menüler ihtiyaç anında başvurmak için duruyor.
+**Anlatıcı gösterimi:** Solda proje klasörünü, sağda açılan dosyayı göster. “Açık soruları sona taşı” dedikten sonra aynı dosyadaki değişikliği göster. Bu üç hareketi tamamlayınca [işe göre model seçimine geç](07-model-hiz-kullanim.md#hangi-ise-hangi-modelle-baslamali); aşağıdaki menüler ihtiyaç anında başvurmak için duruyor.
 
 <a id="platform-ayrintisina-ihtiyac-duyarsan"></a>
 
@@ -241,7 +244,7 @@ Settings içindeki bildirim tercihlerinde tur bitişi için Never, When in backg
 
 Atölye'nin program sayfasını düzenlerken solda sohbet, sağda yerel sayfa, altta terminal açık olsun. Görsel taşmayı sayfada işaretle, düzeltme isteğini sohbette ver, sunucu hatası varsa terminal çıktısına bak. Üç görünüm aynı sorunun farklı kanıtlarını sağlar. Kod değişikliği görünümüne geçerek değişikliğin beklediğin dosyada olduğunu ayrıca kontrol edebilirsin.
 
-**Eğitimde sıradaki:** [Araştırmadan karar ve sunuma](is-arastirma.md)
+**Eğitimde sıradaki:** [İşe göre model ve düşünme seç](07-model-hiz-kullanim.md)
 
 
 # 3. Codex gerçekte nasıl çalışıyor?
@@ -358,7 +361,16 @@ Haftalık raporları karşılaştıracaksan aynı dört alanı iste: **karar, da
 
 > Bu haftaki bulguları bu dört alanla yaz. Kaynakta sorumlu veya tarih yoksa uydurma. İkinci haftada aynı alan sırasını kullan.
 
-Bu, teknik bir veri biçimi öğrenmeden çıktı sözleşmesi kurmaktır. İlk iki raporu yan yana aç: bilgi değişir, nerede aranacağı değişmez. Makinenin okuyacağı JSON gibi biçimler [ileri ekte](ileri-teknik.md#makineye-aktarilacak-cikti).
+**Kurgu karşılaştırma:** Araştırma işindeki kararın iki haftasını aynı alanlarla oku. İkinci hafta hesap açma koşulunun kabul edildiğini varsayıyoruz.
+
+| Alan | İlk hafta | İkinci hafta |
+|---|---|---|
+| Karar | B koşullu öneri | C yeniden aday |
+| Dayanak | Hesapsız kayıt ve CSV şartlarını B karşılıyor | Hesap açma artık kabul ediliyor; C’nin 1.700 TL fiyatı yeniden değerlendirilebilir |
+| Açık soru | Ek ücretler bilinmiyor | C’nin ek ücretleri bilinmiyor |
+| Sonraki adım | B’nin ek ücretlerini doğrula | C’nin ek ücretlerini doğrula; toplam maliyeti karşılaştır |
+
+Bilgi değişir, nerede aranacağı değişmez. Bu, teknik bir veri biçimi öğrenmeden çıktı sözleşmesi kurmaktır. Makinenin okuyacağı JSON gibi biçimler [ileri ekte](ileri-teknik.md#makineye-aktarilacak-cikti).
 
 Plan için de küçük bir karar yeterlidir: “Sunumda fiyat mı, katılım kolaylığı mı önce gelsin?” sorusunu `/plan` ile netleştir; tercihini verdikten sonra “Bu kararı uygula, üç slaytı üret” de. Planı tekrar tekrar genişletmek yerine incelenebilir ilk çıktıya geç.
 
@@ -532,11 +544,11 @@ Masaüstündeki Codex belleği ile ChatGPT web belleği aynı kayıt sistemi de�
 
 | İhtiyaç | Seçim | Korumak istediğin şey |
 |---|---|---|
-| Aynı sonucun bir bölümünü düzeltmek | Mevcut sohbette devam et | Kararlar ve son çıktı |
-| Çalışan işi kesmeden kavram sormak | `/side` | Ana işin devamı |
-| Aynı geçmişten farklı yön denemek | `/fork` | Başlangıç bağlamı; dosya yalıtımı ayrıca seçilir |
-| Bağımsız işe başlamak | `/new` | Aynı çalışma alanı, boş konuşma |
-| Uzayan konuşmanın bağlamını sıkıştırmak | `/compact` | Çalışmaya yarayan özet; eksiksiz arşiv değil |
+| Sunumun yalnız başlığını düzeltmek | Mevcut sohbette devam et | Son dosya ve kararlar korunur |
+| Site üretilirken “worktree ne demek?” diye sormak | `/side` | Yan açıklama için ana işin yönünü değiştirme |
+| Aynı brief’ten farklı tasarım yönü denemek | `/fork` | Geçmiş kopyalanır; aynı dosyaya yazmayı önlemek için ortamı ayrıca seç |
+| Etkinlik sitesinden bağımsız kitap özetine geçmek | `/new` | Uygun olduğunda aynı yerel çalışma alanında boş sohbet; gerekli dosyayı yeniden belirt |
+| Aynı işi uzun konuşmadan sürdürmek | `/compact` | Önce önemli kararları dosyaya geçir; özet tam arşiv değildir |
 
 Bu seçimleri bir sayfa düzeltmesi içinde [yan yana görebilirsin](is-sayfa.md#5-sohbetin-yonunu-hangi-aracla-degistirirsin). Komutların yüzey ve erişim koşulları [masaüstü belgesinde](https://learn.chatgpt.com/docs/reference/slash-commands) açıklanır. Kaynak dosya, kesin alıntı veya test günlüğü yerine sohbet özetini kullanma.
 
@@ -581,11 +593,8 @@ Bu özellikleri öğrenmek için açmak zorunda değilsin. Kaynak dosyalar ve k�
 
 ## Kurgu senaryo: iki hafta sonra dönüş
 
-Atölye için hazırlanan etkinlik takvimine iki hafta sonra dönüyorsun. Eski sohbette bütçe 20 kişiye göreydi; şimdi 35 kişi var. İyi bir başlangıç:
+Atölye takvimine döndüğünde katılımcı sayısı 20’den 35’e çıkmışsa yalnız “devam” demek yetmez. “35 kişi eski varsayımın yerini alıyor; kapasite ve bütçede etkilenen yerleri güncelle” de. Yukarıdaki devir yönteminin ikinci kullanımı budur; diğer kararları yeniden açman gerekmez.
 
-> Önceki kararları oku. Katılımcı sayısı artık 35; bu bilgi eski 20 kişilik varsayımın yerini alıyor. Mekân kapasitesi ve bütçe hesabında etkilenen yerleri bul. Diğer kararları gerekmedikçe yeniden açma.
-
-Böylece değişiklik hem güncel işte kullanılır hem de sonraki dönüşte eski sayı yeniden canlanmaz.
 
 **Eğitimde sıradaki:** [Ayrı denemeyi ana işe taşı](08-ortamlar.md)
 
@@ -614,17 +623,47 @@ En yüksek düşünme ayarı her işin en iyi seçimi değildir. İyi seçim, g�
 
 **Model**, görevi yorumlayan ve araçları kullanan sistemdir. **Düşünme seviyesi**, karar için ayrılan çabayı etkiler. **Hız seçeneği**, desteklenen modellerde hizmet hızını ve kullanım tüketimini etkileyebilir. Model seçmek bir tarayıcı eklentisi kurmaz; düşünmeyi yükseltmek eksik kaynak erişimini açmaz. [Modeller](https://learn.chatgpt.com/docs/models) · [Hız](https://learn.chatgpt.com/docs/agent-configuration/speed)
 
-Güncel resmî rehber, en zor işler için Astra'yı; geniş günlük kullanım için Sol'u; yazı, görsel ve bilgisayar kullanımı ağırlıklı işler için Terra'yı; daha dar ve tekrarlı işler için Luna'yı başlangıç noktaları olarak sunuyor. Bunlar bizim karşılaştırmalı ölçümümüz değil. Kullanılabilir model ve düşünme seçeneklerini kendi mesaj alanında kontrol et; isimler ve hesap erişimi değişebilir.
+<a id="hangi-ise-hangi-modelle-baslamali"></a>
 
-| İş | Mantıklı başlangıç | Seçimi ne değiştirir? |
+## Hangi işe hangi modelle başlamalı?
+
+31 Ekim 2026’da kontrol edilen resmî rehberin dört güncel modeli aşağıda. Model rolleri belgeye, Atölye örnekleri bizim kullanım önerimize dayanır; karşılaştırmalı performans testi yapmadık. Kendi hesabında görünen seçenekleri esas al. [Güncel modeller](https://learn.chatgpt.com/docs/models)
+
+| Model | İyi başlangıç olduğu işler | Atölye’de örnek istek |
 |---|---|---|
-| Tek dosyada açık yazım hatası | Hızlı, düşük çabalı çalışma | Hata birçok dil veya üretim zincirine yayılıyorsa kapsam büyür |
-| Belirsiz ürün kararı | Daha fazla düşünme, önce seçenekler | Gerçek kullanıcı verisi yoksa model gücü boşluğu kapatmaz |
-| Zor hata ayıklama | Güçlü model, somut tekrar adımı | Log ve ortam eksikse önce onları toplamak gerekir |
-| Çok sayıda aynı dönüşüm | Küçük örneği doğrula, sonra betik | Her satır ayrı yorum gerektiriyorsa otomatik dönüşüm uygun olmaz |
-| Estetik yön arama | Referanslar ve karşılaştırılabilir prototipler | Daha uzun açıklama yerine görsel seçim gerekir |
+| **GPT-6 Luna** | Dar kapsamlı düzenleme, bilgi çıkarma, tekrarlı işler | “Bu onaylı programdan tarih ve saatleri çıkar; bulunmayanı ekleme.” |
+| **GPT-6.1 Terra** | Kaynağa dayalı yazı, görsel yorumlama, sonucu belirli bilgisayar işleri | “Karar notunu kısa ekip duyurusuna dönüştür; belirsiz ücretleri koru.” |
+| **GPT-6.1 Sol** | Karmaşık, birden çok dosya veya çıktı içeren, revizyon gerektiren işler | “Bu brief’ten etkinlik sitesini üret; dar ekranı ve kayıt bağlantısını kontrol et.” |
+| **GPT-6 Astra** | Zor muhakeme, geniş bağlam ve sıkı gereksinimleri uzlaştırma | “Birbirini tutmayan koşulları çöz; hangi seçeneğin neden elendiğini göster.” |
 
-Tablo bir kullanım önerisidir; evrensel hız veya kalite sıralaması değildir.
+Bu tablo görev yasağı değildir: Terra sınırlı kod düzeltmesi, Astra kısa yazı da yapabilir. Seçimi “kod mu, yazı mı?” kadar belirsizlik ve birbirine bağlı kararların sayısı belirler. Eski sürüm adlarını bu dört adla eşanlamlı sayma; sürüm değişince aynı işi yeniden karşılaştır. [Seçim rehberi](https://learn.chatgpt.com/docs/model-selection)
+
+<a id="model-dusunme-ve-hizi-uygulamada-sec"></a>
+
+## Model, düşünme ve hızı uygulamada seç
+
+Mesaj alanının altındaki model/düşünme kontrolünü aç. Masaüstünde `/model` model seçer, `/reasoning` düşünme çabasını değiştirir; `/fast` desteklenen Fast hizmet katmanını açıp kapatır. Bunları mesajın içine süslü bir talimat olarak yazmak yerine komut menüsünden seç. Görünür seçenekler ortama ve erişime bağlıdır. [Komutların kapsamı](https://learn.chatgpt.com/docs/reference/slash-commands)
+
+Resmî başlangıç örnekleri: dar bir düzenleme için **Luna · Low**, revize edilecek çok parçalı teknik iş için **Sol · Medium**, zor analiz ve sıkı koşullar için **Astra · Extra high**. Emin değilsen varsayılan çabayla başla; gerekli bilgi elindeyken karar kalitesi yetersiz kalıyorsa yükselt. Bunlar her iş için zorunlu ayarlar değil. [Model ve çaba seçimi](https://learn.chatgpt.com/docs/model-selection)
+
+Fast bir hizmet hızı tercihidir; aynı şey daha güçlü model veya daha yüksek düşünme seviyesi demek değildir. Kullanım tüketimini artırabilir. Model beklemesini azaltmakla dosya yükleme veya derleme süresini azaltmayı ayır. [Hız ve kullanım](https://learn.chatgpt.com/docs/agent-configuration/speed)
+
+**Üç ayrı seçim, tek iş**
+
+1. **İşin güçlüğü:** Dar işlem mi, birçok kararı birleştiren iş mi? Modeli buna göre seç.
+2. **Karar kalitesi:** Bilgi tamam ama muhakeme yetmiyorsa düşünme çabasını değiştir.
+3. **Bekleme:** Model yanıtını bekliyorsan hız seçeneğini değerlendir; araç beklemesini ayrı tut.
+4. **Sonuç:** Aynı kaynak ve kabul koşullarıyla karşılaştır; yeterli sonucu veren seçimi koru.
+
+**Anlatıcı gösterimi:** Modelin adını, seçili düşünme seviyesini ve varsa hız tercihini ayrı ayrı işaret et. Sonra [karar ve sunum işine geç](is-arastirma.md). Dinleyicinin bütün seçenekleri ezberlemesi gerekmiyor; aynı işi yeniden değerlendirirken hangi tercihi değiştirdiğini bilmesi gerekiyor.
+
+<a id="ayni-is-buyuyunce-secim-nasil-degisir"></a>
+
+## Aynı iş büyüyünce seçim nasıl değişir?
+
+**Kurgu karşılaştırma:** Onaylı nottan beş tarih çıkarmak dar bir iştir; Luna ile başlanabilir. Aynı notu farklı kitleye anlatmak için Terra denenebilir. Not, site ve sunumu birlikte güncelleyip tutarlılığını korumak Sol için uygun bir başlangıçtır. Kaynaklar birbiriyle çelişiyor ve seçim birçok koşula bağlıysa Astra’dan güçlü bir ikinci görüş alınabilir.
+
+Her aşamada model değiştirmek zorunda değilsin. Mevcut modelin sonucu yeterliyse devam et. Karşılaştıracaksan aynı kaynakları ve kabul koşullarını ver: “Tarihleri korudu mu, açık ücreti kesinmiş gibi yazdı mı, istenen dosyayı üretti mi?” Daha uzun cevap otomatik olarak daha iyi sonuç değildir. [Karşılaştırma yöntemi](18-iyilestirmek.md)
 
 <a id="yavas-olan-kismi-ayir"></a>
 
@@ -648,7 +687,9 @@ Hesap kullanım penceresi, tek sohbetin token sayısı ve API faturalaması ayr�
 
 ## Ultra, paralellik ve görev kapsamı
 
-Bazı güç ayarları daha yoğun çalışma biçimleri sunar. Bu seçenekler her istemcide aynı araçlara veya alt ajan politikasına sahip olduğun anlamına gelmez. Paralel çalışma bağımsız alt işler olduğunda yarar sağlar; ortak dosyayı aynı anda değiştiren üç çalışma yeni sorun yaratabilir. Ayrıntı 14. bölümde.
+Resmî model belgesi, Ultra modunu tek ajanlı çalışmanın ötesinde alt ajanlardan yararlanan bir seçenek olarak anlatır. Bu yüzden yalnız “biraz daha uzun düşünme” diye tanıtma. Ultra ile hız katmanı Ultrafast farklı tercihlerdir. Görünen seçenekler ve alt ajan politikası istemciye bağlıdır. [Ultra](https://learn.chatgpt.com/docs/models) · [Hız katmanları](https://learn.chatgpt.com/docs/agent-configuration/speed)
+
+Paralel çalışma bağımsız alt işler olduğunda yarar sağlar; ortak dosyayı aynı anda değiştiren üç çalışma yeni sorun yaratabilir. Ayrıntı 14. bölümde.
 
 <a id="kurgu-senaryo-modeli-yukseltmeden-sorunu-cozmek"></a>
 
@@ -669,7 +710,21 @@ Kullanımını anlamaya çalışırken yalnız açık Codex sohbetlerini sayma. 
 
 ## Modeli değiştirmeden önce
 
-[Karar örneğinde](is-arastirma.md) yanlış öneri model seçimiyle değil, eleme ölçütünün düzeltilmesiyle değişiyor. Önce yanlış sonucun hangi karardan çıktığını belirle.
+Kötü sonucu tek bir “model zayıf” açıklamasına bağlama. Aşağıdaki müdahaleler aynı maliyeti ve aynı sonucu üretmez:
+
+| Gözlenen sorun | İlk müdahale | Söylenebilecek kısa istek |
+|---|---|---|
+| Kaynak veya erişim eksik | Girdiyi tamamla | “Hangi bilgiye erişemediğini belirt; tahminle kapatma.” |
+| Bilgi doğru, amaç yanlış anlaşılmış | Ölçütü düzelt | “En ucuzu değil, hesapsız kayıt ve CSV koşullarını karşılayanı seç.” |
+| Bilgi yeterli, çoklu koşullar kaçıyor | Çabayı artır veya güçlü ikinci görüş al | “Bu üç koşulu birlikte değerlendir; öneriyi kaynaklara karşı yeniden incele.” |
+| Aynı mekanik işlem tekrarlanıyor | Kuralı sabitle, betikle uygula | “Önce üç zor satırda yöntemi göster; sonra aynı kuralı uygula.” |
+| Araç sonucu bekleniyor | Beklenen işlemi teşhis et | “Model mi, derleme mi bekliyor? Çalışan işi gereksiz yeniden başlatma.” |
+| Sonuç doğru, anlatım yetersiz | Hedefli editoryal revizyon yap | “Kararı ve belirsizliği koru; teknik terimleri ilk kullanımda açıkla.” |
+
+[Araştırma örneğinde](is-arastirma.md) düzelen şey eleme ölçütüydü. Buna karşılık gerekli kaynaklar verildiği hâlde birbiriyle ilişkili koşullar sürekli kaçıyorsa daha güçlü muhakemeyi denemek anlamlıdır. Hangi müdahalenin işe yaradığını görmek için her denemede tek ana değişkeni değiştir.
+
+
+**Eğitimde sıradaki:** [Araştırmadan karar ve sunuma](is-arastirma.md)
 
 
 <a id="kontrol-listesinde-karsiligi"></a>
@@ -894,6 +949,18 @@ Tekrar tekrar açıklamak zorunda kaldığın yöntemi saklar. Örneğin “kayn
 
 Bu kurgu örnekte beklenen çıktı yalnız uzun bir talimat değildir: doğru tetiklenen, ilgisiz işte devreye girmeyen, kaynakları belli bir paket gerekir.
 
+<a id="skill-dosyadan-kullanilabilir-yonteme-nasil-gecer"></a>
+
+## Skill dosyadan kullanılabilir yönteme nasıl geçer?
+
+Yerel projeye ait örnek için `SKILL.md`, proje kökündeki `.agents/skills/atolye-raporu/` klasörüne konur. Başındaki `name` ve `description` alanları yöntemin adını ve ne zaman seçileceğini tanımlar. Bu yapı, sıradan bir metin dosyasını yalnız sohbete eklemekten farklıdır. [Yerel skill keşfi](https://learn.chatgpt.com/docs/build-skills)
+
+1. Skills görünümünde veya mesaj alanındaki `$` seçicisinde **atolye-raporu** adını bul. Görünmüyorsa yanlış proje, klasör, ad/açıklama veya devre dışı bırakılma ihtimalini kontrol et. Kurulum değişikliği görünmüyorsa uygulamayı yeniden başlatmak resmî sorun giderme adımıdır.
+2. Adı seçip girdi dosyasını belirt: “İkinci haftayı bu yöntemle raporla.” Otomatik seçime güvenmek yerine ilk gösterimde açık çağrı kullan.
+3. Sonuçta yöntemin kritik davranışını ara: yeni `yedek` durumu saklandı mı, boş tahsilat korunuyor mu? Menüde görünmesi başarılı uygulamanın kanıtı değildir.
+
+Codex masaüstündeki `$` çağrısını diğer yüzeylere aynen taşımadan o yüzeyin seçicisini kontrol et. [Masaüstü çağrı yolu](https://learn.chatgpt.com/docs/reference/slash-commands)
+
 <a id="yontem-ikinci-haftada-neyi-koruyor"></a>
 
 ## Yöntem ikinci haftada neyi koruyor?
@@ -998,7 +1065,6 @@ Dosyanın oluşması, bütün kuralların sonraki işte doğru uygulandığını
 
 | Belirsiz kural | Uygulanabilir kural |
 |---|---|
-| “Her şeyi test et.” | “İçerik değişince üreticiyi ve bağlantı denetimini çalıştır; etkileşim değişince tarayıcı regresyonunu da çalıştır.” |
 | “Asla hata yapma.” | “İddianın kanıtı yoksa gözlem, çıkarım ve açık soruyu ayır.” |
 | “Hiç soru sorma.” | “Geri alınabilir ayrıntıları çöz; yayın hedefi veya veri kaybı değişiyorsa karar iste.” |
 | “Bütün bilgiyi hatırla.” | “Kalıcı kararları proje notlarına yaz; eski karar değişince yenisinin öncekini geçersiz kıldığını belirt.” |
@@ -1450,6 +1516,21 @@ Aynı sohbette takip, mevcut işteki bir durumun değişmesini beklemek için uy
 > Her pazartesi seçtiğim proje için geçen haftanın değişikliklerini yeni bir raporda özetle. Kaynak commit bağlantılarını ekle; değişiklik yoksa bunu kısa belirt.
 
 İlk örnek mevcut işin devamını, ikincisi bağımsız tekrar eden sonucu tarif eder. Kurulduğunu, zamanlama ve hedefi geri okuyarak doğrula.
+
+<a id="ne-zaman-zamanlamaya-hazir"></a>
+
+## Ne zaman zamanlamaya hazır?
+
+İlk raporun güzel görünmesi yeterli olmayabilir. Atölye’de ikinci haftanın yeni `yedek` durumu, henüz kararlaştırılmamış kuralı ortaya çıkarıyor. Önce bu kararı ver; sonra aynı yöntemi takvime bağla.
+
+| Gözlediğin durum | Uygun sonraki adım |
+|---|---|
+| Her raporda ne istediğini baştan değiştiriyorsun | Normal sohbette yöntemi oturt |
+| Yöntem sabit, her seferinde elle çağırıyorsun | Skill veya betikle tekrar kullan |
+| Yöntem sabit, girdi ve zaman belli | Otomasyon kur; ilk gerçek koşumun çıktısını aç |
+| Yalnız mevcut yayının bitmesini bekliyorsun | Kalıcı haftalık rutin yerine bu sohbeti takip et |
+
+**Eksik girdi için somut kural:** Yeni haftanın dosyası gelmediyse geçen haftanın raporunu bu haftaymış gibi sunmasın; eksik kaynağı belirtip o koşumu sonlandırsın. Bu, sıklığı artırmaktan daha yararlı bir otomasyon kararıdır.
 
 <a id="i-lk-rapordan-calisan-rutine"></a>
 
@@ -2364,7 +2445,7 @@ Codex Micro, uyumlu fiziksel donanımla sohbet ve komut kontrolü sunan ayrı bi
 
 **Kurgu iş:** Atölye, 60 kişilik ücretsiz bir buluşma için kayıt sistemi seçecek. Katılımcıya hesap açtırmak istemiyor; katılımcı listesini CSV olarak indirebilmesi gerekiyor. Etkinlik başına bütçe 3.000 TL. Aşağıdaki platform adları, fiyatlar ve belge parçaları eğitim için uyduruldu. Gerçek bir ürün karşılaştırması veya yapılmış satın alma yok.
 
-Bu işin sonunda iki şey görünmeli: seçimin dayanağı olan kısa karar notu ve aynı kararı anlatan sunum taslağı. Araştırma, taslak ve görsel düzeltme tek bir iş içinde birbirini besliyor.
+Bu işin sonunda iki şey görünmeli: seçimin dayanağı olan kısa karar notu ve aynı kararı anlatan düzenlenebilir sunum. Araştırma, taslak ve görsel düzeltme tek bir iş içinde birbirini besliyor.
 
 **Karar bilgisini biçimler arasında koru**
 
@@ -2430,6 +2511,12 @@ Aktarım zincirindeki gerçek karşılık için [C02 vakasına](deneyimler.md#c0
 ## 4. Doğrulanmış nottan yeni biçimler üret
 
 > Bu karar notunu ana kaynak kabul et. Karar, dayanak ve açık koşulu taşıyan üç slaytlık sunum taslağı hazırla. Yeni fiyat veya özellik ekleme. Ayrıca aynı kararı 100 kelimeyi geçmeyen ekip duyurusuna dönüştür.
+
+**Aynı kaynaktan kısa ekip duyurusu — kurgu çıktı:**
+
+> Atölye kaydı için B’yi koşullu olarak öneriyoruz. Hesap açmadan kayıt ve CSV dışa aktarma gereksinimlerini karşılıyor. 2.500 TL fiyat, 3.000 TL bütçe içinde 500 TL pay bırakıyor. Ek vergi ve ödeme komisyonu henüz bilinmiyor; toplam maliyeti doğrulamadan satın alma kararı vermeyeceğiz.
+
+Karar notu gerekçeyi ayrıntılandırır, slayt karşılaştırmayı gösterir, duyuru ekibin bilmesi gereken kararı özetler. Üçünde de belirsizlik korunur.
 
 Anlatıcı [düzenlenebilir üç slaytlık sunumu](ornekler/atolye-karar.pptx) açar. [Metin taslağı](ornekler/sunum-taslagi.md) aynı kararın sade kaynak karşılığıdır. Aynı B önerisi, aynı 2.500 TL ve aynı ek ücret belirsizliği korunuyor. Slayt için daha kısa yazılması, “ek ücretler bilinmiyor” cümlesinin silinmesini haklı çıkarmaz.
 
@@ -2522,7 +2609,7 @@ Anlatıcı bütün tabloyu okumak yerine üç ayırıcı durumu gösterir:
 
 ## 3. Sonucun ne söylediğini sınırlarıyla oku
 
-[Örnek raporda](ornekler/katilim-raporu.md) üç ayrı sayı var:
+[Örnek raporda](ornekler/katilim-raporu.md) dört sonuç var:
 
 | Ölçü | Kurgu veriden çıkan sonuç | Anlamı |
 |---|---|---|
@@ -2712,7 +2799,7 @@ Envanter birimi, kullanıcıya dönük yetenek veya ilişkili özellik ailesidir
 | F06 | Sohbet dallandırma ve geçici yan soru | /fork ve /side; dosya yalıtımı seçime bağlı | [Komutlar ve kısayollar](komutlar.md) | [Slash commands](https://learn.chatgpt.com/docs/reference/slash-commands) |
 | F07 | Dosya ve görsel ekleme | Dosya içeriği ve görüntü bağlamı farklı | [Uygulamanın tamamını tanımak](02-uygulama.md) | [Image inputs](https://learn.chatgpt.com/docs/image-inputs) |
 | F08 | Skill ve özel prompt çağrısı | $; etkin skill ve /prompts:<ad> kurulum kapsamı | [Komutlar ve kısayollar](komutlar.md) | [Slash commands](https://learn.chatgpt.com/docs/reference/slash-commands) |
-| F09 | Model, çaba ve hız seçimi | Hesap/model kataloğu; benchmark iddiası yok | [Model, düşünme seviyesi, hız ve kullanım](07-model-hiz-kullanim.md) | [Models](https://learn.chatgpt.com/docs/models) |
+| F09 | Model, çaba ve hız seçimi | Hesap/model kataloğu; dört model ve işe göre başlangıç önerileri, benchmark değil | [Model, düşünme seviyesi, hız ve kullanım](07-model-hiz-kullanim.md) | [Models](https://learn.chatgpt.com/docs/models) |
 | F10 | Fast ve üst hız katmanları | Plan/erişim ve kullanım etkisi değişir | [Model, düşünme seviyesi, hız ve kullanım](07-model-hiz-kullanim.md) | [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) |
 | F11 | Bağlam, durum ve kullanım göstergeleri | /status /usage; API faturasıyla karıştırılmaz | [Komutlar ve kısayollar](komutlar.md) | [Slash commands](https://learn.chatgpt.com/docs/reference/slash-commands) |
 | F12 | Komut menüsü ve klavye kısayolları | Odak, platform ve kişisel tuş ataması etkiler | [Uygulamanın tamamını tanımak](02-uygulama.md) | [Commands](https://learn.chatgpt.com/docs/reference/commands) |
@@ -2931,8 +3018,8 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Codex Micro](https://learn.chatgpt.com/docs/features/codex-micro) | 2026-10-29 |
 | [Memories](https://learn.chatgpt.com/docs/customization/memories) | 2026-10-29 |
 | [Computer History](https://learn.chatgpt.com/docs/customization/computer-history) | 2026-10-29 |
-| [Models](https://learn.chatgpt.com/docs/models) | 2026-10-29 |
-| [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) | 2026-10-29 |
+| [Models](https://learn.chatgpt.com/docs/models) | 2026-10-31 |
+| [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) | 2026-10-31 |
 | [Pricing](https://learn.chatgpt.com/docs/pricing) | 2026-10-29 |
 | [Codex environments](https://learn.chatgpt.com/docs/environments/modes) | 2026-10-29 |
 | [Worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees) | 2026-10-31 |
@@ -2996,6 +3083,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Automating Code Quality and Security Fixes with Codex CLI in GitLab](https://developers.openai.com/cookbook/examples/codex/secure_quality_gitlab) | 2026-10-30 |
 | [Generate Transparent Image Assets for Campaigns and Presentations](https://developers.openai.com/cookbook/examples/multimodal/transparent-image-assets-for-campaigns-and-presentations) | 2026-10-30 |
 | [Harness-aware evaluation of plugins](https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals) | 2026-10-30 |
+| [Model selection](https://learn.chatgpt.com/docs/model-selection) | 2026-10-31 |
 
 <a id="arayuz-gorselleri-ve-atif"></a>
 

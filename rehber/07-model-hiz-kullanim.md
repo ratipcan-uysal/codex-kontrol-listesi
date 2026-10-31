@@ -10,17 +10,47 @@ En yüksek düşünme ayarı her işin en iyi seçimi değildir. İyi seçim, g�
 
 **Model**, görevi yorumlayan ve araçları kullanan sistemdir. **Düşünme seviyesi**, karar için ayrılan çabayı etkiler. **Hız seçeneği**, desteklenen modellerde hizmet hızını ve kullanım tüketimini etkileyebilir. Model seçmek bir tarayıcı eklentisi kurmaz; düşünmeyi yükseltmek eksik kaynak erişimini açmaz. [Modeller](https://learn.chatgpt.com/docs/models) · [Hız](https://learn.chatgpt.com/docs/agent-configuration/speed)
 
-Güncel resmî rehber, en zor işler için Astra'yı; geniş günlük kullanım için Sol'u; yazı, görsel ve bilgisayar kullanımı ağırlıklı işler için Terra'yı; daha dar ve tekrarlı işler için Luna'yı başlangıç noktaları olarak sunuyor. Bunlar bizim karşılaştırmalı ölçümümüz değil. Kullanılabilir model ve düşünme seçeneklerini kendi mesaj alanında kontrol et; isimler ve hesap erişimi değişebilir.
+<a id="hangi-ise-hangi-modelle-baslamali"></a>
 
-| İş | Mantıklı başlangıç | Seçimi ne değiştirir? |
+## Hangi işe hangi modelle başlamalı?
+
+31 Ekim 2026’da kontrol edilen resmî rehberin dört güncel modeli aşağıda. Model rolleri belgeye, Atölye örnekleri bizim kullanım önerimize dayanır; karşılaştırmalı performans testi yapmadık. Kendi hesabında görünen seçenekleri esas al. [Güncel modeller](https://learn.chatgpt.com/docs/models)
+
+| Model | İyi başlangıç olduğu işler | Atölye’de örnek istek |
 |---|---|---|
-| Tek dosyada açık yazım hatası | Hızlı, düşük çabalı çalışma | Hata birçok dil veya üretim zincirine yayılıyorsa kapsam büyür |
-| Belirsiz ürün kararı | Daha fazla düşünme, önce seçenekler | Gerçek kullanıcı verisi yoksa model gücü boşluğu kapatmaz |
-| Zor hata ayıklama | Güçlü model, somut tekrar adımı | Log ve ortam eksikse önce onları toplamak gerekir |
-| Çok sayıda aynı dönüşüm | Küçük örneği doğrula, sonra betik | Her satır ayrı yorum gerektiriyorsa otomatik dönüşüm uygun olmaz |
-| Estetik yön arama | Referanslar ve karşılaştırılabilir prototipler | Daha uzun açıklama yerine görsel seçim gerekir |
+| **GPT-6 Luna** | Dar kapsamlı düzenleme, bilgi çıkarma, tekrarlı işler | “Bu onaylı programdan tarih ve saatleri çıkar; bulunmayanı ekleme.” |
+| **GPT-6.1 Terra** | Kaynağa dayalı yazı, görsel yorumlama, sonucu belirli bilgisayar işleri | “Karar notunu kısa ekip duyurusuna dönüştür; belirsiz ücretleri koru.” |
+| **GPT-6.1 Sol** | Karmaşık, birden çok dosya veya çıktı içeren, revizyon gerektiren işler | “Bu brief’ten etkinlik sitesini üret; dar ekranı ve kayıt bağlantısını kontrol et.” |
+| **GPT-6 Astra** | Zor muhakeme, geniş bağlam ve sıkı gereksinimleri uzlaştırma | “Birbirini tutmayan koşulları çöz; hangi seçeneğin neden elendiğini göster.” |
 
-Tablo bir kullanım önerisidir; evrensel hız veya kalite sıralaması değildir.
+Bu tablo görev yasağı değildir: Terra sınırlı kod düzeltmesi, Astra kısa yazı da yapabilir. Seçimi “kod mu, yazı mı?” kadar belirsizlik ve birbirine bağlı kararların sayısı belirler. Eski sürüm adlarını bu dört adla eşanlamlı sayma; sürüm değişince aynı işi yeniden karşılaştır. [Seçim rehberi](https://learn.chatgpt.com/docs/model-selection)
+
+<a id="model-dusunme-ve-hizi-uygulamada-sec"></a>
+
+## Model, düşünme ve hızı uygulamada seç
+
+Mesaj alanının altındaki model/düşünme kontrolünü aç. Masaüstünde `/model` model seçer, `/reasoning` düşünme çabasını değiştirir; `/fast` desteklenen Fast hizmet katmanını açıp kapatır. Bunları mesajın içine süslü bir talimat olarak yazmak yerine komut menüsünden seç. Görünür seçenekler ortama ve erişime bağlıdır. [Komutların kapsamı](https://learn.chatgpt.com/docs/reference/slash-commands)
+
+Resmî başlangıç örnekleri: dar bir düzenleme için **Luna · Low**, revize edilecek çok parçalı teknik iş için **Sol · Medium**, zor analiz ve sıkı koşullar için **Astra · Extra high**. Emin değilsen varsayılan çabayla başla; gerekli bilgi elindeyken karar kalitesi yetersiz kalıyorsa yükselt. Bunlar her iş için zorunlu ayarlar değil. [Model ve çaba seçimi](https://learn.chatgpt.com/docs/model-selection)
+
+Fast bir hizmet hızı tercihidir; aynı şey daha güçlü model veya daha yüksek düşünme seviyesi demek değildir. Kullanım tüketimini artırabilir. Model beklemesini azaltmakla dosya yükleme veya derleme süresini azaltmayı ayır. [Hız ve kullanım](https://learn.chatgpt.com/docs/agent-configuration/speed)
+
+**Üç ayrı seçim, tek iş**
+
+1. **İşin güçlüğü:** Dar işlem mi, birçok kararı birleştiren iş mi? Modeli buna göre seç.
+2. **Karar kalitesi:** Bilgi tamam ama muhakeme yetmiyorsa düşünme çabasını değiştir.
+3. **Bekleme:** Model yanıtını bekliyorsan hız seçeneğini değerlendir; araç beklemesini ayrı tut.
+4. **Sonuç:** Aynı kaynak ve kabul koşullarıyla karşılaştır; yeterli sonucu veren seçimi koru.
+
+**Anlatıcı gösterimi:** Modelin adını, seçili düşünme seviyesini ve varsa hız tercihini ayrı ayrı işaret et. Sonra [karar ve sunum işine geç](is-arastirma.md). Dinleyicinin bütün seçenekleri ezberlemesi gerekmiyor; aynı işi yeniden değerlendirirken hangi tercihi değiştirdiğini bilmesi gerekiyor.
+
+<a id="ayni-is-buyuyunce-secim-nasil-degisir"></a>
+
+## Aynı iş büyüyünce seçim nasıl değişir?
+
+**Kurgu karşılaştırma:** Onaylı nottan beş tarih çıkarmak dar bir iştir; Luna ile başlanabilir. Aynı notu farklı kitleye anlatmak için Terra denenebilir. Not, site ve sunumu birlikte güncelleyip tutarlılığını korumak Sol için uygun bir başlangıçtır. Kaynaklar birbiriyle çelişiyor ve seçim birçok koşula bağlıysa Astra’dan güçlü bir ikinci görüş alınabilir.
+
+Her aşamada model değiştirmek zorunda değilsin. Mevcut modelin sonucu yeterliyse devam et. Karşılaştıracaksan aynı kaynakları ve kabul koşullarını ver: “Tarihleri korudu mu, açık ücreti kesinmiş gibi yazdı mı, istenen dosyayı üretti mi?” Daha uzun cevap otomatik olarak daha iyi sonuç değildir. [Karşılaştırma yöntemi](18-iyilestirmek.md)
 
 <a id="yavas-olan-kismi-ayir"></a>
 
@@ -44,7 +74,9 @@ Hesap kullanım penceresi, tek sohbetin token sayısı ve API faturalaması ayr�
 
 ## Ultra, paralellik ve görev kapsamı
 
-Bazı güç ayarları daha yoğun çalışma biçimleri sunar. Bu seçenekler her istemcide aynı araçlara veya alt ajan politikasına sahip olduğun anlamına gelmez. Paralel çalışma bağımsız alt işler olduğunda yarar sağlar; ortak dosyayı aynı anda değiştiren üç çalışma yeni sorun yaratabilir. Ayrıntı 14. bölümde.
+Resmî model belgesi, Ultra modunu tek ajanlı çalışmanın ötesinde alt ajanlardan yararlanan bir seçenek olarak anlatır. Bu yüzden yalnız “biraz daha uzun düşünme” diye tanıtma. Ultra ile hız katmanı Ultrafast farklı tercihlerdir. Görünen seçenekler ve alt ajan politikası istemciye bağlıdır. [Ultra](https://learn.chatgpt.com/docs/models) · [Hız katmanları](https://learn.chatgpt.com/docs/agent-configuration/speed)
+
+Paralel çalışma bağımsız alt işler olduğunda yarar sağlar; ortak dosyayı aynı anda değiştiren üç çalışma yeni sorun yaratabilir. Ayrıntı 14. bölümde.
 
 <a id="kurgu-senaryo-modeli-yukseltmeden-sorunu-cozmek"></a>
 
@@ -65,7 +97,21 @@ Kullanımını anlamaya çalışırken yalnız açık Codex sohbetlerini sayma. 
 
 ## Modeli değiştirmeden önce
 
-[Karar örneğinde](is-arastirma.md) yanlış öneri model seçimiyle değil, eleme ölçütünün düzeltilmesiyle değişiyor. Önce yanlış sonucun hangi karardan çıktığını belirle.
+Kötü sonucu tek bir “model zayıf” açıklamasına bağlama. Aşağıdaki müdahaleler aynı maliyeti ve aynı sonucu üretmez:
+
+| Gözlenen sorun | İlk müdahale | Söylenebilecek kısa istek |
+|---|---|---|
+| Kaynak veya erişim eksik | Girdiyi tamamla | “Hangi bilgiye erişemediğini belirt; tahminle kapatma.” |
+| Bilgi doğru, amaç yanlış anlaşılmış | Ölçütü düzelt | “En ucuzu değil, hesapsız kayıt ve CSV koşullarını karşılayanı seç.” |
+| Bilgi yeterli, çoklu koşullar kaçıyor | Çabayı artır veya güçlü ikinci görüş al | “Bu üç koşulu birlikte değerlendir; öneriyi kaynaklara karşı yeniden incele.” |
+| Aynı mekanik işlem tekrarlanıyor | Kuralı sabitle, betikle uygula | “Önce üç zor satırda yöntemi göster; sonra aynı kuralı uygula.” |
+| Araç sonucu bekleniyor | Beklenen işlemi teşhis et | “Model mi, derleme mi bekliyor? Çalışan işi gereksiz yeniden başlatma.” |
+| Sonuç doğru, anlatım yetersiz | Hedefli editoryal revizyon yap | “Kararı ve belirsizliği koru; teknik terimleri ilk kullanımda açıkla.” |
+
+[Araştırma örneğinde](is-arastirma.md) düzelen şey eleme ölçütüydü. Buna karşılık gerekli kaynaklar verildiği hâlde birbiriyle ilişkili koşullar sürekli kaçıyorsa daha güçlü muhakemeyi denemek anlamlıdır. Hangi müdahalenin işe yaradığını görmek için her denemede tek ana değişkeni değiştir.
+
+
+**Eğitimde sıradaki:** [Araştırmadan karar ve sunuma](is-arastirma.md)
 
 
 <a id="kontrol-listesinde-karsiligi"></a>

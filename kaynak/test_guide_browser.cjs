@@ -18,7 +18,7 @@ const out=path.resolve(process.env.EVIDENCE_DIR || 'work/guide-browser');
   await page.screenshot({path:path.join(out,'guide-desktop-light.png')});
   await check('complete index has 18 ordered chapters',async()=>{assert.equal(await page.locator('#tam-icindekiler + ol > li').count(),18);assert.equal(await page.locator('.prose > ul > li').count(),9);});
   await check('sequential reading and current navigation',async()=>{await page.goto(base+'rehber/01-olanaklar.html');assert.equal(await page.locator('[aria-current="page"]').count(),1);await page.locator('a[rel="next"]').click();await page.waitForURL('**/02-uygulama.html');assert.ok((await page.locator('h1').textContent()).startsWith('2.'));await page.locator('a[rel="prev"]').click();await page.waitForURL('**/01-olanaklar.html');});
-  await check('teaching route starts with first file then three journeys without restart',async()=>{await page.goto(base+'rehber/index.html');assert.equal(await page.locator('#uc-isi-bastan-sona-izle + p + ol > li').count(),3);for(const slug of ['02-uygulama','is-arastirma','is-veri','is-sayfa','10-baglantilar-skills']){if(slug==='02-uygulama')await page.locator('a[rel="next"]').click();else await page.locator('.prose p').filter({hasText:'Eğitimde sıradaki:'}).getByRole('link').click();await page.waitForURL('**/'+slug+'.html');if(slug.startsWith('is-'))assert.equal(await page.locator('.lesson-flow li').count(),4);} });
+  await check('teaching route includes model choice before journeys without restart',async()=>{await page.goto(base+'rehber/index.html');assert.equal(await page.locator('#uc-isi-bastan-sona-izle + p + ol > li').count(),3);for(const slug of ['02-uygulama','07-model-hiz-kullanim','is-arastirma','is-veri','is-sayfa','10-baglantilar-skills','06-baglam-bellek','08-ortamlar','14-buyuk-isler','15-otomasyon','18-iyilestirmek']){if(slug==='02-uygulama')await page.locator('a[rel="next"]').click();else await page.locator('.prose p').filter({hasText:'Eğitimde sıradaki:'}).getByRole('link').click();await page.waitForURL('**/'+slug+'.html');if(slug.startsWith('is-'))assert.equal(await page.locator('.lesson-flow li').count(),4);} });
   await check('chapter contents jump reaches heading',async()=>{await page.locator('.page-toc summary').click();const link=page.locator('.page-toc a').first();const hash=await link.getAttribute('href');await link.click();assert.ok(page.url().endsWith(hash));assert.equal(await page.locator(hash).count(),1);});
   await check('all 107 checklist rows link to their mapped chapter',async()=>{await page.goto(base);assert.equal(await page.locator('.guide-link a').count(),107);await page.locator('#m-1-1 summary').click();await page.locator('#m-1-1 .guide-link a').click();await page.waitForURL('**/11-talimatlar.html');});
   await check('chapter returns to original checklist anchor',async()=>{await page.locator('.prose a[href="../index.html#m-1-1"]').click();await page.waitForFunction(()=>document.querySelector('#m-1-1 details')?.open);assert.equal(await page.evaluate(()=>document.activeElement.closest('article')?.id),'m-1-1');});
@@ -116,6 +116,19 @@ const out=path.resolve(process.env.EVIDENCE_DIR || 'work/guide-browser');
    for(const width of [1440,320])for(const slug of ['is-arastirma','is-veri','10-baglantilar-skills','06-baglam-bellek','08-ortamlar','15-otomasyon']){
     await page.setViewportSize({width,height:1000});await page.goto(base+'rehber/'+slug+'.html');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,slug);
     if(slug==='is-arastirma'||slug==='is-veri'){const f=page.locator('.figure-artifact').last();await f.scrollIntoViewIfNeeded();await f.locator('img').evaluate(e=>e.decode());await page.screenshot({path:path.join(out,slug+'-'+width+'.png')});}
+   }
+  });
+  await check('model choices and decision flow remain readable at desktop and mobile widths',async()=>{
+   for(const width of [1440,320]){
+    await page.setViewportSize({width,height:1000});await page.goto(base+'rehber/07-model-hiz-kullanim.html');
+    const table=page.locator('#hangi-ise-hangi-modelle-baslamali').locator('xpath=following-sibling::div[contains(@class,"table-scroll")][1]');
+    assert.equal(await table.locator('tbody tr').count(),4);
+    assert.equal(await page.locator('.lesson-flow li').count(),4);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+    await table.evaluate(e=>e.scrollIntoView({behavior:'instant',block:'start'}));
+    await page.screenshot({path:path.join(out,'model-choice-'+width+'.png')});
+    await page.locator('.lesson-flow').scrollIntoViewIfNeeded();
+    await page.screenshot({path:path.join(out,'model-flow-'+width+'.png')});
    }
   });
   await check('no browser JavaScript errors',async()=>{assert.deepEqual(errors,[]);});

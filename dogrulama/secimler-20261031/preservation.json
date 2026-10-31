@@ -1,0 +1,46 @@
+{
+  "base": "ea1a4ab31d646fe104c7de7de213007fb72d3e02",
+  "all_107_items_unchanged": true,
+  "item_map_unchanged": true,
+  "figures_and_examples_unchanged": true,
+  "preserved_html_ids": 251,
+  "lost_ids": [],
+  "chapters": [
+    {
+      "slug": "02-uygulama",
+      "before_words": 1302,
+      "after_words": 1304
+    },
+    {
+      "slug": "04-is-vermek",
+      "before_words": 796,
+      "after_words": 882
+    },
+    {
+      "slug": "06-baglam-bellek",
+      "before_words": 702,
+      "after_words": 698
+    },
+    {
+      "slug": "07-model-hiz-kullanim",
+      "before_words": 628,
+      "after_words": 1105
+    },
+    {
+      "slug": "10-baglantilar-skills",
+      "before_words": 994,
+      "after_words": 1127
+    },
+    {
+      "slug": "11-talimatlar",
+      "before_words": 609,
+      "after_words": 589
+    },
+    {
+      "slug": "15-otomasyon",
+      "before_words": 606,
+      "after_words": 735
+    }
+  ],
+  "sources": 78
+}

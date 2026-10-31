@@ -45,9 +45,12 @@ Eğitimde aşağıdaki rotayı izle; 18 bölüm, ihtiyaç duyduğun anda açaca�
 
 ## Anlatıcının tek rotası
 
-İlk dosya → araştırma ve sunum → veri ve grafik → sayfa düzeltmesi → skill → devir → worktree → paralel iş → otomasyon → yöntemi iyileştirme. Her sayfanın sonundaki **Eğitimde sıradaki** bağlantısı bu yolu izler. Numaralı konu rehberi ayrı başvuru sırasını korur.
+İlk dosya → model ve düşünme seçimi → araştırma ve sunum → veri ve grafik → sayfa düzeltmesi → skill → devir → worktree → paralel iş → otomasyon → yöntemi iyileştirme. Her sayfanın sonundaki **Eğitimde sıradaki** bağlantısı bu yolu izler. Numaralı konu rehberi ayrı başvuru sırasını korur.
 
 Anlatıcı örnek dosyaları açar, bir kararın çıktıyı nasıl değiştirdiğini gösterir ve devam eder. Dinleyiciden kurulum veya alıştırma beklenmez. Platform ayrıntıları, komut envanteri ve teknik ekler soru geldiğinde açılabilir.
+
+
+Model adlarını ezberlemek yerine [işe göre başlangıç tablosuna](07-model-hiz-kullanim.md#hangi-ise-hangi-modelle-baslamali), sonuç kötü olduğunda [müdahale seçimine](07-model-hiz-kullanim.md#modeli-degistirmeden-once) dön. Aynı işte devam etmek, yan soru sormak veya yeni yön denemek için [sohbet kararlarını](06-baglam-bellek.md#ayni-sohbet-mi-yeni-sohbet-mi) kullan.
 
 <a id="tam-icindekiler"></a>
 

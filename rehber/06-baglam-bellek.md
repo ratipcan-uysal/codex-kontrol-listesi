@@ -24,11 +24,11 @@ Masaüstündeki Codex belleği ile ChatGPT web belleği aynı kayıt sistemi de�
 
 | İhtiyaç | Seçim | Korumak istediğin şey |
 |---|---|---|
-| Aynı sonucun bir bölümünü düzeltmek | Mevcut sohbette devam et | Kararlar ve son çıktı |
-| Çalışan işi kesmeden kavram sormak | `/side` | Ana işin devamı |
-| Aynı geçmişten farklı yön denemek | `/fork` | Başlangıç bağlamı; dosya yalıtımı ayrıca seçilir |
-| Bağımsız işe başlamak | `/new` | Aynı çalışma alanı, boş konuşma |
-| Uzayan konuşmanın bağlamını sıkıştırmak | `/compact` | Çalışmaya yarayan özet; eksiksiz arşiv değil |
+| Sunumun yalnız başlığını düzeltmek | Mevcut sohbette devam et | Son dosya ve kararlar korunur |
+| Site üretilirken “worktree ne demek?” diye sormak | `/side` | Yan açıklama için ana işin yönünü değiştirme |
+| Aynı brief’ten farklı tasarım yönü denemek | `/fork` | Geçmiş kopyalanır; aynı dosyaya yazmayı önlemek için ortamı ayrıca seç |
+| Etkinlik sitesinden bağımsız kitap özetine geçmek | `/new` | Uygun olduğunda aynı yerel çalışma alanında boş sohbet; gerekli dosyayı yeniden belirt |
+| Aynı işi uzun konuşmadan sürdürmek | `/compact` | Önce önemli kararları dosyaya geçir; özet tam arşiv değildir |
 
 Bu seçimleri bir sayfa düzeltmesi içinde [yan yana görebilirsin](is-sayfa.md#5-sohbetin-yonunu-hangi-aracla-degistirirsin). Komutların yüzey ve erişim koşulları [masaüstü belgesinde](https://learn.chatgpt.com/docs/reference/slash-commands) açıklanır. Kaynak dosya, kesin alıntı veya test günlüğü yerine sohbet özetini kullanma.
 
@@ -73,11 +73,8 @@ Bu özellikleri öğrenmek için açmak zorunda değilsin. Kaynak dosyalar ve k�
 
 ## Kurgu senaryo: iki hafta sonra dönüş
 
-Atölye için hazırlanan etkinlik takvimine iki hafta sonra dönüyorsun. Eski sohbette bütçe 20 kişiye göreydi; şimdi 35 kişi var. İyi bir başlangıç:
+Atölye takvimine döndüğünde katılımcı sayısı 20’den 35’e çıkmışsa yalnız “devam” demek yetmez. “35 kişi eski varsayımın yerini alıyor; kapasite ve bütçede etkilenen yerleri güncelle” de. Yukarıdaki devir yönteminin ikinci kullanımı budur; diğer kararları yeniden açman gerekmez.
 
-> Önceki kararları oku. Katılımcı sayısı artık 35; bu bilgi eski 20 kişilik varsayımın yerini alıyor. Mekân kapasitesi ve bütçe hesabında etkilenen yerleri bul. Diğer kararları gerekmedikçe yeniden açma.
-
-Böylece değişiklik hem güncel işte kullanılır hem de sonraki dönüşte eski sayı yeniden canlanmaz.
 
 **Eğitimde sıradaki:** [Ayrı denemeyi ana işe taşı](08-ortamlar.md)
 

@@ -16,7 +16,7 @@ Envanter birimi, kullanıcıya dönük yetenek veya ilişkili özellik ailesidir
 | F06 | Sohbet dallandırma ve geçici yan soru | /fork ve /side; dosya yalıtımı seçime bağlı | [Komutlar ve kısayollar](komutlar.md) | [Slash commands](https://learn.chatgpt.com/docs/reference/slash-commands) |
 | F07 | Dosya ve görsel ekleme | Dosya içeriği ve görüntü bağlamı farklı | [Uygulamanın tamamını tanımak](02-uygulama.md) | [Image inputs](https://learn.chatgpt.com/docs/image-inputs) |
 | F08 | Skill ve özel prompt çağrısı | $; etkin skill ve /prompts:<ad> kurulum kapsamı | [Komutlar ve kısayollar](komutlar.md) | [Slash commands](https://learn.chatgpt.com/docs/reference/slash-commands) |
-| F09 | Model, çaba ve hız seçimi | Hesap/model kataloğu; benchmark iddiası yok | [Model, düşünme seviyesi, hız ve kullanım](07-model-hiz-kullanim.md) | [Models](https://learn.chatgpt.com/docs/models) |
+| F09 | Model, çaba ve hız seçimi | Hesap/model kataloğu; dört model ve işe göre başlangıç önerileri, benchmark değil | [Model, düşünme seviyesi, hız ve kullanım](07-model-hiz-kullanim.md) | [Models](https://learn.chatgpt.com/docs/models) |
 | F10 | Fast ve üst hız katmanları | Plan/erişim ve kullanım etkisi değişir | [Model, düşünme seviyesi, hız ve kullanım](07-model-hiz-kullanim.md) | [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) |
 | F11 | Bağlam, durum ve kullanım göstergeleri | /status /usage; API faturasıyla karıştırılmaz | [Komutlar ve kısayollar](komutlar.md) | [Slash commands](https://learn.chatgpt.com/docs/reference/slash-commands) |
 | F12 | Komut menüsü ve klavye kısayolları | Odak, platform ve kişisel tuş ataması etkiler | [Uygulamanın tamamını tanımak](02-uygulama.md) | [Commands](https://learn.chatgpt.com/docs/reference/commands) |

@@ -26,7 +26,7 @@ Dosya henüz yoksa ilk istekte “Boş proje klasöründe, kurgu bir etkinlik i�
 
 Bu noktada CLI (terminalden kullanılan istemci), IDE (kod editörü) veya MCP kurman gerekmiyor. Bunlar ihtiyaca göre öğreneceğin ek yollar. Dosya üretmek için bir servise yükleme veya yayınlama da gerekmez.
 
-**Anlatıcı gösterimi:** Solda proje klasörünü, sağda açılan dosyayı göster. “Açık soruları sona taşı” dedikten sonra aynı dosyadaki değişikliği göster. Bu üç hareketi tamamlayınca [araştırma işine geç](is-arastirma.md); aşağıdaki menüler ihtiyaç anında başvurmak için duruyor.
+**Anlatıcı gösterimi:** Solda proje klasörünü, sağda açılan dosyayı göster. “Açık soruları sona taşı” dedikten sonra aynı dosyadaki değişikliği göster. Bu üç hareketi tamamlayınca [işe göre model seçimine geç](07-model-hiz-kullanim.md#hangi-ise-hangi-modelle-baslamali); aşağıdaki menüler ihtiyaç anında başvurmak için duruyor.
 
 <a id="platform-ayrintisina-ihtiyac-duyarsan"></a>
 
@@ -135,6 +135,6 @@ Settings içindeki bildirim tercihlerinde tur bitişi için Never, When in backg
 
 Atölye'nin program sayfasını düzenlerken solda sohbet, sağda yerel sayfa, altta terminal açık olsun. Görsel taşmayı sayfada işaretle, düzeltme isteğini sohbette ver, sunucu hatası varsa terminal çıktısına bak. Üç görünüm aynı sorunun farklı kanıtlarını sağlar. Kod değişikliği görünümüne geçerek değişikliğin beklediğin dosyada olduğunu ayrıca kontrol edebilirsin.
 
-**Eğitimde sıradaki:** [Araştırmadan karar ve sunuma](is-arastirma.md)
+**Eğitimde sıradaki:** [İşe göre model ve düşünme seç](07-model-hiz-kullanim.md)
 
 [İçindekiler](README.md) · [← Codex ile neler yapabilirsin?](01-olanaklar.md) · [Codex gerçekte nasıl çalışıyor? →](03-calisma-mantigi.md)

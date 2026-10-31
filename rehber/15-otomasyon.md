@@ -16,6 +16,21 @@ Aynı sohbette takip, mevcut işteki bir durumun değişmesini beklemek için uy
 
 İlk örnek mevcut işin devamını, ikincisi bağımsız tekrar eden sonucu tarif eder. Kurulduğunu, zamanlama ve hedefi geri okuyarak doğrula.
 
+<a id="ne-zaman-zamanlamaya-hazir"></a>
+
+## Ne zaman zamanlamaya hazır?
+
+İlk raporun güzel görünmesi yeterli olmayabilir. Atölye’de ikinci haftanın yeni `yedek` durumu, henüz kararlaştırılmamış kuralı ortaya çıkarıyor. Önce bu kararı ver; sonra aynı yöntemi takvime bağla.
+
+| Gözlediğin durum | Uygun sonraki adım |
+|---|---|
+| Her raporda ne istediğini baştan değiştiriyorsun | Normal sohbette yöntemi oturt |
+| Yöntem sabit, her seferinde elle çağırıyorsun | Skill veya betikle tekrar kullan |
+| Yöntem sabit, girdi ve zaman belli | Otomasyon kur; ilk gerçek koşumun çıktısını aç |
+| Yalnız mevcut yayının bitmesini bekliyorsun | Kalıcı haftalık rutin yerine bu sohbeti takip et |
+
+**Eksik girdi için somut kural:** Yeni haftanın dosyası gelmediyse geçen haftanın raporunu bu haftaymış gibi sunmasın; eksik kaynağı belirtip o koşumu sonlandırsın. Bu, sıklığı artırmaktan daha yararlı bir otomasyon kararıdır.
+
 <a id="i-lk-rapordan-calisan-rutine"></a>
 
 ## İlk rapordan çalışan rutine

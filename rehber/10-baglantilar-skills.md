@@ -49,6 +49,18 @@ Tekrar tekrar açıklamak zorunda kaldığın yöntemi saklar. Örneğin “kayn
 
 Bu kurgu örnekte beklenen çıktı yalnız uzun bir talimat değildir: doğru tetiklenen, ilgisiz işte devreye girmeyen, kaynakları belli bir paket gerekir.
 
+<a id="skill-dosyadan-kullanilabilir-yonteme-nasil-gecer"></a>
+
+## Skill dosyadan kullanılabilir yönteme nasıl geçer?
+
+Yerel projeye ait örnek için `SKILL.md`, proje kökündeki `.agents/skills/atolye-raporu/` klasörüne konur. Başındaki `name` ve `description` alanları yöntemin adını ve ne zaman seçileceğini tanımlar. Bu yapı, sıradan bir metin dosyasını yalnız sohbete eklemekten farklıdır. [Yerel skill keşfi](https://learn.chatgpt.com/docs/build-skills)
+
+1. Skills görünümünde veya mesaj alanındaki `$` seçicisinde **atolye-raporu** adını bul. Görünmüyorsa yanlış proje, klasör, ad/açıklama veya devre dışı bırakılma ihtimalini kontrol et. Kurulum değişikliği görünmüyorsa uygulamayı yeniden başlatmak resmî sorun giderme adımıdır.
+2. Adı seçip girdi dosyasını belirt: “İkinci haftayı bu yöntemle raporla.” Otomatik seçime güvenmek yerine ilk gösterimde açık çağrı kullan.
+3. Sonuçta yöntemin kritik davranışını ara: yeni `yedek` durumu saklandı mı, boş tahsilat korunuyor mu? Menüde görünmesi başarılı uygulamanın kanıtı değildir.
+
+Codex masaüstündeki `$` çağrısını diğer yüzeylere aynen taşımadan o yüzeyin seçicisini kontrol et. [Masaüstü çağrı yolu](https://learn.chatgpt.com/docs/reference/slash-commands)
+
 <a id="yontem-ikinci-haftada-neyi-koruyor"></a>
 
 ## Yöntem ikinci haftada neyi koruyor?

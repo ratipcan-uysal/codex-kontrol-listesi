@@ -191,6 +191,10 @@ class GuideTests(unittest.TestCase):
                 self.assertIn('**Eğitimde sıradaki:** ['+GUIDE_ROUTE[i+1]['title']+']('+GUIDE_ROUTE[i+1]['slug']+'.md)',md)
             else:self.assertIn('Eğitim rotası tamamlandı.',md)
         self.assertNotIn('01-olanaklar',[p['slug'] for p in GUIDE_ROUTE])
+        # Inserting a teaching stop must not turn the final journey's footer into a self-link.
+        last_journey=(OUT/'is-sayfa.md').read_text().split('[İçindekiler](README.md)')[-1]
+        self.assertNotIn('(is-sayfa.md)',last_journey)
+        self.assertIn('(10-baglantilar-skills.md)',last_journey)
 
     def test_deterministic_generation(self):
         def digest():return {str(p.relative_to(OUT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in OUT.rglob('*') if p.is_file()}

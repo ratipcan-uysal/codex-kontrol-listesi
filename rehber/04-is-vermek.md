@@ -42,7 +42,16 @@ Haftalık raporları karşılaştıracaksan aynı dört alanı iste: **karar, da
 
 > Bu haftaki bulguları bu dört alanla yaz. Kaynakta sorumlu veya tarih yoksa uydurma. İkinci haftada aynı alan sırasını kullan.
 
-Bu, teknik bir veri biçimi öğrenmeden çıktı sözleşmesi kurmaktır. İlk iki raporu yan yana aç: bilgi değişir, nerede aranacağı değişmez. Makinenin okuyacağı JSON gibi biçimler [ileri ekte](ileri-teknik.md#makineye-aktarilacak-cikti).
+**Kurgu karşılaştırma:** Araştırma işindeki kararın iki haftasını aynı alanlarla oku. İkinci hafta hesap açma koşulunun kabul edildiğini varsayıyoruz.
+
+| Alan | İlk hafta | İkinci hafta |
+|---|---|---|
+| Karar | B koşullu öneri | C yeniden aday |
+| Dayanak | Hesapsız kayıt ve CSV şartlarını B karşılıyor | Hesap açma artık kabul ediliyor; C’nin 1.700 TL fiyatı yeniden değerlendirilebilir |
+| Açık soru | Ek ücretler bilinmiyor | C’nin ek ücretleri bilinmiyor |
+| Sonraki adım | B’nin ek ücretlerini doğrula | C’nin ek ücretlerini doğrula; toplam maliyeti karşılaştır |
+
+Bilgi değişir, nerede aranacağı değişmez. Bu, teknik bir veri biçimi öğrenmeden çıktı sözleşmesi kurmaktır. Makinenin okuyacağı JSON gibi biçimler [ileri ekte](ileri-teknik.md#makineye-aktarilacak-cikti).
 
 Plan için de küçük bir karar yeterlidir: “Sunumda fiyat mı, katılım kolaylığı mı önce gelsin?” sorusunu `/plan` ile netleştir; tercihini verdikten sonra “Bu kararı uygula, üç slaytı üret” de. Planı tekrar tekrar genişletmek yerine incelenebilir ilk çıktıya geç.
 
