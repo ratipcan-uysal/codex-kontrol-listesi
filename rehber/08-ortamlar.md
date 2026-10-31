@@ -48,6 +48,24 @@ Hand off, sohbet ve Git durumunu taşıyan ürün akışıdır; her değişikli�
 
 [İki dosya alanının örnek kaydı](ornekler/worktree-gecis.md) bu gösterim için kurgu hazırlanmıştır; gerçek bir kullanıcı projesinde worktree açıldığı iddiası değildir. Ana kaynağa döndükten sonra doğrulama, deneme kopyasının görüntüsünü yeniden kullanmakla bitmez.
 
+<a id="toplu-islemden-once-degisiklik-listesini-gor"></a>
+
+## Toplu işlemden önce değişiklik listesini gör
+
+Atölye dosyalarını yeni tarihe göre adlandırmak istiyorsun. **Kurgu önizleme:** Aşağıdaki üç kaynak için tek bir hedef klasör seçildi. Henüz dosya adı değişmedi.
+
+| Mevcut dosya | Önerilen hedef adı | Önizlemenin yakaladığı sorun |
+|---|---|---|
+| `taslaklar/program.pdf` | `2026-11-21-program.pdf` | Onaylı programla aynı hedefe gidiyor |
+| `onayli/program.pdf` | `2026-11-21-program.pdf` | Taslak ile onaylı dosya çakışıyor |
+| `duyuru.pdf` | `2026-11-21-duyuru.pdf` | Hedef klasörde bu adla başka bir dosya var |
+
+> Dosyaları henüz değiştirme. Eski yol → yeni yol listesini çıkar. Aynı hedefe dönüşenleri ve mevcut dosyanın üzerine yazacakları belirt. Sorunları çözen yeni listeyi göster; kaynakları silme.
+
+**Düzeltilmiş karar:** İlk iki hedefe `taslak` ve `onayli` ayrımı eklenir. Duyurunun mevcut hedefle aynı içerik olup olmadığı karşılaştırılır; farklıysa üzerine yazmak yerine açık bir sürüm adı seçilir. Tam liste çakışmasız olduğunda yetkilendirilmiş işlem uygulanır; dosya sayısı, içerik ve yeni yollar kontrol edilir.
+
+Küçük örnekle yöntemi sınamak başka, bütün hedeflerin birbiriyle çakışmadığını görmek başkadır. Gerçek işte 300 dosya varsa önizleme 300 dosyayı kapsamalı; üç örnekte hata çıkmaması tamamı için yeterli değildir. Buna değişiklik yapmadan deneme, teknik adıyla **dry run** denir. “Önizleme” etiketi taşıyan adımın dosya yazmadığından da emin ol.
+
 <a id="ortam-kurulumu-ve-actions"></a>
 
 ## Ortam kurulumu ve Actions

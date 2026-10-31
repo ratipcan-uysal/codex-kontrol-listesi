@@ -66,6 +66,25 @@ Bir dosyayı eklemek, ekran görüntüsü vermek ve açık tarayıcı sekmesini 
 
 **Mesaj önerisi ile gönderme aynı hareket değildir.** Composer predictions erişimin açıksa Codex yanıtından sonra bir sonraki mesaj için öneri gösterebilir. Tab öneriyi düzenlenebilir taslağa alır; kendiliğinden göndermez. Taslağın istediğin işi tarif ettiğini okuyup sonra gönder. Ayar: Settings → General → Composer → Show predictions. Belge tarihinde kişisel Pro hesabı, 18 yaş ve üzeri kullanıcı, desteklenen bölge/model ve yerel veya SSH ile bağlı uzak bilgisayardaki sohbet koşulları var; herkeste görünmesi beklenmez. [Mesaj önerileri](https://learn.chatgpt.com/docs/features/composer-predictions)
 
+<a id="ayni-bilgi-farkli-girdi-hangisini-vermeli"></a>
+
+## Aynı bilgi, farklı girdi: hangisini vermeli?
+
+Atölye'nin katılım tablosunun ekran görüntüsü, CSV'si ve hesaplama içeren çalışma kitabı aynı işi görmez. Önce soruyu seç, sonra o soruya gereken bilgiyi taşıyan girdiyi ver. Resmî yönlendirme de ilgili kaynakları eklemeyi ve görselde önemli bölgeyi belirtmeyi önerir. [Girdi seçimi](https://learn.chatgpt.com/docs/prompting)
+
+| Yapılacak iş | Yararlı girdi | Bu girdiden neyi varsayma? |
+|---|---|---|
+| Tabloda yazı küçük mü, grafik okunuyor mu? | Ekran görüntüsü; sorunlu alan işaretli | Görünmeyen satırların veya formüllerin incelendiğini |
+| K02 ve K03 ayrı kayıt mı; hangi tutar boş? | [Ham CSV](ornekler/katilim-ham.csv) ve sütunların anlamı | Görseldeki birkaç satırın bütün veri olduğu sonucunu |
+| Bir tutar değişince toplam neden değişmiyor? | Formülleri ve sayfaları içeren asıl XLSX | CSV aktarımının çalışma kitabındaki bütün ilişkileri koruduğunu |
+| Programdaki tarih ve koşullar doğru mu? | Onaylı kaynak metin; görünüm de önemliyse PDF | Taranmış PDF'deki her kelimenin doğru okunabildiğini |
+
+**Önce:** “Bu ekran görüntüsündeki toplamı kontrol et.” **Daha işe yarayan istek:**
+
+> Katılım CSV'sini hesap için, ekran görüntüsünü yalnız okunabilirlik için kullan. Önce sütunları ve birimleri belirle. Boş tahsilatı sıfır sayma; görünmeyen kayıtları görüntüden tahmin etme.
+
+PDF sayfaları görüntüyse önce metnin okunabildiğini kontrol ettir. Gerekirse OCR, yani görüntüden yazı tanıma uygulanır; kişi adları, tarihler ve sayılar asıl sayfayla karşılaştırılır. Okunamayan kısım için [inceleme kapsamını](03-calisma-mantigi.md#ne-kadarini-inceledigini-gor) belirtmek, boşluğu akıcı bir metinle doldurmaktan daha yararlıdır.
+
 <a id="yan-panelleri-sonuc-incelemek-icin-kullan"></a>
 
 ## Yan panelleri sonuç incelemek için kullan

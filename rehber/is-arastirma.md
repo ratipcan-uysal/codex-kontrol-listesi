@@ -51,7 +51,7 @@ B’nin 500 TL bütçe payını aşan bir ek ücret seçimi değiştirebilir; lo
 
 > Önce B’nin ek ücretinin bütçeyi aşıp aşmadığını araştır. Yeni özellik listesi toplama. Bilgi bulunamazsa öneriyi koşullu bırak ve gereken soruyu yaz.
 
-Bu kurgu pakette ek ücret yanıtı yoktur. Dolayısıyla sonuç “kesin satın al” değil, koşullu öneridir. Daha fazla aramanın hangi kararı değiştireceği belli olduğunda araştırma sınır kazanır.
+Aynı ürün açıklamasını aktaran üç sayfa bulursan bunları [üç bağımsız doğrulama sayma](09-web-tarayici-bilgisayar.md#cok-baglanti-kac-bagimsiz-dayanak). Bu kurgu pakette ek ücret yanıtı yoktur. Dolayısıyla sonuç “kesin satın al” değil, koşullu öneridir. Daha fazla aramanın hangi kararı değiştireceği belli olduğunda araştırma sınır kazanır.
 
 <a id="3-secimi-tek-cumleye-sigdir-gerekceyi-kaybetme"></a>
 
@@ -77,7 +77,7 @@ Aktarım zincirindeki gerçek karşılık için [C02 vakasına](deneyimler.md#c0
 
 Karar notu gerekçeyi ayrıntılandırır, slayt karşılaştırmayı gösterir, duyuru ekibin bilmesi gereken kararı özetler. Üçünde de belirsizlik korunur.
 
-Anlatıcı [düzenlenebilir üç slaytlık sunumu](ornekler/atolye-karar.pptx) açar. [Metin taslağı](ornekler/sunum-taslagi.md) aynı kararın sade kaynak karşılığıdır. Aynı B önerisi, aynı 2.500 TL ve aynı ek ücret belirsizliği korunuyor. Slayt için daha kısa yazılması, “ek ücretler bilinmiyor” cümlesinin silinmesini haklı çıkarmaz.
+Anlatıcı [düzenlenebilir üç slaytlık sunumu](ornekler/atolye-karar.pptx) açar. Fiyat hücresini değiştirebilmek ile slaytın yalnız resmini almak arasındaki teslim farkı [dosya biçimi bölümünde](17-teslim-yayin.md#uzanti-degil-yapabilecegin-degisiklik) gösteriliyor. [Metin taslağı](ornekler/sunum-taslagi.md) aynı kararın sade kaynak karşılığıdır. Aynı B önerisi, aynı 2.500 TL ve aynı ek ücret belirsizliği korunuyor. Slayt için daha kısa yazılması, “ek ücretler bilinmiyor” cümlesinin silinmesini haklı çıkarmaz.
 
 ![Sohbetin yanında sunum önizlemesi. Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele.](assets/preview.png)
 

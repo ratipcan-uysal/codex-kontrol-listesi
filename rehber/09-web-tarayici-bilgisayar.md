@@ -28,6 +28,24 @@ Yapılandırmada `web_search = "live"` canlı aramayı, `"disabled"` kapatmayı 
 
 Derin kaynak sentezi için hesabında mevcutsa **Work → Plugins → Deep research → Try now** yolu da var. Bu, genel bir “araştır” isteğinden farklı ürün akışıdır; Codex mesaj alanında `/deepresearch` komutu varmış gibi kullanma. Kısa bir resmî belge kontrolünde normal web araştırması çoğu zaman yeterli. Aynı kaynakta yüzey ve erişim koşulları açıklanır.
 
+<a id="cok-baglanti-kac-bagimsiz-dayanak"></a>
+
+## Çok bağlantı, kaç bağımsız dayanak?
+
+Atölye araştırmasındaki B seçeneği için “CSV dışa aktarma var” iddiasını düşün. **Kurgu araştırma uzantısı:** Aynı cümleyi üç yerde bulduğunu varsayalım; bu yeni bir gerçek ürün araştırması değildir.
+
+| Bulunan sayfa | Bilginin geldiği yer | İddiaya katkısı |
+|---|---|---|
+| B'nin özellik belgesi | Ürünün kendi açıklaması | Özelliğin belgede nasıl ve hangi koşullarla sunulduğunu gösterir |
+| B'yi tanıtan haber | Aynı özellik belgesini aktarıyor | Aynı dayanağın ikinci aktarımı; ayrı bir deneme değil |
+| B'yi karşılaştıran liste | Haberdeki cümleyi yeniden kullanıyor | Üçüncü URL, üçüncü bağımsız doğrulama değil |
+
+**Önce:** “Üç kaynak CSV desteğini doğruluyor.” **Daha doğru sonuç:** “Üç sayfa aynı ürün açıklamasına dayanıyor; hesabımızdaki dışa aktarmayı henüz denemedik.”
+
+> Önemli iddiaları ilk dayanağına kadar izle. Aynı açıklamadan türeyen sayfaları birlikte göster. Kaynağın söylediği şey ile bağımsız deneyim veya bizim gözlediğimiz sonucu ayır.
+
+Bağımsız bir kullanıcı denemesi de her plan ve sürüm için kanıt değildir; tarihini ve koşulunu kontrol et. Resmî belgeyi sırf tek kaynak diye değersiz sayma: hangi iddiayı desteklediğine bak. Atölye'de CSV'ye erişim seçimi belirliyorsa uygun hesaptaki küçük dışa aktarma denemesi, aynı cümleyi tekrarlayan yeni sayfalar toplamaktan daha açıklayıcı olabilir. Araştırmanın nerede duracağını [kararı değiştiren boşluk](is-arastirma.md#siradaki-arastirmayi-karari-degistirecek-bosluga-ver) belirler.
+
 <a id="yerlesik-tarayici"></a>
 
 ## Yerleşik tarayıcı

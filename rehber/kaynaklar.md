@@ -19,7 +19,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Settings](https://learn.chatgpt.com/docs/reference/settings) | 2026-10-29 |
 | [Projects and chats](https://learn.chatgpt.com/docs/projects) | 2026-10-29 |
 | [Use ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt) | 2026-10-29 |
-| [Work with files](https://learn.chatgpt.com/docs/artifacts-viewer) | 2026-10-29 |
+| [Work with files](https://learn.chatgpt.com/docs/artifacts-viewer) | 2026-10-31 |
 | [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal) | 2026-10-29 |
 | [Appshots](https://learn.chatgpt.com/docs/appshots) | 2026-10-29 |
 | [ChatGPT Voice](https://learn.chatgpt.com/docs/features/voice) | 2026-10-29 |
@@ -67,7 +67,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Using Goals in Codex: Persistent Objectives for Long-Running Work](https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex) | 2026-10-29 |
 | [Rethinking skills and prompts for GPT-6 Astra](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) | 2026-10-29 |
 | [Pets](https://learn.chatgpt.com/docs/pets) | 2026-10-29 |
-| [Prompting](https://learn.chatgpt.com/docs/prompting) | 2026-10-29 |
+| [Prompting](https://learn.chatgpt.com/docs/prompting) | 2026-10-31 |
 | [Local environments](https://learn.chatgpt.com/docs/environments/local-environment) | 2026-10-29 |
 | [Authentication](https://learn.chatgpt.com/docs/auth) | 2026-10-29 |
 | [Rules](https://learn.chatgpt.com/docs/agent-configuration/rules) | 2026-10-29 |

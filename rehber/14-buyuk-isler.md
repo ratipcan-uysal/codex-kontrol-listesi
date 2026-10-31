@@ -12,6 +12,8 @@ Atölye sitesi için kaynak araştırması ile mevcut arayüzün erişilebilirli
 
 Her parçaya bir çıktı ve sınır ver: “Kaynak iddialarını kontrol et, kodu değiştirme” veya “Yalnız arama davranışını düzelt, içerik metnini değiştirme.” Entegrasyonu kimin yapacağı da belli olsun. Farklı çalışmaların çıktılarını birleştirmek ayrı iştir; son doğrulamanın sahibi gerekir.
 
+İşi bölmeden önce [Atölye'nin tarih değişikliğindeki etki tablosunu](05-yonetmek.md#bir-degisiklik-nerelere-yayiliyor) kullan: aynı kaynağa bağlı dosyalar ve dış kayıtlar görünür olsun. Böylece iki çalışmanın aynı tarihi farklı yerlerde değiştirmesinden doğacak tutarsızlığı erken fark edersin.
+
 <a id="alt-ajan-ayri-sohbet-ve-worktree"></a>
 
 ## Alt ajan, ayrı sohbet ve worktree

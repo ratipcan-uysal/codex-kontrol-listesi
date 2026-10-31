@@ -1,0 +1,11 @@
+{
+  "source": "rehber/ornekler/katilim-temiz.csv",
+  "before": "1800",
+  "replace_known_amount": [
+    "600",
+    "700"
+  ],
+  "after": "1900",
+  "K04_remains_unknown": true,
+  "source_not_modified": true
+}

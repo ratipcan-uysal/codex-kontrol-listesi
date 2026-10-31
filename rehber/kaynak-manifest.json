@@ -42,7 +42,7 @@
       "title": "Work with files",
       "sha256": "91f2b8597741b2da21dd8fcba0a1c4ea5991edf7928dfa6d04a0c8be60f5ca9c",
       "status": 200,
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     "integrated-terminal": {
       "url": "https://learn.chatgpt.com/docs/integrated-terminal",
@@ -378,7 +378,7 @@
       "title": "Prompting",
       "sha256": "c43142cb5c847afb5a2292abe9260667e9001563dceb4e48c0550809e10306f2",
       "status": 200,
-      "checked": "2026-10-29"
+      "checked": "2026-10-31"
     },
     "environments__local-environment": {
       "url": "https://learn.chatgpt.com/docs/environments/local-environment",

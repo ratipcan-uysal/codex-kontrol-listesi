@@ -1,0 +1,29 @@
+{
+  "base": "a333b0c0d8d0172af5054ccb22474c59a9eb616f",
+  "unchanged": [
+    "SECTIONS",
+    "GUIDE_ITEM_MAP",
+    "GUIDE_FEATURES",
+    "GUIDE_FIGURES",
+    "GUIDE_EXAMPLES",
+    "GUIDE_ROUTE",
+    "GUIDE_ARTIFACTS",
+    "GUIDE_FLOWS"
+  ],
+  "preserved_html_ids": 256,
+  "lost_ids": [],
+  "chapters_changed": [
+    "02-uygulama",
+    "03-calisma-mantigi",
+    "05-yonetmek",
+    "08-ortamlar",
+    "09-web-tarayici-bilgisayar",
+    "12-dogrulama",
+    "14-buyuk-isler",
+    "17-teslim-yayin"
+  ],
+  "journeys_changed": [
+    "is-arastirma",
+    "is-veri"
+  ]
+}

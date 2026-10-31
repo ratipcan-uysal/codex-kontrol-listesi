@@ -66,13 +66,27 @@ Worktree arşivleme akışları kaydedilmiş durumu kurtarmaya yardımcı olabil
 
 ## Kullanacağın biçimde teslim al
 
-Çıktıyı nerede kullanacağını başta söyle. Düzenlenecek raporda DOCX, sunumda PPTX, hesaplama sürecek tabloda XLSX yararlı olabilir. Markdown, sade metin ve GitHub yayını için uygundur. PDF sabit görünümle paylaşımı kolaylaştırır ama düzenlenebilir kaynağın yerini her işte tutmaz.
+Çıktıyı nerede kullanacağını başta söyle. Düzenlenecek metinde DOCX, sunumda PPTX, hesaplama sürecek tabloda XLSX yararlı olabilir. Markdown sade metin ve GitHub için, PDF sabit görünümle paylaşım için uygundur. Dosyanın yapısını ve hangi değişikliği yapabilmek istediğini de belirt. [Dosya yapısı ve inceleme ölçütleri](https://learn.chatgpt.com/docs/artifacts-viewer)
 
-> Raporu düzenlenebilir DOCX ve paylaşmalık PDF olarak teslim et. İkisindeki metin ve tablolar aynı olsun. Kaynak dosyayı sakla; son PDF'yi açıp sayfa taşmalarını kontrol et.
+<a id="uzanti-degil-yapabilecegin-degisiklik"></a>
 
-Dosya uzantısını değiştirmek gerçek biçim dönüşümü değildir. Dosyayı hedef uygulamada açtırıp doğrulat. Tek bir “son sürüm” bağlantısı ve gerekiyorsa kaynak dosya vermek, adında final bulunan çok sayıda kopya bırakmaktan daha kolay takip edilir.
+### Uzantı değil, yapabileceğin değişiklik
 
-Kurgu Atölye'nin program sayfasında teslim hedefi canlı URL ise, yerel önizlemenin ardından uzak sürüm ve canlı sayfa kontrolü gerekir. Yaratıcı kalite ve teslim ayrımının gerçek örneği [C04 vakasında](deneyimler.md#c04) bulunur.
+[Atölye tablosunun görüntüsünü](assets/atolye-slayt-2.png) ve [düzenlenebilir sunumu](ornekler/atolye-karar.pptx) karşılaştır. Görüntüde fiyat okunabilir; sunumda fiyatın bulunduğu tablo hücresi ayrı düzenlenebilir. Bir resmi PPTX içine koymak da PPTX dosyası üretir, ama tablonun hücrelerini düzenlenebilir yapmaz.
+
+| Teslim beklentisi | Yetersiz kalan çıktı | İstenecek kontrol |
+|---|---|---|
+| Sunumda fiyatı değiştirmek | Bütün slayt tek resim | Metni veya tablo hücresini ayrı seçip değiştirebilmek |
+| Tahsilat değişince toplamın güncellenmesi | XLSX içinde elle yazılmış sabit toplam | Kopyada bilinen bir tutarı değiştirip hesap ve bağlı grafiği kontrol etmek |
+| Metni düzenleyip PDF paylaşmak | Kaynak belgesi olmayan PDF | Düzenlenebilir kaynak ve onunla aynı içerikte son PDF |
+
+> Sunum metinlerini ve tablolarını ayrı düzenlenebilir bırak. Hesaplama sürecek tabloda formülleri ve gerekli grafik bağlantılarını koru. Son dosyayı hedef uygulamada açıp bu düzenlemeyi yapabildiğini kontrol et; yalnız dosya uzantısını kanıt sayma.
+
+**Atölye için hesap kontrolü — kurgu teslim ölçütü:** İlk haftanın çalışma kopyasında bilinen 600 TL tutarlardan birini 700 TL yaparsan bilinen tahsilat 1.800'den 1.900 TL'ye çıkmalı; K04'ün bilinmeyen tutarı hâlâ açık kalmalı. Bu değişikliği asıl kayda uygulama. Rehberin indirilebilir veri örneği CSV'dir; bu cümle formüllü bir XLSX'in üretilip sınandığı iddiası değildir.
+
+Dosyayı yeniden adlandırmak gerçek biçim dönüşümü değildir. Tek bir son sürüm bağlantısı ve gerekiyorsa düzenlenebilir kaynak verilsin. Çok sayıda dosyayı adlandırırken [toplu değişiklik önizlemesini](08-ortamlar.md#toplu-islemden-once-degisiklik-listesini-gor) kullan.
+
+Kurgu Atölye'nin program sayfasında teslim hedefi canlı URL ise uzak sürüm ve canlı görünüm kontrolü gerekir. Yaratıcı kalite ve teslim ayrımının gerçek örneği [C04 vakasında](deneyimler.md#c04) bulunur.
 
 
 <a id="kontrol-listesinde-karsiligi"></a>

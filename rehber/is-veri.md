@@ -4,7 +4,7 @@
 
 **Kurgu iş:** Atölye'nin etkinlik kayıtları farklı biçimlerde tutulmuş. Altı kayıt var; iki kişinin adı aynı, bir tahsilat boş. Amaç, kimseyi kaybetmeden düzenli tablo ve kısa rapor üretmek. İsimler ve tutarlar eğitim için kurgulandı. Dosyalar gerçek katılımcı verisi içermiyor.
 
-Anlatıcı [ham CSV'yi](ornekler/katilim-ham.csv) ve [beklenen temiz çıktıyı](ornekler/katilim-temiz.csv) yan yana açabilir. CSV, satır ve sütunlardan oluşan, birçok tablo uygulamasında açılabilen düz metin biçimidir. Bu dosyalar bir oturumun otomatik kaydı değil, yöntemi incelemek için hazırlanmış örnek girdiler ve çıktılardır.
+Anlatıcı [ham CSV'yi](ornekler/katilim-ham.csv) ve [beklenen temiz çıktıyı](ornekler/katilim-temiz.csv) yan yana açabilir. CSV, satır ve sütunlardan oluşan, birçok tablo uygulamasında açılabilen düz metin biçimidir. Hesap için görüntü yerine bu girdiyi seçmenin nedeni [girdi karşılaştırmasında](02-uygulama.md#ayni-bilgi-farkli-girdi-hangisini-vermeli) açıklanıyor. Bu dosyalar bir oturumun otomatik kaydı değil, yöntemi incelemek için hazırlanmış örnek girdiler ve çıktılardır.
 
 **Dönüşüm boyunca kayıt kimliğini izle**
 
@@ -35,7 +35,7 @@ Anlatıcı bütün tabloyu okumak yerine üç ayırıcı durumu gösterir:
 | K03 | Deniz; iptal; 0 | Ayrı kişi/kayıt; tahsilat sıfır | K02'nin durumuyla üzerine yazmak |
 | K04 | Ece; katıldı; tutar boş | Katılım biliniyor, tahsilat bilinmiyor | Boşluğu 0 veya 600 ile doldurmak |
 
-İlk dönüşümü bu ayrımlarda gör. Kural doğruysa tüm tabloya uygulat. Kesin ve tekrarlanacak dönüşümde aynı kuralları küçük bir betiğe taşımak yararlı olabilir; her hafta aynı altı kararı yeniden yorumlatmak gerekmez. Betik, programın bir dizi işlemi tekrarlanabilir biçimde yürütmesidir.
+İlk dönüşümü bu ayrımlarda gör. Kural doğruysa tüm tabloya uygulat. Anlatıcının üç satırı göstermesiyle altı kaydın tamamının kontrol edilmesini [inceleme kapsamında](03-calisma-mantigi.md#ne-kadarini-inceledigini-gor) ayrı tut. Kesin ve tekrarlanacak dönüşümde aynı kuralları küçük bir betiğe taşımak yararlı olabilir; her hafta aynı altı kararı yeniden yorumlatmak gerekmez. Betik, programın bir dizi işlemi tekrarlanabilir biçimde yürütmesidir.
 
 <a id="3-sonucun-ne-soyledigini-sinirlariyla-oku"></a>
 

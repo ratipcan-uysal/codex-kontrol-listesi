@@ -12,6 +12,8 @@ Güvenilir sonuç, yalnız doğru görünen cevap değildir. İddiaya uygun kan�
 
 > Bulguları kaynakta yazan, bizzat gözlenen ve yorumlanan olarak ayır. Açılmayan kaynağı doğrulanmış sayma. Sonuç çıkarmaya yetmeyen yerde neyin eksik olduğunu belirt.
 
+Büyük bir kaynak paketinde [ne kadarının okunduğunu](03-calisma-mantigi.md#ne-kadarini-inceledigini-gor), araştırmada ise [kaç bağımsız dayanak bulunduğunu](09-web-tarayici-bilgisayar.md#cok-baglanti-kac-bagimsiz-dayanak) ayır. İnceleme kapsamı ile kaynak bağımsızlığı farklı sorulardır.
+
 <a id="i-se-gore-kalite-olcutu"></a>
 
 ## İşe göre kalite ölçütü

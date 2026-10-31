@@ -48,6 +48,23 @@ Durdurma, o anda devam eden çalışmayı kesmek içindir. Değişmiş dosyalar�
 
 Kapsam gerçekten değiştiyse bunu açıkça söyle: “Önceki web sitesi hedefini bırakıyoruz; yalnız içerik taslağı gerekiyor.” Böylece eski hedefi tamamlama çabası yeni isteğe karışmaz.
 
+<a id="bir-degisiklik-nerelere-yayiliyor"></a>
+
+## Bir değişiklik nerelere yayılıyor?
+
+**Atölye'nin kurgu devamı:** Etkinlik 14 Kasım'dan 21 Kasım'a taşınacak. Yalnız sayfa başlığını düzeltmek yeterli olmayabilir. Bir bilgi başka dosyalara kopyalanmış veya bir zamanlamada kullanılmışsa onları birlikte gör.
+
+> Tarihi değiştirmeden önce 14 Kasım bilgisinin kullanıldığı yerleri ve ona bağlı işlemleri bul. Güncellenecek yerel dosyaları, dış kayıtları ve yalnız geçmiş olarak korunacak kayıtları ayır. Saati ve diğer onaylı bilgileri değiştirme.
+
+| Bulunan yer | Gerekli karar | Son kontrol |
+|---|---|---|
+| Onaylı program ve ondan üretilen site | Kaynağı 21 Kasım yap, siteyi aynı kaynaktan güncelle | Kaynak ile açılan sayfa aynı tarihi gösteriyor mu? |
+| Güncel sunum ve gönderilmemiş duyuru | İlgili tarihleri güncelle | İki çıktı da aynı etkinliği anlatıyor mu? |
+| Kayıt formu ve planlanmış hatırlatma | Hedef kayıt ve tarih/saat dilimi doğrulansın; görev yetkisi kapsamında değiştirilsin | Dış sistemde kayıtlı yeni değer geri okundu mu? |
+| Daha önce gönderilmiş duyuru veya geçmiş kayıt | Sessizce geçmişi yeniden yazma; düzeltme duyurusu gereğini belirt | Yeni taslak ile gerçekten gönderilmiş mesaj ayrılıyor mu? |
+
+Burada önce/sonra farkı “bir metin değişti” ile “etkinliğin güncel tarihini taşıyan yerler tutarlı” arasındadır. Aynı tarih başka bir etkinliğe de ait olabilir; her eşleşmeyi topluca değiştirme. Erişilemeyen dış kayıt varsa bunu açık bırak, tamamını güncelledim deme.
+
 <a id="kurgu-senaryo-yanlis-cozumu-erken-yakalamak"></a>
 
 ## Kurgu senaryo: yanlış çözümü erken yakalamak

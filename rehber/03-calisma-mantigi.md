@@ -41,7 +41,25 @@ Hangi dosyayı veya kaydı okuduğunu belirt.
 Doğrudan gördüğün bilgi ile çıkardığın sonucu ayır.
 ```
 
-Bu, bütün ara işlemleri raporlamasını istemekten farklı bir ihtiyaçtır. İlgili kontrolü tekrar bulabileceğin bir kayıt yeterlidir.
+İlgili kontrolü tekrar bulabileceğin bir kayıt yeterlidir. Büyük kaynak paketinde buna aşağıdaki kısa kapsam kaydını ekle; bütün ara işlemlerin dökümünü istemen gerekmez.
+
+<a id="ne-kadarini-inceledigini-gor"></a>
+
+## Ne kadarını incelediğini gör
+
+“Klasörü inceledim” ifadesi, dosyaları listelemekten her satırı okumaya kadar farklı işler anlamına gelebilir. **Kurgu inceleme kaydı:** Atölye dosyalarında yalnız aşağıdaki incelemelerin yapıldığını varsayalım; bu tablo rehberdeki gerçek doğrulama koşumunun günlüğü değildir.
+
+| Kaynak | İncelenen kapsam | Çıkarılabilecek sonuç |
+|---|---|---|
+| Onaylı program notu | Tam metin | Bu notta etkinlik tarihi 14 Kasım |
+| Altı kayıtlı katılım CSV'si | Yalnız K02, K03 ve K04 örnekleri | Aynı isim ve boş tutar kuralı bu üç örnekte incelendi; altı kaydın tamamı doğrulanmadı |
+| Dört sayfalık mekân PDF'si | İki sayfa okunabildi, iki sayfa okunamadı | Okunamayan sayfalarda ek ücret yok denemez |
+
+**Yanıltıcı teslim:** “Bütün dosyalar kontrol edildi; ek ücret bulunmuyor.” **Kapsamı belli teslim:** “Program notu tam okundu, CSV'nin üç kaydı incelendi. PDF'nin iki sayfası okunamadığı için ek ücret konusu açık.”
+
+> Okuduğun dosya ve bölümleri, yalnız örneklediğin kısımları ve okuyamadıklarını ayır. Sonucunu bu kapsamla sınırla. İstenen karar için eksik bölüm belirleyiciyse onu tamamlamadan kesin öneri verme.
+
+Dosya listesi kapsamı gösterir; okunan içeriğin anlaşıldığını tek başına kanıtlamaz. Basit bir paragraf düzeltmesinde bu tabloya gerek yok. Çok dosyalı araştırma veya büyük veri işinde ise “hepsi” iddiasını denetlenebilir yapar. Bizim [bulunamayan uygulama vakamızda](deneyimler.md#c01) da ilk bakılan yerlerde sonuç bulunmaması, uygulamanın hiç var olmadığı anlamına gelmiyordu.
 
 <a id="bir-islem-zincirini-dogru-okumak"></a>
 

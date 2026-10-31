@@ -175,6 +175,25 @@ Bir dosyayı eklemek, ekran görüntüsü vermek ve açık tarayıcı sekmesini 
 
 **Mesaj önerisi ile gönderme aynı hareket değildir.** Composer predictions erişimin açıksa Codex yanıtından sonra bir sonraki mesaj için öneri gösterebilir. Tab öneriyi düzenlenebilir taslağa alır; kendiliğinden göndermez. Taslağın istediğin işi tarif ettiğini okuyup sonra gönder. Ayar: Settings → General → Composer → Show predictions. Belge tarihinde kişisel Pro hesabı, 18 yaş ve üzeri kullanıcı, desteklenen bölge/model ve yerel veya SSH ile bağlı uzak bilgisayardaki sohbet koşulları var; herkeste görünmesi beklenmez. [Mesaj önerileri](https://learn.chatgpt.com/docs/features/composer-predictions)
 
+<a id="ayni-bilgi-farkli-girdi-hangisini-vermeli"></a>
+
+## Aynı bilgi, farklı girdi: hangisini vermeli?
+
+Atölye'nin katılım tablosunun ekran görüntüsü, CSV'si ve hesaplama içeren çalışma kitabı aynı işi görmez. Önce soruyu seç, sonra o soruya gereken bilgiyi taşıyan girdiyi ver. Resmî yönlendirme de ilgili kaynakları eklemeyi ve görselde önemli bölgeyi belirtmeyi önerir. [Girdi seçimi](https://learn.chatgpt.com/docs/prompting)
+
+| Yapılacak iş | Yararlı girdi | Bu girdiden neyi varsayma? |
+|---|---|---|
+| Tabloda yazı küçük mü, grafik okunuyor mu? | Ekran görüntüsü; sorunlu alan işaretli | Görünmeyen satırların veya formüllerin incelendiğini |
+| K02 ve K03 ayrı kayıt mı; hangi tutar boş? | [Ham CSV](ornekler/katilim-ham.csv) ve sütunların anlamı | Görseldeki birkaç satırın bütün veri olduğu sonucunu |
+| Bir tutar değişince toplam neden değişmiyor? | Formülleri ve sayfaları içeren asıl XLSX | CSV aktarımının çalışma kitabındaki bütün ilişkileri koruduğunu |
+| Programdaki tarih ve koşullar doğru mu? | Onaylı kaynak metin; görünüm de önemliyse PDF | Taranmış PDF'deki her kelimenin doğru okunabildiğini |
+
+**Önce:** “Bu ekran görüntüsündeki toplamı kontrol et.” **Daha işe yarayan istek:**
+
+> Katılım CSV'sini hesap için, ekran görüntüsünü yalnız okunabilirlik için kullan. Önce sütunları ve birimleri belirle. Boş tahsilatı sıfır sayma; görünmeyen kayıtları görüntüden tahmin etme.
+
+PDF sayfaları görüntüyse önce metnin okunabildiğini kontrol ettir. Gerekirse OCR, yani görüntüden yazı tanıma uygulanır; kişi adları, tarihler ve sayılar asıl sayfayla karşılaştırılır. Okunamayan kısım için [inceleme kapsamını](03-calisma-mantigi.md#ne-kadarini-inceledigini-gor) belirtmek, boşluğu akıcı bir metinle doldurmaktan daha yararlıdır.
+
 <a id="yan-panelleri-sonuc-incelemek-icin-kullan"></a>
 
 ## Yan panelleri sonuç incelemek için kullan
@@ -288,7 +307,25 @@ Hangi dosyayı veya kaydı okuduğunu belirt.
 Doğrudan gördüğün bilgi ile çıkardığın sonucu ayır.
 ```
 
-Bu, bütün ara işlemleri raporlamasını istemekten farklı bir ihtiyaçtır. İlgili kontrolü tekrar bulabileceğin bir kayıt yeterlidir.
+İlgili kontrolü tekrar bulabileceğin bir kayıt yeterlidir. Büyük kaynak paketinde buna aşağıdaki kısa kapsam kaydını ekle; bütün ara işlemlerin dökümünü istemen gerekmez.
+
+<a id="ne-kadarini-inceledigini-gor"></a>
+
+## Ne kadarını incelediğini gör
+
+“Klasörü inceledim” ifadesi, dosyaları listelemekten her satırı okumaya kadar farklı işler anlamına gelebilir. **Kurgu inceleme kaydı:** Atölye dosyalarında yalnız aşağıdaki incelemelerin yapıldığını varsayalım; bu tablo rehberdeki gerçek doğrulama koşumunun günlüğü değildir.
+
+| Kaynak | İncelenen kapsam | Çıkarılabilecek sonuç |
+|---|---|---|
+| Onaylı program notu | Tam metin | Bu notta etkinlik tarihi 14 Kasım |
+| Altı kayıtlı katılım CSV'si | Yalnız K02, K03 ve K04 örnekleri | Aynı isim ve boş tutar kuralı bu üç örnekte incelendi; altı kaydın tamamı doğrulanmadı |
+| Dört sayfalık mekân PDF'si | İki sayfa okunabildi, iki sayfa okunamadı | Okunamayan sayfalarda ek ücret yok denemez |
+
+**Yanıltıcı teslim:** “Bütün dosyalar kontrol edildi; ek ücret bulunmuyor.” **Kapsamı belli teslim:** “Program notu tam okundu, CSV'nin üç kaydı incelendi. PDF'nin iki sayfası okunamadığı için ek ücret konusu açık.”
+
+> Okuduğun dosya ve bölümleri, yalnız örneklediğin kısımları ve okuyamadıklarını ayır. Sonucunu bu kapsamla sınırla. İstenen karar için eksik bölüm belirleyiciyse onu tamamlamadan kesin öneri verme.
+
+Dosya listesi kapsamı gösterir; okunan içeriğin anlaşıldığını tek başına kanıtlamaz. Basit bir paragraf düzeltmesinde bu tabloya gerek yok. Çok dosyalı araştırma veya büyük veri işinde ise “hepsi” iddiasını denetlenebilir yapar. Bizim [bulunamayan uygulama vakamızda](deneyimler.md#c01) da ilk bakılan yerlerde sonuç bulunmaması, uygulamanın hiç var olmadığı anlamına gelmiyordu.
 
 <a id="bir-islem-zincirini-dogru-okumak"></a>
 
@@ -500,6 +537,23 @@ Durdurma, o anda devam eden çalışmayı kesmek içindir. Değişmiş dosyalar�
 > Son yaptığın değişiklikleri ve açık işlemleri kontrol et. Geçerli kanıttan devam et; yarım kalan sunucu veya tarayıcı varsa aynı oturumu kullan. Hedef değişmedi.
 
 Kapsam gerçekten değiştiyse bunu açıkça söyle: “Önceki web sitesi hedefini bırakıyoruz; yalnız içerik taslağı gerekiyor.” Böylece eski hedefi tamamlama çabası yeni isteğe karışmaz.
+
+<a id="bir-degisiklik-nerelere-yayiliyor"></a>
+
+## Bir değişiklik nerelere yayılıyor?
+
+**Atölye'nin kurgu devamı:** Etkinlik 14 Kasım'dan 21 Kasım'a taşınacak. Yalnız sayfa başlığını düzeltmek yeterli olmayabilir. Bir bilgi başka dosyalara kopyalanmış veya bir zamanlamada kullanılmışsa onları birlikte gör.
+
+> Tarihi değiştirmeden önce 14 Kasım bilgisinin kullanıldığı yerleri ve ona bağlı işlemleri bul. Güncellenecek yerel dosyaları, dış kayıtları ve yalnız geçmiş olarak korunacak kayıtları ayır. Saati ve diğer onaylı bilgileri değiştirme.
+
+| Bulunan yer | Gerekli karar | Son kontrol |
+|---|---|---|
+| Onaylı program ve ondan üretilen site | Kaynağı 21 Kasım yap, siteyi aynı kaynaktan güncelle | Kaynak ile açılan sayfa aynı tarihi gösteriyor mu? |
+| Güncel sunum ve gönderilmemiş duyuru | İlgili tarihleri güncelle | İki çıktı da aynı etkinliği anlatıyor mu? |
+| Kayıt formu ve planlanmış hatırlatma | Hedef kayıt ve tarih/saat dilimi doğrulansın; görev yetkisi kapsamında değiştirilsin | Dış sistemde kayıtlı yeni değer geri okundu mu? |
+| Daha önce gönderilmiş duyuru veya geçmiş kayıt | Sessizce geçmişi yeniden yazma; düzeltme duyurusu gereğini belirt | Yeni taslak ile gerçekten gönderilmiş mesaj ayrılıyor mu? |
+
+Burada önce/sonra farkı “bir metin değişti” ile “etkinliğin güncel tarihini taşıyan yerler tutarlı” arasındadır. Aynı tarih başka bir etkinliğe de ait olabilir; her eşleşmeyi topluca değiştirme. Erişilemeyen dış kayıt varsa bunu açık bırak, tamamını güncelledim deme.
 
 <a id="kurgu-senaryo-yanlis-cozumu-erken-yakalamak"></a>
 
@@ -787,6 +841,24 @@ Hand off, sohbet ve Git durumunu taşıyan ürün akışıdır; her değişikli�
 
 [İki dosya alanının örnek kaydı](ornekler/worktree-gecis.md) bu gösterim için kurgu hazırlanmıştır; gerçek bir kullanıcı projesinde worktree açıldığı iddiası değildir. Ana kaynağa döndükten sonra doğrulama, deneme kopyasının görüntüsünü yeniden kullanmakla bitmez.
 
+<a id="toplu-islemden-once-degisiklik-listesini-gor"></a>
+
+## Toplu işlemden önce değişiklik listesini gör
+
+Atölye dosyalarını yeni tarihe göre adlandırmak istiyorsun. **Kurgu önizleme:** Aşağıdaki üç kaynak için tek bir hedef klasör seçildi. Henüz dosya adı değişmedi.
+
+| Mevcut dosya | Önerilen hedef adı | Önizlemenin yakaladığı sorun |
+|---|---|---|
+| `taslaklar/program.pdf` | `2026-11-21-program.pdf` | Onaylı programla aynı hedefe gidiyor |
+| `onayli/program.pdf` | `2026-11-21-program.pdf` | Taslak ile onaylı dosya çakışıyor |
+| `duyuru.pdf` | `2026-11-21-duyuru.pdf` | Hedef klasörde bu adla başka bir dosya var |
+
+> Dosyaları henüz değiştirme. Eski yol → yeni yol listesini çıkar. Aynı hedefe dönüşenleri ve mevcut dosyanın üzerine yazacakları belirt. Sorunları çözen yeni listeyi göster; kaynakları silme.
+
+**Düzeltilmiş karar:** İlk iki hedefe `taslak` ve `onayli` ayrımı eklenir. Duyurunun mevcut hedefle aynı içerik olup olmadığı karşılaştırılır; farklıysa üzerine yazmak yerine açık bir sürüm adı seçilir. Tam liste çakışmasız olduğunda yetkilendirilmiş işlem uygulanır; dosya sayısı, içerik ve yeni yollar kontrol edilir.
+
+Küçük örnekle yöntemi sınamak başka, bütün hedeflerin birbiriyle çakışmadığını görmek başkadır. Gerçek işte 300 dosya varsa önizleme 300 dosyayı kapsamalı; üç örnekte hata çıkmaması tamamı için yeterli değildir. Buna değişiklik yapmadan deneme, teknik adıyla **dry run** denir. “Önizleme” etiketi taşıyan adımın dosya yazmadığından da emin ol.
+
 <a id="ortam-kurulumu-ve-actions"></a>
 
 ## Ortam kurulumu ve Actions
@@ -854,6 +926,24 @@ Yerel Codex için belgelenmiş varsayılan web araması, OpenAI'nin tuttuğu ön
 Yapılandırmada `web_search = "live"` canlı aramayı, `"disabled"` kapatmayı seçer. Terminalde `codex --search` o çalıştırma için canlı arama yoludur. Bunlar masaüstü mesajına yazılan slash komutları değildir. Hazır web aracı ile terminalde ağ bağlantısı farklı kanallardır; birinin çalışıp diğerinin engellenmesi mümkün. [Web araması](https://learn.chatgpt.com/docs/web-search)
 
 Derin kaynak sentezi için hesabında mevcutsa **Work → Plugins → Deep research → Try now** yolu da var. Bu, genel bir “araştır” isteğinden farklı ürün akışıdır; Codex mesaj alanında `/deepresearch` komutu varmış gibi kullanma. Kısa bir resmî belge kontrolünde normal web araştırması çoğu zaman yeterli. Aynı kaynakta yüzey ve erişim koşulları açıklanır.
+
+<a id="cok-baglanti-kac-bagimsiz-dayanak"></a>
+
+## Çok bağlantı, kaç bağımsız dayanak?
+
+Atölye araştırmasındaki B seçeneği için “CSV dışa aktarma var” iddiasını düşün. **Kurgu araştırma uzantısı:** Aynı cümleyi üç yerde bulduğunu varsayalım; bu yeni bir gerçek ürün araştırması değildir.
+
+| Bulunan sayfa | Bilginin geldiği yer | İddiaya katkısı |
+|---|---|---|
+| B'nin özellik belgesi | Ürünün kendi açıklaması | Özelliğin belgede nasıl ve hangi koşullarla sunulduğunu gösterir |
+| B'yi tanıtan haber | Aynı özellik belgesini aktarıyor | Aynı dayanağın ikinci aktarımı; ayrı bir deneme değil |
+| B'yi karşılaştıran liste | Haberdeki cümleyi yeniden kullanıyor | Üçüncü URL, üçüncü bağımsız doğrulama değil |
+
+**Önce:** “Üç kaynak CSV desteğini doğruluyor.” **Daha doğru sonuç:** “Üç sayfa aynı ürün açıklamasına dayanıyor; hesabımızdaki dışa aktarmayı henüz denemedik.”
+
+> Önemli iddiaları ilk dayanağına kadar izle. Aynı açıklamadan türeyen sayfaları birlikte göster. Kaynağın söylediği şey ile bağımsız deneyim veya bizim gözlediğimiz sonucu ayır.
+
+Bağımsız bir kullanıcı denemesi de her plan ve sürüm için kanıt değildir; tarihini ve koşulunu kontrol et. Resmî belgeyi sırf tek kaynak diye değersiz sayma: hangi iddiayı desteklediğine bak. Atölye'de CSV'ye erişim seçimi belirliyorsa uygun hesaptaki küçük dışa aktarma denemesi, aynı cümleyi tekrarlayan yeni sayfalar toplamaktan daha açıklayıcı olabilir. Araştırmanın nerede duracağını [kararı değiştiren boşluk](is-arastirma.md#siradaki-arastirmayi-karari-degistirecek-bosluga-ver) belirler.
 
 <a id="yerlesik-tarayici"></a>
 
@@ -1132,6 +1222,8 @@ Güvenilir sonuç, yalnız doğru görünen cevap değildir. İddiaya uygun kan�
 
 > Bulguları kaynakta yazan, bizzat gözlenen ve yorumlanan olarak ayır. Açılmayan kaynağı doğrulanmış sayma. Sonuç çıkarmaya yetmeyen yerde neyin eksik olduğunu belirt.
 
+Büyük bir kaynak paketinde [ne kadarının okunduğunu](03-calisma-mantigi.md#ne-kadarini-inceledigini-gor), araştırmada ise [kaç bağımsız dayanak bulunduğunu](09-web-tarayici-bilgisayar.md#cok-baglanti-kac-bagimsiz-dayanak) ayır. İnceleme kapsamı ile kaynak bağımsızlığı farklı sorulardır.
+
 <a id="i-se-gore-kalite-olcutu"></a>
 
 ## İşe göre kalite ölçütü
@@ -1352,6 +1444,8 @@ Büyük işi parçalamak, bütün dosyaları eşit gruplara ayırmak değildir. 
 Atölye sitesi için kaynak araştırması ile mevcut arayüzün erişilebilirlik incelemesi bağımsız ilerleyebilir. Aynı sayfanın başlığını, düzenini ve CSS'ini üç ayrı çalışmanın eşzamanlı değiştirmesi ise yoğun koordinasyon ister.
 
 Her parçaya bir çıktı ve sınır ver: “Kaynak iddialarını kontrol et, kodu değiştirme” veya “Yalnız arama davranışını düzelt, içerik metnini değiştirme.” Entegrasyonu kimin yapacağı da belli olsun. Farklı çalışmaların çıktılarını birleştirmek ayrı iştir; son doğrulamanın sahibi gerekir.
+
+İşi bölmeden önce [Atölye'nin tarih değişikliğindeki etki tablosunu](05-yonetmek.md#bir-degisiklik-nerelere-yayiliyor) kullan: aynı kaynağa bağlı dosyalar ve dış kayıtlar görünür olsun. Böylece iki çalışmanın aynı tarihi farklı yerlerde değiştirmesinden doğacak tutarsızlığı erken fark edersin.
 
 <a id="alt-ajan-ayri-sohbet-ve-worktree"></a>
 
@@ -1725,13 +1819,27 @@ Worktree arşivleme akışları kaydedilmiş durumu kurtarmaya yardımcı olabil
 
 ## Kullanacağın biçimde teslim al
 
-Çıktıyı nerede kullanacağını başta söyle. Düzenlenecek raporda DOCX, sunumda PPTX, hesaplama sürecek tabloda XLSX yararlı olabilir. Markdown, sade metin ve GitHub yayını için uygundur. PDF sabit görünümle paylaşımı kolaylaştırır ama düzenlenebilir kaynağın yerini her işte tutmaz.
+Çıktıyı nerede kullanacağını başta söyle. Düzenlenecek metinde DOCX, sunumda PPTX, hesaplama sürecek tabloda XLSX yararlı olabilir. Markdown sade metin ve GitHub için, PDF sabit görünümle paylaşım için uygundur. Dosyanın yapısını ve hangi değişikliği yapabilmek istediğini de belirt. [Dosya yapısı ve inceleme ölçütleri](https://learn.chatgpt.com/docs/artifacts-viewer)
 
-> Raporu düzenlenebilir DOCX ve paylaşmalık PDF olarak teslim et. İkisindeki metin ve tablolar aynı olsun. Kaynak dosyayı sakla; son PDF'yi açıp sayfa taşmalarını kontrol et.
+<a id="uzanti-degil-yapabilecegin-degisiklik"></a>
 
-Dosya uzantısını değiştirmek gerçek biçim dönüşümü değildir. Dosyayı hedef uygulamada açtırıp doğrulat. Tek bir “son sürüm” bağlantısı ve gerekiyorsa kaynak dosya vermek, adında final bulunan çok sayıda kopya bırakmaktan daha kolay takip edilir.
+### Uzantı değil, yapabileceğin değişiklik
 
-Kurgu Atölye'nin program sayfasında teslim hedefi canlı URL ise, yerel önizlemenin ardından uzak sürüm ve canlı sayfa kontrolü gerekir. Yaratıcı kalite ve teslim ayrımının gerçek örneği [C04 vakasında](deneyimler.md#c04) bulunur.
+[Atölye tablosunun görüntüsünü](assets/atolye-slayt-2.png) ve [düzenlenebilir sunumu](ornekler/atolye-karar.pptx) karşılaştır. Görüntüde fiyat okunabilir; sunumda fiyatın bulunduğu tablo hücresi ayrı düzenlenebilir. Bir resmi PPTX içine koymak da PPTX dosyası üretir, ama tablonun hücrelerini düzenlenebilir yapmaz.
+
+| Teslim beklentisi | Yetersiz kalan çıktı | İstenecek kontrol |
+|---|---|---|
+| Sunumda fiyatı değiştirmek | Bütün slayt tek resim | Metni veya tablo hücresini ayrı seçip değiştirebilmek |
+| Tahsilat değişince toplamın güncellenmesi | XLSX içinde elle yazılmış sabit toplam | Kopyada bilinen bir tutarı değiştirip hesap ve bağlı grafiği kontrol etmek |
+| Metni düzenleyip PDF paylaşmak | Kaynak belgesi olmayan PDF | Düzenlenebilir kaynak ve onunla aynı içerikte son PDF |
+
+> Sunum metinlerini ve tablolarını ayrı düzenlenebilir bırak. Hesaplama sürecek tabloda formülleri ve gerekli grafik bağlantılarını koru. Son dosyayı hedef uygulamada açıp bu düzenlemeyi yapabildiğini kontrol et; yalnız dosya uzantısını kanıt sayma.
+
+**Atölye için hesap kontrolü — kurgu teslim ölçütü:** İlk haftanın çalışma kopyasında bilinen 600 TL tutarlardan birini 700 TL yaparsan bilinen tahsilat 1.800'den 1.900 TL'ye çıkmalı; K04'ün bilinmeyen tutarı hâlâ açık kalmalı. Bu değişikliği asıl kayda uygulama. Rehberin indirilebilir veri örneği CSV'dir; bu cümle formüllü bir XLSX'in üretilip sınandığı iddiası değildir.
+
+Dosyayı yeniden adlandırmak gerçek biçim dönüşümü değildir. Tek bir son sürüm bağlantısı ve gerekiyorsa düzenlenebilir kaynak verilsin. Çok sayıda dosyayı adlandırırken [toplu değişiklik önizlemesini](08-ortamlar.md#toplu-islemden-once-degisiklik-listesini-gor) kullan.
+
+Kurgu Atölye'nin program sayfasında teslim hedefi canlı URL ise uzak sürüm ve canlı görünüm kontrolü gerekir. Yaratıcı kalite ve teslim ayrımının gerçek örneği [C04 vakasında](deneyimler.md#c04) bulunur.
 
 
 <a id="kontrol-listesinde-karsiligi"></a>
@@ -2492,7 +2600,7 @@ B’nin 500 TL bütçe payını aşan bir ek ücret seçimi değiştirebilir; lo
 
 > Önce B’nin ek ücretinin bütçeyi aşıp aşmadığını araştır. Yeni özellik listesi toplama. Bilgi bulunamazsa öneriyi koşullu bırak ve gereken soruyu yaz.
 
-Bu kurgu pakette ek ücret yanıtı yoktur. Dolayısıyla sonuç “kesin satın al” değil, koşullu öneridir. Daha fazla aramanın hangi kararı değiştireceği belli olduğunda araştırma sınır kazanır.
+Aynı ürün açıklamasını aktaran üç sayfa bulursan bunları [üç bağımsız doğrulama sayma](09-web-tarayici-bilgisayar.md#cok-baglanti-kac-bagimsiz-dayanak). Bu kurgu pakette ek ücret yanıtı yoktur. Dolayısıyla sonuç “kesin satın al” değil, koşullu öneridir. Daha fazla aramanın hangi kararı değiştireceği belli olduğunda araştırma sınır kazanır.
 
 <a id="3-secimi-tek-cumleye-sigdir-gerekceyi-kaybetme"></a>
 
@@ -2518,7 +2626,7 @@ Aktarım zincirindeki gerçek karşılık için [C02 vakasına](deneyimler.md#c0
 
 Karar notu gerekçeyi ayrıntılandırır, slayt karşılaştırmayı gösterir, duyuru ekibin bilmesi gereken kararı özetler. Üçünde de belirsizlik korunur.
 
-Anlatıcı [düzenlenebilir üç slaytlık sunumu](ornekler/atolye-karar.pptx) açar. [Metin taslağı](ornekler/sunum-taslagi.md) aynı kararın sade kaynak karşılığıdır. Aynı B önerisi, aynı 2.500 TL ve aynı ek ücret belirsizliği korunuyor. Slayt için daha kısa yazılması, “ek ücretler bilinmiyor” cümlesinin silinmesini haklı çıkarmaz.
+Anlatıcı [düzenlenebilir üç slaytlık sunumu](ornekler/atolye-karar.pptx) açar. Fiyat hücresini değiştirebilmek ile slaytın yalnız resmini almak arasındaki teslim farkı [dosya biçimi bölümünde](17-teslim-yayin.md#uzanti-degil-yapabilecegin-degisiklik) gösteriliyor. [Metin taslağı](ornekler/sunum-taslagi.md) aynı kararın sade kaynak karşılığıdır. Aynı B önerisi, aynı 2.500 TL ve aynı ek ücret belirsizliği korunuyor. Slayt için daha kısa yazılması, “ek ücretler bilinmiyor” cümlesinin silinmesini haklı çıkarmaz.
 
 ![Sohbetin yanında sunum önizlemesi. Solda üretim isteği ve dosya bağlantısı, sağda slayt listesi ve seçili slayt var. Dosyayı yalnız teslim mesajından değerlendirmek yerine önizlemede incele.](assets/preview.png)
 
@@ -2572,7 +2680,7 @@ Aynı bilgiyi başka biçime taşırken kararı, tutarı ve belirsizliği koru. 
 
 **Kurgu iş:** Atölye'nin etkinlik kayıtları farklı biçimlerde tutulmuş. Altı kayıt var; iki kişinin adı aynı, bir tahsilat boş. Amaç, kimseyi kaybetmeden düzenli tablo ve kısa rapor üretmek. İsimler ve tutarlar eğitim için kurgulandı. Dosyalar gerçek katılımcı verisi içermiyor.
 
-Anlatıcı [ham CSV'yi](ornekler/katilim-ham.csv) ve [beklenen temiz çıktıyı](ornekler/katilim-temiz.csv) yan yana açabilir. CSV, satır ve sütunlardan oluşan, birçok tablo uygulamasında açılabilen düz metin biçimidir. Bu dosyalar bir oturumun otomatik kaydı değil, yöntemi incelemek için hazırlanmış örnek girdiler ve çıktılardır.
+Anlatıcı [ham CSV'yi](ornekler/katilim-ham.csv) ve [beklenen temiz çıktıyı](ornekler/katilim-temiz.csv) yan yana açabilir. CSV, satır ve sütunlardan oluşan, birçok tablo uygulamasında açılabilen düz metin biçimidir. Hesap için görüntü yerine bu girdiyi seçmenin nedeni [girdi karşılaştırmasında](02-uygulama.md#ayni-bilgi-farkli-girdi-hangisini-vermeli) açıklanıyor. Bu dosyalar bir oturumun otomatik kaydı değil, yöntemi incelemek için hazırlanmış örnek girdiler ve çıktılardır.
 
 **Dönüşüm boyunca kayıt kimliğini izle**
 
@@ -2603,7 +2711,7 @@ Anlatıcı bütün tabloyu okumak yerine üç ayırıcı durumu gösterir:
 | K03 | Deniz; iptal; 0 | Ayrı kişi/kayıt; tahsilat sıfır | K02'nin durumuyla üzerine yazmak |
 | K04 | Ece; katıldı; tutar boş | Katılım biliniyor, tahsilat bilinmiyor | Boşluğu 0 veya 600 ile doldurmak |
 
-İlk dönüşümü bu ayrımlarda gör. Kural doğruysa tüm tabloya uygulat. Kesin ve tekrarlanacak dönüşümde aynı kuralları küçük bir betiğe taşımak yararlı olabilir; her hafta aynı altı kararı yeniden yorumlatmak gerekmez. Betik, programın bir dizi işlemi tekrarlanabilir biçimde yürütmesidir.
+İlk dönüşümü bu ayrımlarda gör. Kural doğruysa tüm tabloya uygulat. Anlatıcının üç satırı göstermesiyle altı kaydın tamamının kontrol edilmesini [inceleme kapsamında](03-calisma-mantigi.md#ne-kadarini-inceledigini-gor) ayrı tut. Kesin ve tekrarlanacak dönüşümde aynı kuralları küçük bir betiğe taşımak yararlı olabilir; her hafta aynı altı kararı yeniden yorumlatmak gerekmez. Betik, programın bir dizi işlemi tekrarlanabilir biçimde yürütmesidir.
 
 <a id="3-sonucun-ne-soyledigini-sinirlariyla-oku"></a>
 
@@ -3011,7 +3119,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Settings](https://learn.chatgpt.com/docs/reference/settings) | 2026-10-29 |
 | [Projects and chats](https://learn.chatgpt.com/docs/projects) | 2026-10-29 |
 | [Use ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt) | 2026-10-29 |
-| [Work with files](https://learn.chatgpt.com/docs/artifacts-viewer) | 2026-10-29 |
+| [Work with files](https://learn.chatgpt.com/docs/artifacts-viewer) | 2026-10-31 |
 | [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal) | 2026-10-29 |
 | [Appshots](https://learn.chatgpt.com/docs/appshots) | 2026-10-29 |
 | [ChatGPT Voice](https://learn.chatgpt.com/docs/features/voice) | 2026-10-29 |
@@ -3059,7 +3167,7 @@ Gerçek vaka kayıtlarının kapsamı [deneyim ekinde](deneyimler.md); kurgu ö�
 | [Using Goals in Codex: Persistent Objectives for Long-Running Work](https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex) | 2026-10-29 |
 | [Rethinking skills and prompts for GPT-6 Astra](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) | 2026-10-29 |
 | [Pets](https://learn.chatgpt.com/docs/pets) | 2026-10-29 |
-| [Prompting](https://learn.chatgpt.com/docs/prompting) | 2026-10-29 |
+| [Prompting](https://learn.chatgpt.com/docs/prompting) | 2026-10-31 |
 | [Local environments](https://learn.chatgpt.com/docs/environments/local-environment) | 2026-10-29 |
 | [Authentication](https://learn.chatgpt.com/docs/auth) | 2026-10-29 |
 | [Rules](https://learn.chatgpt.com/docs/agent-configuration/rules) | 2026-10-29 |
